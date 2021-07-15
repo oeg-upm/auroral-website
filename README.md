@@ -1,1 +1,1 @@
-# cogito-website
+# auroral-website
