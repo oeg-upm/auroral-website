@@ -1,1 +1,1 @@
-# auroral-website
+# Auroral-website

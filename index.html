@@ -3,18 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>COGITO Ontologies</title>
+  <title>AURORAL Ontologies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This describes a catalog of ontologies authored or contributed to by BIMERR.">
+  <meta name="description" content="This describes a catalog of ontologies authored or contributed to by AURORAL.">
   <meta name="languaje" content="English">
 
-  <link rel="stylesheet" href="vocab/themes/blue/style.css" type="text/css" media="print, projection, screen" />
-  <script src="vocab/js/jquery-1.11.0.js"></script>
-  <script type="text/javascript" src="vocab/js/jquery.tablesorter.min.js"></script>
-  <script type="text/javascript" src="vocab/js/jquery.stickytableheaders.js"></script>
-  <script type="text/javascript" src="vocab/js/jquery-ui.js"></script>
-  <script type="text/javascript" src="vocab/js/bootstrap.js"></script>
-  <link rel="stylesheet" href="vocab/css/jquery-ui.css">
+  <link rel="stylesheet" href="./vocab/themes/blue/style.css" type="text/css" media="print, projection, screen" />
+  <script src="./vocab/js/jquery-1.11.0.js"></script>
+  <script type="text/javascript" src="./vocab/js/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="./vocab/js/jquery.stickytableheaders.js"></script>
+  <script type="text/javascript" src="./vocab/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="./vocab/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="./vocab/css/jquery-ui.css">
   </link>
   <script type="text/javascript" id="js">
     $(document).ready(function () {
@@ -26,7 +26,7 @@
   </script>
 
   <!-- Le styles -->
-  <link href="vocab/css/bootstrap.css" rel="stylesheet">
+  <link href="./vocab/css/bootstrap.css" rel="stylesheet">
   <style type="text/css">
     body {
       padding-top: 60px;
@@ -68,11 +68,11 @@
 
     <!-- Jumbotron -->
     <div class="jumbotron">
-      <h1><a href="https://bimerr.eu/"><img src="vocab/logo.jpg" width="500" alt="OEG logo" class="img-rounded"
-            class="img-responsive" /></a></h1>
+      <h1><a href="https://www.auroral.eu/"><img src="./vocab/logo2.jpg" width="500" alt="OEG logo" class="img-rounded"
+                                                 class="img-responsive" /></a></h1>
       <p class="lead">Here you can find the list of ontologies developed for AURORAL project </p>
       <p class="lead"> If you want to contribute developing ontologies please follow the <a
-          href="guide.html">guidelines</a> we provide</p>
+          href="./guide.html">guidelines</a> we provide</p>
 
     </div>
     <hr>
@@ -90,24 +90,45 @@
     </thead>
     <tbody>
         <tr id="tr1">
-            <td>COGITO ontology</td>
+            <td><a href="https://auroral.iot.linkeddata.es/def/core" target="_blank">AURORAL Core ontology</a></td>
             <td>
                 This ontology aims to model the DLT data exchanged for the AURORAL project</td>
               <td>
-                <span><a href="requirements/requirements.html" target="_blank">Ontology Requirements </a></span>
+                <span><a href="requirements/requirements-core.html" target="_blank">Ontology Requirements </a></span>
             </td>
             <td>
-                <span>Ontology Repository </span>
+                <span><a href="https://github.com/oeg-upm/auroral-core-ontology">Ontology Repository </a></span>
             </td>
             <td>
-                <span>Ontology Issue Tracker</span>
+                <span><a href="https://github.com/oeg-upm/auroral-core-ontology/issues">Ontology Issue Tracker</a></span>
             <td>
-                <span>Ontology Releases</span>
+                <span><a href="https://github.com/oeg-upm/auroral-core-ontology/releases">Ontology Releases</a></span>
             </td>
           
         </tr>
+        <tr id="tr2">
+            <td><a href="https://auroral.iot.linkeddata.es/def/priv" target="_blank">AURORAL Privacy </a></td>
+            <td>
+                This ontology aims to model the data privacy for the AURORAL project</td>
+            <td>
+                <span><a href="requirements/requirements-priv.html" target="_blank">Ontology Requirements </a></span>
+            </td>
+            <td>
+                <span><a href="https://github.com/oeg-upm/auroral-privacy-ontology">Ontology Repository </a></span>
+            </td>
+            <td>
+                <span><a href="https://github.com/oeg-upm/auroral-privacy-ontology/issues">Ontology Issue Tracker</a></span>
+            <td>
+                <span><a href="https://github.com/oeg-upm/auroral-privacy-ontology/releases">Ontology Releases</a></span>
+            </td>
+
+        </tr>
     </tbody>
 </table>
+
+      <div class="text-center"><br><img src="vocab/auroral.png" width="97%"  border="0"
+                                      />
+      </div>
     
     <!-- Part where we have to include the ontologies -->
     <!-- <div w3-include-html="ontologies/ontologies.html"></div> -->
@@ -131,14 +152,14 @@
           <p>&copy; Ontology Engineering Group</p>
         </div>
         <div class="col-md-2">
-          <a href="https://oeg.fi.upm.es/" target="_blank"><img src="vocab/logo.gif" alt="OEG logo" class="img-rounded"
-              class="img-responsive" width="30%" /></a>
+          <a href="https://oeg.fi.upm.es/" target="_blank"><img src="./vocab/logo.gif" alt="OEG logo" class="img-rounded"
+                                                                class="img-responsive" width="30%" /></a>
 
-          <a href="http://fi.upm.es/" target="_blank"><img src="vocab/fiLogo.png" alt="FI logo" class="img-rounded"
-              class="img-responsive" width="30%" /></a>
+          <a href="http://fi.upm.es/" target="_blank"><img src="./vocab/fiLogo.png" alt="FI logo" class="img-rounded"
+                                                           class="img-responsive" width="30%" /></a>
 
-          <a href="https://www.upm.es/" target="_blank"><img src="vocab/upmlogo.png" alt="UPM logo" class="img-rounded"
-              class="img-responsive" width="30%" /></a>
+          <a href="https://www.upm.es/" target="_blank"><img src="./vocab/upmlogo.png" alt="UPM logo" class="img-rounded"
+                                                             class="img-responsive" width="30%" /></a>
         </div>
       </div>
     </footer>
@@ -176,7 +197,7 @@
     }
 
   </script>
-  <script src="w3-include-HTML.js"></script>
+  <script src="../w3-include-HTML.js"></script>
 </body>
 
 </html>
