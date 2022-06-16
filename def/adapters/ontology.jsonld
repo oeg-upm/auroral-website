@@ -1,0 +1,445 @@
+[ {
+  "@id" : "http:///www.w3.org/ns/ssn/Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AccumulatedWater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#FloodAmbientProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AmbientProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http:///www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AmbientSolarRadiation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AmbientProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AmbientTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#TemperatureAmbientProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AngularUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SpaceProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AtmosphoricPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Pressure"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#BatteryLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#BeaconMac",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SpaceProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#CO2Concentration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#CrabonDioxide"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#CrabonDioxide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http:///www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Distance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SpaceProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#DivPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SpaceProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#ElectricCurrent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyMonitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http:///www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Flood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#FloodAmbientProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#FloodAmbientProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AmbientProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#FloodSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSAltitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SpaceProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSEmergencyButton",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSLatitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SpaceProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSLongitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SpaceProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridVoltage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#HumidityAmbientProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AmbientProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#HumiditySensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Illuminance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#LuminusFlux"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousActivePower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#LightProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http:///www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#LuminusFlux",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#LightProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#MonitoringSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Motion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#MotionProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#MotionProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http:///www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#MotionSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#NoiseLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Sound"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#PowerFactor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Pressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http:///www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Rain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http:///www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#ReturnedEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SoilMoisture",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http:///www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SoilMoistureHeight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SoilMoisture"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SoilMoistureSEnsor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SoilMoistureVolume",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SoilMoisture"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Sound",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http:///www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SpaceProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http:///www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#TemperatureAmbientProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AmbientProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Thermometer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#TotalEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#TotalReturnedEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#UVIndex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AmbientSolarRadiation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Vibration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#MotionProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#WasteBinSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#WaterAMRSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#WaterValveActuator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Actuator"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#WeatherSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindAmbientProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AmbientProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindDirection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindAmbientProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#XAxisAcceleration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SpaceProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#YAxisAcceleration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SpaceProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#ZAxisAcceleration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SpaceProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#relativeHumidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#HumidityAmbientProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#windSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindAmbientProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/forProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Actuator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "for property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http:///www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/observes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "observes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http:///www.w3.org/ns/ssn/Property"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Ahlem Rhayem"
+  }, {
+    "@value" : "Andrea Cimmino"
+  }, {
+    "@value" : "Juan Cano de Benito"
+  }, {
+    "@value" : "Raúl García Castro"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "This ontology aims at modelling the adapters for the AURORAL project."
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "The AURORAL adapters ontology"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.0.1"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/core#Actuator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Device"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/core#Device",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Device"
+  } ]
+} ]
