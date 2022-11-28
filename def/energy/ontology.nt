@@ -1,0 +1,265 @@
+<https://auroral.iot.linkeddata.es/def/energy#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://auroral.iot.linkeddata.es/def/energy#> <http://purl.org/dc/elements/1.1/creator> "Ahlem Rhayem" .
+<https://auroral.iot.linkeddata.es/def/energy#> <http://purl.org/dc/elements/1.1/creator> "Andrea Cimmino" .
+<https://auroral.iot.linkeddata.es/def/energy#> <http://purl.org/dc/elements/1.1/creator> "Juan Cano" .
+<https://auroral.iot.linkeddata.es/def/energy#> <http://purl.org/dc/elements/1.1/creator> "María Poveda Villalón" .
+<https://auroral.iot.linkeddata.es/def/energy#> <http://purl.org/dc/elements/1.1/creator> "Raúl García Castro" .
+<https://auroral.iot.linkeddata.es/def/energy#> <http://purl.org/dc/elements/1.1/description> "Ontology code created by Chowlk" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://auroral.iot.linkeddata.es/def/core#aboutProperty
+<https://auroral.iot.linkeddata.es/def/core#aboutProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/core#aboutProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#Measurement> .
+<https://auroral.iot.linkeddata.es/def/core#aboutProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/core#aboutProperty> <http://www.w3.org/2000/01/rdf-schema#label> "about property" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#belongsTo
+<https://auroral.iot.linkeddata.es/def/energy#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/energy#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/core#Building> .
+<https://auroral.iot.linkeddata.es/def/energy#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/core#Municipality> .
+<https://auroral.iot.linkeddata.es/def/energy#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer
+<https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/energy#Price> .
+<https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/energy#Consoumer> .
+<https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer> <http://www.w3.org/2000/01/rdf-schema#label> "depends on consumer" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#hasBuilding
+<https://auroral.iot.linkeddata.es/def/energy#hasBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/energy#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/energy#Consoumer> .
+<https://auroral.iot.linkeddata.es/def/energy#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/core#Building> .
+<https://auroral.iot.linkeddata.es/def/energy#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "has building" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#hasPrice
+<https://auroral.iot.linkeddata.es/def/energy#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/energy#hasPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/adapters#Energy> .
+<https://auroral.iot.linkeddata.es/def/energy#hasPrice> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/energy#Price> .
+<https://auroral.iot.linkeddata.es/def/energy#hasPrice> <http://www.w3.org/2000/01/rdf-schema#label> "has price" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#hasSource
+<https://auroral.iot.linkeddata.es/def/energy#hasSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/energy#hasSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#Measurement> .
+<https://auroral.iot.linkeddata.es/def/energy#hasSource> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/energy#SourceEnergy> .
+<https://auroral.iot.linkeddata.es/def/energy#hasSource> <http://www.w3.org/2000/01/rdf-schema#label> "has source" .
+# 
+# https://saref.etsi.org/core#hasProperty
+<https://saref.etsi.org/core#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core#hasProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#FeatureofInterest> .
+<https://saref.etsi.org/core#hasProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core#Property> .
+<https://saref.etsi.org/core#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property" .
+# 
+# https://saref.etsi.org/core#isMeasuredIn
+<https://saref.etsi.org/core#isMeasuredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#Measurement> .
+<https://saref.etsi.org/core#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.wurvoc.org/vocabularies/om-2/UnitOfMeasure> .
+<https://saref.etsi.org/core#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#label> "is measured in" .
+# 
+# https://saref.etsi.org/core#isPropertyOf
+<https://saref.etsi.org/core#isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#Property> .
+<https://saref.etsi.org/core#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core#FeatureofInterest> .
+<https://saref.etsi.org/core#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> "is property of" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://auroral.iot.linkeddata.es/def/energy#ID
+<https://auroral.iot.linkeddata.es/def/energy#ID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/energy#ID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/core#Building> .
+<https://auroral.iot.linkeddata.es/def/energy#ID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/energy#ID> <http://www.w3.org/2000/01/rdf-schema#label> "i d" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#Name
+<https://auroral.iot.linkeddata.es/def/energy#Name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/energy#Name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/core#Building> .
+<https://auroral.iot.linkeddata.es/def/energy#Name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/energy#Name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#constructionYear
+<https://auroral.iot.linkeddata.es/def/energy#constructionYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/energy#constructionYear> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/core#Building> .
+<https://auroral.iot.linkeddata.es/def/energy#constructionYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://auroral.iot.linkeddata.es/def/energy#constructionYear> <http://www.w3.org/2000/01/rdf-schema#label> "construction year" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#heatingArea
+<https://auroral.iot.linkeddata.es/def/energy#heatingArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/energy#heatingArea> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/core#Building> .
+<https://auroral.iot.linkeddata.es/def/energy#heatingArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://auroral.iot.linkeddata.es/def/energy#heatingArea> <http://www.w3.org/2000/01/rdf-schema#label> "heating area" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.wurvoc.org/vocabularies/om-2/UnitOfMeasure
+<http://www.wurvoc.org/vocabularies/om-2/UnitOfMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.wurvoc.org/vocabularies/om-2/UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Unit Of Measure" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Energy
+<https://auroral.iot.linkeddata.es/def/adapters#Energy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Energy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#Energy> <http://www.w3.org/2000/01/rdf-schema#label> "Energy" .
+# 
+# https://auroral.iot.linkeddata.es/def/core#Building
+<https://auroral.iot.linkeddata.es/def/core#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/core#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#FeatureofInterest> .
+<https://auroral.iot.linkeddata.es/def/core#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building" .
+# 
+# https://auroral.iot.linkeddata.es/def/core#Municipality
+<https://auroral.iot.linkeddata.es/def/core#Municipality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/core#Municipality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#FeatureofInterest> .
+<https://auroral.iot.linkeddata.es/def/core#Municipality> <http://www.w3.org/2000/01/rdf-schema#label> "Municipality" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#Consoumer
+<https://auroral.iot.linkeddata.es/def/energy#Consoumer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/energy#Consoumer> <http://www.w3.org/2000/01/rdf-schema#label> "Consoumer" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#MonthlyAverageEnergyPrice
+<https://auroral.iot.linkeddata.es/def/energy#MonthlyAverageEnergyPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/energy#MonthlyAverageEnergyPrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/energy#Price> .
+<https://auroral.iot.linkeddata.es/def/energy#MonthlyAverageEnergyPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Monthly Average Energy Price" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#Price
+<https://auroral.iot.linkeddata.es/def/energy#Price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/energy#Price> <http://www.w3.org/2000/01/rdf-schema#label> "Price" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#SourceEnergy
+<https://auroral.iot.linkeddata.es/def/energy#SourceEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/energy#SourceEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Source Energy" .
+# 
+# https://saref.etsi.org/core#FeatureofInterest
+<https://saref.etsi.org/core#FeatureofInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core#FeatureofInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Featureof Interest" .
+# 
+# https://saref.etsi.org/core#Measurement
+<https://saref.etsi.org/core#Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core#Measurement> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement" .
+# 
+# https://saref.etsi.org/core#Property
+<https://saref.etsi.org/core#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Energy> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy
+<https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Energy> .
+# 
+# https://auroral.iot.linkeddata.es/def/core#CubicMeter
+<https://auroral.iot.linkeddata.es/def/core#CubicMeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/core#CubicMeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wurvoc.org/vocabularies/om-2/UnitOfMeasure> .
+# 
+# https://auroral.iot.linkeddata.es/def/core#KiloWattSquareMeter
+<https://auroral.iot.linkeddata.es/def/core#KiloWattSquareMeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/core#KiloWattSquareMeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wurvoc.org/vocabularies/om-2/UnitOfMeasure> .
+# 
+# https://auroral.iot.linkeddata.es/def/core#Kilogram
+<https://auroral.iot.linkeddata.es/def/core#Kilogram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/core#Kilogram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wurvoc.org/vocabularies/om-2/UnitOfMeasure> .
+# 
+# https://auroral.iot.linkeddata.es/def/core#KilowattYear
+<https://auroral.iot.linkeddata.es/def/core#KilowattYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/core#KilowattYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wurvoc.org/vocabularies/om-2/UnitOfMeasure> .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#Apartement
+<https://auroral.iot.linkeddata.es/def/energy#Apartement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#Apartement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#Consoumer> .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#ElectricityGrid
+<https://auroral.iot.linkeddata.es/def/energy#ElectricityGrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#ElectricityGrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#SourceEnergy> .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#Firewood
+<https://auroral.iot.linkeddata.es/def/energy#Firewood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#Firewood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#SourceEnergy> .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#FuelOil
+<https://auroral.iot.linkeddata.es/def/energy#FuelOil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#FuelOil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#SourceEnergy> .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#HouseWithElectricHeating
+<https://auroral.iot.linkeddata.es/def/energy#HouseWithElectricHeating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#HouseWithElectricHeating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#Consoumer> .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#HouseWithoutElectricHeating
+<https://auroral.iot.linkeddata.es/def/energy#HouseWithoutElectricHeating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#HouseWithoutElectricHeating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#Consoumer> .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#LargerHouseholds
+<https://auroral.iot.linkeddata.es/def/energy#LargerHouseholds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#LargerHouseholds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#Consoumer> .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#LigniteBriquette
+<https://auroral.iot.linkeddata.es/def/energy#LigniteBriquette> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#LigniteBriquette> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#SourceEnergy> .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#NatruralGas
+<https://auroral.iot.linkeddata.es/def/energy#NatruralGas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#NatruralGas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#SourceEnergy> .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#OneYearFixedAgreement
+<https://auroral.iot.linkeddata.es/def/energy#OneYearFixedAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#OneYearFixedAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#MonthlyAverageEnergyPrice> .
+<https://auroral.iot.linkeddata.es/def/energy#OneYearFixedAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "One year fixed agreement" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#StandardPriceAgreement
+<https://auroral.iot.linkeddata.es/def/energy#StandardPriceAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#StandardPriceAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#MonthlyAverageEnergyPrice> .
+<https://auroral.iot.linkeddata.es/def/energy#StandardPriceAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "Standard price agreement" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#ThreeYearsFixedAgreement
+<https://auroral.iot.linkeddata.es/def/energy#ThreeYearsFixedAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#ThreeYearsFixedAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#MonthlyAverageEnergyPrice> .
+<https://auroral.iot.linkeddata.es/def/energy#ThreeYearsFixedAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "Three year fixed agreement" .
+# 
+# https://auroral.iot.linkeddata.es/def/energy#TwoYearsFixedAgreement
+<https://auroral.iot.linkeddata.es/def/energy#TwoYearsFixedAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/energy#TwoYearsFixedAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/energy#MonthlyAverageEnergyPrice> .
+<https://auroral.iot.linkeddata.es/def/energy#TwoYearsFixedAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "Two year fixed agreement" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
