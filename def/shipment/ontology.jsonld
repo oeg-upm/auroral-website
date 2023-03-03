@@ -84,6 +84,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Document Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Document"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Product",
@@ -219,18 +222,8 @@
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#hasType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Document"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has type"
-  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/shipment#DocumentType"
-  }, {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {

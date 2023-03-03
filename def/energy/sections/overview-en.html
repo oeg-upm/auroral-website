@@ -8,8 +8,16 @@ This ontology has the following classes and properties.</span>
          title="https://auroral.iot.linkeddata.es/def/core#Building">Building</a>
    </li>
    <li>
-      <a href="#Consoumer"
-         title="https://auroral.iot.linkeddata.es/def/energy#Consoumer">Consoumer</a>
+      <a href="#Consumer"
+         title="https://auroral.iot.linkeddata.es/def/energy#Consumer">Consumer</a>
+   </li>
+   <li>
+      <a href="#CostPriceSeason"
+         title="https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason">Cost Price Season</a>
+   </li>
+   <li>
+      <a href="#Currency"
+         title="https://auroral.iot.linkeddata.es/def/energy#Currency">Currency</a>
    </li>
    <li>
       <a href="#https://auroral.iot.linkeddata.es/def/adapters#Energy"
@@ -19,11 +27,11 @@ This ontology has the following classes and properties.</span>
       <a href="#https://saref.etsi.org/core#FeatureofInterest" title="https://saref.etsi.org/core#FeatureofInterest">Featureof Interest</a>
    </li>
    <li>
-      <a href="#https://saref.etsi.org/core#Measurement" title="https://saref.etsi.org/core#Measurement">Measurement</a>
+      <a href="#FixedAgreement"
+         title="https://auroral.iot.linkeddata.es/def/energy#FixedAgreement">Fixed Agreement</a>
    </li>
    <li>
-      <a href="#MonthlyAverageEnergyPrice"
-         title="https://auroral.iot.linkeddata.es/def/energy#MonthlyAverageEnergyPrice">Monthly Average Energy Price</a>
+      <a href="#https://saref.etsi.org/core#Measurement" title="https://saref.etsi.org/core#Measurement">Measurement</a>
    </li>
    <li>
       <a href="#https://auroral.iot.linkeddata.es/def/core#Municipality"
@@ -34,15 +42,31 @@ This ontology has the following classes and properties.</span>
          title="https://auroral.iot.linkeddata.es/def/energy#Price">Price</a>
    </li>
    <li>
+      <a href="#PriceAgreement"
+         title="https://auroral.iot.linkeddata.es/def/energy#PriceAgreement">Price Agreement</a>
+   </li>
+   <li>
       <a href="#https://saref.etsi.org/core#Property" title="https://saref.etsi.org/core#Property">Property</a>
+   </li>
+   <li>
+      <a href="#Season"
+         title="https://auroral.iot.linkeddata.es/def/energy#Season">Season</a>
    </li>
    <li>
       <a href="#SourceEnergy"
          title="https://auroral.iot.linkeddata.es/def/energy#SourceEnergy">Source Energy</a>
    </li>
    <li>
+      <a href="#StandardAgreement"
+         title="https://auroral.iot.linkeddata.es/def/energy#StandardAgreement">Standard Agreement</a>
+   </li>
+   <li>
       <a href="#http://www.wurvoc.org/vocabularies/om-2/UnitOfMeasure"
          title="http://www.wurvoc.org/vocabularies/om-2/UnitOfMeasure">Unit Of Measure</a>
+   </li>
+   <li>
+      <a href="#VariableAgreement"
+         title="https://auroral.iot.linkeddata.es/def/energy#VariableAgreement">Variable Agreement</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
@@ -58,8 +82,16 @@ This ontology has the following classes and properties.</span>
          title="https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer">depends on consumer</a>
    </li>
    <li>
+      <a href="#forSeason"
+         title="https://auroral.iot.linkeddata.es/def/energy#forSeason">for season</a>
+   </li>
+   <li>
       <a href="#hasBuilding"
          title="https://auroral.iot.linkeddata.es/def/energy#hasBuilding">has building</a>
+   </li>
+   <li>
+      <a href="#hasCostPrice"
+         title="https://auroral.iot.linkeddata.es/def/energy#hasCostPrice">has cost price</a>
    </li>
    <li>
       <a href="#hasPrice"
@@ -73,6 +105,10 @@ This ontology has the following classes and properties.</span>
          title="https://auroral.iot.linkeddata.es/def/energy#hasSource">has source</a>
    </li>
    <li>
+      <a href="#inCurrency"
+         title="https://auroral.iot.linkeddata.es/def/energy#inCurrency">in currency</a>
+   </li>
+   <li>
       <a href="#https://saref.etsi.org/core#isMeasuredIn" title="https://saref.etsi.org/core#isMeasuredIn">is measured in</a>
    </li>
    <li>
@@ -81,30 +117,49 @@ This ontology has the following classes and properties.</span>
 </ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#constructionYear"
-         title="https://auroral.iot.linkeddata.es/def/energy#constructionYear">construction year</a>
+         title="https://auroral.iot.linkeddata.es/def/energy#constructionYear">construction Year</a>
+   </li>
+   <li>
+      <a href="#contractTime"
+         title="https://auroral.iot.linkeddata.es/def/energy#contractTime">
+         <span>contract time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#costPrice"
+         title="https://auroral.iot.linkeddata.es/def/energy#costPrice">
+         <span>cost price</span>
+      </a>
    </li>
    <li>
       <a href="#heatingArea"
-         title="https://auroral.iot.linkeddata.es/def/energy#heatingArea">heating area</a>
+         title="https://auroral.iot.linkeddata.es/def/energy#heatingArea">heating Area</a>
    </li>
    <li>
-      <a href="#ID" title="https://auroral.iot.linkeddata.es/def/energy#ID">i d</a>
+      <a href="#https://auroral.iot.linkeddata.es/def/core#id" title="https://auroral.iot.linkeddata.es/def/core#id">
+         <span>id</span>
+      </a>
    </li>
    <li>
-      <a href="#Name"
-         title="https://auroral.iot.linkeddata.es/def/energy#Name">name</a>
+      <a href="#https://auroral.iot.linkeddata.es/def/core#name" title="https://auroral.iot.linkeddata.es/def/core#name">
+         <span>name</span>
+      </a>
    </li>
 </ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#Apartement"
-         title="https://auroral.iot.linkeddata.es/def/energy#Apartement">
-         <span>apartement</span>
+         title="https://auroral.iot.linkeddata.es/def/energy#Apartement">Apartement</a>
+   </li>
+   <li>
+      <a href="#Autumn"
+         title="https://auroral.iot.linkeddata.es/def/energy#Autumn">
+         <span>autumn</span>
       </a>
    </li>
    <li>
-      <a href="#https://auroral.iot.linkeddata.es/def/core#CubicMeter"
-         title="https://auroral.iot.linkeddata.es/def/core#CubicMeter">
-         <span>cubic meter</span>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/cubicMetre"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/cubicMetre">
+         <span>cubic metre</span>
       </a>
    </li>
    <li>
@@ -133,39 +188,33 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#HouseWithElectricHeating"
-         title="https://auroral.iot.linkeddata.es/def/energy#HouseWithElectricHeating">
-         <span>house with electric heating</span>
-      </a>
+         title="https://auroral.iot.linkeddata.es/def/energy#HouseWithElectricHeating">House with electric heating</a>
    </li>
    <li>
       <a href="#HouseWithoutElectricHeating"
-         title="https://auroral.iot.linkeddata.es/def/energy#HouseWithoutElectricHeating">
-         <span>house without electric heating</span>
+         title="https://auroral.iot.linkeddata.es/def/energy#HouseWithoutElectricHeating">House without electric heating</a>
+   </li>
+   <li>
+      <a href="#https://auroral.iot.linkeddata.es/def/core#KiloWattHourSquareMeter"
+         title="https://auroral.iot.linkeddata.es/def/core#KiloWattHourSquareMeter">
+         <span>kilo watt hour square meter</span>
       </a>
    </li>
    <li>
-      <a href="#https://auroral.iot.linkeddata.es/def/core#KiloWattSquareMeter"
-         title="https://auroral.iot.linkeddata.es/def/core#KiloWattSquareMeter">
-         <span>kilo watt square meter</span>
-      </a>
-   </li>
-   <li>
-      <a href="#https://auroral.iot.linkeddata.es/def/core#Kilogram"
-         title="https://auroral.iot.linkeddata.es/def/core#Kilogram">
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram">
          <span>kilogram</span>
       </a>
    </li>
    <li>
-      <a href="#https://auroral.iot.linkeddata.es/def/core#KilowattYear"
-         title="https://auroral.iot.linkeddata.es/def/core#KilowattYear">
-         <span>kilowatt year</span>
+      <a href="#https://auroral.iot.linkeddata.es/def/core#KilowattHourYear"
+         title="https://auroral.iot.linkeddata.es/def/core#KilowattHourYear">
+         <span>kilowatt hour year</span>
       </a>
    </li>
    <li>
       <a href="#LargerHouseholds"
-         title="https://auroral.iot.linkeddata.es/def/energy#LargerHouseholds">
-         <span>larger households</span>
-      </a>
+         title="https://auroral.iot.linkeddata.es/def/energy#LargerHouseholds">Larger households</a>
    </li>
    <li>
       <a href="#LigniteBriquette"
@@ -184,8 +233,20 @@ This ontology has the following classes and properties.</span>
          title="https://auroral.iot.linkeddata.es/def/energy#OneYearFixedAgreement">One year fixed agreement</a>
    </li>
    <li>
+      <a href="#Springer"
+         title="https://auroral.iot.linkeddata.es/def/energy#Springer">
+         <span>springer</span>
+      </a>
+   </li>
+   <li>
       <a href="#StandardPriceAgreement"
          title="https://auroral.iot.linkeddata.es/def/energy#StandardPriceAgreement">Standard price agreement</a>
+   </li>
+   <li>
+      <a href="#https://auroral.iot.linkeddata.es/def/core#Summer"
+         title="https://auroral.iot.linkeddata.es/def/core#Summer">
+         <span>summer</span>
+      </a>
    </li>
    <li>
       <a href="#ThreeYearsFixedAgreement"
@@ -200,5 +261,11 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#TwoYearsFixedAgreement"
          title="https://auroral.iot.linkeddata.es/def/energy#TwoYearsFixedAgreement">Two year fixed agreement</a>
+   </li>
+   <li>
+      <a href="#https://auroral.iot.linkeddata.es/def/core#Winter"
+         title="https://auroral.iot.linkeddata.es/def/core#Winter">
+         <span>winter</span>
+      </a>
    </li>
 </ul>

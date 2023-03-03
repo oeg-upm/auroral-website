@@ -1,0 +1,202 @@
+<https://auroral.iot.linkeddata.es/def/cell#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://auroral.iot.linkeddata.es/def/cell#> <http://purl.org/dc/elements/1.1/creator> "Ahlem Rhayem" .
+<https://auroral.iot.linkeddata.es/def/cell#> <http://purl.org/dc/elements/1.1/creator> "Andrea Cimmino" .
+<https://auroral.iot.linkeddata.es/def/cell#> <http://purl.org/dc/elements/1.1/creator> "Juan Cano Benito" .
+<https://auroral.iot.linkeddata.es/def/cell#> <http://purl.org/dc/elements/1.1/creator> "María Poveda Villalón" .
+<https://auroral.iot.linkeddata.es/def/cell#> <http://purl.org/dc/elements/1.1/creator> "Raúl García Castro" .
+<https://auroral.iot.linkeddata.es/def/cell#> <http://purl.org/dc/elements/1.1/description> "Ontology code created by Chowlk" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.owl-ontologies.com/geo#location
+<http://www.owl-ontologies.com/geo#location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/geo#location> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/cell#CellTowers> .
+<http://www.owl-ontologies.com/geo#location> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+<http://www.owl-ontologies.com/geo#location> <http://www.w3.org/2000/01/rdf-schema#label> "location" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#country
+<https://auroral.iot.linkeddata.es/def/cell#country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/cell#country> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/cell#CellTowers> .
+<https://auroral.iot.linkeddata.es/def/cell#country> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/core#Place> .
+<https://auroral.iot.linkeddata.es/def/cell#country> <http://www.w3.org/2000/01/rdf-schema#label> "country" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#hasOperator
+<https://auroral.iot.linkeddata.es/def/cell#hasOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/cell#hasOperator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/cell#CellTowers> .
+<https://auroral.iot.linkeddata.es/def/cell#hasOperator> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/cell#Operator> .
+<https://auroral.iot.linkeddata.es/def/cell#hasOperator> <http://www.w3.org/2000/01/rdf-schema#label> "has operator" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#hasRange
+<https://auroral.iot.linkeddata.es/def/cell#hasRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/cell#hasRange> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/cell#CellTowers> .
+<https://auroral.iot.linkeddata.es/def/cell#hasRange> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/cell#Range> .
+<https://auroral.iot.linkeddata.es/def/cell#hasRange> <http://www.w3.org/2000/01/rdf-schema#label> "has range" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#providesNetwork
+<https://auroral.iot.linkeddata.es/def/cell#providesNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/cell#providesNetwork> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/cell#CellTowers> .
+<https://auroral.iot.linkeddata.es/def/cell#providesNetwork> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/cell#Network> .
+<https://auroral.iot.linkeddata.es/def/cell#providesNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "provides network" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "lat" .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "long" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#cellId
+<https://auroral.iot.linkeddata.es/def/cell#cellId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/cell#cellId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/cell#CellTowers> .
+<https://auroral.iot.linkeddata.es/def/cell#cellId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/cell#cellId> <http://www.w3.org/2000/01/rdf-schema#label> "cell id" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#created
+<https://auroral.iot.linkeddata.es/def/cell#created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/cell#created> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/cell#CellTowers> .
+<https://auroral.iot.linkeddata.es/def/cell#created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://auroral.iot.linkeddata.es/def/cell#created> <http://www.w3.org/2000/01/rdf-schema#label> "created" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#networkCode
+<https://auroral.iot.linkeddata.es/def/cell#networkCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/cell#networkCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/cell#Network> .
+<https://auroral.iot.linkeddata.es/def/cell#networkCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/cell#networkCode> <http://www.w3.org/2000/01/rdf-schema#label> "network code" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#operatorId
+<https://auroral.iot.linkeddata.es/def/cell#operatorId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/cell#operatorId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/cell#Operator> .
+<https://auroral.iot.linkeddata.es/def/cell#operatorId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/cell#operatorId> <http://www.w3.org/2000/01/rdf-schema#label> "operator id" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#operatorName
+<https://auroral.iot.linkeddata.es/def/cell#operatorName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/cell#operatorName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/cell#Operator> .
+<https://auroral.iot.linkeddata.es/def/cell#operatorName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/cell#operatorName> <http://www.w3.org/2000/01/rdf-schema#label> "operator name" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#range
+<https://auroral.iot.linkeddata.es/def/cell#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/cell#range> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/cell#Range> .
+<https://auroral.iot.linkeddata.es/def/cell#range> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/cell#range> <http://www.w3.org/2000/01/rdf-schema#label> "range" .
+# 
+# https://auroral.iot.linkeddata.es/def/core#code
+<https://auroral.iot.linkeddata.es/def/core#code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/core#code> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/core#Place> .
+<https://auroral.iot.linkeddata.es/def/core#code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/core#code> <http://www.w3.org/2000/01/rdf-schema#label> "code" .
+# 
+# https://auroral.iot.linkeddata.es/def/core#name
+<https://auroral.iot.linkeddata.es/def/core#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/core#name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/core#Place> .
+<https://auroral.iot.linkeddata.es/def/core#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/core#name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.geonames.org/ontology#Feature
+<http://www.geonames.org/ontology#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature" .
+# 
+# http://www.w3.org/2003/01/geo/wgs84_pos#Point
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#CDMA
+<https://auroral.iot.linkeddata.es/def/cell#CDMA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/cell#CDMA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/cell#Network> .
+<https://auroral.iot.linkeddata.es/def/cell#CDMA> <http://www.w3.org/2000/01/rdf-schema#label> "C D M A" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#CellTowers
+<https://auroral.iot.linkeddata.es/def/cell#CellTowers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/cell#CellTowers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Device> .
+<https://auroral.iot.linkeddata.es/def/cell#CellTowers> <http://www.w3.org/2000/01/rdf-schema#label> "Cell Towers" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#GSM
+<https://auroral.iot.linkeddata.es/def/cell#GSM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/cell#GSM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/cell#Network> .
+<https://auroral.iot.linkeddata.es/def/cell#GSM> <http://www.w3.org/2000/01/rdf-schema#label> "G S M" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#LTE
+<https://auroral.iot.linkeddata.es/def/cell#LTE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/cell#LTE> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/cell#Network> .
+<https://auroral.iot.linkeddata.es/def/cell#LTE> <http://www.w3.org/2000/01/rdf-schema#label> "L T E" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#Network
+<https://auroral.iot.linkeddata.es/def/cell#Network> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/cell#Network> <http://www.w3.org/2000/01/rdf-schema#label> "Network" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#Operator
+<https://auroral.iot.linkeddata.es/def/cell#Operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/cell#Operator> <http://www.w3.org/2000/01/rdf-schema#label> "Operator" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#Range
+<https://auroral.iot.linkeddata.es/def/cell#Range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/cell#Range> <http://www.w3.org/2000/01/rdf-schema#label> "Range" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#UMTS
+<https://auroral.iot.linkeddata.es/def/cell#UMTS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/cell#UMTS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/cell#Network> .
+<https://auroral.iot.linkeddata.es/def/cell#UMTS> <http://www.w3.org/2000/01/rdf-schema#label> "U M T S" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#4G
+<https://auroral.iot.linkeddata.es/def/cell#4G> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/cell#4G> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/cell#Network> .
+<https://auroral.iot.linkeddata.es/def/cell#4G> <http://www.w3.org/2000/01/rdf-schema#label> "4 G" .
+# 
+# https://auroral.iot.linkeddata.es/def/cell#5G
+<https://auroral.iot.linkeddata.es/def/cell#5G> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/cell#5G> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/cell#Network> .
+<https://auroral.iot.linkeddata.es/def/cell#5G> <http://www.w3.org/2000/01/rdf-schema#label> "5 G" .
+# 
+# https://auroral.iot.linkeddata.es/def/core#Device
+<https://auroral.iot.linkeddata.es/def/core#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" .
+# 
+# https://auroral.iot.linkeddata.es/def/core#Place
+<https://auroral.iot.linkeddata.es/def/core#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/core#Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geonames.org/ontology#Feature> .
+<https://auroral.iot.linkeddata.es/def/core#Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

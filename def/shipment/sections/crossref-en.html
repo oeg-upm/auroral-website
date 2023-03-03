@@ -110,11 +110,15 @@ This section provides details for each class and property defined by [Ontology N
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/shipment#Document</p>
       <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DocumentType"
+               title="https://auroral.iot.linkeddata.es/def/shipment#DocumentType">Document Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasType"
-               title="https://auroral.iot.linkeddata.es/def/shipment#hasType">has type</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#mimeType"
+            <a href="#mimeType"
                title="https://auroral.iot.linkeddata.es/def/shipment#mimeType">mime type</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#remoteAddress"
                title="https://auroral.iot.linkeddata.es/def/shipment#remoteAddress">remote address</a>
@@ -138,6 +142,12 @@ This section provides details for each class and property defined by [Ontology N
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/shipment#DocumentType</p>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Document"
+               title="https://auroral.iot.linkeddata.es/def/shipment#Document">Document</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#descriptionDocumentType"
@@ -147,12 +157,6 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-dp" title="data property">dp</sup>, <a href="#uuidDocumentType"
                title="https://auroral.iot.linkeddata.es/def/shipment#uuidDocumentType">uuid document type</a>
             <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasType"
-               title="https://auroral.iot.linkeddata.es/def/shipment#hasType">has type</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -257,8 +261,6 @@ This section provides details for each class and property defined by [Ontology N
                title="https://auroral.iot.linkeddata.es/def/shipment#hasDocument">has document</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasOrigin"
                title="https://auroral.iot.linkeddata.es/def/shipment#hasOrigin">has origin</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasType"
-               title="https://auroral.iot.linkeddata.es/def/shipment#hasType">has type</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#inTransportation"
                title="https://auroral.iot.linkeddata.es/def/shipment#inTransportation">in transportation</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isParentOf"
@@ -402,12 +404,6 @@ This section provides details for each class and property defined by [Ontology N
             title="https://auroral.iot.linkeddata.es/def/shipment#hasPile">has pile</a>
       </li>
       <li>
-         <a href="#hasType"
-            title="https://auroral.iot.linkeddata.es/def/shipment#hasType">
-            <span>has type</span>
-         </a>
-      </li>
-      <li>
          <a href="#hasUpdate"
             title="https://auroral.iot.linkeddata.es/def/shipment#hasUpdate">has update</a>
       </li>
@@ -548,39 +544,6 @@ This section provides details for each class and property defined by [Ontology N
                <a href="#StoragePile"
                   title="https://auroral.iot.linkeddata.es/def/shipment#StoragePile">Storage Pile</a>
                <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasType">
-      <h3>has type<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/shipment#hasType</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Document"
-                  title="https://auroral.iot.linkeddata.es/def/shipment#Document">Document</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#ShipmentUpdate"
-                  title="https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate">Shipment Update</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#DocumentType"
-                  title="https://auroral.iot.linkeddata.es/def/shipment#DocumentType">Document Type</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>
-               <a href="#hasType">data property</a>
             </dd>
          </dl>
       </div>
@@ -933,7 +896,7 @@ This section provides details for each class and property defined by [Ontology N
       </div>
    </div>
    <div class="entity" id="hasType">
-      <h3>has type<sup class="type-op" title="object property">op</sup>
+      <h3>has type<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -946,10 +909,6 @@ This section provides details for each class and property defined by [Ontology N
                <a href="http://www.w3.org/2001/XMLSchema#string"
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>
-               <a href="#hasType">object property</a>
             </dd>
          </dl>
       </div>

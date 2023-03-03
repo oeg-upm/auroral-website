@@ -110,17 +110,6 @@
     
 
 
-    <!-- https://auroral.iot.linkeddata.es/def/shipment#hasType -->
-
-
-    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/shipment#hasType">
-        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/shipment#Document"/>
-        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate"/>
-        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/shipment#DocumentType"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://auroral.iot.linkeddata.es/def/shipment#hasUpdate -->
 
 
@@ -548,6 +537,7 @@
 
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/shipment#DocumentType">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/shipment#Document"/>
         <rdfs:label>Document Type</rdfs:label>
     </owl:Class>
     
@@ -604,21 +594,6 @@
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/shipment#Transportation">
         <rdfs:label>Transportation</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="https://auroral.iot.linkeddata.es/def/shipment#hasType">
-        <rdfs:label>has type</rdfs:label>
-    </rdf:Description>
 </rdf:RDF>
 
 

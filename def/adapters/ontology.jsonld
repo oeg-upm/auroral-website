@@ -11,742 +11,6 @@
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.opengis.net/ont/geosparql#ActiveEnergy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Active Energy"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Active Energy"
-  } ]
-}, {
-  "@id" : "http://www.opengis.net/ont/geosparql#InstantaneousReactiveInductivePower",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Instantaneous Reactive Inductive Power"
-  } ]
-}, {
-  "@id" : "http://www.opengis.net/ont/geosparql#ReactiveCpacitiveEnergy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Reactive Capacitive Energy"
-  } ]
-}, {
-  "@id" : "http://www.opengis.net/ont/geosparql#ReactiveInductiveEnergy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Reactive Inductive Energy"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AccumulatedWater",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Accumulated Water"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Accumulated Water"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AmbientTemperature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Ambient Temperature"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AngularUnit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Angular Unit"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AtmosphoricPressure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Pressure"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Atmosphoric Pressure"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Atmospheric Pressure"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AverageMovementShare",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Average Movement Share"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#AverageMovementTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Average Movement Time"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#BasalMetabolicRate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Basal Metabolic Rate (BMR) is the number of calories you burn as your body performs basic (basal) life-sustaining function."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Basal Metabolic Rate"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#BatteryLevel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#BeaconMac",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Beacon Mac"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#BodyFatPercentage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The amount of essential fat differs between men and women, and is typically around 2-5% in men, and 10-13% in women."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Body Fat Percentage"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#BodyMassIndex",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Body Mass Index"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#BoneMineralContent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Calcium is the largest contributor to bone mineral content. It exists in hydroxyapatite crystals, which contribute to bone strength, and acts as a reserve to maintain serum calcium levels within a narrow range during periods of dietary calcium inadequacy."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Bone Mineral Content"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#CO2Concentration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CarbonDioxide"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "CO2 Concentration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#COConcentration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CarbonMonoxide"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "CO Concentration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#CaloriesBurned",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "indicates how many clories were burned by wlking for example"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Calories Burned"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#DiastolicBloodPressure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Diastolic blood level for a patient"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Diastolic Blood Pressure"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Distance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Distance"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#DistanceWalked",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Distance Walked"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#DivPosition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Div Position"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#ElectricCurrent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Electric Current"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#ElectricVoltage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Electric Voltage"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Electric Voltage"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyConsumption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Energy Consumption"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyProduction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Energy Production"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Flood",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSAltitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "GPS Altitude"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSLatitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "GPS Latitude"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSLongitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "GPS Longitude"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridCapacity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Grid Capacity"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridDemand",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Grid Demand"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridFrequency",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Grid Frequency"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridVoltage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Grid Voltage"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#HeartRate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Heart rate level for a patient"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Heart Rate"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#HourlyPersonCounter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PersonCounter"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Hourly person counter"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#ID-Device",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Device Identifier"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyMonitor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#FloodSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GPSEmergencyButton"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HumiditySensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MonitoringSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SoilMoistureSEnsor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Thermometer"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WaterAMRSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WaterValveActuator"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WeatherSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/core#Actuator"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/core#Device"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ID Device"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Illuminance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#LuminusFlux"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Illuminance"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousActivePower",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Instantaneous Active Power"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousApparentPower",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Instantaneous Apparent Power"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Instantaneous Apparent Power"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousCapacitiveInductivePower",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Instantaneous Capacitive Inductive Power"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousReactivePower",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Instantaneous Reactive Power"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#LightColor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#LightProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Light Color"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Motion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Motion"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#MuscleMass",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Muscle mass is the amount of muscle in your body, including skeletal muscles, smooth muscles, and cardiac muscles."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Muscle Mass"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#NH3Concentration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Ammonia"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Ammonia - NH3 - is a gas commonly used as a refrigerant in cooling systems."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "NH3 Concentration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#NO2Concentration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#NitrogenDioxide"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "NO2 Concentration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#NOConcentration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#NitrogenMonoxide"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "No Concentration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#NoiseLevel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Sound"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Noise Level"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#O3Concentration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Ozone"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "O3 Concentration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#PM10Concentration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CoarseParticulateMatter"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "PM10 are very small particles found in dust and smoke. They have a diameter of 10 micrometres (0.01 mm) or smaller.\n\nPM10 particles are a common air pollutant."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "PM10 Concentration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#PM2.5Concentration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#FineParticlesMatter"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Fine particulate matter (PM2.5) is an air pollutant that is a concern for people's health when levels in air are high."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "PM2.5 Concentration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#PowerFactor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Power Factor"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Protein",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Protein"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Pulse",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The rhythmic dilation of an artery that results from beating of the heart. Pulse is often measured by feeling the arteries of the wrist or neck."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Pulse"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Rainfall",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Percipitation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Rainfall"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#ReturnedEnergy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Returned Energy"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SO2Concentration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SulphurDioxide"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "SO2 Concentration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Sleep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "control the sleep disorders of a patient"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Sleep"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Snowfall",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Percipitation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Snowfall"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Steps",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SugarLevel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A blood sugar level less than 140 mg/dL (7.8 mmol/L) is normal. A reading of more than 200 mg/dL (11.1 mmol/L) after two hours means you have diabetes. A reading between 140 and 199 mg/dL (7.8 mmol/L and 11.0 mmol/L) means you have prediabetes."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Sugar Level"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#SystolicBloodPressure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "niveau de systolic blood pressure for a patient"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Systolic Blood Pressure"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#TotalBodyWaterPercentage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Most of the human body is water, with an average of roughly 60%. The amount of water in the body changes slightly with age, sex, and hydration levels."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Total Body Water Percentage"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#TotalEnergy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Total Energy"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#TotalReturnedEnergy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Accumulated Percipitation"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#UVIndex",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Vibration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Vibration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#VisceralFatRating",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "According to the manufacturer's information, a rating between 1 and 12 indicates a healthy level of visceral fat, whereas a rating between 13 and 59 indicates excess visceral fat."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Visceral Fat Rating"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#WeatherCondition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Weather"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Weather Condition"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#Weight",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Weight of patient"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Weight"
-  } ]
-}, {
   "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindDirection",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -754,140 +18,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Wind Direction"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#XAxisAcceleration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "XAxix Acceleration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#YAxisAcceleration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "YAxis Acceleration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#ZAxisAcceleration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ZAxis Acceleration"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#from-timestamp",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "UTC time in ISO 8601 formatted timestamp for when to get data From"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MonitoringSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WeatherSensor"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#has-location",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "location of the device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyMonitor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#FloodSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GPSEmergencyButton"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HumiditySensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MonitoringSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SoilMoistureSEnsor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Thermometer"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WaterAMRSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WaterValveActuator"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WeatherSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/core#Actuator"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/core#Device"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#has-timestamp",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Timestamp when the measure was detected"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SoilMoistureSEnsor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WaterAMRSensor"
-  }, {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WeatherSensor"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#hasHeight",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has height"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#hasVolume",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has volume"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#relativeHumidity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HumidityAmbientProperty"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#to-timestamp",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "UTC time in ISO 8601 formatted timestamp for when to get data TO"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/user/ontologies/2022/5/adapters#windSpeed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WindAmbientProperty"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/sosa/description",
@@ -950,12 +80,24 @@
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AccumulatedPercipitation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Accumulated Percipitation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://saref.etsi.org/core#Property"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AccumulatedWater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Accumulated Water"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Accumulated Water"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason",
@@ -965,6 +107,26 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#StatusProperty"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActiveEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Active Energy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Active Energy"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AirConditionningBasic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor"
+  }, {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AirQuality",
@@ -980,6 +142,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Alarm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Alert",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Alert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#StatusProperty"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty",
@@ -1008,6 +185,15 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ambient Temperature"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Ammonia",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1015,6 +201,177 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AirQuality"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AngularUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Angular Unit"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AtmosphoricPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Pressure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Atmosphoric Pressure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Atmospheric Pressure"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AverageMovementShare",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Average Movement Share"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AverageMovementTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Average Movement Time"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BasalMetabolicRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Basal Metabolic Rate (BMR) is the number of calories you burn as your body performs basic (basal) life-sustaining function."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Basal Metabolic Rate"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Battery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BatteryLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Battery level"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BeaconMac",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Beacon Mac"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BodyFatPercentage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The amount of essential fat differs between men and women, and is typically around 2-5% in men, and 10-13% in women."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Body Fat Percentage"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BodyMassIndex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Body Mass Index"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BoilerBiomass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BoilerSensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BoilerNgas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BoilerSensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BoilerOil",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BoilerSensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BoilerSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#BoneMineralContent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Calcium is the largest contributor to bone mineral content. It exists in hydroxyapatite crystals, which contribute to bone strength, and acts as a reserve to maintain serum calcium levels within a narrow range during periods of dietary calcium inadequacy."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bone Mineral Content"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Button",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CO2Concentration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CarbonDioxide"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CO2 Concentration"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#COConcentration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CarbonMonoxide"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CO Concentration"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CaloriesBurned",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "indicates how many clories were burned by wlking for example"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Calories Burned"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CarbonDioxide",
@@ -1035,6 +392,12 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AirQuality"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CloudCover",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CoarseParticulateMatter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1042,6 +405,135 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AirQuality"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#DiastolicBloodPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Diastolic blood level for a patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Diastolic Blood Pressure"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Diffuse Radiation"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiationInstant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Diffuse Radiation Instant"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradiance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Direct Normal Irradiance"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradianceInstant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Direct Normal Irradiance Instant"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#DirectRadiation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Direct Radiation"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#DirectRadiationInstant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Direct Radiation Instant"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Distance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Distance"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#DistanceWalked",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Distance Walked"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#DivPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Div Position"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ElectricCurrent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Electric Current"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ElectricVoltage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Electric Voltage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Electric Voltage"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy Consumption"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyMonitor",
@@ -1056,6 +548,15 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProduction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy Production"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1068,6 +569,24 @@
     "@id" : "https://saref.etsi.org/core#Property"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy use intensity"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Error",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Error"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#StatusProperty"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#FineParticlesMatter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1075,6 +594,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AirQuality"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Flood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty",
@@ -1101,6 +626,15 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "GPS Altitude"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GPSEmergencyButton",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1113,6 +647,60 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GPSLatitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "GPS Latitude"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GPSLongitude",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "GPS Longitude"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GridCapacity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Grid Capacity"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GridDemand",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Grid Demand"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GridFrequency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Grid Frequency"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GridVoltage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Grid Voltage"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1120,6 +708,49 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://saref.etsi.org/core#Property"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HeartRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Heart rate level for a patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heart Rate"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirtoAir",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor"
+  }, {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirtoWater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor"
+  }, {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HourlyPersonCounter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PersonCounter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hourly person counter"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HumidityAmbientProperty",
@@ -1146,6 +777,72 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Illuminance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#LuminusFlux"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Illuminance"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#IndoorAmbientTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indoor Ambient Temperature"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#InstantaneousActivePower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Instantaneous Active Power"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#InstantaneousApparentPower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Instantaneous Apparent Power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Instantaneous Apparent Power"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#InstantaneousCapacitiveInductivePower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Instantaneous Capacitive Inductive Power"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactiveInductivePower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Instantaneous Reactive Inductive Power"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactivePower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Instantaneous Reactive Power"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#LightBulb",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1153,6 +850,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#LightColor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#LightProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Light Color"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#LightProperty",
@@ -1188,6 +894,15 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Motion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Motion"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1210,6 +925,48 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MuscleMass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Muscle mass is the amount of muscle in your body, including skeletal muscles, smooth muscles, and cardiac muscles."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Muscle Mass"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#NH3Concentration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Ammonia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Ammonia - NH3 - is a gas commonly used as a refrigerant in cooling systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NH3 Concentration"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#NO2Concentration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#NitrogenDioxide"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NO2 Concentration"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#NOConcentration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#NitrogenMonoxide"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "No Concentration"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#NitrogenDioxide",
@@ -1242,6 +999,33 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#NoiseLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Sound"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Noise Level"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#O3Concentration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Ozone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "O3 Concentration"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#OutdoorAmbientTemperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outdoor Ambient Temperature"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Ozone",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1249,6 +1033,30 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AirQuality"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PM10Concentration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CoarseParticulateMatter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "PM10 are very small particles found in dust and smoke. They have a diameter of 10 micrometres (0.01 mm) or smaller.\n\nPM10 particles are a common air pollutant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PM10 Concentration"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PM2.5Concentration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#FineParticlesMatter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Fine particulate matter (PM2.5) is an air pollutant that is a concern for people's health when levels in air are high."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PM2.5 Concentration"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PV",
@@ -1260,13 +1068,43 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
   } ]
 }, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Percipitation",
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PVBIntegrated",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Percipitation"
+    "@value" : "PV Bintegrated"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty"
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PV"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PVFaçade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PV"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PVGround",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PV"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PVRoofFlat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PV"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PVRoofStanled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PV"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Periodic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PersonCounter",
@@ -1284,10 +1122,43 @@
     "@value" : "The person sounter sensor is designed to count the number of person that visit a specific city"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Peron Counter Sensor"
+    "@value" : "Person Counter Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PowerFactor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Power Factor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PowerOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Precipitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Precipitation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Presence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Presence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#StatusProperty"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Presence_Sensor",
@@ -1314,6 +1185,27 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Protein",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Protein"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Pulse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The rhythmic dilation of an artery that results from beating of the heart. Pulse is often measured by feeling the arteries of the wrist or neck."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pulse"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#QRCounter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1335,6 +1227,39 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Rainfall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Precipitation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Rainfall"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ReactiveCpacitiveEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Reactive Capacitive Energy"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ReactiveInductiveEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Reactive Inductive Energy"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#RelativeHumidity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HumidityAmbientProperty"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Relay",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1342,6 +1267,57 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Actuator"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ReturnedEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Returned Energy"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SO2Concentration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SulphurDioxide"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "SO2 Concentration"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "it responds to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ShortwaveRadiationInstant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Shortwave Radiation Instant"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Sleep",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "control the sleep disorders of a patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sleep"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SmartPlug",
@@ -1360,6 +1336,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Actuator"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Snowfall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Precipitation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Snowfall"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture",
@@ -1419,10 +1404,37 @@
     "@id" : "https://saref.etsi.org/core#Property"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Steps",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#StorageCapacity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Storage Capacity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#StatusProperty"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SugarLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A blood sugar level less than 140 mg/dL (7.8 mmol/L) is normal. A reading of more than 200 mg/dL (11.1 mmol/L) after two hours means you have diabetes. A reading between 140 and 199 mg/dL (7.8 mmol/L and 11.0 mmol/L) means you have prediabetes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sugar Level"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SulphurDioxide",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "sulphur Dioxide"
+    "@value" : "Sulphur Dioxide"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AirQuality"
@@ -1435,6 +1447,27 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Actuator"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SwitchStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Switch Status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#StatusProperty"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SystolicBloodPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "niveau de systolic blood pressure for a patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Systolic Blood Pressure"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#TRAFXProperty",
@@ -1455,6 +1488,21 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Terrestrial Radiation"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiationInstant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Thermometer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1465,6 +1513,54 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#TotalBodyWaterPercentage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Most of the human body is water, with an average of roughly 60%. The amount of water in the body changes slightly with age, sex, and hydration levels."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Total Body Water Percentage"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Total Energy"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#UVIndex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Vibration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MotionProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Vibration"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#VisceralFatRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "According to the manufacturer's information, a rating between 1 and 12 indicates a healthy level of visceral fat, whereas a rating between 13 and 59 indicates excess visceral fat."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Visceral Fat Rating"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor",
@@ -1509,6 +1605,15 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WeatherCondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Weather"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Weather Condition"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WeatherSensor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1521,6 +1626,18 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Weight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#HealthProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Weight of patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Weight"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WindAmbientProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1528,6 +1645,80 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#XAxisAcceleration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "XAxix Acceleration"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#YAxisAcceleration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "YAxis Acceleration"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ZAxisAcceleration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ZAxis Acceleration"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#from-timestamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "UTC time in ISO 8601 formatted timestamp for when to get data From"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#MonitoringSensor"
+  }, {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WeatherSensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#hasHeight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has height"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#hasVolume",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has volume"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#to-timestamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "UTC time in ISO 8601 formatted timestamp for when to get data TO"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#windSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WindAmbientProperty"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/core#Actuator",
@@ -1542,27 +1733,6 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Device"
   } ]
 }, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/core#Alarm",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason"
-  } ]
-}, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/core#Alert",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Alert"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#StatusProperty"
-  } ]
-}, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/core#Battery",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason"
-  } ]
-}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/core#BatterySensor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1572,12 +1742,6 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
   } ]
 }, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/core#Button",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason"
-  } ]
-}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/core#Device",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1585,69 +1749,51 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Device"
-  } ]
-}, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/core#Error",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Error"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#StatusProperty"
-  } ]
-}, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/core#Periodic",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason"
-  } ]
-}, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/core#PowerOn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason"
-  } ]
-}, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/core#Presence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Presence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#StatusProperty"
+    "@id" : "https://saref.etsi.org/core#Device"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#ActReason"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "it responds to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Sensor"
-  } ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Device"
   } ]
 }, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/core#StorageCapacity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Storage Capacity"
+  "@id" : "https://auroral.iot.linkeddata.es/def/core#hasId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://saref.etsi.org/core#Device"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#StatusProperty"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has id"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/core#SwitchStatus",
+  "@id" : "https://auroral.iot.linkeddata.es/def/core#serialNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://saref.etsi.org/core#Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/core#versionNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://saref.etsi.org/core#Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://saref.etsi.org/core#Device",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Switch Status"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#StatusProperty"
+    "@value" : "Device"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core#Property",

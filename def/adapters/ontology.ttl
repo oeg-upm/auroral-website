@@ -65,81 +65,49 @@
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#ID-Device
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#ID-Device> rdf:type owl:DatatypeProperty ;
-                                                                       rdfs:domain :EnergyMonitor ,
-                                                                                   :FloodSensor ,
-                                                                                   :GPSEmergencyButton ,
-                                                                                   :HumiditySensor ,
-                                                                                   :MonitoringSensor ,
-                                                                                   :MotionSensor ,
-                                                                                   :SoilMoistureSEnsor ,
-                                                                                   :Thermometer ,
-                                                                                   :WasteBinSensor ,
-                                                                                   :WaterAMRSensor ,
-                                                                                   :WaterValveActuator ,
-                                                                                   :WeatherSensor ,
-                                                                                   <https://auroral.iot.linkeddata.es/def/core#Actuator> ,
-                                                                                   <https://auroral.iot.linkeddata.es/def/core#Device> ,
-                                                                                   <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                                                                       rdfs:comment "Device Identifier" ;
-                                                                       rdfs:label "ID Device" .
+###  https://auroral.iot.linkeddata.es/def/adapters#from-timestamp
+:from-timestamp rdf:type owl:DatatypeProperty ;
+                rdfs:domain :MonitoringSensor ,
+                            :WeatherSensor ;
+                rdfs:comment "UTC time in ISO 8601 formatted timestamp for when to get data From" .
 
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#from-timestamp
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#from-timestamp> rdf:type owl:DatatypeProperty ;
-                                                                            rdfs:domain :MonitoringSensor ,
-                                                                                        :WeatherSensor ;
-                                                                            rdfs:comment "UTC time in ISO 8601 formatted timestamp for when to get data From" .
+###  https://auroral.iot.linkeddata.es/def/adapters#hasHeight
+:hasHeight rdf:type owl:DatatypeProperty ;
+           rdfs:domain :SoilMoisture ;
+           rdfs:range xsd:float ;
+           rdfs:label "has height" .
 
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#has-location
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#has-location> rdf:type owl:DatatypeProperty ;
-                                                                          rdfs:domain :EnergyMonitor ,
-                                                                                      :FloodSensor ,
-                                                                                      :GPSEmergencyButton ,
-                                                                                      :HumiditySensor ,
-                                                                                      :MonitoringSensor ,
-                                                                                      :MotionSensor ,
-                                                                                      :SoilMoistureSEnsor ,
-                                                                                      :Thermometer ,
-                                                                                      :WasteBinSensor ,
-                                                                                      :WaterAMRSensor ,
-                                                                                      :WaterValveActuator ,
-                                                                                      :WeatherSensor ,
-                                                                                      <https://auroral.iot.linkeddata.es/def/core#Actuator> ,
-                                                                                      <https://auroral.iot.linkeddata.es/def/core#Device> ,
-                                                                                      <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                                                                          rdfs:comment "location of the device" .
+###  https://auroral.iot.linkeddata.es/def/adapters#hasVolume
+:hasVolume rdf:type owl:DatatypeProperty ;
+           rdfs:domain :SoilMoisture ;
+           rdfs:range xsd:float ;
+           rdfs:label "has volume" .
 
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#has-timestamp
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#has-timestamp> rdf:type owl:DatatypeProperty ;
-                                                                           rdfs:domain :MotionSensor ,
-                                                                                       :SoilMoistureSEnsor ,
-                                                                                       :WasteBinSensor ,
-                                                                                       :WaterAMRSensor ,
-                                                                                       :WeatherSensor ;
-                                                                           rdfs:comment "Timestamp when the measure was detected" .
+###  https://auroral.iot.linkeddata.es/def/adapters#to-timestamp
+:to-timestamp rdf:type owl:DatatypeProperty ;
+              rdfs:comment "UTC time in ISO 8601 formatted timestamp for when to get data TO" .
 
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#hasHeight
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#hasHeight> rdf:type owl:DatatypeProperty ;
-                                                                       rdfs:domain :SoilMoisture ;
-                                                                       rdfs:range xsd:float ;
-                                                                       rdfs:label "has height" .
+###  https://auroral.iot.linkeddata.es/def/core#hasId
+<https://auroral.iot.linkeddata.es/def/core#hasId> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://saref.etsi.org/core#Device> ;
+                                                   rdfs:range xsd:string ;
+                                                   rdfs:label "has id" .
 
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#hasVolume
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#hasVolume> rdf:type owl:DatatypeProperty ;
-                                                                       rdfs:domain :SoilMoisture ;
-                                                                       rdfs:range xsd:float ;
-                                                                       rdfs:label "has volume" .
+###  https://auroral.iot.linkeddata.es/def/core#serialNumber
+<https://auroral.iot.linkeddata.es/def/core#serialNumber> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:domain <https://saref.etsi.org/core#Device> ;
+                                                          rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#to-timestamp
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#to-timestamp> rdf:type owl:DatatypeProperty ;
-                                                                          rdfs:comment "UTC time in ISO 8601 formatted timestamp for when to get data TO" .
+###  https://auroral.iot.linkeddata.es/def/core#versionNumber
+<https://auroral.iot.linkeddata.es/def/core#versionNumber> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <https://saref.etsi.org/core#Device> ;
+                                                           rdfs:range xsd:string .
 
 
 #################################################################
@@ -148,14 +116,19 @@
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#AccumulatedPercipitation
 :AccumulatedPercipitation rdf:type owl:Class ;
-                          rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-                          rdfs:label "Accumulated Percipitation" .
+                          rdfs:subClassOf <https://saref.etsi.org/core#Property> .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#ActReason
 :ActReason rdf:type owl:Class ;
            rdfs:subClassOf :StatusProperty ;
            rdfs:label "Act reason" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#AirConditionningBasic
+:AirConditionningBasic rdf:type owl:Class ;
+                       rdfs:subClassOf :CoolingSensor ,
+                                       :HeatingSensor .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#AirQuality
@@ -167,6 +140,12 @@
 :AirQualitySensor rdf:type owl:Class ;
                   rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
                   rdfs:label "Air Quality Sensor" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Alert
+:Alert rdf:type owl:Class ;
+       rdfs:subClassOf :StatusProperty ;
+       rdfs:label "Alert" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty
@@ -190,6 +169,26 @@
          rdfs:label "Ammonia" .
 
 
+###  https://auroral.iot.linkeddata.es/def/adapters#BoilerBiomass
+:BoilerBiomass rdf:type owl:Class ;
+               rdfs:subClassOf :BoilerSensor .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#BoilerNgas
+:BoilerNgas rdf:type owl:Class ;
+            rdfs:subClassOf :BoilerSensor .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#BoilerOil
+:BoilerOil rdf:type owl:Class ;
+           rdfs:subClassOf :BoilerSensor .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#BoilerSensor
+:BoilerSensor rdf:type owl:Class ;
+              rdfs:subClassOf :HeatingSensor .
+
+
 ###  https://auroral.iot.linkeddata.es/def/adapters#CarbonDioxide
 :CarbonDioxide rdf:type owl:Class ;
                rdfs:subClassOf :AirQuality ;
@@ -202,10 +201,20 @@
                 rdfs:label "Carbon Monoxide" .
 
 
+###  https://auroral.iot.linkeddata.es/def/adapters#CloudCover
+:CloudCover rdf:type owl:Class ;
+            rdfs:subClassOf :AmbientProperty .
+
+
 ###  https://auroral.iot.linkeddata.es/def/adapters#CoarseParticulateMatter
 :CoarseParticulateMatter rdf:type owl:Class ;
                          rdfs:subClassOf :AirQuality ;
                          rdfs:label "Coarse Particulate Matter" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor
+:CoolingSensor rdf:type owl:Class ;
+               rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#EnergyMonitor
@@ -220,6 +229,12 @@
                 rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
                 rdfs:comment "It regroups the properties related to the energy such as: the battery level, the totalreturnedEnergy, the TotalEnergy, the PowerFactor, the Gridvoltage, and so one." ;
                 rdfs:label "Energy Property" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Error
+:Error rdf:type owl:Class ;
+       rdfs:subClassOf :StatusProperty ;
+       rdfs:label "Error" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#FineParticlesMatter
@@ -253,6 +268,23 @@
 :HealthProperty rdf:type owl:Class ;
                 rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
                 rdfs:label "Health Property" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirtoAir
+:HeatPumpAirtoAir rdf:type owl:Class ;
+                  rdfs:subClassOf :CoolingSensor ,
+                                  :HeatingSensor .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirtoWater
+:HeatPumpAirtoWater rdf:type owl:Class ;
+                    rdfs:subClassOf :CoolingSensor ,
+                                    :HeatingSensor .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor
+:HeatingSensor rdf:type owl:Class ;
+               rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#HumidityAmbientProperty
@@ -340,10 +372,30 @@
     rdfs:label "PV" .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Percipitation
-:Percipitation rdf:type owl:Class ;
-               rdfs:subClassOf :AmbientProperty ;
-               rdfs:label "Percipitation" .
+###  https://auroral.iot.linkeddata.es/def/adapters#PVBIntegrated
+:PVBIntegrated rdf:type owl:Class ;
+               rdfs:subClassOf :PV ;
+               rdfs:label "PV Bintegrated" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#PVFaçade
+:PVFaçade rdf:type owl:Class ;
+          rdfs:subClassOf :PV .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#PVGround
+:PVGround rdf:type owl:Class ;
+          rdfs:subClassOf :PV .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#PVRoofFlat
+:PVRoofFlat rdf:type owl:Class ;
+            rdfs:subClassOf :PV .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#PVRoofStanled
+:PVRoofStanled rdf:type owl:Class ;
+               rdfs:subClassOf :PV .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#PersonCounter
@@ -356,7 +408,19 @@
 :PersonCounterSensor rdf:type owl:Class ;
                      rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
                      rdfs:comment "The person sounter sensor is designed to count the number of person that visit a specific city" ;
-                     rdfs:label "Peron Counter Sensor" .
+                     rdfs:label "Person Counter Sensor" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Precipitation
+:Precipitation rdf:type owl:Class ;
+               rdfs:subClassOf :AmbientProperty ;
+               rdfs:label "Precipitation" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Presence
+:Presence rdf:type owl:Class ;
+          rdfs:subClassOf :StatusProperty ;
+          rdfs:label "Presence" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#Presence_Sensor
@@ -438,16 +502,28 @@
                 rdfs:label "Status Property" .
 
 
+###  https://auroral.iot.linkeddata.es/def/adapters#StorageCapacity
+:StorageCapacity rdf:type owl:Class ;
+                 rdfs:subClassOf :StatusProperty ;
+                 rdfs:label "Storage Capacity" .
+
+
 ###  https://auroral.iot.linkeddata.es/def/adapters#SulphurDioxide
 :SulphurDioxide rdf:type owl:Class ;
                 rdfs:subClassOf :AirQuality ;
-                rdfs:label "sulphur Dioxide" .
+                rdfs:label "Sulphur Dioxide" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#Switch
 :Switch rdf:type owl:Class ;
         rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Actuator> ;
         rdfs:label "Switch" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#SwitchStatus
+:SwitchStatus rdf:type owl:Class ;
+              rdfs:subClassOf :StatusProperty ;
+              rdfs:label "Switch Status" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#TRAFXProperty
@@ -515,12 +591,6 @@
                                                       rdfs:label "Actuator" .
 
 
-###  https://auroral.iot.linkeddata.es/def/core#Alert
-<https://auroral.iot.linkeddata.es/def/core#Alert> rdf:type owl:Class ;
-                                                   rdfs:subClassOf :StatusProperty ;
-                                                   rdfs:label "Alert" .
-
-
 ###  https://auroral.iot.linkeddata.es/def/core#BatterySensor
 <https://auroral.iot.linkeddata.es/def/core#BatterySensor> rdf:type owl:Class ;
                                                            rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
@@ -529,20 +599,9 @@
 
 ###  https://auroral.iot.linkeddata.es/def/core#Device
 <https://auroral.iot.linkeddata.es/def/core#Device> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://saref.etsi.org/core#Device> ;
                                                     rdfs:comment "It is designed to realize a specific task. This task can be a detection of an occurred event or the initiation of an action. It has two sub-classes (sensor and actuator)." ;
                                                     rdfs:label "Device" .
-
-
-###  https://auroral.iot.linkeddata.es/def/core#Error
-<https://auroral.iot.linkeddata.es/def/core#Error> rdf:type owl:Class ;
-                                                   rdfs:subClassOf :StatusProperty ;
-                                                   rdfs:label "Error" .
-
-
-###  https://auroral.iot.linkeddata.es/def/core#Presence
-<https://auroral.iot.linkeddata.es/def/core#Presence> rdf:type owl:Class ;
-                                                      rdfs:subClassOf :StatusProperty ;
-                                                      rdfs:label "Presence" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/core#Sensor
@@ -550,16 +609,9 @@
                                                     rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Device> .
 
 
-###  https://auroral.iot.linkeddata.es/def/core#StorageCapacity
-<https://auroral.iot.linkeddata.es/def/core#StorageCapacity> rdf:type owl:Class ;
-                                                             rdfs:subClassOf :StatusProperty ;
-                                                             rdfs:label "Storage Capacity" .
-
-
-###  https://auroral.iot.linkeddata.es/def/core#SwitchStatus
-<https://auroral.iot.linkeddata.es/def/core#SwitchStatus> rdf:type owl:Class ;
-                                                          rdfs:subClassOf :StatusProperty ;
-                                                          rdfs:label "Switch Status" .
+###  https://saref.etsi.org/core#Device
+<https://saref.etsi.org/core#Device> rdf:type owl:Class ;
+                                     rdfs:label "Device" .
 
 
 ###  https://saref.etsi.org/core#Property
@@ -572,523 +624,594 @@
 #    Individuals
 #################################################################
 
-###  http://www.opengis.net/ont/geosparql#ActiveEnergy
-<http://www.opengis.net/ont/geosparql#ActiveEnergy> rdf:type owl:NamedIndividual ,
-                                                             :EnergyProperty ;
-                                                    rdfs:comment "Active Energy" ;
-                                                    rdfs:label "Active Energy" .
-
-
-###  http://www.opengis.net/ont/geosparql#InstantaneousReactiveInductivePower
-<http://www.opengis.net/ont/geosparql#InstantaneousReactiveInductivePower> rdf:type owl:NamedIndividual ,
-                                                                                    :EnergyProperty ;
-                                                                           rdfs:label "Instantaneous Reactive Inductive Power" .
-
-
-###  http://www.opengis.net/ont/geosparql#ReactiveCpacitiveEnergy
-<http://www.opengis.net/ont/geosparql#ReactiveCpacitiveEnergy> rdf:type owl:NamedIndividual ,
-                                                                        :EnergyProperty ;
-                                                               rdfs:label "Reactive Capacitive Energy" .
-
-
-###  http://www.opengis.net/ont/geosparql#ReactiveInductiveEnergy
-<http://www.opengis.net/ont/geosparql#ReactiveInductiveEnergy> rdf:type owl:NamedIndividual ,
-                                                                        :EnergyProperty ;
-                                                               rdfs:label "Reactive Inductive Energy" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#AccumulatedWater
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#AccumulatedWater> rdf:type owl:NamedIndividual ,
-                                                                                       :FloodAmbientProperty ;
-                                                                              rdfs:comment "Accumulated Water" ;
-                                                                              rdfs:label "Accumulated Water" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#AmbientTemperature
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#AmbientTemperature> rdf:type owl:NamedIndividual ,
-                                                                                         :TemperatureAmbientProperty ;
-                                                                                rdfs:label "Ambient Temperature" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#AngularUnit
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#AngularUnit> rdf:type owl:NamedIndividual ,
-                                                                                  :SpaceProperty ;
-                                                                         rdfs:label "Angular Unit" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#AtmosphoricPressure
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#AtmosphoricPressure> rdf:type owl:NamedIndividual ,
-                                                                                          :Pressure ;
-                                                                                 rdfs:comment "Atmosphoric Pressure" ;
-                                                                                 rdfs:label "Atmospheric Pressure" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#AverageMovementShare
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#AverageMovementShare> rdf:type owl:NamedIndividual ,
-                                                                                           :MotionProperty ;
-                                                                                  rdfs:label "Average Movement Share" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#AverageMovementTime
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#AverageMovementTime> rdf:type owl:NamedIndividual ,
-                                                                                          :MotionProperty ;
-                                                                                 rdfs:label "Average Movement Time" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#BasalMetabolicRate
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#BasalMetabolicRate> rdf:type owl:NamedIndividual ,
-                                                                                         :HealthProperty ;
-                                                                                rdfs:comment "Basal Metabolic Rate (BMR) is the number of calories you burn as your body performs basic (basal) life-sustaining function." ;
-                                                                                rdfs:label "Basal Metabolic Rate" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#BatteryLevel
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#BatteryLevel> rdf:type owl:NamedIndividual ,
-                                                                                   :EnergyProperty .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#BeaconMac
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#BeaconMac> rdf:type owl:NamedIndividual ,
-                                                                                :SpaceProperty ;
-                                                                       rdfs:label "Beacon Mac" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#BodyFatPercentage
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#BodyFatPercentage> rdf:type owl:NamedIndividual ,
-                                                                                        :HealthProperty ;
-                                                                               rdfs:comment "The amount of essential fat differs between men and women, and is typically around 2-5% in men, and 10-13% in women." ;
-                                                                               rdfs:label "Body Fat Percentage" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#BodyMassIndex
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#BodyMassIndex> rdf:type owl:NamedIndividual ,
-                                                                                    :HealthProperty ;
-                                                                           rdfs:comment "Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women." ;
-                                                                           rdfs:label "Body Mass Index" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#BoneMineralContent
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#BoneMineralContent> rdf:type owl:NamedIndividual ,
-                                                                                         :HealthProperty ;
-                                                                                rdfs:comment "Calcium is the largest contributor to bone mineral content. It exists in hydroxyapatite crystals, which contribute to bone strength, and acts as a reserve to maintain serum calcium levels within a narrow range during periods of dietary calcium inadequacy." ;
-                                                                                rdfs:label "Bone Mineral Content" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#CO2Concentration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#CO2Concentration> rdf:type owl:NamedIndividual ,
-                                                                                       :CarbonDioxide ;
-                                                                              rdfs:label "CO2 Concentration" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#COConcentration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#COConcentration> rdf:type owl:NamedIndividual ,
-                                                                                      :CarbonMonoxide ;
-                                                                             rdfs:label "CO Concentration" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#CaloriesBurned
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#CaloriesBurned> rdf:type owl:NamedIndividual ,
-                                                                                     :HealthProperty ;
-                                                                            rdfs:comment "indicates how many clories were burned by wlking for example" ;
-                                                                            rdfs:label "Calories Burned" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#DiastolicBloodPressure
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#DiastolicBloodPressure> rdf:type owl:NamedIndividual ,
-                                                                                             :HealthProperty ;
-                                                                                    rdfs:comment "Diastolic blood level for a patient" ;
-                                                                                    rdfs:label "Diastolic Blood Pressure" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#Distance
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#Distance> rdf:type owl:NamedIndividual ,
-                                                                               :SpaceProperty ;
-                                                                      rdfs:label "Distance" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#DistanceWalked
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#DistanceWalked> rdf:type owl:NamedIndividual ,
-                                                                                     :MotionProperty ;
-                                                                            rdfs:label "Distance Walked" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#DivPosition
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#DivPosition> rdf:type owl:NamedIndividual ,
-                                                                                  :SpaceProperty ;
-                                                                         rdfs:label "Div Position" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#ElectricCurrent
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#ElectricCurrent> rdf:type owl:NamedIndividual ,
-                                                                                      :EnergyProperty ;
-                                                                             rdfs:label "Electric Current" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#ElectricVoltage
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#ElectricVoltage> rdf:type owl:NamedIndividual ,
-                                                                                      :EnergyProperty ;
-                                                                             rdfs:comment "Electric Voltage" ;
-                                                                             rdfs:label "Electric Voltage" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyConsumption
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyConsumption> rdf:type owl:NamedIndividual ,
-                                                                                        :EnergyProperty ;
-                                                                               rdfs:label "Energy Consumption" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyProduction
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#EnergyProduction> rdf:type owl:NamedIndividual ,
-                                                                                       :EnergyProperty ;
-                                                                              rdfs:label "Energy Production" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#Flood
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#Flood> rdf:type owl:NamedIndividual ,
-                                                                            :FloodAmbientProperty .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSAltitude
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSAltitude> rdf:type owl:NamedIndividual ,
-                                                                                  :SpaceProperty ;
-                                                                         rdfs:label "GPS Altitude" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSLatitude
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSLatitude> rdf:type owl:NamedIndividual ,
-                                                                                  :SpaceProperty ;
-                                                                         rdfs:label "GPS Latitude" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSLongitude
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#GPSLongitude> rdf:type owl:NamedIndividual ,
-                                                                                   :SpaceProperty ;
-                                                                          rdfs:label "GPS Longitude" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridCapacity
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridCapacity> rdf:type owl:NamedIndividual ,
-                                                                                   :EnergyProperty ;
-                                                                          rdfs:label "Grid Capacity" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridDemand
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridDemand> rdf:type owl:NamedIndividual ,
-                                                                                 :EnergyProperty ;
-                                                                        rdfs:label "Grid Demand" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridFrequency
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridFrequency> rdf:type owl:NamedIndividual ,
-                                                                                    :EnergyProperty ;
-                                                                           rdfs:label "Grid Frequency" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridVoltage
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#GridVoltage> rdf:type owl:NamedIndividual ,
-                                                                                  :EnergyProperty ;
-                                                                         rdfs:label "Grid Voltage" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#HeartRate
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#HeartRate> rdf:type owl:NamedIndividual ,
-                                                                                :HealthProperty ;
-                                                                       rdfs:comment "Heart rate level for a patient" ;
-                                                                       rdfs:label "Heart Rate" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#HourlyPersonCounter
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#HourlyPersonCounter> rdf:type owl:NamedIndividual ,
-                                                                                          :PersonCounter ;
-                                                                                 rdfs:label "Hourly person counter" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#Illuminance
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#Illuminance> rdf:type owl:NamedIndividual ,
-                                                                                  :LuminusFlux ;
-                                                                         rdfs:label "Illuminance" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousActivePower
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousActivePower> rdf:type owl:NamedIndividual ,
-                                                                                               :EnergyProperty ;
-                                                                                      rdfs:label "Instantaneous Active Power" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousApparentPower
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousApparentPower> rdf:type owl:NamedIndividual ,
-                                                                                                 :EnergyProperty ;
-                                                                                        rdfs:comment "Instantaneous Apparent Power" ;
-                                                                                        rdfs:label "Instantaneous Apparent Power" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousCapacitiveInductivePower
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousCapacitiveInductivePower> rdf:type owl:NamedIndividual ,
-                                                                                                            :EnergyProperty ;
-                                                                                                   rdfs:label "Instantaneous Capacitive Inductive Power" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousReactivePower
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#InstantaneousReactivePower> rdf:type owl:NamedIndividual ,
-                                                                                                 :EnergyProperty ;
-                                                                                        rdfs:label "Instantaneous Reactive Power" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#LightColor
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#LightColor> rdf:type owl:NamedIndividual ,
-                                                                                 :LightProperty ;
-                                                                        rdfs:label "Light Color" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#Motion
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#Motion> rdf:type owl:NamedIndividual ,
-                                                                             :MotionProperty ;
-                                                                    rdfs:label "Motion" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#MuscleMass
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#MuscleMass> rdf:type owl:NamedIndividual ,
-                                                                                 :HealthProperty ;
-                                                                        rdfs:comment "Muscle mass is the amount of muscle in your body, including skeletal muscles, smooth muscles, and cardiac muscles." ;
-                                                                        rdfs:label "Muscle Mass" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#NH3Concentration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#NH3Concentration> rdf:type owl:NamedIndividual ,
-                                                                                       :Ammonia ;
-                                                                              rdfs:comment "Ammonia - NH3 - is a gas commonly used as a refrigerant in cooling systems." ;
-                                                                              rdfs:label "NH3 Concentration" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#NO2Concentration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#NO2Concentration> rdf:type owl:NamedIndividual ,
-                                                                                       :NitrogenDioxide ;
-                                                                              rdfs:label "NO2 Concentration" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#NOConcentration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#NOConcentration> rdf:type owl:NamedIndividual ,
-                                                                                      :NitrogenMonoxide ;
-                                                                             rdfs:label "No Concentration" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#NoiseLevel
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#NoiseLevel> rdf:type owl:NamedIndividual ,
-                                                                                 :Sound ;
-                                                                        rdfs:label "Noise Level" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#O3Concentration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#O3Concentration> rdf:type owl:NamedIndividual ,
-                                                                                      :Ozone ;
-                                                                             rdfs:comment "O3 Concentration" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#PM10Concentration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#PM10Concentration> rdf:type owl:NamedIndividual ,
-                                                                                        :CoarseParticulateMatter ;
-                                                                               rdfs:comment """PM10 are very small particles found in dust and smoke. They have a diameter of 10 micrometres (0.01 mm) or smaller.
-
-PM10 particles are a common air pollutant.""" ;
-                                                                               rdfs:label "PM10 Concentration" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#PM2.5Concentration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#PM2.5Concentration> rdf:type owl:NamedIndividual ,
-                                                                                         :FineParticlesMatter ;
-                                                                                rdfs:comment "Fine particulate matter (PM2.5) is an air pollutant that is a concern for people's health when levels in air are high." ;
-                                                                                rdfs:label "PM2.5 Concentration" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#PowerFactor
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#PowerFactor> rdf:type owl:NamedIndividual ,
-                                                                                  :EnergyProperty ;
-                                                                         rdfs:label "Power Factor" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#Protein
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#Protein> rdf:type owl:NamedIndividual ,
-                                                                              :HealthProperty ;
-                                                                     rdfs:label "Protein" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#Pulse
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#Pulse> rdf:type owl:NamedIndividual ,
-                                                                            :HealthProperty ;
-                                                                   rdfs:comment "The rhythmic dilation of an artery that results from beating of the heart. Pulse is often measured by feeling the arteries of the wrist or neck." ;
-                                                                   rdfs:label "Pulse" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#Rainfall
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#Rainfall> rdf:type owl:NamedIndividual ,
-                                                                               :Percipitation ;
-                                                                      rdfs:label "Rainfall" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#ReturnedEnergy
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#ReturnedEnergy> rdf:type owl:NamedIndividual ,
-                                                                                     :EnergyProperty ;
-                                                                            rdfs:label "Returned Energy" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#SO2Concentration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#SO2Concentration> rdf:type owl:NamedIndividual ,
-                                                                                       :SulphurDioxide ;
-                                                                              rdfs:label "SO2 Concentration" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#Sleep
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#Sleep> rdf:type owl:NamedIndividual ,
-                                                                            :HealthProperty ;
-                                                                   rdfs:comment "control the sleep disorders of a patient" ;
-                                                                   rdfs:label "Sleep" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#Snowfall
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#Snowfall> rdf:type owl:NamedIndividual ,
-                                                                               :Percipitation ;
-                                                                      rdfs:label "Snowfall" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#Steps
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#Steps> rdf:type owl:NamedIndividual ,
-                                                                            :MotionProperty .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#SugarLevel
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#SugarLevel> rdf:type owl:NamedIndividual ,
-                                                                                 :HealthProperty ;
-                                                                        rdfs:comment "A blood sugar level less than 140 mg/dL (7.8 mmol/L) is normal. A reading of more than 200 mg/dL (11.1 mmol/L) after two hours means you have diabetes. A reading between 140 and 199 mg/dL (7.8 mmol/L and 11.0 mmol/L) means you have prediabetes." ;
-                                                                        rdfs:label "Sugar Level" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#SystolicBloodPressure
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#SystolicBloodPressure> rdf:type owl:NamedIndividual ,
-                                                                                            :HealthProperty ;
-                                                                                   rdfs:comment "niveau de systolic blood pressure for a patient" ;
-                                                                                   rdfs:label "Systolic Blood Pressure" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#TotalBodyWaterPercentage
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#TotalBodyWaterPercentage> rdf:type owl:NamedIndividual ,
-                                                                                               :HealthProperty ;
-                                                                                      rdfs:comment "Most of the human body is water, with an average of roughly 60%. The amount of water in the body changes slightly with age, sex, and hydration levels." ;
-                                                                                      rdfs:label "Total Body Water Percentage" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#TotalEnergy
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#TotalEnergy> rdf:type owl:NamedIndividual ,
-                                                                                  :EnergyProperty ;
-                                                                         rdfs:label "Total Energy" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#TotalReturnedEnergy
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#TotalReturnedEnergy> rdf:type owl:NamedIndividual ,
-                                                                                          :EnergyProperty ;
-                                                                                 rdfs:label "Accumulated Percipitation" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#UVIndex
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#UVIndex> rdf:type owl:NamedIndividual ,
-                                                                              :AmbientSolarRadiation .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#Vibration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#Vibration> rdf:type owl:NamedIndividual ,
-                                                                                :MotionProperty ;
-                                                                       rdfs:label "Vibration" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#VisceralFatRating
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#VisceralFatRating> rdf:type owl:NamedIndividual ,
-                                                                                        :HealthProperty ;
-                                                                               rdfs:comment "According to the manufacturer's information, a rating between 1 and 12 indicates a healthy level of visceral fat, whereas a rating between 13 and 59 indicates excess visceral fat." ;
-                                                                               rdfs:label "Visceral Fat Rating" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#WeatherCondition
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#WeatherCondition> rdf:type owl:NamedIndividual ,
-                                                                                       :Weather ;
-                                                                              rdfs:label "Weather Condition" .
-
-
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#Weight
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#Weight> rdf:type owl:NamedIndividual ,
-                                                                             :HealthProperty ;
-                                                                    rdfs:comment "Weight of patient" ;
-                                                                    rdfs:label "Weight" .
-
-
 ###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindDirection
 <http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindDirection> rdf:type owl:NamedIndividual ,
                                                                                     :WindAmbientProperty ;
                                                                            rdfs:label "Wind Direction" .
 
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#XAxisAcceleration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#XAxisAcceleration> rdf:type owl:NamedIndividual ,
-                                                                                        :SpaceProperty ;
-                                                                               rdfs:label "XAxix Acceleration" .
+###  https://auroral.iot.linkeddata.es/def/adapters#AccumulatedPercipitation
+:AccumulatedPercipitation rdf:type owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#YAxisAcceleration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#YAxisAcceleration> rdf:type owl:NamedIndividual ,
-                                                                                        :SpaceProperty ;
-                                                                               rdfs:label "YAxis Acceleration" .
+###  https://auroral.iot.linkeddata.es/def/adapters#AccumulatedWater
+:AccumulatedWater rdf:type owl:NamedIndividual ,
+                           :FloodAmbientProperty ;
+                  rdfs:comment "Accumulated Water" ;
+                  rdfs:label "Accumulated Water" .
 
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#ZAxisAcceleration
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#ZAxisAcceleration> rdf:type owl:NamedIndividual ,
-                                                                                        :SpaceProperty ;
-                                                                               rdfs:label "ZAxis Acceleration" .
+###  https://auroral.iot.linkeddata.es/def/adapters#ActiveEnergy
+:ActiveEnergy rdf:type owl:NamedIndividual ,
+                       :EnergyProperty ;
+              rdfs:comment "Active Energy" ;
+              rdfs:label "Active Energy" .
 
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#relativeHumidity
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#relativeHumidity> rdf:type owl:NamedIndividual ,
-                                                                                       :HumidityAmbientProperty .
+###  https://auroral.iot.linkeddata.es/def/adapters#Alarm
+:Alarm rdf:type owl:NamedIndividual ,
+                :ActReason .
 
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#windSpeed
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#windSpeed> rdf:type owl:NamedIndividual ,
-                                                                                :WindAmbientProperty .
+###  https://auroral.iot.linkeddata.es/def/adapters#AmbientTemperature
+:AmbientTemperature rdf:type owl:NamedIndividual ,
+                             :TemperatureAmbientProperty ;
+                    rdfs:label "Ambient Temperature" .
 
 
-###  https://auroral.iot.linkeddata.es/def/core#Alarm
-<https://auroral.iot.linkeddata.es/def/core#Alarm> rdf:type owl:NamedIndividual ,
-                                                            :ActReason .
+###  https://auroral.iot.linkeddata.es/def/adapters#AngularUnit
+:AngularUnit rdf:type owl:NamedIndividual ,
+                      :SpaceProperty ;
+             rdfs:label "Angular Unit" .
 
 
-###  https://auroral.iot.linkeddata.es/def/core#Battery
-<https://auroral.iot.linkeddata.es/def/core#Battery> rdf:type owl:NamedIndividual ,
-                                                              :ActReason .
+###  https://auroral.iot.linkeddata.es/def/adapters#AtmosphoricPressure
+:AtmosphoricPressure rdf:type owl:NamedIndividual ,
+                              :Pressure ;
+                     rdfs:comment "Atmosphoric Pressure" ;
+                     rdfs:label "Atmospheric Pressure" .
 
 
-###  https://auroral.iot.linkeddata.es/def/core#Button
-<https://auroral.iot.linkeddata.es/def/core#Button> rdf:type owl:NamedIndividual ,
-                                                             :ActReason .
+###  https://auroral.iot.linkeddata.es/def/adapters#AverageMovementShare
+:AverageMovementShare rdf:type owl:NamedIndividual ,
+                               :MotionProperty ;
+                      rdfs:label "Average Movement Share" .
 
 
-###  https://auroral.iot.linkeddata.es/def/core#Periodic
-<https://auroral.iot.linkeddata.es/def/core#Periodic> rdf:type owl:NamedIndividual ,
-                                                               :ActReason .
+###  https://auroral.iot.linkeddata.es/def/adapters#AverageMovementTime
+:AverageMovementTime rdf:type owl:NamedIndividual ,
+                              :MotionProperty ;
+                     rdfs:label "Average Movement Time" .
 
 
-###  https://auroral.iot.linkeddata.es/def/core#PowerOn
-<https://auroral.iot.linkeddata.es/def/core#PowerOn> rdf:type owl:NamedIndividual ,
-                                                              :ActReason .
+###  https://auroral.iot.linkeddata.es/def/adapters#BasalMetabolicRate
+:BasalMetabolicRate rdf:type owl:NamedIndividual ,
+                             :HealthProperty ;
+                    rdfs:comment "Basal Metabolic Rate (BMR) is the number of calories you burn as your body performs basic (basal) life-sustaining function." ;
+                    rdfs:label "Basal Metabolic Rate" .
 
 
-###  https://auroral.iot.linkeddata.es/def/core#Sensor
-<https://auroral.iot.linkeddata.es/def/core#Sensor> rdf:type owl:NamedIndividual ,
-                                                             :ActReason .
+###  https://auroral.iot.linkeddata.es/def/adapters#Battery
+:Battery rdf:type owl:NamedIndividual ,
+                  :ActReason .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#BatteryLevel
+:BatteryLevel rdf:type owl:NamedIndividual ,
+                       :EnergyProperty ;
+              rdfs:label "Battery level" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#BeaconMac
+:BeaconMac rdf:type owl:NamedIndividual ,
+                    :SpaceProperty ;
+           rdfs:label "Beacon Mac" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#BodyFatPercentage
+:BodyFatPercentage rdf:type owl:NamedIndividual ,
+                            :HealthProperty ;
+                   rdfs:comment "The amount of essential fat differs between men and women, and is typically around 2-5% in men, and 10-13% in women." ;
+                   rdfs:label "Body Fat Percentage" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#BodyMassIndex
+:BodyMassIndex rdf:type owl:NamedIndividual ,
+                        :HealthProperty ;
+               rdfs:comment "Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women." ;
+               rdfs:label "Body Mass Index" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#BoneMineralContent
+:BoneMineralContent rdf:type owl:NamedIndividual ,
+                             :HealthProperty ;
+                    rdfs:comment "Calcium is the largest contributor to bone mineral content. It exists in hydroxyapatite crystals, which contribute to bone strength, and acts as a reserve to maintain serum calcium levels within a narrow range during periods of dietary calcium inadequacy." ;
+                    rdfs:label "Bone Mineral Content" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Button
+:Button rdf:type owl:NamedIndividual ,
+                 :ActReason .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#CO2Concentration
+:CO2Concentration rdf:type owl:NamedIndividual ,
+                           :CarbonDioxide ;
+                  rdfs:label "CO2 Concentration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#COConcentration
+:COConcentration rdf:type owl:NamedIndividual ,
+                          :CarbonMonoxide ;
+                 rdfs:label "CO Concentration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#CaloriesBurned
+:CaloriesBurned rdf:type owl:NamedIndividual ,
+                         :HealthProperty ;
+                rdfs:comment "indicates how many clories were burned by wlking for example" ;
+                rdfs:label "Calories Burned" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#DiastolicBloodPressure
+:DiastolicBloodPressure rdf:type owl:NamedIndividual ,
+                                 :HealthProperty ;
+                        rdfs:comment "Diastolic blood level for a patient" ;
+                        rdfs:label "Diastolic Blood Pressure" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiation
+:DiffuseRadiation rdf:type owl:NamedIndividual ,
+                           :AmbientSolarRadiation ;
+                  rdfs:label "Diffuse Radiation" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiationInstant
+:DiffuseRadiationInstant rdf:type owl:NamedIndividual ,
+                                  :AmbientSolarRadiation ;
+                         rdfs:label "Diffuse Radiation Instant" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradiance
+:DirectNormalIrradiance rdf:type owl:NamedIndividual ,
+                                 :AmbientSolarRadiation ;
+                        rdfs:label "Direct Normal Irradiance" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradianceInstant
+:DirectNormalIrradianceInstant rdf:type owl:NamedIndividual ,
+                                        :AmbientSolarRadiation ;
+                               rdfs:label "Direct Normal Irradiance Instant" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#DirectRadiation
+:DirectRadiation rdf:type owl:NamedIndividual ,
+                          :AmbientSolarRadiation ;
+                 rdfs:label "Direct Radiation" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#DirectRadiationInstant
+:DirectRadiationInstant rdf:type owl:NamedIndividual ,
+                                 :AmbientSolarRadiation ;
+                        rdfs:label "Direct Radiation Instant" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Distance
+:Distance rdf:type owl:NamedIndividual ,
+                   :SpaceProperty ;
+          rdfs:label "Distance" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#DistanceWalked
+:DistanceWalked rdf:type owl:NamedIndividual ,
+                         :MotionProperty ;
+                rdfs:label "Distance Walked" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#DivPosition
+:DivPosition rdf:type owl:NamedIndividual ,
+                      :SpaceProperty ;
+             rdfs:label "Div Position" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#ElectricCurrent
+:ElectricCurrent rdf:type owl:NamedIndividual ,
+                          :EnergyProperty ;
+                 rdfs:label "Electric Current" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#ElectricVoltage
+:ElectricVoltage rdf:type owl:NamedIndividual ,
+                          :EnergyProperty ;
+                 rdfs:comment "Electric Voltage" ;
+                 rdfs:label "Electric Voltage" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#EnergyConsumption
+:EnergyConsumption rdf:type owl:NamedIndividual ,
+                            :EnergyProperty ;
+                   rdfs:label "Energy Consumption" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#EnergyProduction
+:EnergyProduction rdf:type owl:NamedIndividual ,
+                           :EnergyProperty ;
+                  rdfs:label "Energy Production" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity
+:EnergyUseIntensity rdf:type owl:NamedIndividual ,
+                             :EnergyProperty ;
+                    rdfs:label "Energy use intensity" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Flood
+:Flood rdf:type owl:NamedIndividual ,
+                :FloodAmbientProperty .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude
+:GPSAltitude rdf:type owl:NamedIndividual ,
+                      :SpaceProperty ;
+             rdfs:label "GPS Altitude" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#GPSLatitude
+:GPSLatitude rdf:type owl:NamedIndividual ,
+                      :SpaceProperty ;
+             rdfs:label "GPS Latitude" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#GPSLongitude
+:GPSLongitude rdf:type owl:NamedIndividual ,
+                       :SpaceProperty ;
+              rdfs:label "GPS Longitude" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#GridCapacity
+:GridCapacity rdf:type owl:NamedIndividual ,
+                       :EnergyProperty ;
+              rdfs:label "Grid Capacity" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#GridDemand
+:GridDemand rdf:type owl:NamedIndividual ,
+                     :EnergyProperty ;
+            rdfs:label "Grid Demand" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#GridFrequency
+:GridFrequency rdf:type owl:NamedIndividual ,
+                        :EnergyProperty ;
+               rdfs:label "Grid Frequency" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#GridVoltage
+:GridVoltage rdf:type owl:NamedIndividual ,
+                      :EnergyProperty ;
+             rdfs:label "Grid Voltage" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#HeartRate
+:HeartRate rdf:type owl:NamedIndividual ,
+                    :HealthProperty ;
+           rdfs:comment "Heart rate level for a patient" ;
+           rdfs:label "Heart Rate" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#HourlyPersonCounter
+:HourlyPersonCounter rdf:type owl:NamedIndividual ,
+                              :PersonCounter ;
+                     rdfs:label "Hourly person counter" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Illuminance
+:Illuminance rdf:type owl:NamedIndividual ,
+                      :LuminusFlux ;
+             rdfs:label "Illuminance" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#IndoorAmbientTemperature
+:IndoorAmbientTemperature rdf:type owl:NamedIndividual ,
+                                   :TemperatureAmbientProperty ;
+                          rdfs:label "Indoor Ambient Temperature" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#InstantaneousActivePower
+:InstantaneousActivePower rdf:type owl:NamedIndividual ,
+                                   :EnergyProperty ;
+                          rdfs:label "Instantaneous Active Power" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#InstantaneousApparentPower
+:InstantaneousApparentPower rdf:type owl:NamedIndividual ,
+                                     :EnergyProperty ;
+                            rdfs:comment "Instantaneous Apparent Power" ;
+                            rdfs:label "Instantaneous Apparent Power" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#InstantaneousCapacitiveInductivePower
+:InstantaneousCapacitiveInductivePower rdf:type owl:NamedIndividual ,
+                                                :EnergyProperty ;
+                                       rdfs:label "Instantaneous Capacitive Inductive Power" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactiveInductivePower
+:InstantaneousReactiveInductivePower rdf:type owl:NamedIndividual ,
+                                              :EnergyProperty ;
+                                     rdfs:label "Instantaneous Reactive Inductive Power" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactivePower
+:InstantaneousReactivePower rdf:type owl:NamedIndividual ,
+                                     :EnergyProperty ;
+                            rdfs:label "Instantaneous Reactive Power" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#LightColor
+:LightColor rdf:type owl:NamedIndividual ,
+                     :LightProperty ;
+            rdfs:label "Light Color" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Motion
+:Motion rdf:type owl:NamedIndividual ,
+                 :MotionProperty ;
+        rdfs:label "Motion" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#MuscleMass
+:MuscleMass rdf:type owl:NamedIndividual ,
+                     :HealthProperty ;
+            rdfs:comment "Muscle mass is the amount of muscle in your body, including skeletal muscles, smooth muscles, and cardiac muscles." ;
+            rdfs:label "Muscle Mass" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#NH3Concentration
+:NH3Concentration rdf:type owl:NamedIndividual ,
+                           :Ammonia ;
+                  rdfs:comment "Ammonia - NH3 - is a gas commonly used as a refrigerant in cooling systems." ;
+                  rdfs:label "NH3 Concentration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#NO2Concentration
+:NO2Concentration rdf:type owl:NamedIndividual ,
+                           :NitrogenDioxide ;
+                  rdfs:label "NO2 Concentration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#NOConcentration
+:NOConcentration rdf:type owl:NamedIndividual ,
+                          :NitrogenMonoxide ;
+                 rdfs:label "No Concentration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#NoiseLevel
+:NoiseLevel rdf:type owl:NamedIndividual ,
+                     :Sound ;
+            rdfs:label "Noise Level" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#O3Concentration
+:O3Concentration rdf:type owl:NamedIndividual ,
+                          :Ozone ;
+                 rdfs:comment "O3 Concentration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#OutdoorAmbientTemperature
+:OutdoorAmbientTemperature rdf:type owl:NamedIndividual ,
+                                    :TemperatureAmbientProperty ;
+                           rdfs:label "Outdoor Ambient Temperature" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#PM10Concentration
+:PM10Concentration rdf:type owl:NamedIndividual ,
+                            :CoarseParticulateMatter ;
+                   rdfs:comment """PM10 are very small particles found in dust and smoke. They have a diameter of 10 micrometres (0.01 mm) or smaller.
+
+PM10 particles are a common air pollutant.""" ;
+                   rdfs:label "PM10 Concentration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#PM2.5Concentration
+:PM2.5Concentration rdf:type owl:NamedIndividual ,
+                             :FineParticlesMatter ;
+                    rdfs:comment "Fine particulate matter (PM2.5) is an air pollutant that is a concern for people's health when levels in air are high." ;
+                    rdfs:label "PM2.5 Concentration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Periodic
+:Periodic rdf:type owl:NamedIndividual ,
+                   :ActReason .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#PowerFactor
+:PowerFactor rdf:type owl:NamedIndividual ,
+                      :EnergyProperty ;
+             rdfs:label "Power Factor" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#PowerOn
+:PowerOn rdf:type owl:NamedIndividual ,
+                  :ActReason .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Protein
+:Protein rdf:type owl:NamedIndividual ,
+                  :HealthProperty ;
+         rdfs:label "Protein" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Pulse
+:Pulse rdf:type owl:NamedIndividual ,
+                :HealthProperty ;
+       rdfs:comment "The rhythmic dilation of an artery that results from beating of the heart. Pulse is often measured by feeling the arteries of the wrist or neck." ;
+       rdfs:label "Pulse" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Rainfall
+:Rainfall rdf:type owl:NamedIndividual ,
+                   :Precipitation ;
+          rdfs:label "Rainfall" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#ReactiveCpacitiveEnergy
+:ReactiveCpacitiveEnergy rdf:type owl:NamedIndividual ,
+                                  :EnergyProperty ;
+                         rdfs:label "Reactive Capacitive Energy" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#ReactiveInductiveEnergy
+:ReactiveInductiveEnergy rdf:type owl:NamedIndividual ,
+                                  :EnergyProperty ;
+                         rdfs:label "Reactive Inductive Energy" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#RelativeHumidity
+:RelativeHumidity rdf:type owl:NamedIndividual ,
+                           :HumidityAmbientProperty .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#ReturnedEnergy
+:ReturnedEnergy rdf:type owl:NamedIndividual ,
+                         :EnergyProperty ;
+                rdfs:label "Returned Energy" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#SO2Concentration
+:SO2Concentration rdf:type owl:NamedIndividual ,
+                           :SulphurDioxide ;
+                  rdfs:label "SO2 Concentration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Sensor
+:Sensor rdf:type owl:NamedIndividual ,
+                 :ActReason ;
+        rdfs:comment "it responds to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result" ;
+        rdfs:label "Sensor" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#ShortwaveRadiationInstant
+:ShortwaveRadiationInstant rdf:type owl:NamedIndividual ,
+                                    :AmbientSolarRadiation ;
+                           rdfs:label "Shortwave Radiation Instant" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Sleep
+:Sleep rdf:type owl:NamedIndividual ,
+                :HealthProperty ;
+       rdfs:comment "control the sleep disorders of a patient" ;
+       rdfs:label "Sleep" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Snowfall
+:Snowfall rdf:type owl:NamedIndividual ,
+                   :Precipitation ;
+          rdfs:label "Snowfall" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Steps
+:Steps rdf:type owl:NamedIndividual ,
+                :MotionProperty .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#SugarLevel
+:SugarLevel rdf:type owl:NamedIndividual ,
+                     :HealthProperty ;
+            rdfs:comment "A blood sugar level less than 140 mg/dL (7.8 mmol/L) is normal. A reading of more than 200 mg/dL (11.1 mmol/L) after two hours means you have diabetes. A reading between 140 and 199 mg/dL (7.8 mmol/L and 11.0 mmol/L) means you have prediabetes." ;
+            rdfs:label "Sugar Level" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#SystolicBloodPressure
+:SystolicBloodPressure rdf:type owl:NamedIndividual ,
+                                :HealthProperty ;
+                       rdfs:comment "niveau de systolic blood pressure for a patient" ;
+                       rdfs:label "Systolic Blood Pressure" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiation
+:TerrestrialRadiation rdf:type owl:NamedIndividual ,
+                               :AmbientSolarRadiation ;
+                      rdfs:label "Terrestrial Radiation" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiationInstant
+:TerrestrialRadiationInstant rdf:type owl:NamedIndividual ,
+                                      :AmbientSolarRadiation .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#TotalBodyWaterPercentage
+:TotalBodyWaterPercentage rdf:type owl:NamedIndividual ,
+                                   :HealthProperty ;
+                          rdfs:comment "Most of the human body is water, with an average of roughly 60%. The amount of water in the body changes slightly with age, sex, and hydration levels." ;
+                          rdfs:label "Total Body Water Percentage" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy
+:TotalEnergy rdf:type owl:NamedIndividual ,
+                      :EnergyProperty ;
+             rdfs:label "Total Energy" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#UVIndex
+:UVIndex rdf:type owl:NamedIndividual ,
+                  :AmbientSolarRadiation .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Vibration
+:Vibration rdf:type owl:NamedIndividual ,
+                    :MotionProperty ;
+           rdfs:label "Vibration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#VisceralFatRating
+:VisceralFatRating rdf:type owl:NamedIndividual ,
+                            :HealthProperty ;
+                   rdfs:comment "According to the manufacturer's information, a rating between 1 and 12 indicates a healthy level of visceral fat, whereas a rating between 13 and 59 indicates excess visceral fat." ;
+                   rdfs:label "Visceral Fat Rating" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#WeatherCondition
+:WeatherCondition rdf:type owl:NamedIndividual ,
+                           :Weather ;
+                  rdfs:label "Weather Condition" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Weight
+:Weight rdf:type owl:NamedIndividual ,
+                 :HealthProperty ;
+        rdfs:comment "Weight of patient" ;
+        rdfs:label "Weight" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#XAxisAcceleration
+:XAxisAcceleration rdf:type owl:NamedIndividual ,
+                            :SpaceProperty ;
+                   rdfs:label "XAxix Acceleration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#YAxisAcceleration
+:YAxisAcceleration rdf:type owl:NamedIndividual ,
+                            :SpaceProperty ;
+                   rdfs:label "YAxis Acceleration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#ZAxisAcceleration
+:ZAxisAcceleration rdf:type owl:NamedIndividual ,
+                            :SpaceProperty ;
+                   rdfs:label "ZAxis Acceleration" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#windSpeed
+:windSpeed rdf:type owl:NamedIndividual ,
+                    :WindAmbientProperty .
 
 
 #################################################################
 #    Annotations
 #################################################################
 
-<https://auroral.iot.linkeddata.es/def/core#Sensor> rdfs:comment "it responds to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result" ;
-                                                    rdfs:label "Sensor" .
+:AccumulatedPercipitation rdfs:label "Accumulated Percipitation" .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
