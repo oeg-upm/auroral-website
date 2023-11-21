@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AURORAL Ontologies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This describes a catalog of ontologies authored or contributed to by AURORAL.">
+  <meta name="languaje" content="English">
+
+  <link rel="stylesheet" href="./vocab/themes/blue/style.css" type="text/css" media="print, projection, screen" />
+  <script src="./vocab/js/jquery-1.11.0.js"></script>
+  <script type="text/javascript" src="./vocab/js/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="./vocab/js/jquery.stickytableheaders.js"></script>
+  <script type="text/javascript" src="./vocab/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="./vocab/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="./vocab/css/jquery-ui.css">
+  </link>
+  <script type="text/javascript" id="js">
+    $(document).ready(function () {
+      $("#tablesorter-demo").tablesorter();
+      $("#tablesorter-demo").stickyTableHeaders();
+      $('[data-toggle="tooltip"]').tooltip();
+    }
+    );
+  </script>
+
+  <!-- Le styles -->
+  <link href="./vocab/css/bootstrap.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Ontologies</a></li>
+          <!-- <li><a href="#">Knowledge Graph Generator</a></li> -->
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Ontology testing</a>
+            <ul class="dropdown-menu">
+              <li><a>Development requirements (TBD)</a></li>
+              <li><a>Validate the ontologies (TBD)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <h1><a href="https://www.auroral.eu/"><img src="./vocab/logo2.jpg" width="500" alt="OEG logo" class="img-rounded"
+                                                 class="img-responsive" /></a></h1>
+      <p class="lead">Here you can find the list of interfaces involved in the data exchange for AURORAL project </p>
+
+    </div>
+    <hr>
+    <br>
+    <table id="tablesorter-demo" class="tablesorter table table-hover ">
+    <thead>
+        <tr>
+            <th class="col-md-2">Ontology</th>
+            <th class="col-md-3">Exchanged Data</th>
+            <th class="col-md-2">SHACL shapes</th>
+            <th class="col-md-3">RDF examples (Turtle)
+            </th>
+            <th class="col-md-3">JSON-LD 1.1 examples</th>
+            <th class="col-md-3"> Context</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr id="tr1">
+            <td>AURORAL Core ontology</a></td>
+            <td>
+                Data related to provide information about the auroral service. </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-core-ontology/master/SHACL-Shape/astrea-shapes.ttl">Core Shape </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-core-ontology/master/RDF%20Example/service.rdf">Service in RDF</a></span>
+           </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/AuroralH2020/auroral-data-payloads-examples/main/Service%20store/payload1.json">Service in Json-LD</a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/core/services.json">Core context</a></span>
+             </td>
+        </tr>
+        <tr id="tr2">
+            <td>AURORAL Privacy ontology</a></td>
+            <td>
+                Data related to provide information about the privacy. </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-privacy-ontology/master/SHACL-Shapes/astrea-shapes.ttl">Privacy Shape </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-privacy-ontology/master/RDF%20Example/privacy.rdf">Privacy in RDF</a></span>
+           </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/AuroralH2020/auroral-data-payloads-examples/main/priv/privacyPayload.json">Privacy in Json-LD </a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/priv/contextPrivacy.json">Privacy context</a></span>
+             </td>
+        </tr>
+        <tr id="tr2">
+            <td>AURORAL Adapters </a></td>
+            <td>
+                Data related to provide information about the Device and its measurement. </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-adapters-ontology/main/SACL-Shapes/astrea-shapes.ttl">Adapters Shape </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-adapters-ontology/main/RDF%20Example/adapters.rdf">Adapters device in RDF</a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/AuroralH2020/auroral-data-payloads-examples/main/adapters/adapters-lightbulb.json">Adapters device in Json-LD </a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/adapters/context.json">adapters context</a></span>
+             </td>
+        </tr>
+        <tr id="tr3">
+            <td>AURORAL Tourism </a></td>
+            <td>
+                Data related to provide information about the tourism activity. </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-tourism-ontology/main/SHACL-Shapes/astrea-shapes.ttl">Activity Shape </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-tourism-ontology/main/RDF%20Example/tourism.rdf">Tourism activity in RDF </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/AuroralH2020/auroral-data-payloads-examples/main/tourism/payload1.json">Tourism Activity in Json-LD </a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/tour/context.json">Tourism context</a></span>
+             </td>
+        </tr>
+         <tr id="tr2">
+            <td>AURORAL Marketplace ontology</a></td>
+            <td>
+                Data related to provide information about the biomass marketplace. </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-marketplace-ontology/main/SHACL-Shapes/astrea-shapes.ttl">marketplace Shape </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-marketplace-ontology/main/RdfExample/market.rdf">Marketplace in RDF</a></span>
+           </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/AuroralH2020/auroral-data-payloads-examples/main/market/marketpayload.json">Marketplace in Json-LD </a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/marketplace/marketcontext.json">Marketplace context</a></span>
+             </td>
+        </tr>
+          <tr id="tr4">
+          <td>AURORAL Biomass </a></td>
+            <td>
+                Data related to provide information about Biomass characteristics. </td>
+            <td>
+                <span><a href="#" class="disabled">Biomass Shape </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-biomass-ontology/main/RDF%20Example/biomass.rdf">Biomass in RDF</a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/AuroralH2020/auroral-data-payloads-examples/main/Biomass/biomass.json">Biomass in Json-LD </a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/biomass/catalogue.json">Biomass context</a></span>
+             </td>
+        </tr>
+         <tr id="tr2">
+            <td>AURORAL Logistic ontology</a></td>
+            <td>
+                Data related to provide information about logistic  data. </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-biomass-ontology/main/SHACL-Shapes/astrea-shapes.ttl">Logistic Shape </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-shipmentBiomass-ontology/main/RDF-Example/shipment.rdf">RDF Example</a></span>
+           </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/AuroralH2020/auroral-data-payloads-examples/main/shipment/shipment-payload.json">Logistic in Json-LD </a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/shipment/shipment.json">Logistic context</a></span>
+             </td>
+        </tr>
+         <tr id="tr2">
+            <td>AURORAL Energy ontology</a></td>
+            <td>
+                Data related to provide information about building energy consumption. </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-energy-ontology/main/SHACL-Shapes/astrea-shapes.ttl">Energy Shape </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-energy-ontology/main/RDFExample/energy.rdf">Energy in RDF</a></span>
+           </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/AuroralH2020/auroral-data-payloads-examples/main/energy/energy-payload.json">Energy in Json-LD </a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/energy/context.json">Energy context</a></span>
+             </td>
+        </tr>
+          <tr id="tr5">
+            <td>AURORAL car-booking </a></td>
+            <td>
+                Data related to provide information about the car booking. </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-Car-booking-ontology/main/SHACL-Shapes/astrea-shapes.ttl">Car-booking Shape </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-Car-booking-ontology/main/RDF-Example/car-booking.rdf">Car-booking in RDF</a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/AuroralH2020/auroral-data-payloads-examples/main/booking/booking.json">Car-booking in Json-LD </a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/booking/context.json">Car-booking context</a></span>
+             </td>
+        </tr>
+                 <tr id="tr2">
+            <td>AURORAL Mobility ontology</a></td>
+            <td>
+                Data related to provide information about bus mobility. </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-mobility-Ontology/main/SHACL-Shapes/astrea-shapes.ttl">Mobility Shape </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-mobility-Ontology/main/RDF%20Example/mobility.rdf">Mobility in RDF</a></span>
+           </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/AuroralH2020/auroral-data-payloads-examples/main/mobility/mobility-payload.json">Mobility in Json-LD </a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/mobility/context.json">Mobility context</a></span>
+             </td>
+        </tr>
+              <tr id="tr2">
+            <td>AURORAL Farming ontology</a></td>
+            <td>
+                Data related to provide information about dairy production of cow. </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-cow-ontology/main/SHACL-Shapes/astrea-shapes.ttl">Farming Shape </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-cow-ontology/main/RDF-Example/cow.rdf">Farming in RDF</a></span>
+           </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/AuroralH2020/auroral-data-payloads-examples/main/cow/PayloadCow.json">Farming in Json-LD </a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/cow/contextCow.json">Farming context</a></span>
+             </td>
+        </tr>
+         <tr id="tr6">
+            <td>AURORAL cell Tower </a></td>
+            <td>
+                Data related to provide information about the cell Tower. </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-cellTower-ontology/main/SHACL-Shapes/astrea-shapes.ttl">Cell Tower Shape </a></span>
+            </td>
+            <td>
+                <span><a href="https://github.com/oeg-upm/auroral-cellTower-ontology/blob/main/RDF-Example/cell-tower.rdf">Cell-tower in RDF </a></span>
+            </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/AuroralH2020/auroral-data-payloads-examples/main/cellTower/cellTower-example.json">Cell Tower in Json-LD </a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/cellTowers/context.json">Cell Tower context</a></span>
+             </td>
+        </tr>
+         <tr id="tr6">
+            <td>AURORAL Electrical Vehicle charger </a></td>
+            <td>
+                Data related to provide information about the cell Tower. </td>
+            <td>
+                <span><a href="https://raw.githubusercontent.com/oeg-upm/auroral-VehicleCharger-ontology/main/SHACL-Shapes/astrea-shapes.ttl">EV charger Shape </a></span>
+            </td>
+            <td>
+                <span><a href="#">EV charger in RDF </a></span>
+            </td>
+            <td>
+                <span><a href="#">EV charger in Json-LD </a></span>
+            </td>
+            <td>
+                <span><a href="https://auroralh2020.github.io/auroral-ontology-contexts/evcharger/context.json">EV charger context</a></span>
+             </td>
+        </tr>
+    </tbody>
+</table>
+
+    
+    <!-- Part where we have to include the ontologies -->
+    <!-- <div w3-include-html="ontologies/ontologies.html"></div> -->
+    <!-- Ontologies must be included at the ontologies/ontologies.html file -->
+    
+    <!-- Part where we have to include the ontology network -->
+    <!-- <div class="text-center"><br><img src="vocab/ontology_network.svg" width="95%" /></div> -->
+    <!-- Ontology network must be included into the vocab folder and in svg format -->
+
+    <p>
+    <footer class="footer">
+      <div class="row">
+        <div class="col-md-10">
+          Developed by <a href="http://oeg-upm.net" target="_blank">Ontology Engineering Group</a>
+          <br>
+          Built with <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+          Icons from <a target="_blank" href="http://glyphicons.com/">Glyphicons</a>
+          <br>
+          Latest revision July, 2021
+          <br>
+          <p>&copy; Ontology Engineering Group</p>
+        </div>
+        <div class="col-md-2">
+          <a href="https://oeg.fi.upm.es/" target="_blank"><img src="./vocab/logo.gif" alt="OEG logo" class="img-rounded"
+                                                                class="img-responsive" width="30%" /></a>
+
+          <a href="http://fi.upm.es/" target="_blank"><img src="./vocab/fiLogo.png" alt="FI logo" class="img-rounded"
+                                                           class="img-responsive" width="30%" /></a>
+
+          <a href="https://www.upm.es/" target="_blank"><img src="./vocab/upmlogo.png" alt="UPM logo" class="img-rounded"
+                                                             class="img-responsive" width="30%" /></a>
+        </div>
+      </div>
+    </footer>
+  </div> <!-- /container -->
+
+
+
+
+<!-- Scripts -->
+
+  <script>
+    function hideRows(text) {
+      index = 1;
+      tr = document.getElementById('tr' + index);
+      while (tr != null) {
+        valores = document.getElementById('inp' + index).value;
+        if (valores.indexOf(text) == -1) {
+          tr.style.display = 'none';
+        }
+        index++;
+        tr = document.getElementById('tr' + index);
+      }
+      document.getElementById('remButt').style.display = '';
+    }
+
+    function showRows() {
+      index = 1;
+      tr = document.getElementById('tr' + index);
+      while (tr != null) {
+        tr.style.display = '';
+        index++;
+        tr = document.getElementById('tr' + index);
+      }
+      butt = document.getElementById('remButt').style.display = 'none';
+    }
+
+  </script>
+  <script src="../w3-include-HTML.js"></script>
+</body>
+
+</html>

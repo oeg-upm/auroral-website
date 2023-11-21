@@ -1,0 +1,695 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://auroral.iot.linkeddata.es/def/energy#"
+     xml:base="https://auroral.iot.linkeddata.es/def/energy"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://auroral.iot.linkeddata.es/def/energy#">
+        <dc:creator>Ahlem Rhayem</dc:creator>
+        <dc:creator>Andrea Cimmino</dc:creator>
+        <dc:creator>Juan Cano</dc:creator>
+        <dc:creator>María Poveda Villalón</dc:creator>
+        <dc:creator>Raúl García Castro</dc:creator>
+        <dc:description>This ontology aims at modeling the building energy consumption for the AURORAL project.</dc:description>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#belongsTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#belongsTo">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/core#Building"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/core#Municipality"/>
+        <rdfs:label>belongs to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Price"/>
+        <rdfs:label>depends on consumer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#forSeason -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#forSeason">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Season"/>
+        <rdfs:label>for season</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#hasBuilding -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#hasBuilding">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Consumer"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/core#Building"/>
+        <rdfs:label>has building</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#hasCostPrice -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#hasCostPrice">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/energy#PriceAgreement"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason"/>
+        <rdfs:label>has cost price</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#hasPrice -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#hasPrice">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Energy"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Price"/>
+        <rdfs:label>has price</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#hasSource -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#hasSource">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Energy"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/energy#SourceEnergy"/>
+        <rdfs:label>has source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#inCurrency -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#inCurrency">
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Currency"/>
+        <rdfs:label>in currency</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core#hasProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core#hasProperty">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core#FeatureofInterest"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core#Property"/>
+        <rdfs:label>has property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core#isMeasuredIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core#isMeasuredIn">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core#Measurement"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core#UnitOfMeasure"/>
+        <rdfs:label>is measured in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core#isPropertyOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core#isPropertyOf">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core#Property"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core#FeatureofInterest"/>
+        <rdfs:label>is property of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core#relatesToMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core#relatesToMeasurement">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core#Property"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core#Measurement"/>
+        <rdfs:label>relates to measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core#relatesToProperty -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core#relatesToProperty">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core#Measurement"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core#Property"/>
+        <rdfs:label>relates to property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/core#id -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/core#id">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/core#name -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/core#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#constructionYear -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#constructionYear">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/core#Building"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>construction Year</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#contractTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#contractTime">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/energy#FixedAgreement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Indicates the type of agreement (Year, month, week)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#costPrice -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#costPrice">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#heatingArea -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#heatingArea">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/core#Building"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>heating Area</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#Energy -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/adapters#Energy">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core#Property"/>
+        <rdfs:label>Energy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/core#Building -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/core#Building">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core#FeatureofInterest"/>
+        <rdfs:label>Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/core#Municipality -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/core#Municipality">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core#FeatureofInterest"/>
+        <rdfs:label>Municipality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#Consumer -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#Consumer">
+        <rdfs:label>Consumer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Price"/>
+        <rdfs:label>Cost Price Season</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#Currency -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#Currency">
+        <rdfs:label>Currency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#FixedAgreement -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#FixedAgreement">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/energy#PriceAgreement"/>
+        <rdfs:label>Fixed Agreement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#Price -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#Price">
+        <rdfs:label>Price</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#PriceAgreement -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#PriceAgreement">
+        <rdfs:label>Price Agreement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#PriceMeasurement -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#PriceMeasurement">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core#Measurement"/>
+        <rdfs:label>Price Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#Season -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#Season">
+        <rdfs:label>Season</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#SourceEnergy -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#SourceEnergy">
+        <rdfs:label>Source Energy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#StandardAgreement -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#StandardAgreement">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/energy#PriceAgreement"/>
+        <rdfs:label>Standard Agreement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#VariableAgreement -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#VariableAgreement">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/energy#PriceAgreement"/>
+        <rdfs:label>Variable Agreement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core#FeatureofInterest -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core#FeatureofInterest">
+        <rdfs:label>Featureof Interest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core#Measurement -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core#Measurement">
+        <rdfs:label>Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core#Property -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core#Property">
+        <rdfs:label>Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core#UnitOfMeasure -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core#UnitOfMeasure">
+        <rdfs:label>Unit Of Measure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/cubicMetre -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/cubicMetre">
+        <rdf:type rdf:resource="https://saref.etsi.org/core#UnitOfMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogram">
+        <rdf:type rdf:resource="https://saref.etsi.org/core#UnitOfMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Energy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Energy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/core#KiloWattHourSquareMeter -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/core#KiloWattHourSquareMeter">
+        <rdf:type rdf:resource="https://saref.etsi.org/core#UnitOfMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/core#KilowattHourYear -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/core#KilowattHourYear">
+        <rdf:type rdf:resource="https://saref.etsi.org/core#UnitOfMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/core#MegawattHour -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/core#MegawattHour">
+        <rdf:type rdf:resource="https://saref.etsi.org/core#UnitOfMeasure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/core#Summer -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/core#Summer">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/core#Winter -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/core#Winter">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#Apartement -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#Apartement">
+        <rdfs:label>Apartement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#Autumn -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#Autumn">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#ElectricityGrid -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#ElectricityGrid">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/energy#SourceEnergy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#Firewood -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#Firewood">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/energy#SourceEnergy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#FuelOil -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#FuelOil">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/energy#SourceEnergy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#HouseWithElectricHeating -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#HouseWithElectricHeating">
+        <rdfs:label>House with electric heating</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#HouseWithoutElectricHeating -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#HouseWithoutElectricHeating">
+        <rdfs:label>House without electric heating</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#LargerHouseholds -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#LargerHouseholds">
+        <rdfs:label>Larger households</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#LigniteBriquette -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#LigniteBriquette">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/energy#SourceEnergy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#NatruralGas -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#NatruralGas">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/energy#SourceEnergy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#OneYearFixedAgreement -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#OneYearFixedAgreement">
+        <rdfs:label>One year fixed agreement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#Springer -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#Springer">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#StandardPriceAgreement -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#StandardPriceAgreement">
+        <rdfs:label>Standard price agreement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#ThreeYearsFixedAgreement -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#ThreeYearsFixedAgreement">
+        <rdfs:label>Three year fixed agreement</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/energy#TwoYearsFixedAgreement -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/energy#TwoYearsFixedAgreement">
+        <rdfs:label>Two year fixed agreement</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

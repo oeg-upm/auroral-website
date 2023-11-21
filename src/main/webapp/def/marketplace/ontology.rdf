@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://auroral.iot.linkeddata.es/def/market#"
+     xml:base="https://auroral.iot.linkeddata.es/def/market"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:market="https://auroral.iot.linkeddata.es/def/market#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://auroral.iot.linkeddata.es/def/market#">
+        <dc:creator>Ahlem Rhayem</dc:creator>
+        <dc:creator>Andrea Cimmino</dc:creator>
+        <dc:creator>Juan Cano</dc:creator>
+        <dc:creator>María Poveda-Villalón</dc:creator>
+        <dc:creator>Raúl Garcia-Castro</dc:creator>
+        <dc:description>This ontology model the market-place information for AURORAL</dc:description>
+        <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#buy -->
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#buy">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Customer"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/market#Product"/>
+        <rdfs:label>buy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#hasCategory">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Product"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/market#Category"/>
+        <rdfs:label>has category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#hasQuantity -->
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#hasQuantity">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Product"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/market#Stock"/>
+        <rdfs:label>has quantity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#sell -->
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#sell">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Seller"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/market#Product"/>
+        <rdfs:label>sell</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#address -->
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#address">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#categoryId -->
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#categoryId">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>category id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#categoryName -->
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#categoryName">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>category name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#categoryType -->
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#categoryType">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>category type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#hasId -->
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#hasId">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#hasName -->
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#hasName">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#productId -->
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#productId">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>product id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#productName -->
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#productName">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>product name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#sellerId -->
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#sellerId">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Seller"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>seller id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#sellerName -->
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#sellerName">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Seller"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>seller name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#stockId -->
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#stockId">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Stock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>stock id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#stockQuantity -->
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#stockQuantity">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Stock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>stock quantity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#Category -->
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/market#Category">
+        <rdfs:label>Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#Customer -->
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/market#Customer">
+        <rdfs:label>Customer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#Product -->
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/market#Product">
+        <rdfs:label>Product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#Seller -->
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/market#Seller">
+        <rdfs:label>Seller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#Stock -->
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/market#Stock">
+        <rdfs:label>Stock</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

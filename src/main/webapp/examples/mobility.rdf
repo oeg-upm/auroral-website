@@ -1,0 +1,48 @@
+@prefix ns1: <https://auroral.iot.linkeddata.es/def/mobility#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:point1 a ns1:StopPoint ;
+    ns1:hasEstimatedCall ns1:estimatedcall1 ;
+    ns1:id "NSR:StopPlace:548"^^xsd:string ;
+    ns1:name "Bergen stasjon"^^xsd:string .
+
+ns1:arrivalTime1 a ns1:ArrivalTime ;
+    ns1:actualArrivalTime "null" ;
+    ns1:aimedArrivalTime "2023-02-27T22:01:00+01:00"^^xsd:dateTime ;
+    ns1:expectedArrivalTime "2023-02-27T22:01:00+01:00"^^xsd:dateTime .
+
+ns1:departureTime1 a ns1:DepartureTime ;
+    ns1:actualDepartureTime "null" ;
+    ns1:aimedDepartureTime "2023-02-27T22:01:00+01:00"^^xsd:dateTime ;
+    ns1:expectedDepartureTime "2023-02-27T22:01:00+01:00"^^xsd:dateTime .
+
+ns1:destinationdisplay1 a ns1:DestinationDisplay ;
+    ns1:frontText "Arna"^^xsd:string .
+
+ns1:estimatedcall1 a ns1:EstimatedCall ;
+    ns1:date "2023-02-27"^^xsd:date ;
+    ns1:forAlighting 39 ;
+    ns1:forBoarding true ;
+    ns1:hasQuay ns1:quay1 ;
+    ns1:hasScheduledTime ns1:arrivalTime1,
+        ns1:departureTime1 ;
+    ns1:journeyService ns1:servicejourney1 ;
+    ns1:prescribing ns1:destinationdisplay1 ;
+    ns1:realTime true .
+
+ns1:line1 a ns1:Line ;
+    ns1:hasTransportMode ns1:transportmode1 ;
+    ns1:id "VYG:Line:43"^^xsd:string ;
+    ns1:name "Bergen-Arna"^^xsd:string .
+
+ns1:pattern1 a ns1:JourneyPattern ;
+    ns1:hasLine ns1:line1 .
+
+ns1:quay1 a ns1:Quay ;
+    ns1:id "NSR:Quay:901" .
+
+ns1:servicejourney1 a ns1:JourneyService ;
+    ns1:hasPattern ns1:pattern1 .
+
+ns1:transportmode1 a ns1:TransportMode ;
+    ns1:transportMode "rail"^^xsd:string .

@@ -1,0 +1,4561 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://auroral.iot.linkeddata.es/def/biomass#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://auroral.iot.linkeddata.es/def/biomass#">
+    <Prefix name="" IRI="https://auroral.iot.linkeddata.es/def/biomass#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="om" IRI="http://www.ontology-of-units-of-measure.org/page/om-2/"/>
+    <Prefix name="cur" IRI="http://publications.europa.eu/resource/authority/currency/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="biom" IRI="https://auroral.iot.linkeddata.es/def/biomass#"/>
+    <Prefix name="core" IRI="https://auroral.iot.linkeddata.es/def/core#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="ship" IRI="https://auroral.iot.linkeddata.es/def/shipment#"/>
+    <Prefix name="skos" IRI="https://www.w3.org/ns/org#"/>
+    <Prefix name="saref" IRI="https://saref.etsi.org/core#"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms"/>
+    <Prefix name="adapters" IRI="https://auroral.iot.linkeddata.es/def/adapters#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Ahlem Rhayem</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Andrea Cimmino</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Juan Cano</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Maria Poveda Villalon</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Raul Garcia Castro</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal>This ontology aims to model the characteristics of the biomass for the AURORAL project.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+        <IRI>http://purl.org/NET/rdflicense/cc-by4.0</IRI>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="om:UnitOfMeasure"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="adapters:Energy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Aches"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Biomass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BiomassEnergyPrice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BiomassGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BiomassOrigin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BiomassSubGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BiomassSubType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BiomassType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="BoughtPerGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Caliber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CurrentQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Humidity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SoldPerCaliber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SoldPerGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="SoldQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TotalQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TradingForm"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ship:BoughtQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="saref:Measurement"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="saref:Price"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="saref:Property"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="belongsToType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="boughtQuantityPerGroup"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="consumes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasAshes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasCaliber"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasGroup"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasHumidity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasOrigin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSubGroup"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasSubType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTradingForm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="produces"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="quantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="quantityPerCaliber"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="relatedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="soldQuantityPerGroup"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="saref:isMeasuredIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="saref:relatesToMeasurement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="saref:relatesToProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="dimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="priceValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="saref:hasTimeStamp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="saref:hasValue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="adapters:EnergyConsumption"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="adapters:EnergyProduction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Algae"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="AquaticBiomass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BambooGrasses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BarkChemicallyTreatedUsedWood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BarkChemicallyUntreatedUsedWood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BarkChemicallyUntreatedWoodByProductsAndResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BarkFromForestryOperations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BarkFromIndustryOperations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Berries"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BerriesChemicallyTreatedFruitResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BerriesChemicallyUntreatedFruitResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Blends"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMIxturesStoneOrKernelFruit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixtures"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesAlgae"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesAquaticBiomass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesBerries"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesByProductsAndResiduesFromFoodAndHerbaceousProcesingIndustry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesByProductsAndResiduesFromWoodProcessingIndustry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesCerealCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyTreatedFruitResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyTreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyUntreatedFruitResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyUntreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesFlowers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesForestPlantation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesFruitBiomass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesGrasses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesHerbaceousBiomass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesHerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesLeakAndSeaGrass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesLegumeCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesLoggingResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesNutsAndAcorns"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesOilSeedCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesOrchardAndHorticultureFruit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesReeds"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesRootCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesStemwood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesStumpsOrRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesUsedWood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesWholeTreesWithRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesWholeTreesWithoutRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BlendsAndMixturesWoodyBiomass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BroadLeafStumpsOrRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BroadLeafWholeTreesWithRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BroadLeafWholeTreesWithoutRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BroadLeafWithBarkChemicallyUntreatedWoodByProductsAndResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BroadLeafWithBarkStemwood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BroadLeafWithoutBarkChemicallyUntreatedWoodByProductsAndResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BroadLeafWithoutBarkStemwood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BrownSeaWeed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BushesStumpsOrRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BushesWholeTreesWithRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="BushesWholeTreesWithoutRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ByProductsAndResiduesFromWoodProcessingIndustry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CerealCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CerealCropsAndGrasses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CerealCropsAndGrassesChemicallyTreatedherbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CerealCropsAndGrassesChemicallyUntreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ChemicallyTreatedUsedWood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ChemicallyUntreatedUsedWood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CommonReed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ConiferousStumpsOrRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ConiferousWholeTreesWithRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ConiferousWholeTreesWithoutRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ConiferousWithBarkStemwood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ConiferousWithBrakChemicallyUntreatedWoodByProductsAndResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ConiferousWithoutBarkChemicallyUntreatedWoodByProductsAndResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ConiferousWithoutBarkStemwood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CrudeOliveCakeChemicallyUntreatedFruitResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ExhaustedOliveCakeChemicallyTreatedFruitResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="FibresAndWoodConstituentsChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="FleshBerries"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="FleshStoneOrKernelFruits"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Flowers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="FlowersChemicallyTreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="FlowersChemicallyUntreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ForestPlantation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="FreshOrGreenBroadLeaf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="FreshOrGreenConiferous"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="FruitBiomass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="FruitLegumeCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="GrainsOrSeedsCerealCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Grasses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="GreenSeaWeed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HerbaceousBiomass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HusksOrShellsCerealCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="HusksOrShellsOilSeedCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="KernelsNutsAndAcorns"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LakeAndSeaGrass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LakeGrass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LegumeCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LegumeCropsChemicallyTreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LegumeCropsChemicallyUntreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="LoggingResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MacroAlgae"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="MicroAlgae"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Mixtures"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NutsAndAcornsChemicallyTreatedFruitResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NutsAndAcornsChemicallyUntreatedFruitResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="NutsandAcorns"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="OilSeedCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="OilSeedCropsChemicallyTreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="OilSeedCropsChemicallyUntreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="OrchardAndHorticultureFruit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="OtherReed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PodsLegumeCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PrimaryEnergyCost"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="PrimaryEnergyCostObs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="RedSeaWeed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Reeds"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="RootCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="RootCropsChemicallyTreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="RootCropsChemicallyUntreatedHerbaceousResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="RootRootCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SeaGrass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SeedsBerries"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SeedsFlowers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SeedsGrasses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SeedsOilSeedCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SegregatedHerbaceousBiomassFromGardensParksRoadsideMaintenanceVineyardsAndFruitOrchards"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="SegregatedWoodFromGardensParksRoadsideMaintenanceVineyardsFruitOrchardsAndDriftwoodFromFreshwater"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ShellsGrasses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ShellsOrHusksNutsAndAcorns"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ShortRotationCoppiceStumpsOrRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ShortRotationCoppiceWholeTreesWithRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ShortRotationCoppiceWholeTreesWithoutRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StalksAndLeavesFlowers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StalksAndLeavesLegumeCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StalksAndLeavesOilSeedCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StalksAndLeavesRootCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Stemwood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StoneOrKernelFruitsChemicallyTreatedFruitResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StoneOrKernelFruitsOrFruitFibreChemicallyUntreatedFruitResidues"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StoneOrKernelOrFruitFibreStoneOrKernelFruit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StoredBroadLeaf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StoredConiferous"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StrawPartsCerealCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StrawPartsGrasses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="UsedWood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WaterHyacinth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WholeBerries"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WholeFruit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WholeFruitStoneOrKernelFruits"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WholeNuts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WholePlantCerealCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WholePlantFlowers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WholePlantGrasses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WholePlantLegumeCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WholePlantOilSeedCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WholePlantRootCrops"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WithBarkChemicallyTreatedUsedWood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WithBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WithBrakChemicallyUntreatedUsedWood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WithoutBarkChemicallyTreatedUsedWood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WithoutBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WithoutBarkChemicallyUntreatedUsedWood"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="WoodyBiomass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="core:KilowattPerKg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="core:MegajoulePerKg"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="Biomass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="consumes"/>
+            <Class abbreviatedIRI="adapters:Energy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Biomass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasAshes"/>
+            <Class IRI="Aches"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Biomass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasHumidity"/>
+            <Class IRI="Humidity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Biomass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasOrigin"/>
+            <Class IRI="BiomassOrigin"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Biomass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="produces"/>
+            <Class abbreviatedIRI="adapters:Energy"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Biomass"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="quantity"/>
+            <Class IRI="Quantity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BiomassEnergyPrice"/>
+        <Class abbreviatedIRI="saref:Price"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BiomassGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="skos:narrower"/>
+            <Class IRI="BiomassSubGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BiomassOrigin"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="belongsToType"/>
+            <Class IRI="BiomassType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BiomassOrigin"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasGroup"/>
+            <Class IRI="BiomassGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BiomassOrigin"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasSubGroup"/>
+            <Class IRI="BiomassSubGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BiomassOrigin"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasSubType"/>
+            <Class IRI="BiomassSubType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BiomassSubGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="skos:broader"/>
+            <Class IRI="BiomassGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BiomassSubGroup"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="skos:narrower"/>
+            <Class IRI="BiomassType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BiomassSubType"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="skos:broader"/>
+            <Class IRI="BiomassType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BiomassType"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="skos:broader"/>
+            <Class IRI="BiomassSubGroup"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BiomassType"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="skos:narrower"/>
+            <Class IRI="BiomassSubType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BoughtPerGroup"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="relatedTo"/>
+            <Class IRI="BiomassSubGroup"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="BoughtPerGroup"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="value"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="CurrentQuantity"/>
+        <Class IRI="Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Quantity"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="value"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SoldPerCaliber"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasCaliber"/>
+            <Class IRI="Caliber"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SoldPerCaliber"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasTradingForm"/>
+            <Class IRI="TradingForm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SoldPerGroup"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="relatedTo"/>
+            <Class IRI="BiomassSubGroup"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SoldPerGroup"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="value"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="SoldQuantity"/>
+        <Class IRI="Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TotalQuantity"/>
+        <Class IRI="Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="ship:BoughtQuantity"/>
+        <Class IRI="Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="saref:Measurement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="saref:relatesToProperty"/>
+            <Class abbreviatedIRI="saref:Property"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="adapters:Energy"/>
+        <NamedIndividual abbreviatedIRI="adapters:EnergyConsumption"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="adapters:Energy"/>
+        <NamedIndividual abbreviatedIRI="adapters:EnergyProduction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="Algae"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassGroup"/>
+        <NamedIndividual IRI="AquaticBiomass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BambooGrasses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BarkChemicallyTreatedUsedWood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BarkChemicallyUntreatedUsedWood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BarkChemicallyUntreatedWoodByProductsAndResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="BarkFromForestryOperations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BarkFromIndustryOperations"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="Berries"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BerriesChemicallyTreatedFruitResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BerriesChemicallyUntreatedFruitResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="Blends"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMIxturesStoneOrKernelFruit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassGroup"/>
+        <NamedIndividual IRI="BlendsAndMixtures"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="BlendsAndMixturesAlgae"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="BlendsAndMixturesAquaticBiomass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesBerries"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="BlendsAndMixturesByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="BlendsAndMixturesByProductsAndResiduesFromFoodAndHerbaceousProcesingIndustry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="BlendsAndMixturesByProductsAndResiduesFromWoodProcessingIndustry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesCerealCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyTreatedFruitResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyTreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyUntreatedFruitResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyUntreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesFlowers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="BlendsAndMixturesForestPlantation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="BlendsAndMixturesFruitBiomass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesGrasses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="BlendsAndMixturesHerbaceousBiomass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="BlendsAndMixturesHerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="BlendsAndMixturesLeakAndSeaGrass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesLegumeCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesLoggingResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesNutsAndAcorns"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesOilSeedCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="BlendsAndMixturesOrchardAndHorticultureFruit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="BlendsAndMixturesReeds"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesRootCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesStemwood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesStumpsOrRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="BlendsAndMixturesUsedWood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesWholeTreesWithRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BlendsAndMixturesWholeTreesWithoutRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="BlendsAndMixturesWoodyBiomass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BroadLeafStumpsOrRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BroadLeafWholeTreesWithRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BroadLeafWholeTreesWithoutRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BroadLeafWithBarkChemicallyUntreatedWoodByProductsAndResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BroadLeafWithBarkStemwood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BroadLeafWithoutBarkChemicallyUntreatedWoodByProductsAndResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BroadLeafWithoutBarkStemwood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BrownSeaWeed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BushesStumpsOrRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BushesWholeTreesWithRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="BushesWholeTreesWithoutRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromWoodProcessingIndustry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="CerealCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="CerealCropsAndGrasses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="CerealCropsAndGrassesChemicallyTreatedherbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="CerealCropsAndGrassesChemicallyUntreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="ChemicallyTreatedUsedWood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="ChemicallyUntreatedUsedWood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="CommonReed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ConiferousStumpsOrRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ConiferousWholeTreesWithRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ConiferousWholeTreesWithoutRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ConiferousWithBarkStemwood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ConiferousWithBrakChemicallyUntreatedWoodByProductsAndResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ConiferousWithoutBarkChemicallyUntreatedWoodByProductsAndResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ConiferousWithoutBarkStemwood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="CrudeOliveCakeChemicallyUntreatedFruitResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ExhaustedOliveCakeChemicallyTreatedFruitResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="FibresAndWoodConstituentsChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="FleshBerries"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="FleshStoneOrKernelFruits"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="Flowers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="FlowersChemicallyTreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="FlowersChemicallyUntreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="FreshOrGreenBroadLeaf"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="FreshOrGreenConiferous"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassGroup"/>
+        <NamedIndividual IRI="FruitBiomass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="FruitLegumeCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="GrainsOrSeedsCerealCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="Grasses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="GreenSeaWeed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassGroup"/>
+        <NamedIndividual IRI="HerbaceousBiomass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="HusksOrShellsCerealCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="HusksOrShellsOilSeedCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="KernelsNutsAndAcorns"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="LakeAndSeaGrass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="LakeGrass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="LegumeCropsChemicallyTreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="LegumeCropsChemicallyUntreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="MacroAlgae"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="MicroAlgae"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="Mixtures"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="NutsAndAcornsChemicallyTreatedFruitResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="NutsAndAcornsChemicallyUntreatedFruitResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="NutsandAcorns"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="OilSeedCropsChemicallyTreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="OilSeedCropsChemicallyUntreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="OrchardAndHorticultureFruit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="OtherReed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="PodsLegumeCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassEnergyPrice"/>
+        <NamedIndividual IRI="PrimaryEnergyCost"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassEnergyPrice"/>
+        <NamedIndividual IRI="PrimaryEnergyCostObs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="RedSeaWeed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="Reeds"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="RootCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="RootCropsChemicallyTreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="RootCropsChemicallyUntreatedHerbaceousResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="RootRootCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="SeaGrass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="SeedsBerries"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="SeedsFlowers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="SeedsGrasses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="SeedsOilSeedCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="SegregatedHerbaceousBiomassFromGardensParksRoadsideMaintenanceVineyardsAndFruitOrchards"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="SegregatedWoodFromGardensParksRoadsideMaintenanceVineyardsFruitOrchardsAndDriftwoodFromFreshwater"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ShellsGrasses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ShellsOrHusksNutsAndAcorns"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ShortRotationCoppiceStumpsOrRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ShortRotationCoppiceWholeTreesWithRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="ShortRotationCoppiceWholeTreesWithoutRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="StalksAndLeavesFlowers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="StalksAndLeavesLegumeCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="StalksAndLeavesOilSeedCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="StalksAndLeavesRootCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="Stemwood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="StoneOrKernelFruitsChemicallyTreatedFruitResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="StoneOrKernelFruitsOrFruitFibreChemicallyUntreatedFruitResidues"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="StoneOrKernelOrFruitFibreStoneOrKernelFruit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="StoredBroadLeaf"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="StoredConiferous"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="StrawPartsCerealCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="StrawPartsGrasses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="UsedWood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubGroup"/>
+        <NamedIndividual IRI="WaterHyacinth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WholeBerries"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WholeFruit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WholeFruitStoneOrKernelFruits"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WholeNuts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WholePlantCerealCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WholePlantFlowers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WholePlantGrasses"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WholePlantLegumeCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WholePlantOilSeedCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WholePlantRootCrops"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassType"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WithBarkChemicallyTreatedUsedWood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WithBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WithBrakChemicallyUntreatedUsedWood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WithoutBarkChemicallyTreatedUsedWood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WithoutBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassSubType"/>
+        <NamedIndividual IRI="WithoutBarkChemicallyUntreatedUsedWood"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="BiomassGroup"/>
+        <NamedIndividual IRI="WoodyBiomass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="om:UnitOfMeasure"/>
+        <NamedIndividual abbreviatedIRI="core:KilowattPerKg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="om:UnitOfMeasure"/>
+        <NamedIndividual abbreviatedIRI="core:MegajoulePerKg"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="Algae"/>
+        <NamedIndividual IRI="AquaticBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Algae"/>
+        <NamedIndividual IRI="BlendsAndMixturesAlgae"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Algae"/>
+        <NamedIndividual IRI="MacroAlgae"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Algae"/>
+        <NamedIndividual IRI="MicroAlgae"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="AquaticBiomass"/>
+        <NamedIndividual IRI="Algae"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="AquaticBiomass"/>
+        <NamedIndividual IRI="BlendsAndMixturesAquaticBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="AquaticBiomass"/>
+        <NamedIndividual IRI="LakeAndSeaGrass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="AquaticBiomass"/>
+        <NamedIndividual IRI="Reeds"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="AquaticBiomass"/>
+        <NamedIndividual IRI="WaterHyacinth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BambooGrasses"/>
+        <NamedIndividual IRI="Grasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BarkChemicallyTreatedUsedWood"/>
+        <NamedIndividual IRI="ChemicallyTreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+        <NamedIndividual IRI="ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BarkChemicallyUntreatedUsedWood"/>
+        <NamedIndividual IRI="ChemicallyUntreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BarkChemicallyUntreatedWoodByProductsAndResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="Berries"/>
+        <NamedIndividual IRI="OrchardAndHorticultureFruit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Berries"/>
+        <NamedIndividual IRI="BlendsAndMixturesBerries"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Berries"/>
+        <NamedIndividual IRI="FleshBerries"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Berries"/>
+        <NamedIndividual IRI="SeedsBerries"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Berries"/>
+        <NamedIndividual IRI="WholeBerries"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BerriesChemicallyTreatedFruitResidues"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BerriesChemicallyUntreatedFruitResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMIxturesStoneOrKernelFruit"/>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesAlgae"/>
+        <NamedIndividual IRI="Algae"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesAquaticBiomass"/>
+        <NamedIndividual IRI="AquaticBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesBerries"/>
+        <NamedIndividual IRI="Berries"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesByProductsAndResiduesFromFoodAndHerbaceousProcesingIndustry"/>
+        <NamedIndividual IRI="ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesByProductsAndResiduesFromWoodProcessingIndustry"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromWoodProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesCerealCrops"/>
+        <NamedIndividual IRI="CerealCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyTreatedFruitResidues"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyTreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyUntreatedFruitResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesFlowers"/>
+        <NamedIndividual IRI="Flowers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesForestPlantation"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesFruitBiomass"/>
+        <NamedIndividual IRI="FruitBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesGrasses"/>
+        <NamedIndividual IRI="Grasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesHerbaceousBiomass"/>
+        <NamedIndividual IRI="HerbaceousBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesHerbaceousBiomassFromAgricultureAndHorticulture"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesLeakAndSeaGrass"/>
+        <NamedIndividual IRI="LakeAndSeaGrass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesLegumeCrops"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesLoggingResidues"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesNutsAndAcorns"/>
+        <NamedIndividual IRI="NutsandAcorns"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesOilSeedCrops"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesOrchardAndHorticultureFruit"/>
+        <NamedIndividual IRI="OrchardAndHorticultureFruit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesReeds"/>
+        <NamedIndividual IRI="Reeds"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesRootCrops"/>
+        <NamedIndividual IRI="RootCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesStemwood"/>
+        <NamedIndividual IRI="Stemwood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesStumpsOrRoots"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesUsedWood"/>
+        <NamedIndividual IRI="UsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesWholeTreesWithRoots"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesWholeTreesWithoutRoots"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BlendsAndMixturesWoodyBiomass"/>
+        <NamedIndividual IRI="WoodyBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BroadLeafStumpsOrRoots"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BroadLeafWholeTreesWithRoots"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BroadLeafWholeTreesWithoutRoots"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BroadLeafWithBarkChemicallyUntreatedWoodByProductsAndResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BroadLeafWithBarkStemwood"/>
+        <NamedIndividual IRI="Stemwood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BroadLeafWithoutBarkChemicallyUntreatedWoodByProductsAndResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BroadLeafWithoutBarkStemwood"/>
+        <NamedIndividual IRI="Stemwood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BrownSeaWeed"/>
+        <NamedIndividual IRI="MacroAlgae"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BushesStumpsOrRoots"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BushesWholeTreesWithRoots"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="BushesWholeTreesWithoutRoots"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+        <NamedIndividual IRI="FruitBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+        <NamedIndividual IRI="BlendsAndMixturesByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromWoodProcessingIndustry"/>
+        <NamedIndividual IRI="WoodyBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromWoodProcessingIndustry"/>
+        <NamedIndividual IRI="BlendsAndMixturesByProductsAndResiduesFromWoodProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromWoodProcessingIndustry"/>
+        <NamedIndividual IRI="ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromWoodProcessingIndustry"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry"/>
+        <NamedIndividual IRI="HerbaceousBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry"/>
+        <NamedIndividual IRI="BlendsAndMixturesByProductsAndResiduesFromFoodAndHerbaceousProcesingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="CerealCrops"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="CerealCrops"/>
+        <NamedIndividual IRI="BlendsAndMixturesCerealCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="CerealCrops"/>
+        <NamedIndividual IRI="GrainsOrSeedsCerealCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="CerealCrops"/>
+        <NamedIndividual IRI="HusksOrShellsCerealCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="CerealCrops"/>
+        <NamedIndividual IRI="StrawPartsCerealCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="CerealCrops"/>
+        <NamedIndividual IRI="WholePlantCerealCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="CerealCropsAndGrasses"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="CerealCropsAndGrasses"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="CerealCropsAndGrassesChemicallyTreatedherbaceousResidues"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="CerealCropsAndGrassesChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+        <NamedIndividual IRI="BerriesChemicallyTreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyTreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+        <NamedIndividual IRI="ExhaustedOliveCakeChemicallyTreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+        <NamedIndividual IRI="NutsAndAcornsChemicallyTreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+        <NamedIndividual IRI="StoneOrKernelFruitsChemicallyTreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="CerealCropsAndGrassesChemicallyTreatedherbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="FlowersChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="LegumeCropsChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="OilSeedCropsChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="RootCropsChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ChemicallyTreatedUsedWood"/>
+        <NamedIndividual IRI="UsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedUsedWood"/>
+        <NamedIndividual IRI="BarkChemicallyTreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedUsedWood"/>
+        <NamedIndividual IRI="WithBarkChemicallyTreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedUsedWood"/>
+        <NamedIndividual IRI="WithoutBarkChemicallyTreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromWoodProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+        <NamedIndividual IRI="BarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+        <NamedIndividual IRI="FibresAndWoodConstituentsChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+        <NamedIndividual IRI="WithBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+        <NamedIndividual IRI="WithoutBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+        <NamedIndividual IRI="BerriesChemicallyUntreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyUntreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+        <NamedIndividual IRI="CrudeOliveCakeChemicallyUntreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+        <NamedIndividual IRI="NutsAndAcornsChemicallyUntreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+        <NamedIndividual IRI="StoneOrKernelFruitsOrFruitFibreChemicallyUntreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="BlendsAndMixturesChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="CerealCropsAndGrassesChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="FlowersChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="LegumeCropsChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="OilSeedCropsChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="RootCropsChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ChemicallyUntreatedUsedWood"/>
+        <NamedIndividual IRI="UsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedUsedWood"/>
+        <NamedIndividual IRI="BarkChemicallyUntreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedUsedWood"/>
+        <NamedIndividual IRI="WithBrakChemicallyUntreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedUsedWood"/>
+        <NamedIndividual IRI="WithoutBarkChemicallyUntreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromWoodProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+        <NamedIndividual IRI="BarkChemicallyUntreatedWoodByProductsAndResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+        <NamedIndividual IRI="BroadLeafWithBarkChemicallyUntreatedWoodByProductsAndResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+        <NamedIndividual IRI="BroadLeafWithoutBarkChemicallyUntreatedWoodByProductsAndResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+        <NamedIndividual IRI="ConiferousWithBrakChemicallyUntreatedWoodByProductsAndResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+        <NamedIndividual IRI="ConiferousWithoutBarkChemicallyUntreatedWoodByProductsAndResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="CommonReed"/>
+        <NamedIndividual IRI="Reeds"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ConiferousStumpsOrRoots"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ConiferousWholeTreesWithRoots"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ConiferousWholeTreesWithoutRoots"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ConiferousWithBarkStemwood"/>
+        <NamedIndividual IRI="Stemwood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ConiferousWithBrakChemicallyUntreatedWoodByProductsAndResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ConiferousWithoutBarkChemicallyUntreatedWoodByProductsAndResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedWoodbyProductsAndResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ConiferousWithoutBarkStemwood"/>
+        <NamedIndividual IRI="Stemwood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="CrudeOliveCakeChemicallyUntreatedFruitResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ExhaustedOliveCakeChemicallyTreatedFruitResidues"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="FibresAndWoodConstituentsChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+        <NamedIndividual IRI="ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="FleshStoneOrKernelFruits"/>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="Flowers"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Flowers"/>
+        <NamedIndividual IRI="BlendsAndMixturesFlowers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Flowers"/>
+        <NamedIndividual IRI="SeedsFlowers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Flowers"/>
+        <NamedIndividual IRI="StalksAndLeavesFlowers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Flowers"/>
+        <NamedIndividual IRI="WholePlantFlowers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="FlowersChemicallyTreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="FlowersChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+        <NamedIndividual IRI="WoodyBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+        <NamedIndividual IRI="BlendsAndMixturesForestPlantation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+        <NamedIndividual IRI="SegregatedWoodFromGardensParksRoadsideMaintenanceVineyardsFruitOrchardsAndDriftwoodFromFreshwater"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+        <NamedIndividual IRI="Stemwood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="FreshOrGreenBroadLeaf"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="FreshOrGreenConiferous"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="FruitBiomass"/>
+        <NamedIndividual IRI="BlendsAndMixturesFruitBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="FruitBiomass"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromFoodAndFruitProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="FruitBiomass"/>
+        <NamedIndividual IRI="OrchardAndHorticultureFruit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="FruitLegumeCrops"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="GrainsOrSeedsCerealCrops"/>
+        <NamedIndividual IRI="CerealCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="Grasses"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Grasses"/>
+        <NamedIndividual IRI="BambooGrasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Grasses"/>
+        <NamedIndividual IRI="BlendsAndMixturesGrasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Grasses"/>
+        <NamedIndividual IRI="SeedsGrasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Grasses"/>
+        <NamedIndividual IRI="ShellsGrasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Grasses"/>
+        <NamedIndividual IRI="StrawPartsGrasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Grasses"/>
+        <NamedIndividual IRI="WholePlantGrasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="GreenSeaWeed"/>
+        <NamedIndividual IRI="MacroAlgae"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="HerbaceousBiomass"/>
+        <NamedIndividual IRI="BlendsAndMixturesHerbaceousBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="HerbaceousBiomass"/>
+        <NamedIndividual IRI="ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="HerbaceousBiomass"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+        <NamedIndividual IRI="HerbaceousBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+        <NamedIndividual IRI="BlendsAndMixturesHerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+        <NamedIndividual IRI="CerealCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+        <NamedIndividual IRI="Flowers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+        <NamedIndividual IRI="Grasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+        <NamedIndividual IRI="RootCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+        <NamedIndividual IRI="SegregatedHerbaceousBiomassFromGardensParksRoadsideMaintenanceVineyardsAndFruitOrchards"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="HusksOrShellsCerealCrops"/>
+        <NamedIndividual IRI="CerealCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="HusksOrShellsOilSeedCrops"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="KernelsNutsAndAcorns"/>
+        <NamedIndividual IRI="NutsandAcorns"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="LakeAndSeaGrass"/>
+        <NamedIndividual IRI="AquaticBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LakeAndSeaGrass"/>
+        <NamedIndividual IRI="BlendsAndMixturesLeakAndSeaGrass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LakeAndSeaGrass"/>
+        <NamedIndividual IRI="LakeGrass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LakeAndSeaGrass"/>
+        <NamedIndividual IRI="SeaGrass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="LakeGrass"/>
+        <NamedIndividual IRI="LakeAndSeaGrass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+        <NamedIndividual IRI="BlendsAndMixturesLegumeCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+        <NamedIndividual IRI="FruitLegumeCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+        <NamedIndividual IRI="PodsLegumeCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+        <NamedIndividual IRI="StalksAndLeavesLegumeCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+        <NamedIndividual IRI="WholePlantLegumeCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="LegumeCropsChemicallyTreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="LegumeCropsChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+        <NamedIndividual IRI="BlendsAndMixturesLoggingResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+        <NamedIndividual IRI="FreshOrGreenBroadLeaf"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+        <NamedIndividual IRI="FreshOrGreenConiferous"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+        <NamedIndividual IRI="StoredBroadLeaf"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+        <NamedIndividual IRI="StoredConiferous"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="MacroAlgae"/>
+        <NamedIndividual IRI="Algae"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="MacroAlgae"/>
+        <NamedIndividual IRI="BrownSeaWeed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="MacroAlgae"/>
+        <NamedIndividual IRI="GreenSeaWeed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="MacroAlgae"/>
+        <NamedIndividual IRI="RedSeaWeed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="MicroAlgae"/>
+        <NamedIndividual IRI="Algae"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="NutsAndAcornsChemicallyTreatedFruitResidues"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="NutsAndAcornsChemicallyUntreatedFruitResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="NutsandAcorns"/>
+        <NamedIndividual IRI="OrchardAndHorticultureFruit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="NutsandAcorns"/>
+        <NamedIndividual IRI="BlendsAndMixturesNutsAndAcorns"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="NutsandAcorns"/>
+        <NamedIndividual IRI="KernelsNutsAndAcorns"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="NutsandAcorns"/>
+        <NamedIndividual IRI="ShellsOrHusksNutsAndAcorns"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="NutsandAcorns"/>
+        <NamedIndividual IRI="WholeNuts"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+        <NamedIndividual IRI="BlendsAndMixturesOilSeedCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+        <NamedIndividual IRI="HusksOrShellsOilSeedCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+        <NamedIndividual IRI="SeedsOilSeedCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+        <NamedIndividual IRI="StalksAndLeavesOilSeedCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+        <NamedIndividual IRI="WholePlantOilSeedCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="OilSeedCropsChemicallyTreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="OilSeedCropsChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="OrchardAndHorticultureFruit"/>
+        <NamedIndividual IRI="FruitBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="OrchardAndHorticultureFruit"/>
+        <NamedIndividual IRI="Berries"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="OrchardAndHorticultureFruit"/>
+        <NamedIndividual IRI="BlendsAndMixturesOrchardAndHorticultureFruit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="OrchardAndHorticultureFruit"/>
+        <NamedIndividual IRI="NutsandAcorns"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="OrchardAndHorticultureFruit"/>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="OtherReed"/>
+        <NamedIndividual IRI="Reeds"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="PodsLegumeCrops"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="RedSeaWeed"/>
+        <NamedIndividual IRI="MacroAlgae"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="Reeds"/>
+        <NamedIndividual IRI="AquaticBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Reeds"/>
+        <NamedIndividual IRI="BlendsAndMixturesReeds"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Reeds"/>
+        <NamedIndividual IRI="CommonReed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Reeds"/>
+        <NamedIndividual IRI="OtherReed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="RootCrops"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="RootCrops"/>
+        <NamedIndividual IRI="BlendsAndMixturesRootCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="RootCrops"/>
+        <NamedIndividual IRI="RootRootCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="RootCrops"/>
+        <NamedIndividual IRI="StalksAndLeavesRootCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="RootCrops"/>
+        <NamedIndividual IRI="WholePlantRootCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="RootCropsChemicallyTreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="RootCropsChemicallyUntreatedHerbaceousResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="RootRootCrops"/>
+        <NamedIndividual IRI="RootCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="SeaGrass"/>
+        <NamedIndividual IRI="LakeAndSeaGrass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="SeedsFlowers"/>
+        <NamedIndividual IRI="Flowers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="SeedsGrasses"/>
+        <NamedIndividual IRI="Grasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="SeedsOilSeedCrops"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="SegregatedHerbaceousBiomassFromGardensParksRoadsideMaintenanceVineyardsAndFruitOrchards"/>
+        <NamedIndividual IRI="HerbaceousBiomassFromAgricultureAndHorticulture"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="SegregatedWoodFromGardensParksRoadsideMaintenanceVineyardsFruitOrchardsAndDriftwoodFromFreshwater"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ShellsGrasses"/>
+        <NamedIndividual IRI="Grasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ShellsOrHusksNutsAndAcorns"/>
+        <NamedIndividual IRI="NutsandAcorns"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ShortRotationCoppiceStumpsOrRoots"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ShortRotationCoppiceWholeTreesWithRoots"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="ShortRotationCoppiceWholeTreesWithoutRoots"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StalksAndLeavesFlowers"/>
+        <NamedIndividual IRI="Flowers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StalksAndLeavesLegumeCrops"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StalksAndLeavesOilSeedCrops"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StalksAndLeavesRootCrops"/>
+        <NamedIndividual IRI="RootCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="Stemwood"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Stemwood"/>
+        <NamedIndividual IRI="BlendsAndMixturesStemwood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Stemwood"/>
+        <NamedIndividual IRI="BroadLeafWithBarkStemwood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Stemwood"/>
+        <NamedIndividual IRI="BroadLeafWithoutBarkStemwood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Stemwood"/>
+        <NamedIndividual IRI="ConiferousWithBarkStemwood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="Stemwood"/>
+        <NamedIndividual IRI="ConiferousWithoutBarkStemwood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+        <NamedIndividual IRI="OrchardAndHorticultureFruit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+        <NamedIndividual IRI="BlendsAndMIxturesStoneOrKernelFruit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+        <NamedIndividual IRI="FleshStoneOrKernelFruits"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+        <NamedIndividual IRI="StoneOrKernelOrFruitFibreStoneOrKernelFruit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+        <NamedIndividual IRI="WholeFruitStoneOrKernelFruits"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StoneOrKernelFruitsChemicallyTreatedFruitResidues"/>
+        <NamedIndividual IRI="ChemicallyTreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StoneOrKernelFruitsOrFruitFibreChemicallyUntreatedFruitResidues"/>
+        <NamedIndividual IRI="ChemicallyUntreatedFruitResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StoneOrKernelOrFruitFibreStoneOrKernelFruit"/>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StoredBroadLeaf"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StoredConiferous"/>
+        <NamedIndividual IRI="LoggingResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StrawPartsCerealCrops"/>
+        <NamedIndividual IRI="CerealCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StrawPartsGrasses"/>
+        <NamedIndividual IRI="Grasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+        <NamedIndividual IRI="BlendsAndMixturesStumpsOrRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+        <NamedIndividual IRI="BroadLeafStumpsOrRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+        <NamedIndividual IRI="BushesStumpsOrRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+        <NamedIndividual IRI="ConiferousStumpsOrRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="StumpsOrRoots"/>
+        <NamedIndividual IRI="ShortRotationCoppiceStumpsOrRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="UsedWood"/>
+        <NamedIndividual IRI="WoodyBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="UsedWood"/>
+        <NamedIndividual IRI="BlendsAndMixturesUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="UsedWood"/>
+        <NamedIndividual IRI="ChemicallyTreatedHerbaceousResidues"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="UsedWood"/>
+        <NamedIndividual IRI="ChemicallyUntreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WaterHyacinth"/>
+        <NamedIndividual IRI="AquaticBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WholeBerries"/>
+        <NamedIndividual IRI="Berries"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WholeFruit"/>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WholeFruitStoneOrKernelFruits"/>
+        <NamedIndividual IRI="StoneOrKernelFruits"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WholeNuts"/>
+        <NamedIndividual IRI="NutsandAcorns"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WholePlantCerealCrops"/>
+        <NamedIndividual IRI="CerealCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WholePlantFlowers"/>
+        <NamedIndividual IRI="Flowers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WholePlantGrasses"/>
+        <NamedIndividual IRI="Grasses"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WholePlantLegumeCrops"/>
+        <NamedIndividual IRI="LegumeCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WholePlantOilSeedCrops"/>
+        <NamedIndividual IRI="OilSeedCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WholePlantRootCrops"/>
+        <NamedIndividual IRI="RootCrops"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+        <NamedIndividual IRI="BlendsAndMixturesWholeTreesWithRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+        <NamedIndividual IRI="BroadLeafWholeTreesWithRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+        <NamedIndividual IRI="BushesWholeTreesWithRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+        <NamedIndividual IRI="ConiferousWholeTreesWithRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WholeTreesWithRoots"/>
+        <NamedIndividual IRI="ShortRotationCoppiceWholeTreesWithRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+        <NamedIndividual IRI="BlendsAndMixturesWholeTreesWithoutRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+        <NamedIndividual IRI="BroadLeafWholeTreesWithoutRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+        <NamedIndividual IRI="BushesWholeTreesWithoutRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+        <NamedIndividual IRI="ConiferousWholeTreesWithoutRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WholeTreesWithoutRoots"/>
+        <NamedIndividual IRI="ShortRotationCoppiceWholeTreesWithoutRoots"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WithBarkChemicallyTreatedUsedWood"/>
+        <NamedIndividual IRI="ChemicallyTreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WithBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+        <NamedIndividual IRI="ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WithBrakChemicallyUntreatedUsedWood"/>
+        <NamedIndividual IRI="ChemicallyUntreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WithoutBarkChemicallyTreatedUsedWood"/>
+        <NamedIndividual IRI="ChemicallyTreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WithoutBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+        <NamedIndividual IRI="ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:broader"/>
+        <NamedIndividual IRI="WithoutBarkChemicallyUntreatedUsedWood"/>
+        <NamedIndividual IRI="ChemicallyUntreatedUsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WoodyBiomass"/>
+        <NamedIndividual IRI="BlendsAndMixturesWoodyBiomass"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WoodyBiomass"/>
+        <NamedIndividual IRI="ByProductsAndResiduesFromWoodProcessingIndustry"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WoodyBiomass"/>
+        <NamedIndividual IRI="ForestPlantation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="skos:narrower"/>
+        <NamedIndividual IRI="WoodyBiomass"/>
+        <NamedIndividual IRI="UsedWood"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="belongsToType"/>
+        <Class IRI="BiomassOrigin"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="boughtQuantityPerGroup"/>
+        <Class abbreviatedIRI="ship:BoughtQuantity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="consumes"/>
+        <Class IRI="Biomass"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasAshes"/>
+        <Class IRI="Biomass"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasCaliber"/>
+        <Class IRI="SoldPerCaliber"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasGroup"/>
+        <Class IRI="BiomassOrigin"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasHumidity"/>
+        <Class IRI="Biomass"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasOrigin"/>
+        <Class IRI="Biomass"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSubGroup"/>
+        <Class IRI="BiomassOrigin"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasSubType"/>
+        <Class IRI="BiomassOrigin"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="produces"/>
+        <Class IRI="Biomass"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="quantity"/>
+        <Class IRI="Biomass"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="quantityPerCaliber"/>
+        <Class IRI="SoldPerGroup"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="soldQuantityPerGroup"/>
+        <Class IRI="SoldQuantity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="saref:isMeasuredIn"/>
+        <Class abbreviatedIRI="saref:Measurement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="saref:relatesToMeasurement"/>
+        <Class abbreviatedIRI="saref:Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="saref:relatesToProperty"/>
+        <Class abbreviatedIRI="saref:Measurement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="belongsToType"/>
+        <Class IRI="BiomassType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="boughtQuantityPerGroup"/>
+        <Class IRI="BoughtPerGroup"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="consumes"/>
+        <Class abbreviatedIRI="adapters:Energy"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasAshes"/>
+        <Class IRI="Aches"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasCaliber"/>
+        <Class IRI="Caliber"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasGroup"/>
+        <Class IRI="BiomassGroup"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasHumidity"/>
+        <Class IRI="Humidity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasOrigin"/>
+        <Class IRI="BiomassOrigin"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSubGroup"/>
+        <Class IRI="BiomassSubGroup"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasSubType"/>
+        <Class IRI="BiomassSubType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTradingForm"/>
+        <Class IRI="TradingForm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="produces"/>
+        <Class abbreviatedIRI="adapters:Energy"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="quantity"/>
+        <Class IRI="Quantity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="quantityPerCaliber"/>
+        <Class IRI="SoldPerCaliber"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="relatedTo"/>
+        <Class IRI="BiomassSubGroup"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="soldQuantityPerGroup"/>
+        <Class IRI="SoldPerGroup"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="saref:isMeasuredIn"/>
+        <Class abbreviatedIRI="om:UnitOfMeasure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="saref:relatesToMeasurement"/>
+        <Class abbreviatedIRI="saref:Measurement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="saref:relatesToProperty"/>
+        <Class abbreviatedIRI="saref:Property"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="dimension"/>
+        <Class IRI="Biomass"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="priceValue"/>
+        <Class IRI="BiomassEnergyPrice"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="value"/>
+        <Class IRI="Quantity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="saref:hasTimeStamp"/>
+        <Class abbreviatedIRI="saref:Measurement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="saref:hasValue"/>
+        <Class abbreviatedIRI="saref:Measurement"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="dimension"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasDescription"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="priceValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="value"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="saref:hasTimeStamp"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="saref:hasValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>om:UnitOfMeasure</AbbreviatedIRI>
+        <Literal>Unit of Measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>adapters:Energy</AbbreviatedIRI>
+        <Literal>Energy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Aches</IRI>
+        <Literal>Aches</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>AquaticBiomass</IRI>
+        <Literal>Aquatic Biomass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BambooGrasses</IRI>
+        <Literal>Bamboo grasses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BarkChemicallyTreatedUsedWood</IRI>
+        <Literal>Bark chemically treated used wood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents</IRI>
+        <Literal>Bark chemically treated wood by products residues fibres and wood constituents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BarkChemicallyUntreatedUsedWood</IRI>
+        <Literal>Bark chemically untreated used wood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>BarkChemicallyUntreatedWoodByProductsAndResidues</IRI>
+        <Literal>from industry operations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BarkChemicallyUntreatedWoodByProductsAndResidues</IRI>
+        <Literal>Bark chemically untreated wood by products and residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BarkFromForestryOperations</IRI>
+        <Literal>Bark from forestry operations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BarkFromIndustryOperations</IRI>
+        <Literal>Bark from industry operations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BerriesChemicallyTreatedFruitResidues</IRI>
+        <Literal>Berries chemically treated fruit residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BerriesChemicallyUntreatedFruitResidues</IRI>
+        <Literal>Berries chemically untreated fruit residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Biomass</IRI>
+        <Literal>Biomass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BiomassEnergyPrice</IRI>
+        <Literal>Biomass Energy Price</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BiomassGroup</IRI>
+        <Literal>Biomass Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BiomassOrigin</IRI>
+        <Literal>Biomass Origin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BiomassSubGroup</IRI>
+        <Literal>Biomass Sub Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BiomassSubType</IRI>
+        <Literal>Biomass Sub Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BiomassType</IRI>
+        <Literal>Biomass Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMIxturesStoneOrKernelFruit</IRI>
+        <Literal>Blends and mixtures stone or kernel fruit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixtures</IRI>
+        <Literal>Blends and Mixtures</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesAlgae</IRI>
+        <Literal>Blends and mixtures algae</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesAquaticBiomass</IRI>
+        <Literal>Blends and mixtures aquatic biomass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesBerries</IRI>
+        <Literal>Blends and mixtures berries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesByProductsAndResiduesFromFoodAndFruitProcessingIndustry</IRI>
+        <Literal>Blends and mixtures by products and residues from food and  fruit processing industry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesByProductsAndResiduesFromFoodAndHerbaceousProcesingIndustry</IRI>
+        <Literal>Blends and mixtures by products and residues from food and herbaceous procesing industry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesByProductsAndResiduesFromWoodProcessingIndustry</IRI>
+        <Literal>Blends and mixtures by products and residues from wood processing industry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesCerealCrops</IRI>
+        <Literal>Blends and mixtures cereal crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesChemicallyTreatedFruitResidues</IRI>
+        <Literal>Blends and mixtures chemically treated fruit residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesChemicallyTreatedHerbaceousResidues</IRI>
+        <Literal>Blends and mixtures chemically treated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesChemicallyUntreatedFruitResidues</IRI>
+        <Literal>Blends and mixtures chemically untreated fruit residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesChemicallyUntreatedHerbaceousResidues</IRI>
+        <Literal>Blends and mixtures chemically untreated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesFlowers</IRI>
+        <Literal>Blends and mixtures flowers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesForestPlantation</IRI>
+        <Literal>Blends and mixtures forest plantation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesFruitBiomass</IRI>
+        <Literal>Blends and mixtures fruit biomass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesGrasses</IRI>
+        <Literal>Blends and mixtures grasses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesHerbaceousBiomass</IRI>
+        <Literal>Blends and mixtures herbaceous biomass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesHerbaceousBiomassFromAgricultureAndHorticulture</IRI>
+        <Literal>Blends and mixtures herbaceous biomass from agriculture and horticulture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesLeakAndSeaGrass</IRI>
+        <Literal>Blends and mixtures leak and sea grass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesLegumeCrops</IRI>
+        <Literal>Blends and mixtures legume crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesLoggingResidues</IRI>
+        <Literal>Blends and mixtures logging residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesNutsAndAcorns</IRI>
+        <Literal>Blends and mixtures nuts and acorns</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesOilSeedCrops</IRI>
+        <Literal>Blends and mixtures oil seed crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesOrchardAndHorticultureFruit</IRI>
+        <Literal>Blends and mixtures orchard and horticulture fruit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesReeds</IRI>
+        <Literal>Blends and mixtures reeds</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesRootCrops</IRI>
+        <Literal>Blends and mixtures root crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesStemwood</IRI>
+        <Literal>Blends and mixtures stemwood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesStumpsOrRoots</IRI>
+        <Literal>Blends And Mixtures Stumps or roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesUsedWood</IRI>
+        <Literal>Blends and mixtures used wood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesWholeTreesWithRoots</IRI>
+        <Literal>Blends and mixtures whole trees with roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesWholeTreesWithoutRoots</IRI>
+        <Literal>Blends and mixtures whole trees without roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BlendsAndMixturesWoodyBiomass</IRI>
+        <Literal>Blends and mixtures woody biomass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BoughtPerGroup</IRI>
+        <Literal>Bought Per Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BroadLeafStumpsOrRoots</IRI>
+        <Literal>Broad leaf stumps or roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BroadLeafWholeTreesWithRoots</IRI>
+        <Literal>Broad leaf whole trees with roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BroadLeafWholeTreesWithoutRoots</IRI>
+        <Literal>Broad Leaf whole trees without roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BroadLeafWithBarkChemicallyUntreatedWoodByProductsAndResidues</IRI>
+        <Literal>Broad leaf with bark chemically untreated wood by products and residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BroadLeafWithBarkStemwood</IRI>
+        <Literal>Broad leaf with bark stemwood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BroadLeafWithoutBarkChemicallyUntreatedWoodByProductsAndResidues</IRI>
+        <Literal>Broad leaf without bark chemically untreated wood by products and residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BroadLeafWithoutBarkStemwood</IRI>
+        <Literal>Broad leaf without bark stemwood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BrownSeaWeed</IRI>
+        <Literal>Brown sea weed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BushesStumpsOrRoots</IRI>
+        <Literal>Bushes stumps or roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BushesWholeTreesWithRoots</IRI>
+        <Literal>Bushes whole trees with roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>BushesWholeTreesWithoutRoots</IRI>
+        <Literal>Bushes whole trees without roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ByProductsAndResiduesFromFoodAndFruitProcessingIndustry</IRI>
+        <Literal>By product and residues from food and fruit processing industry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ByProductsAndResiduesFromWoodProcessingIndustry</IRI>
+        <Literal>by products and residue from wood processing industry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry</IRI>
+        <Literal>By product and residues From food and Herbaceous processing industry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Caliber</IRI>
+        <Literal>Caliber</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CerealCrops</IRI>
+        <Literal>Cereal crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CerealCropsAndGrasses</IRI>
+        <Literal>Cereal crops and grasses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CerealCropsAndGrassesChemicallyTreatedherbaceousResidues</IRI>
+        <Literal>Cereal crops and grasses chemically treated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CerealCropsAndGrassesChemicallyUntreatedHerbaceousResidues</IRI>
+        <Literal>Cereal crops and grasses chemically untreated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ChemicallyTreatedFruitResidues</IRI>
+        <Literal>Chemically treated fruit residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ChemicallyTreatedHerbaceousResidues</IRI>
+        <Literal>Chemically treated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ChemicallyTreatedUsedWood</IRI>
+        <Literal>Chemically treated used wood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents</IRI>
+        <Literal>Chemically treated wood by products residues fibres and wood constituents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ChemicallyUntreatedFruitResidues</IRI>
+        <Literal>Chemically untreated fruit residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ChemicallyUntreatedHerbaceousResidues</IRI>
+        <Literal>Chemically untreated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ChemicallyUntreatedUsedWood</IRI>
+        <Literal>Chemically untreated used wood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ChemicallyUntreatedWoodbyProductsAndResidues</IRI>
+        <Literal>Chemically untreated wood by products and residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CommonReed</IRI>
+        <Literal>Common reed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ConiferousStumpsOrRoots</IRI>
+        <Literal>Coniferous stumps or roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ConiferousWholeTreesWithRoots</IRI>
+        <Literal>Coniferous whole trees with roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ConiferousWholeTreesWithoutRoots</IRI>
+        <Literal>Coniferous Whole trees without roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ConiferousWithBarkStemwood</IRI>
+        <Literal>Coniferous with bark stemwood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ConiferousWithBrakChemicallyUntreatedWoodByProductsAndResidues</IRI>
+        <Literal>Coniferous with bark chemically untreated wood by products and residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ConiferousWithoutBarkChemicallyUntreatedWoodByProductsAndResidues</IRI>
+        <Literal>Coniferous without bark chemically untreated wood by products and residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ConiferousWithoutBarkStemwood</IRI>
+        <Literal>Coniferous without bark stemwood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CrudeOliveCakeChemicallyUntreatedFruitResidues</IRI>
+        <Literal>Crude olive cake chemically untreated fruit residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>CurrentQuantity</IRI>
+        <Literal>Current Quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ExhaustedOliveCakeChemicallyTreatedFruitResidues</IRI>
+        <Literal>Exhausted olive cake chemically treated fruit residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FibresAndWoodConstituentsChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents</IRI>
+        <Literal>Fibres and wood constituents chemically treated wood by products residues fibres and wood constituents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FleshBerries</IRI>
+        <Literal>Flesh berries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FleshStoneOrKernelFruits</IRI>
+        <Literal>Flesh stone or kernel fruits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Flowers</IRI>
+        <Literal>Flowers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FlowersChemicallyTreatedHerbaceousResidues</IRI>
+        <Literal>Flowers chemically treated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FlowersChemicallyUntreatedHerbaceousResidues</IRI>
+        <Literal>Flowers chemically untreated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ForestPlantation</IRI>
+        <Literal>Forest Plantation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>FreshOrGreenBroadLeaf</IRI>
+        <Literal>Fresh or green broad leaf  (including leaves)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FreshOrGreenBroadLeaf</IRI>
+        <Literal>Fresh or green broad leaf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>FreshOrGreenConiferous</IRI>
+        <Literal>Fresh or green coniferous (including needles)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FreshOrGreenConiferous</IRI>
+        <Literal>Fresh or green coniferous</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FruitBiomass</IRI>
+        <Literal>Fruit Biomass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>FruitLegumeCrops</IRI>
+        <Literal>Fruit legume Crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>GrainsOrSeedsCerealCrops</IRI>
+        <Literal>Grains or seeds cereal crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>GreenSeaWeed</IRI>
+        <Literal>Green sea weed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>HerbaceousBiomass</IRI>
+        <Literal>Herbaceous Biomass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>HerbaceousBiomassFromAgricultureAndHorticulture</IRI>
+        <Literal>Herbaceous biomass from agriculture and horticulture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Humidity</IRI>
+        <Literal>Humidity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>HusksOrShellsCerealCrops</IRI>
+        <Literal>Husks or shells cereal crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>HusksOrShellsOilSeedCrops</IRI>
+        <Literal>Husks or shells oil seed crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>KernelsNutsAndAcorns</IRI>
+        <Literal>kernels nuts and acorns</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LakeAndSeaGrass</IRI>
+        <Literal>Lake and sea grass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LakeGrass</IRI>
+        <Literal>Lake grass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LegumeCrops</IRI>
+        <Literal>Legume crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LegumeCropsChemicallyTreatedHerbaceousResidues</IRI>
+        <Literal>Legume crops chemically treated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LegumeCropsChemicallyUntreatedHerbaceousResidues</IRI>
+        <Literal>Legume crops chemically untreated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>LoggingResidues</IRI>
+        <Literal>Logging residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MacroAlgae</IRI>
+        <Literal>Macro algae</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>MicroAlgae</IRI>
+        <Literal>Micro algae</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NutsAndAcornsChemicallyTreatedFruitResidues</IRI>
+        <Literal>Nuts and acorns chemically treated fruit residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NutsAndAcornsChemicallyUntreatedFruitResidues</IRI>
+        <Literal>Nuts and acorns chemically untreated fruit residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NutsandAcorns</IRI>
+        <Literal>Nuts and acorns</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OilSeedCrops</IRI>
+        <Literal>OIl seed corps</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OilSeedCropsChemicallyTreatedHerbaceousResidues</IRI>
+        <Literal>Oil seed crops chemically treated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OilSeedCropsChemicallyUntreatedHerbaceousResidues</IRI>
+        <Literal>Oil seed chemically untreated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OrchardAndHorticultureFruit</IRI>
+        <Literal>Orchard and horticulture fruit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>OtherReed</IRI>
+        <Literal>Other reed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PodsLegumeCrops</IRI>
+        <Literal>Pods legume crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PrimaryEnergyCost</IRI>
+        <Literal>Primary Energy Cost</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PrimaryEnergyCostObs</IRI>
+        <Literal>Primary Energy Cost Obs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Quantity</IRI>
+        <Literal>Quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>RedSeaWeed</IRI>
+        <Literal>Red sea weed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>RootCrops</IRI>
+        <Literal>Root corps</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>RootCropsChemicallyTreatedHerbaceousResidues</IRI>
+        <Literal>Root crops chemically treated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>RootCropsChemicallyUntreatedHerbaceousResidues</IRI>
+        <Literal>Root crops chemically untreated herbaceous residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>RootRootCrops</IRI>
+        <Literal>Root root crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SeaGrass</IRI>
+        <Literal>Sea grass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SeedsBerries</IRI>
+        <Literal>Seeds berries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SeedsFlowers</IRI>
+        <Literal>Seeds Flowers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SeedsGrasses</IRI>
+        <Literal>Seeds grasses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SeedsOilSeedCrops</IRI>
+        <Literal>Seeds oil seed crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SegregatedHerbaceousBiomassFromGardensParksRoadsideMaintenanceVineyardsAndFruitOrchards</IRI>
+        <Literal>Segregated herbaceous</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SegregatedWoodFromGardensParksRoadsideMaintenanceVineyardsFruitOrchardsAndDriftwoodFromFreshwater</IRI>
+        <Literal>Segregated wood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ShellsGrasses</IRI>
+        <Literal>Shells Grasses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ShellsOrHusksNutsAndAcorns</IRI>
+        <Literal>Shells or husks nuts and acorns</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ShortRotationCoppiceStumpsOrRoots</IRI>
+        <Literal>Short rotation coppice stumps or roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ShortRotationCoppiceWholeTreesWithRoots</IRI>
+        <Literal>Short rotation coppice whole trees with roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ShortRotationCoppiceWholeTreesWithoutRoots</IRI>
+        <Literal>Short rotation coppice whole trees without roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SoldPerCaliber</IRI>
+        <Literal>Sold Per Caliber</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SoldPerGroup</IRI>
+        <Literal>Sold Per Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>SoldQuantity</IRI>
+        <Literal>Sold Quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StalksAndLeavesFlowers</IRI>
+        <Literal>Stalks and leaves flowers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StalksAndLeavesLegumeCrops</IRI>
+        <Literal>Stalks and leaves legume crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StalksAndLeavesOilSeedCrops</IRI>
+        <Literal>Stalks and leaves oil seed crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StalksAndLeavesRootCrops</IRI>
+        <Literal>Stalks and leaves root crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Stemwood</IRI>
+        <Literal>Stemwood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StoneOrKernelFruits</IRI>
+        <Literal>Stone or kernel fruits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StoneOrKernelFruitsChemicallyTreatedFruitResidues</IRI>
+        <Literal>Stone or kernels fruits chemically treated fuit residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StoneOrKernelFruitsOrFruitFibreChemicallyUntreatedFruitResidues</IRI>
+        <Literal>Stone or kernel fruits or fruit fibre chemically untreated fruit residues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StoneOrKernelOrFruitFibreStoneOrKernelFruit</IRI>
+        <Literal>Stone or kernel or fruit fibre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StoredBroadLeaf</IRI>
+        <Literal>Stored broad leaf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StoredConiferous</IRI>
+        <Literal>Stored coniferous</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StrawPartsCerealCrops</IRI>
+        <Literal>Straw parts cereal crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StrawPartsGrasses</IRI>
+        <Literal>Straw parts grasses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>StumpsOrRoots</IRI>
+        <Literal>Stumps or roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TotalQuantity</IRI>
+        <Literal>Total Quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TradingForm</IRI>
+        <Literal>Trading Form</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>UsedWood</IRI>
+        <Literal>Used wood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WaterHyacinth</IRI>
+        <Literal>Water Hyacinth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WholeBerries</IRI>
+        <Literal>Whole berries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WholeFruitStoneOrKernelFruits</IRI>
+        <Literal>Whole fruit stone or kernel fruits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WholeNuts</IRI>
+        <Literal>Whole nuts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WholePlantCerealCrops</IRI>
+        <Literal>Whole plant cereal crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WholePlantFlowers</IRI>
+        <Literal>Whole plant flowers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WholePlantGrasses</IRI>
+        <Literal>Whole plant grasses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WholePlantLegumeCrops</IRI>
+        <Literal>Whole plant legume crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WholePlantOilSeedCrops</IRI>
+        <Literal>Whole plant oil seed crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WholePlantRootCrops</IRI>
+        <Literal>Whole plant root crops</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WholeTreesWithRoots</IRI>
+        <Literal>Whole trees with roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WholeTreesWithoutRoots</IRI>
+        <Literal>Whole trees without roots</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WithBarkChemicallyTreatedUsedWood</IRI>
+        <Literal>With bark chemically treated used  wood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WithBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents</IRI>
+        <Literal>With bark chemically treated wood by products residues fibres and wood constituents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WithBrakChemicallyUntreatedUsedWood</IRI>
+        <Literal>With bark chemically untreated used wood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WithoutBarkChemicallyTreatedUsedWood</IRI>
+        <Literal>Without bark chemically treated used wood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WithoutBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents</IRI>
+        <Literal>Without bark chemically treated wood by products residues fibres and wood constituents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WithoutBarkChemicallyUntreatedUsedWood</IRI>
+        <Literal>Without bark chemically untreated used wood</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WoodyBiomass</IRI>
+        <Literal>Woody Biomass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>belongsToType</IRI>
+        <Literal>belongs to type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>boughtQuantityPerGroup</IRI>
+        <Literal>bought quantity per group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasAshes</IRI>
+        <Literal>has ashes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasCaliber</IRI>
+        <Literal>has caliber</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasDescription</IRI>
+        <Literal>has Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasGroup</IRI>
+        <Literal>has group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasHumidity</IRI>
+        <Literal>has humidity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasID</IRI>
+        <Literal>has ID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasName</IRI>
+        <Literal>has Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasOrigin</IRI>
+        <Literal>has origin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSubGroup</IRI>
+        <Literal>has sub group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasSubType</IRI>
+        <Literal>has sub type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTradingForm</IRI>
+        <Literal>has trading form</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>priceValue</IRI>
+        <Literal>price value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>quantityPerCaliber</IRI>
+        <Literal>quantity per caliber</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>relatedTo</IRI>
+        <Literal>related to</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>soldQuantityPerGroup</IRI>
+        <Literal>sold quantity per group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>value</IRI>
+        <Literal>value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>ship:BoughtQuantity</AbbreviatedIRI>
+        <Literal>Bought Quantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>saref:Measurement</AbbreviatedIRI>
+        <Literal>Measurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>saref:Price</AbbreviatedIRI>
+        <Literal>Price</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>saref:Property</AbbreviatedIRI>
+        <Literal>Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>saref:hasValue</AbbreviatedIRI>
+        <Literal>has Value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>saref:isMeasuredIn</AbbreviatedIRI>
+        <Literal>is measured in</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>saref:relatesToMeasurement</AbbreviatedIRI>
+        <Literal>relates to measurement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>saref:relatesToProperty</AbbreviatedIRI>
+        <Literal>relates to property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>skos:broader</AbbreviatedIRI>
+        <Literal>broader</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>skos:narrower</AbbreviatedIRI>
+        <Literal>narrower</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

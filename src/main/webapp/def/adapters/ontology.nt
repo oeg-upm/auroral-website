@@ -1,0 +1,1197 @@
+<https://auroral.iot.linkeddata.es/def/adapters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://auroral.iot.linkeddata.es/def/adapters> <http://purl.org/dc/elements/1.1/creator> "Ahlem Rhayem" .
+<https://auroral.iot.linkeddata.es/def/adapters> <http://purl.org/dc/elements/1.1/creator> "Andrea Cimmino" .
+<https://auroral.iot.linkeddata.es/def/adapters> <http://purl.org/dc/elements/1.1/creator> "Juan Cano de Benito" .
+<https://auroral.iot.linkeddata.es/def/adapters> <http://purl.org/dc/elements/1.1/creator> "Maria Poveda Villalon" .
+<https://auroral.iot.linkeddata.es/def/adapters> <http://purl.org/dc/elements/1.1/creator> "Raúl García Castro" .
+<https://auroral.iot.linkeddata.es/def/adapters> <http://purl.org/dc/elements/1.1/description> "This ontology aims at modelling the adapters for the AURORAL project." .
+<https://auroral.iot.linkeddata.es/def/adapters> <http://purl.org/dc/elements/1.1/title> "The AURORAL adapters ontology" .
+<https://auroral.iot.linkeddata.es/def/adapters> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<https://auroral.iot.linkeddata.es/def/adapters> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/sosa/description
+<http://www.w3.org/ns/sosa/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://saref.etsi.org/core#controlsProperty
+<https://saref.etsi.org/core#controlsProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core#controlsProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://saref.etsi.org/core#controlsProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#Device> .
+<https://saref.etsi.org/core#controlsProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core#Property> .
+# 
+# https://saref.etsi.org/core#measuresProperty
+<https://saref.etsi.org/core#measuresProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/core#measuresProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#Device> .
+<https://saref.etsi.org/core#measuresProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core#Property> .
+<https://saref.etsi.org/core#measuresProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "measures property" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#dateLastStatusUpdate
+<https://auroral.iot.linkeddata.es/def/adapters#dateLastStatusUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#dateLastStatusUpdate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#dateLastStatusUpdate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://auroral.iot.linkeddata.es/def/adapters#dateLastStatusUpdate> <http://www.w3.org/2000/01/rdf-schema#label> "date Last Status Update" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#hasHeight
+<https://auroral.iot.linkeddata.es/def/adapters#hasHeight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#hasHeight> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture> .
+<https://auroral.iot.linkeddata.es/def/adapters#hasHeight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://auroral.iot.linkeddata.es/def/adapters#hasHeight> <http://www.w3.org/2000/01/rdf-schema#label> "has height" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#hasVolume
+<https://auroral.iot.linkeddata.es/def/adapters#hasVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#hasVolume> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture> .
+<https://auroral.iot.linkeddata.es/def/adapters#hasVolume> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://auroral.iot.linkeddata.es/def/adapters#hasVolume> <http://www.w3.org/2000/01/rdf-schema#label> "has volume" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#title
+<https://auroral.iot.linkeddata.es/def/adapters#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#title> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/adapters#title> <http://www.w3.org/2000/01/rdf-schema#label> "title" .
+# 
+# https://auroral.iot.linkeddata.es/def/core#hasId
+<https://auroral.iot.linkeddata.es/def/core#hasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/core#hasId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/core#hasId> <http://www.w3.org/2000/01/rdf-schema#label> "has id" .
+# 
+# https://auroral.iot.linkeddata.es/def/core#serialNumber
+<https://auroral.iot.linkeddata.es/def/core#serialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/core#serialNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#Device> .
+<https://auroral.iot.linkeddata.es/def/core#serialNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://auroral.iot.linkeddata.es/def/core#versionNumber
+<https://auroral.iot.linkeddata.es/def/core#versionNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/core#versionNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#Device> .
+<https://auroral.iot.linkeddata.es/def/core#versionNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://saref.etsi.org/core#hasTimeStamp
+<https://saref.etsi.org/core#hasTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://saref.etsi.org/core#hasTimeStamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://saref.etsi.org/core#hasTimeStamp> <http://www.w3.org/2000/01/rdf-schema#label> "has time stamp" .
+# 
+# https://saref.etsi.org/core#hasValue
+<https://saref.etsi.org/core#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://saref.etsi.org/core#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://saref.etsi.org/core#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Accelerometer
+<https://auroral.iot.linkeddata.es/def/adapters#Accelerometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Accelerometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AccumulatedPercipitation
+<https://auroral.iot.linkeddata.es/def/adapters#AccumulatedPercipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#AccumulatedPercipitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#ActReason
+<https://auroral.iot.linkeddata.es/def/adapters#ActReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#ActReason> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#ActReason> <http://www.w3.org/2000/01/rdf-schema#label> "Act reason" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AirConditionningBasic
+<https://auroral.iot.linkeddata.es/def/adapters#AirConditionningBasic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#AirConditionningBasic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#AirConditionningBasic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AirQuality
+<https://auroral.iot.linkeddata.es/def/adapters#AirQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#AirQuality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AirQualitySensor
+<https://auroral.iot.linkeddata.es/def/adapters#AirQualitySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#AirQualitySensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#AirQualitySensor> <http://www.w3.org/2000/01/rdf-schema#label> "Air Quality Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Alert
+<https://auroral.iot.linkeddata.es/def/adapters#Alert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Alert> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Alert> <http://www.w3.org/2000/01/rdf-schema#label> "Alert" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty
+<https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Ambient Property" .
+<https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "This concepts regroups the ambient properties that are detcetd by the deployed devices. These properties are the ambient temperature, the ambient humidity, the ambient flood, the ambient wind and the ambient solar radiation properties." .
+<https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Ambient Property" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation
+<https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> <http://www.w3.org/2000/01/rdf-schema#comment> "Often called the solar resource or just sunlight, is a general term for the electromagnetic radiation emitted by the sun." .
+<https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> <http://www.w3.org/2000/01/rdf-schema#label> "Ambient Solar Radiation" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Ammonia
+<https://auroral.iot.linkeddata.es/def/adapters#Ammonia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Ammonia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AirQuality> .
+<https://auroral.iot.linkeddata.es/def/adapters#Ammonia> <http://www.w3.org/2000/01/rdf-schema#label> "Ammonia" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#BoilerBiomass
+<https://auroral.iot.linkeddata.es/def/adapters#BoilerBiomass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#BoilerBiomass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#BoilerSensor> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#BoilerNgas
+<https://auroral.iot.linkeddata.es/def/adapters#BoilerNgas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#BoilerNgas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#BoilerSensor> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#BoilerOil
+<https://auroral.iot.linkeddata.es/def/adapters#BoilerOil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#BoilerOil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#BoilerSensor> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#BoilerSensor
+<https://auroral.iot.linkeddata.es/def/adapters#BoilerSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#BoilerSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#CarbonDioxide
+<https://auroral.iot.linkeddata.es/def/adapters#CarbonDioxide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#CarbonDioxide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AirQuality> .
+<https://auroral.iot.linkeddata.es/def/adapters#CarbonDioxide> <http://www.w3.org/2000/01/rdf-schema#label> "Carbon Dioxide" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#CarbonMonoxide
+<https://auroral.iot.linkeddata.es/def/adapters#CarbonMonoxide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#CarbonMonoxide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AirQuality> .
+<https://auroral.iot.linkeddata.es/def/adapters#CarbonMonoxide> <http://www.w3.org/2000/01/rdf-schema#label> "Carbon Monoxide" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#CloudCover
+<https://auroral.iot.linkeddata.es/def/adapters#CloudCover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#CloudCover> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#CoarseParticulateMatter
+<https://auroral.iot.linkeddata.es/def/adapters#CoarseParticulateMatter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#CoarseParticulateMatter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AirQuality> .
+<https://auroral.iot.linkeddata.es/def/adapters#CoarseParticulateMatter> <http://www.w3.org/2000/01/rdf-schema#label> "Coarse Particulate Matter" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor
+<https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#EnergyMonitor
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyMonitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyMonitor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyMonitor> <http://www.w3.org/2000/01/rdf-schema#comment> "It is used to track and control real time energy use. It has different properties such as the returned energy, the total returned energy, etc..." .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyMonitor> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Monitor Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "It regroups the properties related to the energy such as: the battery level, the totalreturnedEnergy, the TotalEnergy, the PowerFactor, the Gridvoltage, and so one." .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Property" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Error
+<https://auroral.iot.linkeddata.es/def/adapters#Error> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Error> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Error> <http://www.w3.org/2000/01/rdf-schema#label> "Error" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#FineParticlesMatter
+<https://auroral.iot.linkeddata.es/def/adapters#FineParticlesMatter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#FineParticlesMatter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AirQuality> .
+<https://auroral.iot.linkeddata.es/def/adapters#FineParticlesMatter> <http://www.w3.org/2000/01/rdf-schema#label> "Fine Particles Matter" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty
+<https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "a rising and overflowing of a body os water especially onto normally dry land" .
+<https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Flood Ambient Property" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#FloodSensor
+<https://auroral.iot.linkeddata.es/def/adapters#FloodSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#FloodSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#FloodSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "It is designed for detection of water leaks or detecting excessively high-water level." .
+<https://auroral.iot.linkeddata.es/def/adapters#FloodSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Flood Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#GPSEmergencyButton
+<https://auroral.iot.linkeddata.es/def/adapters#GPSEmergencyButton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#GPSEmergencyButton> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#GPSEmergencyButton> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a device used to detect the exact location of a specific thing or object. The detected data is the longitude, latitude, altitude, and the acceleration." .
+<https://auroral.iot.linkeddata.es/def/adapters#GPSEmergencyButton> <http://www.w3.org/2000/01/rdf-schema#label> "GPS Emergency Button" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#HealthProperty
+<https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Health Property" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirtoAir
+<https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirtoAir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirtoAir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirtoAir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirtoWater
+<https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirtoWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirtoWater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirtoWater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor
+<https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#HumidityAmbientProperty
+<https://auroral.iot.linkeddata.es/def/adapters#HumidityAmbientProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#HumidityAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#HumidityAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a value expressed as a percentage (0-100%). It is the amount of water vapor present in a specific volume." .
+<https://auroral.iot.linkeddata.es/def/adapters#HumidityAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Ambient Humidity Property" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#HumiditySensor
+<https://auroral.iot.linkeddata.es/def/adapters#HumiditySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#HumiditySensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#HumiditySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a device that detects and measures water vapor in its environment and converts its findings into a corresponding electrical signal." .
+<https://auroral.iot.linkeddata.es/def/adapters#HumiditySensor> <http://www.w3.org/2000/01/rdf-schema#label> "Humidity Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#LightBulb
+<https://auroral.iot.linkeddata.es/def/adapters#LightBulb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#LightBulb> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#LightBulb> <http://www.w3.org/2000/01/rdf-schema#label> "Light Bulb" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#LightProperty
+<https://auroral.iot.linkeddata.es/def/adapters#LightProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#LightProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#LightProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "it describes properties about illuminance." .
+<https://auroral.iot.linkeddata.es/def/adapters#LightProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Light Property" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#LuminusFlux
+<https://auroral.iot.linkeddata.es/def/adapters#LuminusFlux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#LuminusFlux> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#LightProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#LuminusFlux> <http://www.w3.org/2000/01/rdf-schema#label> "Luminus Flux" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#MonitoringSensor
+<https://auroral.iot.linkeddata.es/def/adapters#MonitoringSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#MonitoringSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#MonitoringSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "It generates data about the active power, the reactive inductive power, the active enrgy, the reactive capacitif, the voltage and so one." .
+<https://auroral.iot.linkeddata.es/def/adapters#MonitoringSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Monitoring Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#MotionProperty
+<https://auroral.iot.linkeddata.es/def/adapters#MotionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#MotionProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#MotionProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "it is  about the motion and the vibration properties." .
+<https://auroral.iot.linkeddata.es/def/adapters#MotionProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Motion Property" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#MotionSensor
+<https://auroral.iot.linkeddata.es/def/adapters#MotionSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#MotionSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#MotionSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A motion sensor (or motion detector) is a device that is designed to detect and measure movement." .
+<https://auroral.iot.linkeddata.es/def/adapters#MotionSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Motion Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#NitrogenDioxide
+<https://auroral.iot.linkeddata.es/def/adapters#NitrogenDioxide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#NitrogenDioxide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AirQuality> .
+<https://auroral.iot.linkeddata.es/def/adapters#NitrogenDioxide> <http://www.w3.org/2000/01/rdf-schema#label> "Nitrogen Dioxide" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#NitrogenMonoxide
+<https://auroral.iot.linkeddata.es/def/adapters#NitrogenMonoxide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#NitrogenMonoxide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AirQuality> .
+<https://auroral.iot.linkeddata.es/def/adapters#NitrogenMonoxide> <http://www.w3.org/2000/01/rdf-schema#label> "Nitrogen Monoxide" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Noise
+<https://auroral.iot.linkeddata.es/def/adapters#Noise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Noise> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Noise> <http://www.w3.org/2000/01/rdf-schema#comment> "mesure the noise in a place" .
+<https://auroral.iot.linkeddata.es/def/adapters#Noise> <http://www.w3.org/2000/01/rdf-schema#label> "Noise" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#OperatingProperty
+<https://auroral.iot.linkeddata.es/def/adapters#OperatingProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#OperatingProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#OperatingProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Operating Property" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Ozone
+<https://auroral.iot.linkeddata.es/def/adapters#Ozone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Ozone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AirQuality> .
+<https://auroral.iot.linkeddata.es/def/adapters#Ozone> <http://www.w3.org/2000/01/rdf-schema#label> "Ozone" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PV
+<https://auroral.iot.linkeddata.es/def/adapters#PV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#PV> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#PV> <http://www.w3.org/2000/01/rdf-schema#label> "PV" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PVBIntegrated
+<https://auroral.iot.linkeddata.es/def/adapters#PVBIntegrated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#PVBIntegrated> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#PV> .
+<https://auroral.iot.linkeddata.es/def/adapters#PVBIntegrated> <http://www.w3.org/2000/01/rdf-schema#label> "PV Bintegrated" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PVFaçade
+<https://auroral.iot.linkeddata.es/def/adapters#PVFaçade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#PVFaçade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#PV> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PVGround
+<https://auroral.iot.linkeddata.es/def/adapters#PVGround> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#PVGround> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#PV> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PVRoofFlat
+<https://auroral.iot.linkeddata.es/def/adapters#PVRoofFlat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#PVRoofFlat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#PV> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PVRoofStanled
+<https://auroral.iot.linkeddata.es/def/adapters#PVRoofStanled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#PVRoofStanled> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#PV> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PersonCounter
+<https://auroral.iot.linkeddata.es/def/adapters#PersonCounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#PersonCounter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#TRAFXProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#PersonCounter> <http://www.w3.org/2000/01/rdf-schema#label> "Person Counter" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PersonCounterSensor
+<https://auroral.iot.linkeddata.es/def/adapters#PersonCounterSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#PersonCounterSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#PersonCounterSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "The person sounter sensor is designed to count the number of person that visit a specific city" .
+<https://auroral.iot.linkeddata.es/def/adapters#PersonCounterSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Person Counter Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Precipitation
+<https://auroral.iot.linkeddata.es/def/adapters#Precipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Precipitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Precipitation> <http://www.w3.org/2000/01/rdf-schema#label> "Precipitation" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Presence
+<https://auroral.iot.linkeddata.es/def/adapters#Presence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Presence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Presence> <http://www.w3.org/2000/01/rdf-schema#label> "Presence" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Presence_Sensor
+<https://auroral.iot.linkeddata.es/def/adapters#Presence_Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Presence_Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#Presence_Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "it detects the presence of an object in a place" .
+<https://auroral.iot.linkeddata.es/def/adapters#Presence_Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Presence Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Pressure
+<https://auroral.iot.linkeddata.es/def/adapters#Pressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Pressure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Pressure> <http://www.w3.org/2000/01/rdf-schema#comment> "provides information about the pressure properties (for example the atmospheric pressure)." .
+<https://auroral.iot.linkeddata.es/def/adapters#Pressure> <http://www.w3.org/2000/01/rdf-schema#label> "Pressure" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PressureSensor
+<https://auroral.iot.linkeddata.es/def/adapters#PressureSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#PressureSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#PressureSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Pressure Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#QRCounter
+<https://auroral.iot.linkeddata.es/def/adapters#QRCounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#QRCounter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#TRAFXProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#QRCounter> <http://www.w3.org/2000/01/rdf-schema#label> "QR Counter" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#QRGeneratorSensor
+<https://auroral.iot.linkeddata.es/def/adapters#QRGeneratorSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#QRGeneratorSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#QRGeneratorSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "The QR Generator sensor is designed to count the numebr of person that scan the QR code when they visit a specific city" .
+<https://auroral.iot.linkeddata.es/def/adapters#QRGeneratorSensor> <http://www.w3.org/2000/01/rdf-schema#label> "QR Generator Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Relay
+<https://auroral.iot.linkeddata.es/def/adapters#Relay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Relay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Actuator> .
+<https://auroral.iot.linkeddata.es/def/adapters#Relay> <http://www.w3.org/2000/01/rdf-schema#label> "Relay" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#SmartPlug
+<https://auroral.iot.linkeddata.es/def/adapters#SmartPlug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#SmartPlug> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#SmartPlug> <http://www.w3.org/2000/01/rdf-schema#label> "Smart Plug" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#SmartValve
+<https://auroral.iot.linkeddata.es/def/adapters#SmartValve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#SmartValve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Actuator> .
+<https://auroral.iot.linkeddata.es/def/adapters#SmartValve> <http://www.w3.org/2000/01/rdf-schema#label> "Smart Valve" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture
+<https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture> <http://www.w3.org/2000/01/rdf-schema#comment> "presents the soil moisture height and volume" .
+<https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture> <http://www.w3.org/2000/01/rdf-schema#label> "Soil Moisture" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#SoilMoistureSensor
+<https://auroral.iot.linkeddata.es/def/adapters#SoilMoistureSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#SoilMoistureSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#SoilMoistureSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "soil moisture sensors measure the volumetric water content in soil. it provides data about the height and volume of water in soil." .
+<https://auroral.iot.linkeddata.es/def/adapters#SoilMoistureSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Soil Moisture Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Sound
+<https://auroral.iot.linkeddata.es/def/adapters#Sound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Sound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#Sound> <http://www.w3.org/2000/01/rdf-schema#comment> "This concept defines the Noise Level properties." .
+<https://auroral.iot.linkeddata.es/def/adapters#Sound> <http://www.w3.org/2000/01/rdf-schema#label> "Sound Property" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#SoundSensor
+<https://auroral.iot.linkeddata.es/def/adapters#SoundSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#SoundSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#SoundSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sound Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty
+<https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "describes properties related to space such as the  GPS latitude, the GPS altitude, the GPS longitude, the XAxis Acceleration, the YAxisAcceleration, the ZAxis acceleration, the distance, etc." .
+<https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Space Property" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#StatusProperty
+<https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Status Property" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#StorageCapacity
+<https://auroral.iot.linkeddata.es/def/adapters#StorageCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#StorageCapacity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#StorageCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Storage Capacity" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#SulphurDioxide
+<https://auroral.iot.linkeddata.es/def/adapters#SulphurDioxide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#SulphurDioxide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AirQuality> .
+<https://auroral.iot.linkeddata.es/def/adapters#SulphurDioxide> <http://www.w3.org/2000/01/rdf-schema#label> "Sulphur Dioxide" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Switch
+<https://auroral.iot.linkeddata.es/def/adapters#Switch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Switch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Actuator> .
+<https://auroral.iot.linkeddata.es/def/adapters#Switch> <http://www.w3.org/2000/01/rdf-schema#label> "Switch" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#SwitchStatus
+<https://auroral.iot.linkeddata.es/def/adapters#SwitchStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#SwitchStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#SwitchStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Switch Status" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#TRAFXProperty
+<https://auroral.iot.linkeddata.es/def/adapters#TRAFXProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#TRAFXProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty
+<https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Ambient Temperature is a measure of the temperature around a given asset or piece of equipement or other object" .
+<https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Ambient Temperature" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Thermometer
+<https://auroral.iot.linkeddata.es/def/adapters#Thermometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Thermometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#Thermometer> <http://www.w3.org/2000/01/rdf-schema#comment> "A thermometer sensor is a device used to measure temperature." .
+<https://auroral.iot.linkeddata.es/def/adapters#Thermometer> <http://www.w3.org/2000/01/rdf-schema#label> "Thermometer Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#UltraFineParticlesMatter
+<https://auroral.iot.linkeddata.es/def/adapters#UltraFineParticlesMatter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#UltraFineParticlesMatter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AirQuality> .
+<https://auroral.iot.linkeddata.es/def/adapters#UltraFineParticlesMatter> <http://www.w3.org/2000/01/rdf-schema#label> "Ultra Fine Particles Matter" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#UltrasoundSensor
+<https://auroral.iot.linkeddata.es/def/adapters#UltrasoundSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#UltrasoundSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor
+<https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "It ensures a real time monitoring of the waste bins' status. It generates data about the distance and the deviation position" .
+<https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Waste Bin Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#WaterAMRSensor
+<https://auroral.iot.linkeddata.es/def/adapters#WaterAMRSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#WaterAMRSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#WaterAMRSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Water AMR sensor sends data about the accumulated value of water in the current timestamp." .
+<https://auroral.iot.linkeddata.es/def/adapters#WaterAMRSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Water AMR Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#WaterValveActuator
+<https://auroral.iot.linkeddata.es/def/adapters#WaterValveActuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#WaterValveActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Actuator> .
+<https://auroral.iot.linkeddata.es/def/adapters#WaterValveActuator> <http://www.w3.org/2000/01/rdf-schema#comment> "it is used to control the water valve. It generates an acknowledgement message indicating that the command has been accepted. The generated command can be: ON, OFF, active, close." .
+<https://auroral.iot.linkeddata.es/def/adapters#WaterValveActuator> <http://www.w3.org/2000/01/rdf-schema#label> "Water Valve Actuator" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Weather
+<https://auroral.iot.linkeddata.es/def/adapters#Weather> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Weather> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#WeatherSensor
+<https://auroral.iot.linkeddata.es/def/adapters#WeatherSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#WeatherSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/adapters#WeatherSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a component of an automatic weather station that detects the presence of hydrometeors and determines their type (rain, snow, drizzle, etc.) and intensity. it detects data about the temperature, the humidity, the solar irradiation, the pressure and the rain." .
+<https://auroral.iot.linkeddata.es/def/adapters#WeatherSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Weather Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#WindAmbientProperty
+<https://auroral.iot.linkeddata.es/def/adapters#WindAmbientProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#WindAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#WindAmbientProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Wind Ambient Property" .
+# 
+# https://auroral.iot.linkeddata.es/def/core#Actuator
+<https://auroral.iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Device> .
+<https://auroral.iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Actuator> .
+<https://auroral.iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#comment> "A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world" .
+<https://auroral.iot.linkeddata.es/def/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#label> "Actuator" .
+# 
+# https://auroral.iot.linkeddata.es/def/core#BatterySensor
+<https://auroral.iot.linkeddata.es/def/core#BatterySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/core#BatterySensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
+<https://auroral.iot.linkeddata.es/def/core#BatterySensor> <http://www.w3.org/2000/01/rdf-schema#label> "Battery Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/core#Device
+<https://auroral.iot.linkeddata.es/def/core#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Device> .
+<https://auroral.iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "It is designed to realize a specific task. This task can be a detection of an occurred event or the initiation of an action. It has two sub-classes (sensor and actuator)." .
+<https://auroral.iot.linkeddata.es/def/core#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" .
+# 
+# https://auroral.iot.linkeddata.es/def/core#Sensor
+<https://auroral.iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Device> .
+<https://auroral.iot.linkeddata.es/def/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Sensor> .
+# 
+# https://saref.etsi.org/core#Actuator
+<https://saref.etsi.org/core#Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core#Actuator> <http://www.w3.org/2000/01/rdf-schema#label> "Actuator" .
+# 
+# https://saref.etsi.org/core#Device
+<https://saref.etsi.org/core#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" .
+# 
+# https://saref.etsi.org/core#Property
+<https://saref.etsi.org/core#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "It refers to the observables properties concerning a particular domain or use case. It has diverse sub-classes as presented below." .
+<https://saref.etsi.org/core#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
+# 
+# https://saref.etsi.org/core#Sensor
+<https://saref.etsi.org/core#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindDirection
+<http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#WindAmbientProperty> .
+<http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Wind Direction" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AccumulatedWater
+<https://auroral.iot.linkeddata.es/def/adapters#AccumulatedWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#AccumulatedWater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#AccumulatedWater> <http://www.w3.org/2000/01/rdf-schema#comment> "Accumulated Water" .
+<https://auroral.iot.linkeddata.es/def/adapters#AccumulatedWater> <http://www.w3.org/2000/01/rdf-schema#label> "Accumulated Water" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Active
+<https://auroral.iot.linkeddata.es/def/adapters#Active> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Active> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Active> <http://www.w3.org/2000/01/rdf-schema#comment> "Active" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#ActiveEnergy
+<https://auroral.iot.linkeddata.es/def/adapters#ActiveEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#ActiveEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#ActiveEnergy> <http://www.w3.org/2000/01/rdf-schema#comment> "Active Energy" .
+<https://auroral.iot.linkeddata.es/def/adapters#ActiveEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Active Energy" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AirPressureAtSea
+<https://auroral.iot.linkeddata.es/def/adapters#AirPressureAtSea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#AirPressureAtSea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Pressure> .
+<https://auroral.iot.linkeddata.es/def/adapters#AirPressureAtSea> <http://www.w3.org/2000/01/rdf-schema#label> "Air Pressure at Sea Level" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Alarm
+<https://auroral.iot.linkeddata.es/def/adapters#Alarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Alarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#ActReason> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AmbientTemperature
+<https://auroral.iot.linkeddata.es/def/adapters#AmbientTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#AmbientTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#AmbientTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Ambient Temperature" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AmountPrecipitation
+<https://auroral.iot.linkeddata.es/def/adapters#AmountPrecipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#AmountPrecipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Precipitation> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AngularUnit
+<https://auroral.iot.linkeddata.es/def/adapters#AngularUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#AngularUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#AngularUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Angular Unit" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AtmosphericPressure
+<https://auroral.iot.linkeddata.es/def/adapters#AtmosphericPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#AtmosphericPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Pressure> .
+<https://auroral.iot.linkeddata.es/def/adapters#AtmosphericPressure> <http://www.w3.org/2000/01/rdf-schema#comment> "Atmosphoric Pressure" .
+<https://auroral.iot.linkeddata.es/def/adapters#AtmosphericPressure> <http://www.w3.org/2000/01/rdf-schema#label> "Atmospheric Pressure" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Available
+<https://auroral.iot.linkeddata.es/def/adapters#Available> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Available> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AverageMovementShare
+<https://auroral.iot.linkeddata.es/def/adapters#AverageMovementShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#AverageMovementShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#MotionProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#AverageMovementShare> <http://www.w3.org/2000/01/rdf-schema#label> "Average Movement Share" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#AverageMovementTime
+<https://auroral.iot.linkeddata.es/def/adapters#AverageMovementTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#AverageMovementTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#MotionProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#AverageMovementTime> <http://www.w3.org/2000/01/rdf-schema#label> "Average Movement Time" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#BasalMetabolicRate
+<https://auroral.iot.linkeddata.es/def/adapters#BasalMetabolicRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#BasalMetabolicRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#BasalMetabolicRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Basal Metabolic Rate (BMR) is the number of calories you burn as your body performs basic (basal) life-sustaining function." .
+<https://auroral.iot.linkeddata.es/def/adapters#BasalMetabolicRate> <http://www.w3.org/2000/01/rdf-schema#label> "Basal Metabolic Rate" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Battery
+<https://auroral.iot.linkeddata.es/def/adapters#Battery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Battery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#ActReason> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#BatteryLevel
+<https://auroral.iot.linkeddata.es/def/adapters#BatteryLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#BatteryLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#BatteryLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Battery level" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#BeaconMac
+<https://auroral.iot.linkeddata.es/def/adapters#BeaconMac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#BeaconMac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#BeaconMac> <http://www.w3.org/2000/01/rdf-schema#label> "Beacon Mac" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#BodyFatPercentage
+<https://auroral.iot.linkeddata.es/def/adapters#BodyFatPercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#BodyFatPercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#BodyFatPercentage> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of essential fat differs between men and women, and is typically around 2-5% in men, and 10-13% in women." .
+<https://auroral.iot.linkeddata.es/def/adapters#BodyFatPercentage> <http://www.w3.org/2000/01/rdf-schema#label> "Body Fat Percentage" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#BodyMassIndex
+<https://auroral.iot.linkeddata.es/def/adapters#BodyMassIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#BodyMassIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#BodyMassIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women." .
+<https://auroral.iot.linkeddata.es/def/adapters#BodyMassIndex> <http://www.w3.org/2000/01/rdf-schema#label> "Body Mass Index" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#BoneMineralContent
+<https://auroral.iot.linkeddata.es/def/adapters#BoneMineralContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#BoneMineralContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#BoneMineralContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Calcium is the largest contributor to bone mineral content. It exists in hydroxyapatite crystals, which contribute to bone strength, and acts as a reserve to maintain serum calcium levels within a narrow range during periods of dietary calcium inadequacy." .
+<https://auroral.iot.linkeddata.es/def/adapters#BoneMineralContent> <http://www.w3.org/2000/01/rdf-schema#label> "Bone Mineral Content" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Button
+<https://auroral.iot.linkeddata.es/def/adapters#Button> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Button> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#ActReason> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#CO2Concentration
+<https://auroral.iot.linkeddata.es/def/adapters#CO2Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#CO2Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#CarbonDioxide> .
+<https://auroral.iot.linkeddata.es/def/adapters#CO2Concentration> <http://www.w3.org/2000/01/rdf-schema#label> "CO2 Concentration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#COConcentration
+<https://auroral.iot.linkeddata.es/def/adapters#COConcentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#COConcentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#CarbonMonoxide> .
+<https://auroral.iot.linkeddata.es/def/adapters#COConcentration> <http://www.w3.org/2000/01/rdf-schema#label> "CO Concentration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#CaloriesBurned
+<https://auroral.iot.linkeddata.es/def/adapters#CaloriesBurned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#CaloriesBurned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#CaloriesBurned> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates how many clories were burned by wlking for example" .
+<https://auroral.iot.linkeddata.es/def/adapters#CaloriesBurned> <http://www.w3.org/2000/01/rdf-schema#label> "Calories Burned" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Cloudiness
+<https://auroral.iot.linkeddata.es/def/adapters#Cloudiness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Cloudiness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#CloudCover> .
+<https://auroral.iot.linkeddata.es/def/adapters#Cloudiness> <http://www.w3.org/2000/01/rdf-schema#label> "Cloudiness" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Depth
+<https://auroral.iot.linkeddata.es/def/adapters#Depth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Depth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#OperatingProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Depth> <http://www.w3.org/2000/01/rdf-schema#comment> "Depth" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#DevPosition
+<https://auroral.iot.linkeddata.es/def/adapters#DevPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#DevPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#DevPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Dev Position" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#DeviceStatus
+<https://auroral.iot.linkeddata.es/def/adapters#DeviceStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#DeviceStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#DeviceStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Device Status" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#DewpointTemperature
+<https://auroral.iot.linkeddata.es/def/adapters#DewpointTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#DewpointTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#DewpointTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Dewpoint Temperature" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#DiastolicBloodPressure
+<https://auroral.iot.linkeddata.es/def/adapters#DiastolicBloodPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#DiastolicBloodPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#DiastolicBloodPressure> <http://www.w3.org/2000/01/rdf-schema#comment> "Diastolic blood level for a patient" .
+<https://auroral.iot.linkeddata.es/def/adapters#DiastolicBloodPressure> <http://www.w3.org/2000/01/rdf-schema#label> "Diastolic Blood Pressure" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiation
+<https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> .
+<https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiation> <http://www.w3.org/2000/01/rdf-schema#label> "Diffuse Radiation" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiationInstant
+<https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiationInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiationInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> .
+<https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiationInstant> <http://www.w3.org/2000/01/rdf-schema#label> "Diffuse Radiation Instant" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradiance
+<https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradiance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradiance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> .
+<https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradiance> <http://www.w3.org/2000/01/rdf-schema#label> "Direct Normal Irradiance" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradianceInstant
+<https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradianceInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradianceInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> .
+<https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradianceInstant> <http://www.w3.org/2000/01/rdf-schema#label> "Direct Normal Irradiance Instant" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#DirectRadiation
+<https://auroral.iot.linkeddata.es/def/adapters#DirectRadiation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#DirectRadiation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> .
+<https://auroral.iot.linkeddata.es/def/adapters#DirectRadiation> <http://www.w3.org/2000/01/rdf-schema#label> "Direct Radiation" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#DirectRadiationInstant
+<https://auroral.iot.linkeddata.es/def/adapters#DirectRadiationInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#DirectRadiationInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> .
+<https://auroral.iot.linkeddata.es/def/adapters#DirectRadiationInstant> <http://www.w3.org/2000/01/rdf-schema#label> "Direct Radiation Instant" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Distance
+<https://auroral.iot.linkeddata.es/def/adapters#Distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Distance> <http://www.w3.org/2000/01/rdf-schema#label> "Distance" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#DistanceWalked
+<https://auroral.iot.linkeddata.es/def/adapters#DistanceWalked> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#DistanceWalked> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#MotionProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#DistanceWalked> <http://www.w3.org/2000/01/rdf-schema#label> "Distance Walked" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#ElectricCurrent
+<https://auroral.iot.linkeddata.es/def/adapters#ElectricCurrent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#ElectricCurrent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#ElectricCurrent> <http://www.w3.org/2000/01/rdf-schema#label> "Electric Current" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#ElectricVoltage
+<https://auroral.iot.linkeddata.es/def/adapters#ElectricVoltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#ElectricVoltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#ElectricVoltage> <http://www.w3.org/2000/01/rdf-schema#comment> "Electric Voltage" .
+<https://auroral.iot.linkeddata.es/def/adapters#ElectricVoltage> <http://www.w3.org/2000/01/rdf-schema#label> "Electric Voltage" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#EnergyConsumption
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Consumption" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#EnergyProduction
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProduction> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Production" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity> <http://www.w3.org/2000/01/rdf-schema#label> "Energy use intensity" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Flood
+<https://auroral.iot.linkeddata.es/def/adapters#Flood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Flood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Fog
+<https://auroral.iot.linkeddata.es/def/adapters#Fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#CloudCover> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude
+<https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude> <http://www.w3.org/2000/01/rdf-schema#label> "GPS Altitude" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#GPSLatitude
+<https://auroral.iot.linkeddata.es/def/adapters#GPSLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#GPSLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#GPSLatitude> <http://www.w3.org/2000/01/rdf-schema#label> "GPS Latitude" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#GPSLongitude
+<https://auroral.iot.linkeddata.es/def/adapters#GPSLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#GPSLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#GPSLongitude> <http://www.w3.org/2000/01/rdf-schema#label> "GPS Longitude" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#GridCapacity
+<https://auroral.iot.linkeddata.es/def/adapters#GridCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#GridCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#GridCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Grid Capacity" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#GridDemand
+<https://auroral.iot.linkeddata.es/def/adapters#GridDemand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#GridDemand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#GridDemand> <http://www.w3.org/2000/01/rdf-schema#label> "Grid Demand" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#GridFrequency
+<https://auroral.iot.linkeddata.es/def/adapters#GridFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#GridFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#GridFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "Grid Frequency" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#GridVoltage
+<https://auroral.iot.linkeddata.es/def/adapters#GridVoltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#GridVoltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#GridVoltage> <http://www.w3.org/2000/01/rdf-schema#label> "Grid Voltage" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#HeartRate
+<https://auroral.iot.linkeddata.es/def/adapters#HeartRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#HeartRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#HeartRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Heart rate level for a patient" .
+<https://auroral.iot.linkeddata.es/def/adapters#HeartRate> <http://www.w3.org/2000/01/rdf-schema#label> "Heart Rate" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#HighClouds
+<https://auroral.iot.linkeddata.es/def/adapters#HighClouds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#HighClouds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#CloudCover> .
+<https://auroral.iot.linkeddata.es/def/adapters#HighClouds> <http://www.w3.org/2000/01/rdf-schema#label> "High Clouds" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#HourlyPersonCounter
+<https://auroral.iot.linkeddata.es/def/adapters#HourlyPersonCounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#HourlyPersonCounter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#PersonCounter> .
+<https://auroral.iot.linkeddata.es/def/adapters#HourlyPersonCounter> <http://www.w3.org/2000/01/rdf-schema#label> "Hourly person counter" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Illuminance
+<https://auroral.iot.linkeddata.es/def/adapters#Illuminance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Illuminance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#LuminusFlux> .
+<https://auroral.iot.linkeddata.es/def/adapters#Illuminance> <http://www.w3.org/2000/01/rdf-schema#label> "Illuminance" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#IndoorAmbientTemperature
+<https://auroral.iot.linkeddata.es/def/adapters#IndoorAmbientTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#IndoorAmbientTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#IndoorAmbientTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Indoor Ambient Temperature" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#InstantaneousActivePower
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousActivePower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousActivePower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousActivePower> <http://www.w3.org/2000/01/rdf-schema#label> "Instantaneous Active Power" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#InstantaneousApparentPower
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousApparentPower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousApparentPower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousApparentPower> <http://www.w3.org/2000/01/rdf-schema#comment> "Instantaneous Apparent Power" .
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousApparentPower> <http://www.w3.org/2000/01/rdf-schema#label> "Instantaneous Apparent Power" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#InstantaneousCapacitiveInductivePower
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousCapacitiveInductivePower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousCapacitiveInductivePower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousCapacitiveInductivePower> <http://www.w3.org/2000/01/rdf-schema#label> "Instantaneous Capacitive Inductive Power" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactiveInductivePower
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactiveInductivePower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactiveInductivePower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactiveInductivePower> <http://www.w3.org/2000/01/rdf-schema#label> "Instantaneous Reactive Inductive Power" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactivePower
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactivePower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactivePower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactivePower> <http://www.w3.org/2000/01/rdf-schema#label> "Instantaneous Reactive Power" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#LightColor
+<https://auroral.iot.linkeddata.es/def/adapters#LightColor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#LightColor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#LightProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#LightColor> <http://www.w3.org/2000/01/rdf-schema#label> "Light Color" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#LowClouds
+<https://auroral.iot.linkeddata.es/def/adapters#LowClouds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#LowClouds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#CloudCover> .
+<https://auroral.iot.linkeddata.es/def/adapters#LowClouds> <http://www.w3.org/2000/01/rdf-schema#label> "Low Clouds" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#MaximumPrecipitation
+<https://auroral.iot.linkeddata.es/def/adapters#MaximumPrecipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#MaximumPrecipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Precipitation> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#MaximumTemperature
+<https://auroral.iot.linkeddata.es/def/adapters#MaximumTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#MaximumTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#MaximumTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Maximum Temperature" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Medium_Clouds
+<https://auroral.iot.linkeddata.es/def/adapters#Medium_Clouds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Medium_Clouds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#CloudCover> .
+<https://auroral.iot.linkeddata.es/def/adapters#Medium_Clouds> <http://www.w3.org/2000/01/rdf-schema#label> "Medium Clouds" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#MinimumPrecipitation
+<https://auroral.iot.linkeddata.es/def/adapters#MinimumPrecipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#MinimumPrecipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Precipitation> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#MinimumTemperature
+<https://auroral.iot.linkeddata.es/def/adapters#MinimumTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#MinimumTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#MinimumTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Minimum Temperature" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Motion
+<https://auroral.iot.linkeddata.es/def/adapters#Motion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Motion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#MotionProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Motion> <http://www.w3.org/2000/01/rdf-schema#label> "Motion" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#MuscleMass
+<https://auroral.iot.linkeddata.es/def/adapters#MuscleMass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#MuscleMass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#MuscleMass> <http://www.w3.org/2000/01/rdf-schema#comment> "Muscle mass is the amount of muscle in your body, including skeletal muscles, smooth muscles, and cardiac muscles." .
+<https://auroral.iot.linkeddata.es/def/adapters#MuscleMass> <http://www.w3.org/2000/01/rdf-schema#label> "Muscle Mass" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#NH3Concentration
+<https://auroral.iot.linkeddata.es/def/adapters#NH3Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#NH3Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Ammonia> .
+<https://auroral.iot.linkeddata.es/def/adapters#NH3Concentration> <http://www.w3.org/2000/01/rdf-schema#comment> "Ammonia - NH3 - is a gas commonly used as a refrigerant in cooling systems." .
+<https://auroral.iot.linkeddata.es/def/adapters#NH3Concentration> <http://www.w3.org/2000/01/rdf-schema#label> "NH3 Concentration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#NO2Concentration
+<https://auroral.iot.linkeddata.es/def/adapters#NO2Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#NO2Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#NitrogenDioxide> .
+<https://auroral.iot.linkeddata.es/def/adapters#NO2Concentration> <http://www.w3.org/2000/01/rdf-schema#label> "NO2 Concentration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#NOConcentration
+<https://auroral.iot.linkeddata.es/def/adapters#NOConcentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#NOConcentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#NitrogenMonoxide> .
+<https://auroral.iot.linkeddata.es/def/adapters#NOConcentration> <http://www.w3.org/2000/01/rdf-schema#label> "No Concentration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#NoiseLevel
+<https://auroral.iot.linkeddata.es/def/adapters#NoiseLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#NoiseLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Sound> .
+<https://auroral.iot.linkeddata.es/def/adapters#NoiseLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Noise Level" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#O3Concentration
+<https://auroral.iot.linkeddata.es/def/adapters#O3Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#O3Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Ozone> .
+<https://auroral.iot.linkeddata.es/def/adapters#O3Concentration> <http://www.w3.org/2000/01/rdf-schema#comment> "O3 Concentration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Off
+<https://auroral.iot.linkeddata.es/def/adapters#Off> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Off> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#On
+<https://auroral.iot.linkeddata.es/def/adapters#On> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#On> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#OperationalStatus
+<https://auroral.iot.linkeddata.es/def/adapters#OperationalStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#OperationalStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#OperationalStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Operational Status" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#OutdoorAmbientTemperature
+<https://auroral.iot.linkeddata.es/def/adapters#OutdoorAmbientTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#OutdoorAmbientTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#OutdoorAmbientTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Outdoor Ambient Temperature" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PM10Concentration
+<https://auroral.iot.linkeddata.es/def/adapters#PM10Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#PM10Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#CoarseParticulateMatter> .
+<https://auroral.iot.linkeddata.es/def/adapters#PM10Concentration> <http://www.w3.org/2000/01/rdf-schema#comment> "PM10 are very small particles found in dust and smoke. They have a diameter of 10 micrometres (0.01 mm) or smaller.\n\nPM10 particles are a common air pollutant." .
+<https://auroral.iot.linkeddata.es/def/adapters#PM10Concentration> <http://www.w3.org/2000/01/rdf-schema#label> "PM10 Concentration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PM1_0Concentration
+<https://auroral.iot.linkeddata.es/def/adapters#PM1_0Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#PM1_0Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#UltraFineParticlesMatter> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PM2_5Concentration
+<https://auroral.iot.linkeddata.es/def/adapters#PM2_5Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#PM2_5Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#FineParticlesMatter> .
+<https://auroral.iot.linkeddata.es/def/adapters#PM2_5Concentration> <http://www.w3.org/2000/01/rdf-schema#comment> "Fine particulate matter (PM2.5) is an air pollutant that is a concern for people's health when levels in air are high." .
+<https://auroral.iot.linkeddata.es/def/adapters#PM2_5Concentration> <http://www.w3.org/2000/01/rdf-schema#label> "PM2_5 Concentration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Periodic
+<https://auroral.iot.linkeddata.es/def/adapters#Periodic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Periodic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#ActReason> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PowerFactor
+<https://auroral.iot.linkeddata.es/def/adapters#PowerFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#PowerFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#PowerFactor> <http://www.w3.org/2000/01/rdf-schema#label> "Power Factor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PowerOn
+<https://auroral.iot.linkeddata.es/def/adapters#PowerOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#PowerOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#ActReason> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#ProbabilityPrecipitation
+<https://auroral.iot.linkeddata.es/def/adapters#ProbabilityPrecipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#ProbabilityPrecipitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Precipitation> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Protein
+<https://auroral.iot.linkeddata.es/def/adapters#Protein> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Protein> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Protein> <http://www.w3.org/2000/01/rdf-schema#label> "Protein" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Pulse
+<https://auroral.iot.linkeddata.es/def/adapters#Pulse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Pulse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Pulse> <http://www.w3.org/2000/01/rdf-schema#comment> "The rhythmic dilation of an artery that results from beating of the heart. Pulse is often measured by feeling the arteries of the wrist or neck." .
+<https://auroral.iot.linkeddata.es/def/adapters#Pulse> <http://www.w3.org/2000/01/rdf-schema#label> "Pulse" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Rainfall
+<https://auroral.iot.linkeddata.es/def/adapters#Rainfall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Rainfall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Precipitation> .
+<https://auroral.iot.linkeddata.es/def/adapters#Rainfall> <http://www.w3.org/2000/01/rdf-schema#label> "Rainfall" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#ReactiveCpacitiveEnergy
+<https://auroral.iot.linkeddata.es/def/adapters#ReactiveCpacitiveEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#ReactiveCpacitiveEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#ReactiveCpacitiveEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Reactive Capacitive Energy" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#ReactiveInductiveEnergy
+<https://auroral.iot.linkeddata.es/def/adapters#ReactiveInductiveEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#ReactiveInductiveEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#ReactiveInductiveEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Reactive Inductive Energy" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#RelativeHumidity
+<https://auroral.iot.linkeddata.es/def/adapters#RelativeHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#RelativeHumidity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HumidityAmbientProperty> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#RelayStatus
+<https://auroral.iot.linkeddata.es/def/adapters#RelayStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#RelayStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#RelayStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Relay Status" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#ReturnedEnergy
+<https://auroral.iot.linkeddata.es/def/adapters#ReturnedEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#ReturnedEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#ReturnedEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Returned Energy" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#SO2Concentration
+<https://auroral.iot.linkeddata.es/def/adapters#SO2Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#SO2Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SulphurDioxide> .
+<https://auroral.iot.linkeddata.es/def/adapters#SO2Concentration> <http://www.w3.org/2000/01/rdf-schema#label> "SO2 Concentration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#SelectableStatus
+<https://auroral.iot.linkeddata.es/def/adapters#SelectableStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#SelectableStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#SelectableStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Selectable Status" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Sensor
+<https://auroral.iot.linkeddata.es/def/adapters#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#ActReason> .
+<https://auroral.iot.linkeddata.es/def/adapters#Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "it responds to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result" .
+<https://auroral.iot.linkeddata.es/def/adapters#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#ShortwaveRadiationInstant
+<https://auroral.iot.linkeddata.es/def/adapters#ShortwaveRadiationInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#ShortwaveRadiationInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> .
+<https://auroral.iot.linkeddata.es/def/adapters#ShortwaveRadiationInstant> <http://www.w3.org/2000/01/rdf-schema#label> "Shortwave Radiation Instant" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Sleep
+<https://auroral.iot.linkeddata.es/def/adapters#Sleep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Sleep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Sleep> <http://www.w3.org/2000/01/rdf-schema#comment> "control the sleep disorders of a patient" .
+<https://auroral.iot.linkeddata.es/def/adapters#Sleep> <http://www.w3.org/2000/01/rdf-schema#label> "Sleep" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Snowfall
+<https://auroral.iot.linkeddata.es/def/adapters#Snowfall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Snowfall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Precipitation> .
+<https://auroral.iot.linkeddata.es/def/adapters#Snowfall> <http://www.w3.org/2000/01/rdf-schema#label> "Snowfall" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Steps
+<https://auroral.iot.linkeddata.es/def/adapters#Steps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Steps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#MotionProperty> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#SugarLevel
+<https://auroral.iot.linkeddata.es/def/adapters#SugarLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#SugarLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#SugarLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "A blood sugar level less than 140 mg/dL (7.8 mmol/L) is normal. A reading of more than 200 mg/dL (11.1 mmol/L) after two hours means you have diabetes. A reading between 140 and 199 mg/dL (7.8 mmol/L and 11.0 mmol/L) means you have prediabetes." .
+<https://auroral.iot.linkeddata.es/def/adapters#SugarLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Sugar Level" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#SystolicBloodPressure
+<https://auroral.iot.linkeddata.es/def/adapters#SystolicBloodPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#SystolicBloodPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#SystolicBloodPressure> <http://www.w3.org/2000/01/rdf-schema#comment> "niveau de systolic blood pressure for a patient" .
+<https://auroral.iot.linkeddata.es/def/adapters#SystolicBloodPressure> <http://www.w3.org/2000/01/rdf-schema#label> "Systolic Blood Pressure" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiation
+<https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> .
+<https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiation> <http://www.w3.org/2000/01/rdf-schema#label> "Terrestrial Radiation" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiationInstant
+<https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiationInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiationInstant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Thunder
+<https://auroral.iot.linkeddata.es/def/adapters#Thunder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Thunder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Weather> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#TotalBodyWaterPercentage
+<https://auroral.iot.linkeddata.es/def/adapters#TotalBodyWaterPercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#TotalBodyWaterPercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#TotalBodyWaterPercentage> <http://www.w3.org/2000/01/rdf-schema#comment> "Most of the human body is water, with an average of roughly 60%. The amount of water in the body changes slightly with age, sex, and hydration levels." .
+<https://auroral.iot.linkeddata.es/def/adapters#TotalBodyWaterPercentage> <http://www.w3.org/2000/01/rdf-schema#label> "Total Body Water Percentage" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy
+<https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Total Energy" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#UVIndex
+<https://auroral.iot.linkeddata.es/def/adapters#UVIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#UVIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Unavailable
+<https://auroral.iot.linkeddata.es/def/adapters#Unavailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Unavailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#StatusProperty> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Vibration
+<https://auroral.iot.linkeddata.es/def/adapters#Vibration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Vibration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#MotionProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Vibration> <http://www.w3.org/2000/01/rdf-schema#label> "Vibration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#VisceralFatRating
+<https://auroral.iot.linkeddata.es/def/adapters#VisceralFatRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#VisceralFatRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#VisceralFatRating> <http://www.w3.org/2000/01/rdf-schema#comment> "According to the manufacturer's information, a rating between 1 and 12 indicates a healthy level of visceral fat, whereas a rating between 13 and 59 indicates excess visceral fat." .
+<https://auroral.iot.linkeddata.es/def/adapters#VisceralFatRating> <http://www.w3.org/2000/01/rdf-schema#label> "Visceral Fat Rating" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#WeatherCondition
+<https://auroral.iot.linkeddata.es/def/adapters#WeatherCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#WeatherCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Weather> .
+<https://auroral.iot.linkeddata.es/def/adapters#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Weather Condition" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#Weight
+<https://auroral.iot.linkeddata.es/def/adapters#Weight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Weight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#HealthProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#Weight> <http://www.w3.org/2000/01/rdf-schema#comment> "Weight of patient" .
+<https://auroral.iot.linkeddata.es/def/adapters#Weight> <http://www.w3.org/2000/01/rdf-schema#label> "Weight" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#WindGust
+<https://auroral.iot.linkeddata.es/def/adapters#WindGust> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#WindGust> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#WindAmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#WindGust> <http://www.w3.org/2000/01/rdf-schema#label> "Wind Gust" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#XAxisAcceleration
+<https://auroral.iot.linkeddata.es/def/adapters#XAxisAcceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#XAxisAcceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#XAxisAcceleration> <http://www.w3.org/2000/01/rdf-schema#label> "XAxis Acceleration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#YAxisAcceleration
+<https://auroral.iot.linkeddata.es/def/adapters#YAxisAcceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#YAxisAcceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#YAxisAcceleration> <http://www.w3.org/2000/01/rdf-schema#label> "YAxis Acceleration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#ZAxisAcceleration
+<https://auroral.iot.linkeddata.es/def/adapters#ZAxisAcceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#ZAxisAcceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#ZAxisAcceleration> <http://www.w3.org/2000/01/rdf-schema#label> "ZAxis Acceleration" .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#windSpeed
+<https://auroral.iot.linkeddata.es/def/adapters#windSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#windSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#WindAmbientProperty> .
+<https://auroral.iot.linkeddata.es/def/adapters#windSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "Wind Speed" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,30 @@
+@prefix ns1: <https://auroral.iot.linkeddata.es/def/cell#> .
+@prefix ns2: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ns3: <https://auroral.iot.linkeddata.es/def/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:CellTower1 a ns1:CellTowers ;
+    ns2:location ns1:positioncelltower1 ;
+    ns1:cellId "491"^^xsd:string ;
+    ns1:country ns1:placecelltower1 ;
+    ns1:created "1201-01-01T12:10:14"^^xsd:dateTime ;
+    ns1:hasOperator ns1:operatorcelltower1 ;
+    ns1:hasRange ns1:Rangecelltower1 ;
+    ns1:providesNetwork ns1:GSMcelltower1 .
+
+ns1:GSMcelltower1 a ns1:GSM .
+
+ns1:Rangecelltower1 a ns1:Range ;
+    ns1:range "100 meters"^^xsd:string .
+
+ns1:operatorcelltower1 a ns1:Operator ;
+    ns1:operatorId "12tsd"^^xsd:string ;
+    ns1:operatorName "Vodafone"^^xsd:string .
+
+ns1:placecelltower1 a ns3:Place ;
+    ns3:code "04810"^^xsd:string ;
+    ns3:name "madrid"^^xsd:string .
+
+ns1:positioncelltower1 a ns2:Point ;
+    ns2:lat "20.43536"^^xsd:string ;
+    ns2:long "-33.43536"^^xsd:string .

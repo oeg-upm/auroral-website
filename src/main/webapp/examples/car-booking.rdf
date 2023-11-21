@@ -1,0 +1,39 @@
+@prefix ns1: <https://auroral.iot.linkeddata.es/def/car-booking#> .
+@prefix ns2: <https://auroral.iot.linkeddata.es/def/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:address1 a ns1:Address ;
+    ns1:city "Dornbirn"^^xsd:string ;
+    ns1:zip "6850"^^xsd:string .
+
+ns1:address2 a ns1:Address ;
+    ns1:address "Färbergasse 17b"^^xsd:string ;
+    ns1:city "Teststand"^^xsd:string ;
+    ns1:zip "6850"^^xsd:string .
+
+ns1:reservation1 a ns1:Reservation ;
+    ns1:bufferedEnd "2020-02-25T17:00:00+01:00"^^xsd:dateTime ;
+    ns1:created "2020-02-25T15:26:56.269446+01:00"^^xsd:dateTime ;
+    ns1:identifier "538824"^^xsd:string ;
+    ns1:lift_offer false ;
+    ns1:madeBy ns2:user1 ;
+    ns1:purpose "0"^^xsd:string ;
+    ns1:relatedTo ns1:vehicle1 ;
+    ns1:reservationEnd "2020-02-25T17:00:00+01:00"^^xsd:dateTime ;
+    ns1:reservationStart "2020-02-25T15:00:00+01:00"^^xsd:dateTime ;
+    ns1:state "closed"^^xsd:string .
+
+ns1:vehicle1 a ns1:Vehicle ;
+    ns1:brand "ILOCKIT"^^xsd:string ;
+    ns1:hasAdress ns1:adress2 ;
+    ns1:hasType "[RAD1 - LCT] ILOCKIT PLUS Testschloss"^^xsd:string ;
+    ns1:identifier "951"^^xsd:string ;
+    ns1:label "[RAD1 - LCT]"^^xsd:string ;
+    ns1:model "PLUS Testschloss"^^xsd:string ;
+    ns1:timeZone "Europe/Vienna"^^xsd:string .
+
+ns2:user1 a ns2:User ;
+    ns1:hasAdress ns1:adress1 ;
+    ns2:hasEmail "christian.sutterluety@carusocarsharing.com"^^xsd:string ;
+    ns2:hasID "16992"^^xsd:string ;
+    ns2:hasName "Christian Sutterlüty (Fuhrparkmanager)"^^xsd:string .

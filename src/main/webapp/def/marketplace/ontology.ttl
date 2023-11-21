@@ -1,0 +1,187 @@
+@prefix : <https://auroral.iot.linkeddata.es/def/market#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix market: <https://auroral.iot.linkeddata.es/def/market#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://auroral.iot.linkeddata.es/def/market#> .
+
+<https://auroral.iot.linkeddata.es/def/market#> rdf:type owl:Ontology ;
+                                                 dc:creator "Ahlem Rhayem" ,
+                                                            "Andrea Cimmino" ,
+                                                            "Juan Cano" ,
+                                                            "María Poveda-Villalón" ,
+                                                            "Raúl Garcia-Castro" ;
+                                                 dc:description "This ontology model the market-place information for AURORAL" ;
+                                                 dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://auroral.iot.linkeddata.es/def/market#buy
+market:buy rdf:type owl:ObjectProperty ;
+           rdfs:domain market:Customer ;
+           rdfs:range market:Product ;
+           rdfs:label "buy" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#hasCategory
+market:hasCategory rdf:type owl:ObjectProperty ;
+                   rdfs:domain market:Product ;
+                   rdfs:range market:Category ;
+                   rdfs:label "has category" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#hasQuantity
+market:hasQuantity rdf:type owl:ObjectProperty ;
+                   rdfs:domain market:Product ;
+                   rdfs:range market:Stock ;
+                   rdfs:label "has quantity" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#sell
+market:sell rdf:type owl:ObjectProperty ;
+            rdfs:domain market:Seller ;
+            rdfs:range market:Product ;
+            rdfs:label "sell" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://auroral.iot.linkeddata.es/def/market#address
+market:address rdf:type owl:DatatypeProperty ;
+               rdfs:domain market:Customer ;
+               rdfs:range xsd:string ;
+               rdfs:label "address" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#categoryId
+market:categoryId rdf:type owl:DatatypeProperty ;
+                  rdfs:domain market:Category ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "category id" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#categoryName
+market:categoryName rdf:type owl:DatatypeProperty ;
+                    rdfs:domain market:Category ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "category name" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#categoryType
+market:categoryType rdf:type owl:DatatypeProperty ;
+                    rdfs:domain market:Category ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "category type" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#hasId
+market:hasId rdf:type owl:DatatypeProperty ;
+             rdfs:domain market:Customer ;
+             rdfs:range xsd:string ;
+             rdfs:label "has id" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#hasName
+market:hasName rdf:type owl:DatatypeProperty ;
+               rdfs:domain market:Customer ;
+               rdfs:range xsd:string ;
+               rdfs:label "has name" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#productId
+market:productId rdf:type owl:DatatypeProperty ;
+                 rdfs:domain market:Product ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "product id" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#productName
+market:productName rdf:type owl:DatatypeProperty ;
+                   rdfs:domain market:Product ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "product name" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#sellerId
+market:sellerId rdf:type owl:DatatypeProperty ;
+                rdfs:domain market:Seller ;
+                rdfs:range xsd:string ;
+                rdfs:label "seller id" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#sellerName
+market:sellerName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain market:Seller ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "seller name" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#stockId
+market:stockId rdf:type owl:DatatypeProperty ;
+               rdfs:domain market:Stock ;
+               rdfs:range xsd:string ;
+               rdfs:label "stock id" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#stockQuantity
+market:stockQuantity rdf:type owl:DatatypeProperty ;
+                     rdfs:domain market:Stock ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "stock quantity" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://auroral.iot.linkeddata.es/def/market#Category
+market:Category rdf:type owl:Class ;
+                rdfs:label "Category" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#Customer
+market:Customer rdf:type owl:Class ;
+                rdfs:label "Customer" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#Product
+market:Product rdf:type owl:Class ;
+               rdfs:label "Product" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#Seller
+market:Seller rdf:type owl:Class ;
+              rdfs:label "Seller" .
+
+
+###  https://auroral.iot.linkeddata.es/def/market#Stock
+market:Stock rdf:type owl:Class ;
+             rdfs:label "Stock" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

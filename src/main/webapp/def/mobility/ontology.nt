@@ -1,0 +1,248 @@
+<https://auroral.iot.linkeddata.es/def/mobility#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://auroral.iot.linkeddata.es/def/mobility#> <http://www.w3.org/2002/07/owl#versionIRI> <https://auroral.iot.linkeddata.es/def/mobility#/1.0.0> .
+<https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/creator> "Ahlem Rhayem" .
+<https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/creator> "Andrea Cimmino" .
+<https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/creator> "Juan Cano" .
+<https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/creator> "María Poveda Villalón" .
+<https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/creator> "Raúl García Castro" .
+<https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/description> "The mobility ontology aims to model data related to transportation sector" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.geonames.org/ontology#hasEstimatedCall
+<http://www.geonames.org/ontology#hasEstimatedCall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.geonames.org/ontology#hasEstimatedCall> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#StopPoint> .
+<http://www.geonames.org/ontology#hasEstimatedCall> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#EstimatedCall> .
+<http://www.geonames.org/ontology#hasEstimatedCall> <http://www.w3.org/2000/01/rdf-schema#label> "has estimated call" .
+# 
+# http://www.geonames.org/ontology#hasPattern
+<http://www.geonames.org/ontology#hasPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.geonames.org/ontology#hasPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#JourneyService> .
+<http://www.geonames.org/ontology#hasPattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#JourneyPattern> .
+<http://www.geonames.org/ontology#hasPattern> <http://www.w3.org/2000/01/rdf-schema#label> "has pattern" .
+# 
+# http://www.geonames.org/ontology#hasQuay
+<http://www.geonames.org/ontology#hasQuay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.geonames.org/ontology#hasQuay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
+<http://www.geonames.org/ontology#hasQuay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#Quay> .
+<http://www.geonames.org/ontology#hasQuay> <http://www.w3.org/2000/01/rdf-schema#label> "has quay" .
+# 
+# http://www.geonames.org/ontology#hasScheduledTime
+<http://www.geonames.org/ontology#hasScheduledTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.geonames.org/ontology#hasScheduledTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
+<http://www.geonames.org/ontology#hasScheduledTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#ScheduledTime> .
+<http://www.geonames.org/ontology#hasScheduledTime> <http://www.w3.org/2000/01/rdf-schema#label> "has scheduled time" .
+# 
+# http://www.geonames.org/ontology#hasTransportMode
+<http://www.geonames.org/ontology#hasTransportMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.geonames.org/ontology#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#Line> .
+<http://www.geonames.org/ontology#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#TransportMode> .
+<http://www.geonames.org/ontology#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#label> "has transport mode" .
+# 
+# http://www.geonames.org/ontology#hasline
+<http://www.geonames.org/ontology#hasline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.geonames.org/ontology#hasline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#JourneyPattern> .
+<http://www.geonames.org/ontology#hasline> <http://www.w3.org/2000/01/rdf-schema#label> "hasline" .
+# 
+# http://www.geonames.org/ontology#journeyServicel
+<http://www.geonames.org/ontology#journeyServicel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.geonames.org/ontology#journeyServicel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
+<http://www.geonames.org/ontology#journeyServicel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#JourneyService> .
+<http://www.geonames.org/ontology#journeyServicel> <http://www.w3.org/2000/01/rdf-schema#label> "journey servicel" .
+# 
+# http://www.geonames.org/ontology#prescribing
+<http://www.geonames.org/ontology#prescribing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.geonames.org/ontology#prescribing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
+<http://www.geonames.org/ontology#prescribing> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#DestinationDisplay> .
+<http://www.geonames.org/ontology#prescribing> <http://www.w3.org/2000/01/rdf-schema#label> "prescribing" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.geonames.org/ontology#actualArrivedTime
+<http://www.geonames.org/ontology#actualArrivedTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#actualArrivedTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#ArrivalTime> .
+<http://www.geonames.org/ontology#actualArrivedTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.geonames.org/ontology#actualArrivedTime> <http://www.w3.org/2000/01/rdf-schema#label> "actual arrived time" .
+# 
+# http://www.geonames.org/ontology#actualDepartureTime
+<http://www.geonames.org/ontology#actualDepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#actualDepartureTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#DepartureTime> .
+<http://www.geonames.org/ontology#actualDepartureTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.geonames.org/ontology#actualDepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "actual departure time" .
+# 
+# http://www.geonames.org/ontology#aimedArrivalTime
+<http://www.geonames.org/ontology#aimedArrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#aimedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#ArrivalTime> .
+<http://www.geonames.org/ontology#aimedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.geonames.org/ontology#aimedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#label> "aimed arrival time" .
+# 
+# http://www.geonames.org/ontology#aimedDepartureTime
+<http://www.geonames.org/ontology#aimedDepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#aimedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#DepartureTime> .
+<http://www.geonames.org/ontology#aimedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.geonames.org/ontology#aimedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "aimed departure time" .
+# 
+# http://www.geonames.org/ontology#date
+<http://www.geonames.org/ontology#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
+<http://www.geonames.org/ontology#date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.geonames.org/ontology#date> <http://www.w3.org/2000/01/rdf-schema#label> "date" .
+# 
+# http://www.geonames.org/ontology#expectedArrivalTime
+<http://www.geonames.org/ontology#expectedArrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#expectedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#ArrivalTime> .
+<http://www.geonames.org/ontology#expectedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.geonames.org/ontology#expectedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#label> "expected arrival time" .
+# 
+# http://www.geonames.org/ontology#expectedDepartureTime
+<http://www.geonames.org/ontology#expectedDepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#expectedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#DepartureTime> .
+<http://www.geonames.org/ontology#expectedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.geonames.org/ontology#expectedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "expected departure time" .
+# 
+# http://www.geonames.org/ontology#forAlighting
+<http://www.geonames.org/ontology#forAlighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#forAlighting> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
+<http://www.geonames.org/ontology#forAlighting> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.geonames.org/ontology#forAlighting> <http://www.w3.org/2000/01/rdf-schema#label> "for alighting" .
+# 
+# http://www.geonames.org/ontology#forBoarding
+<http://www.geonames.org/ontology#forBoarding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#forBoarding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
+<http://www.geonames.org/ontology#forBoarding> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.geonames.org/ontology#forBoarding> <http://www.w3.org/2000/01/rdf-schema#label> "for boarding" .
+# 
+# http://www.geonames.org/ontology#frontText
+<http://www.geonames.org/ontology#frontText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#frontText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#DestinationDisplay> .
+<http://www.geonames.org/ontology#frontText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.geonames.org/ontology#frontText> <http://www.w3.org/2000/01/rdf-schema#label> "front text" .
+# 
+# http://www.geonames.org/ontology#id
+<http://www.geonames.org/ontology#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#StopPoint> .
+<http://www.geonames.org/ontology#id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.geonames.org/ontology#id> <http://www.w3.org/2000/01/rdf-schema#label> "id" .
+# 
+# http://www.geonames.org/ontology#name
+<http://www.geonames.org/ontology#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#StopPoint> .
+<http://www.geonames.org/ontology#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.geonames.org/ontology#name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+# 
+# http://www.geonames.org/ontology#realTime
+<http://www.geonames.org/ontology#realTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#realTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
+<http://www.geonames.org/ontology#realTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# 
+# http://www.geonames.org/ontology#transportMode
+<http://www.geonames.org/ontology#transportMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.geonames.org/ontology#transportMode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#TransportMode> .
+<http://www.geonames.org/ontology#transportMode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.geonames.org/ontology#ArrivalTime
+<http://www.geonames.org/ontology#ArrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#ArrivalTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geonames.org/ontology#ScheduledTime> .
+<http://www.geonames.org/ontology#ArrivalTime> <http://www.w3.org/2000/01/rdf-schema#label> "Arrival Time" .
+# 
+# http://www.geonames.org/ontology#DepartureTime
+<http://www.geonames.org/ontology#DepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#DepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "Departure Time" .
+# 
+# http://www.geonames.org/ontology#DestinationDisplay
+<http://www.geonames.org/ontology#DestinationDisplay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#DestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#label> "Destination Display" .
+# 
+# http://www.geonames.org/ontology#EstimatedCall
+<http://www.geonames.org/ontology#EstimatedCall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#EstimatedCall> <http://www.w3.org/2000/01/rdf-schema#label> "Estimated Call" .
+# 
+# http://www.geonames.org/ontology#JourneyPattern
+<http://www.geonames.org/ontology#JourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#JourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Journey Pattern" .
+# 
+# http://www.geonames.org/ontology#JourneyService
+<http://www.geonames.org/ontology#JourneyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#JourneyService> <http://www.w3.org/2000/01/rdf-schema#label> "Journey Service" .
+# 
+# http://www.geonames.org/ontology#Line
+<http://www.geonames.org/ontology#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#Line> <http://www.w3.org/2000/01/rdf-schema#label> "Line" .
+# 
+# http://www.geonames.org/ontology#Point
+<http://www.geonames.org/ontology#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geon#Feature> .
+<http://www.geonames.org/ontology#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point" .
+# 
+# http://www.geonames.org/ontology#Quay
+<http://www.geonames.org/ontology#Quay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#Quay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geonames.org/ontology#Point> .
+<http://www.geonames.org/ontology#Quay> <http://www.w3.org/2000/01/rdf-schema#label> "Quay" .
+# 
+# http://www.geonames.org/ontology#ScheduledTime
+<http://www.geonames.org/ontology#ScheduledTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#ScheduledTime> <http://www.w3.org/2000/01/rdf-schema#label> "Scheduled Time" .
+# 
+# http://www.geonames.org/ontology#StopPoint
+<http://www.geonames.org/ontology#StopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#StopPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geonames.org/ontology#Point> .
+<http://www.geonames.org/ontology#StopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Stop Point" .
+# 
+# http://www.geonames.org/ontology#TransportMode
+<http://www.geonames.org/ontology#TransportMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#TransportMode> <http://www.w3.org/2000/01/rdf-schema#label> "Transport Mode" .
+# 
+# http://www.owl-ontologies.com/geon#Feature
+<http://www.owl-ontologies.com/geon#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geon#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
