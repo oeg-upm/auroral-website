@@ -1,6 +1,6 @@
-<h2 id="crossreference" class="list">Cross-reference for the AURORAL Energy Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by AURORAL Energy Ontology.
-<div xmlns:extra="https://w3id.org/extra#"
+<h2 id="crossreference" class="list">Cross-reference for Energy Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Energy Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
@@ -22,8 +22,8 @@ This section provides details for each class and property defined by AURORAL Ene
             title="https://auroral.iot.linkeddata.es/def/energy#Currency">Currency</a>
       </li>
       <li>
-         <a href="#https://auroral.iot.linkeddata.es/def/adapters#Energy"
-            title="https://auroral.iot.linkeddata.es/def/adapters#Energy">Energy</a>
+         <a href="#https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+            title="https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty">Energy Property</a>
       </li>
       <li>
          <a href="#https://saref.etsi.org/core#FeatureofInterest" title="https://saref.etsi.org/core#FeatureofInterest">Featureof Interest</a>
@@ -81,6 +81,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/core#Building</p>
+      <div class="comment">
+         <span class="markdown">The building in which energy consumption is controlled</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -94,7 +97,7 @@ This section provides details for each class and property defined by AURORAL Ene
             <sup class="type-op" title="object property">op</sup>, <a href="#constructionYear"
                title="https://auroral.iot.linkeddata.es/def/energy#constructionYear">construction Year</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#heatingArea"
-               title="https://auroral.iot.linkeddata.es/def/energy#heatingArea">heating Area</a>
+               title="https://auroral.iot.linkeddata.es/def/energy#heatingArea">heating area</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
@@ -112,6 +115,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#Consumer</p>
+      <div class="comment">
+         <span class="markdown">a person or an object that consumes the enrgy. consumers are: Apartment, a house with electrical heating, a house without electrical heating, a larger households</span>
+      </div>
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
@@ -128,6 +134,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason</p>
+      <div class="comment">
+         <span class="markdown">The price cost of the energy consumption per season</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -158,6 +167,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#Currency</p>
+      <div class="comment">
+         <span class="markdown">The currency of the enry price</span>
+      </div>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
@@ -167,13 +179,16 @@ This section provides details for each class and property defined by AURORAL Ene
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://auroral.iot.linkeddata.es/def/adapters#Energy">
-      <h3>Energy<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty">
+      <h3>Energy Property<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/adapters#Energy</p>
+         <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty</p>
+      <div class="comment">
+         <span class="markdown">Energy property means any utility company, gas transmission or pipeline company or electric generating company or facility, but shall in no event include interests in or development of oil, gas, natural resources and mineral rights.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -205,6 +220,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core#FeatureofInterest</p>
+      <div class="comment">
+         <span class="markdown">A feature of interest represents any real world entity from which a property is measured.</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
@@ -233,6 +251,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#FixedAgreement</p>
+      <div class="comment">
+         <span class="markdown">A fixed-price contract is a contractual agreement with a predetermined value for the goods or services provided.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -255,6 +276,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core#Measurement</p>
+      <div class="comment">
+         <span class="markdown">Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
@@ -282,6 +306,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/core#Municipality</p>
+      <div class="comment">
+         <span class="markdown">The Municipality in which energy consumption is controlled</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -303,6 +330,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#Price</p>
+      <div class="comment">
+         <span class="markdown">The price of the energy</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
@@ -331,6 +361,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#PriceAgreement</p>
+      <div class="comment">
+         <span class="markdown">A Price Agreement comprises a group of common items or services competitively bid to set the prices contractually for a specified time period</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
@@ -357,6 +390,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#PriceMeasurement</p>
+      <div class="comment">
+         <span class="markdown">It corresponds to the measurement price of the energy</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -372,11 +408,14 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core#Property</p>
+      <div class="comment">
+         <span class="markdown">A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#https://auroral.iot.linkeddata.es/def/adapters#Energy"
-               title="https://auroral.iot.linkeddata.es/def/adapters#Energy">Energy</a>
+            <a href="#https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+               title="https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty">Energy Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -400,6 +439,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#Season</p>
+      <div class="comment">
+         <span class="markdown">The four seasons: Winter, Summer, Autumn, Spring</span>
+      </div>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
@@ -428,6 +470,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#SourceEnergy</p>
+      <div class="comment">
+         <span class="markdown">The origin of the energy: fuel oil, natural gas, firewood, lignite briquette</span>
+      </div>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
@@ -458,6 +503,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#StandardAgreement</p>
+      <div class="comment">
+         <span class="markdown">A standard agreement is an agreement in which one of the parties to the contract determines the terms, and the other party cannot change these terms.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -474,6 +522,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core#UnitOfMeasure</p>
+      <div class="comment">
+         <span class="markdown">The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called "watt".</span>
+      </div>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
@@ -503,6 +554,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#VariableAgreement</p>
+      <div class="comment">
+         <span class="markdown">A variable agreement is a contract  where the terms could be changed</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -512,7 +566,7 @@ This section provides details for each class and property defined by AURORAL Ene
          </dd>
       </dl>
    </div>
-</div><div xmlns:extra="https://w3id.org/extra#"
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
@@ -572,6 +626,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#belongsTo</p>
+      <div class="comment">
+         <span class="markdown">A relationship between the building and the municipality it belongs to</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -596,6 +653,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer</p>
+      <div class="comment">
+         <span class="markdown">A relationship between Price and the consumer of the energy</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -614,6 +674,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#forSeason</p>
+      <div class="comment">
+         <span class="markdown">A relationship between the price and the season</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -638,6 +701,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#hasBuilding</p>
+      <div class="comment">
+         <span class="markdown">A relationship betewwwn the consumer and the building</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -662,6 +728,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#hasCostPrice</p>
+      <div class="comment">
+         <span class="markdown">A relationship between the price and its cost per season</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -686,12 +755,15 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#hasPrice</p>
+      <div class="comment">
+         <span class="markdown">A relationship between the energy and its price</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://auroral.iot.linkeddata.es/def/adapters#Energy"
-                  title="https://auroral.iot.linkeddata.es/def/adapters#Energy">Energy</a>
+               <a href="#https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+                  title="https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty">Energy Property</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -710,6 +782,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core#hasProperty</p>
+      <div class="comment">
+         <span class="markdown">A relationship between a feature of interest and a property of that feature</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -732,12 +807,15 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#hasSource</p>
+      <div class="comment">
+         <span class="markdown">A relationship between the energy property and its source</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://auroral.iot.linkeddata.es/def/adapters#Energy"
-                  title="https://auroral.iot.linkeddata.es/def/adapters#Energy">Energy</a>
+               <a href="#https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+                  title="https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty">Energy Property</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -756,6 +834,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#inCurrency</p>
+      <div class="comment">
+         <span class="markdown">A relationship between price and its currency</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
@@ -774,6 +855,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core#isMeasuredIn</p>
+      <div class="comment">
+         <span class="markdown">A relationship identifying the unit of measure used for a certain entity.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -796,6 +880,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core#isPropertyOf</p>
+      <div class="comment">
+         <span class="markdown">A relationship between a property and the feature of interest it belongs to</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -818,6 +905,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core#relatesToMeasurement</p>
+      <div class="comment">
+         <span class="markdown">A relationship between a property and the measurements it relates to</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -840,6 +930,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core#relatesToProperty</p>
+      <div class="comment">
+         <span class="markdown">A relationship between a measurement and the property it relates to</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -855,7 +948,7 @@ This section provides details for each class and property defined by AURORAL Ene
          </dl>
       </div>
    </div>
-</div><div xmlns:extra="https://w3id.org/extra#"
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
@@ -872,13 +965,11 @@ This section provides details for each class and property defined by AURORAL Ene
       </li>
       <li>
          <a href="#costPrice"
-            title="https://auroral.iot.linkeddata.es/def/energy#costPrice">
-            <span>cost price</span>
-         </a>
+            title="https://auroral.iot.linkeddata.es/def/energy#costPrice">cost price</a>
       </li>
       <li>
          <a href="#heatingArea"
-            title="https://auroral.iot.linkeddata.es/def/energy#heatingArea">heating Area</a>
+            title="https://auroral.iot.linkeddata.es/def/energy#heatingArea">heating area</a>
       </li>
       <li>
          <a href="#https://auroral.iot.linkeddata.es/def/core#id" title="https://auroral.iot.linkeddata.es/def/core#id">
@@ -898,6 +989,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#constructionYear</p>
+      <div class="comment">
+         <span class="markdown">The construction year of a building</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -949,6 +1043,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#costPrice</p>
+      <div class="comment">
+         <span class="markdown">The cost of the price per season</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -967,12 +1064,15 @@ This section provides details for each class and property defined by AURORAL Ene
       </div>
    </div>
    <div class="entity" id="heatingArea">
-      <h3>heating Area<sup class="type-dp" title="data property">dp</sup>
+      <h3>heating area<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/energy#heatingArea</p>
+      <div class="comment">
+         <span class="markdown">The heating area of the buidling or a municipality</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -997,6 +1097,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/core#id</p>
+      <div class="comment">
+         <span class="markdown">The identifier of an entity</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
@@ -1015,6 +1118,9 @@ This section provides details for each class and property defined by AURORAL Ene
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/core#name</p>
+      <div class="comment">
+         <span class="markdown">The name of an entity</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
@@ -1026,7 +1132,7 @@ This section provides details for each class and property defined by AURORAL Ene
          </dl>
       </div>
    </div>
-</div><div xmlns:extra="https://w3id.org/extra#"
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
@@ -1225,8 +1331,8 @@ This section provides details for each class and property defined by AURORAL Ene
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://auroral.iot.linkeddata.es/def/adapters#Energy"
-               title="https://auroral.iot.linkeddata.es/def/adapters#Energy">Energy</a>
+            <a href="#https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+               title="https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty">Energy Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1445,8 +1551,8 @@ This section provides details for each class and property defined by AURORAL Ene
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://auroral.iot.linkeddata.es/def/adapters#Energy"
-               title="https://auroral.iot.linkeddata.es/def/adapters#Energy">Energy</a>
+            <a href="#https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
+               title="https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty">Energy Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1475,6 +1581,11 @@ This section provides details for each class and property defined by AURORAL Ene
          </dd>
       </dl>
    </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="rules">
+   <h3 class="list" id="rule">Rules</h3>
+   <ul class="hlist"/>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">

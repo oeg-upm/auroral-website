@@ -8,10 +8,27 @@
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/core#User",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Users responsible for selling or consuming a product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "User"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Ahlem Rhayem"
+  }, {
+    "@value" : "Andrea Cimmino"
+  }, {
+    "@value" : "Juan Cano"
+  }, {
+    "@value" : "María Poveda-Villalón"
+  }, {
+    "@value" : "Raúl Garcia-Castro"
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@value" : "This ontology model the market-place information for AURORAL"
@@ -22,36 +39,60 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#Category",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The category of the product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Category"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#Customer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The users that consumes a product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Customer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#User"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#Product",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It is the item that will be sold"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Product"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#Seller",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The users that sell a product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Seller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#User"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#Stock",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The items available for sale in a store"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Stock"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#address",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The address details of the consumer"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Customer"
   } ],
@@ -64,6 +105,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#buy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the consumer and the product he buys"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Customer"
   } ],
@@ -76,6 +120,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#categoryId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of the product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Category"
   } ],
@@ -88,6 +135,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#categoryName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of the product category"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Category"
   } ],
@@ -100,6 +150,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#categoryType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The category type of the product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Category"
   } ],
@@ -112,6 +165,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#hasCategory",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the product and its category"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Product"
   } ],
@@ -124,6 +180,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#hasId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of the customer"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Customer"
   } ],
@@ -136,6 +195,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#hasName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of the customer"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Customer"
   } ],
@@ -148,6 +210,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#hasQuantity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the product and its quantity in the stock"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Product"
   } ],
@@ -160,6 +225,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#productId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of the product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Product"
   } ],
@@ -172,6 +240,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#productName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The product name"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Product"
   } ],
@@ -184,6 +255,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#sell",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between product and salespeople"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Seller"
   } ],
@@ -196,6 +270,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#sellerId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of the seller"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Seller"
   } ],
@@ -208,6 +285,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#sellerName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of the seller"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Seller"
   } ],
@@ -220,6 +300,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#stockId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of the stock"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Stock"
   } ],
@@ -232,6 +315,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/market#stockQuantity",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The quantity of the stock"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/market#Stock"
   } ],

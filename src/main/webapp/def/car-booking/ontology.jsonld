@@ -42,24 +42,36 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Address",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The information related to the address of  given entity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Address"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Reservation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The information about the reservation process of something (reservation of vehicle for example)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Reservation"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Vehicle",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The object to which the reservation applies"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Vehicle"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#address",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Information about the address of the user or the vehicle"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Address"
   } ],
@@ -72,6 +84,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#brand",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The brand of the vehicle"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Vehicle"
   } ],
@@ -84,6 +99,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#bufferedEnd",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The buffered end of a reservation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Reservation"
   } ],
@@ -96,6 +114,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#city",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The city specified in an address"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Address"
   } ],
@@ -108,6 +129,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#created",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The created date of a reservation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Reservation"
   } ],
@@ -120,6 +144,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#hasAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between an object (user, cehicle, etc) and its address"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has address"
   } ],
@@ -129,8 +156,14 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#identifierReservation",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a reservation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Reservation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "identifier reservation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -138,6 +171,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#identifierVehicle",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a vehicle"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Vehicle"
   } ],
@@ -150,6 +186,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#label",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The label of a vehicle"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Vehicle"
   } ],
@@ -162,6 +201,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#liftOffer",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The lift offer of a reservation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Reservation"
   } ],
@@ -174,8 +216,14 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#madeBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the reservation and the person who make it"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Reservation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "made by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#User"
@@ -183,6 +231,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#makesReservation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the person and the reservation that he made"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#User"
   } ],
@@ -195,6 +246,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#model",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The model of a vehicle"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Vehicle"
   } ],
@@ -207,6 +261,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#note",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The note of a reservation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Reservation"
   } ],
@@ -219,8 +276,14 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#purpose",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The purpose of a reservation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Reservation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "purpose"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -228,6 +291,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#relatedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the reservation and the object about it"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Reservation"
   } ],
@@ -240,6 +306,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#reservationEnd",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The end date of a reservation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Reservation"
   } ],
@@ -252,6 +321,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#reservationStart",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The start date of a reservation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Reservation"
   } ],
@@ -264,6 +336,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#state",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The state of a reservation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Reservation"
   } ],
@@ -276,11 +351,14 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#timeZone",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The time Zone of a vehicle"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Vehicle"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "time zone>"
+    "@value" : "time zone"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -288,6 +366,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#type",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The type of a vehicle"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Vehicle"
   } ],
@@ -300,6 +381,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#zip",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The zip code of an address"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/car-booking#Address"
   } ],
@@ -312,6 +396,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/core#User",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The user who makes the reservation"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "User"
   } ]

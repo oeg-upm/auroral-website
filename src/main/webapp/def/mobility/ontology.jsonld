@@ -5,94 +5,134 @@
   "@id" : "http://purl.org/dc/elements/1.1/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#ArrivalTime",
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.geonames.org/ontology#Feature",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to a specific location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Feature"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#versionInfo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Ahlem Rhayem"
+  }, {
+    "@value" : "María Poveda Villalón"
+  }, {
+    "@value" : "Raúl García Castro"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@value" : "This ontology aims at modelling the data related mean of transport mobility  for the AURORAL project."
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "The AURORAL Mobility Ontology"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.0.1"
+  } ],
+  "https://w3id.org/mod#createdWith" : [ {
+    "@id" : "https://chowlk.linkeddata.es/"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents the scheduled arrival time for a stop point"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Arrival Time"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.geonames.org/ontology#ScheduledTime"
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#DepartureTime",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#DepartureTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents the scheduled departure time for a stop point"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Departure Time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#DestinationDisplay",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Destination Display"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#EstimatedCall",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class defines the estimated call of a bus or any mean of transport in a specific stop point"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Estimated Call"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#JourneyPattern",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#JourneyService",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Journey Pattern"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#JourneyService",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A passenger carrying Mean Of Transport JOURNEY for one specified\r\nDAY TYPE. The pattern of working is in principle defined by a\r\nSERVICE JOURNEY PATTERN."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Journey Service"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#Line",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#Quay",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Line"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#Point",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Point"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A place such as platform, stance, or quayside where\r\npassengers have access to PT vehicles, Taxi, cars or other\r\nmeans of transportation. A QUAY may serve one or more\r\nVEHICLE STOPPING PLACEs and be associated with one or\r\nmore SCHEDULED STOP POINTS. A QUAY may contain other\r\nsub QUAYs."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.owl-ontologies.com/geon#Feature"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#Quay",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Quay"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.geonames.org/ontology#Point"
+    "@id" : "https://w3id.org/transmodel/journeys#Point"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#ScheduledTime",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Defines the scheduled time for a Stop point"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Scheduled Time"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#StopPoint",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#StopPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A POINT where passengers can board or alight from mean of transport"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Stop Point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.geonames.org/ontology#Point"
+    "@id" : "https://w3id.org/transmodel/journeys#Point"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#TransportMode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Transport Mode"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#actualArrivedTime",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#actualArrivedTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The actual arrived time of a mean of transport"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#ArrivalTime"
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "actual arrived time"
@@ -101,10 +141,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#actualDepartureTime",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#actualDepartureTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The actual departure time of a mean of transport"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#DepartureTime"
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#DepartureTime"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "actual departure time"
@@ -113,10 +156,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#aimedArrivalTime",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#aimedArrivalTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The aimed arrival time of a mean of transport"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#ArrivalTime"
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "aimed arrival time"
@@ -125,10 +171,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#aimedDepartureTime",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#aimedDepartureTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The aimde departure time of a mean of transport"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#DepartureTime"
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#DepartureTime"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "aimed departure time"
@@ -137,10 +186,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#date",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#date",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The date of the estimated call"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#EstimatedCall"
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "date"
@@ -149,10 +201,28 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#expectedArrivalTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#destinationDisplay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the estimated call and the destination"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#ArrivalTime"
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "destination display"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#DestinationDisplay"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#expectedArrivalTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The expected arrival time of a given mean of transport to a stop point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "expected arrival time"
@@ -161,10 +231,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#expectedDepartureTime",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#expectedDepartureTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The expected departure time of a given mean of transport to a stop point"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#DepartureTime"
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#DepartureTime"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "expected departure time"
@@ -173,10 +246,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#forAlighting",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#forAlighting",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "To dismount from a horse, descend from a vehicle, etc. to settle or stay after descending:"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#EstimatedCall"
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "for alighting"
@@ -185,10 +261,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#forBoarding",
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#forBoarding",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The act of passengers and crew getting aboard a ship or aircraft"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#EstimatedCall"
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "for boarding"
@@ -197,179 +276,297 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "http://www.geonames.org/ontology#frontText",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#hasEstimatedCall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the stop point and its estimade calls"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#DestinationDisplay"
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#StopPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has estimated call"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#hasLine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between journey pattern and the line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#JourneyPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Line"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#hasQuay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the estimated call and the quay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has quay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#Quay"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#hasScheduledTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the scheduled time and the estimated call"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has scheduled time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#hasTransportMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the mean of transport and the line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has transport mode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#idLine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "id line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#idQuay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a quay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#Quay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "id quay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#idStopPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a stop point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#StopPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "id stop point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#journeyPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the  journey service and the journey pattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#JourneyService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "journey pattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#JourneyPattern"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#journeyService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the journey service and the estimated calls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "journey service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#JourneyService"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#nameLine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of a line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "name line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#nameStopPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of a stop point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#StopPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "name stop point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mod#createdWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Bus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#CableCar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DestinationDisplay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An advertised destination of a specific Journey Pattern usually displayed on a headsign or other on-board locations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Destination Display"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Ferry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Funicular",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Gondola",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#JourneyPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ordered list of SCHEDULED STOP POINTs and TIMING\r\nPOINTs on a single ROUTE, describing the pattern of working\r\nfor public transport vehicles.A JOURNEY PATTERN may pass\r\nthrough the same POINT more than once. The first point of a\r\nJOURNEY PATTERN is the origin. The last point is the\r\ndestination"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Journey Pattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Line",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A group of ROUTEs which is generally known to the public by\r\na similar name or number."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Line"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The means of transportation are bus, train, aeroplane, ship, car, etc while the mode of transportation refers to road, air, sea/ocean, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Mean Of Transport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Metro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Point",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Presents the geospatial coordination of a given place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.geonames.org/ontology#Feature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Rail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Tram",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#frontText",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The act of acting like you are somebody else"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#DestinationDisplay"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "front text"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#hasEstimatedCall",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#StopPoint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has estimated call"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.geonames.org/ontology#EstimatedCall"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#hasPattern",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#JourneyService"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has pattern"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.geonames.org/ontology#JourneyPattern"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#hasQuay",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#EstimatedCall"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has quay"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.geonames.org/ontology#Quay"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#hasScheduledTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#EstimatedCall"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has scheduled time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.geonames.org/ontology#ScheduledTime"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#hasTransportMode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#Line"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has transport mode"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.geonames.org/ontology#TransportMode"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#hasline",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#JourneyPattern"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasline"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#id",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#StopPoint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "id"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#journeyServicel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#EstimatedCall"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "journey servicel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.geonames.org/ontology#JourneyService"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#name",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#StopPoint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "name"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#prescribing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#EstimatedCall"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "prescribing"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.geonames.org/ontology#DestinationDisplay"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#realTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#EstimatedCall"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ]
-}, {
-  "@id" : "http://www.geonames.org/ontology#transportMode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.geonames.org/ontology#TransportMode"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://www.owl-ontologies.com/geon#Feature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Feature"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2001/XMLSchema#date",
-  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
-}, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/mobility#",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Ahlem Rhayem"
-  }, {
-    "@value" : "Andrea Cimmino"
-  }, {
-    "@value" : "Juan Cano"
-  }, {
-    "@value" : "María Poveda Villalón"
-  }, {
-    "@value" : "Raúl García Castro"
-  } ],
-  "http://purl.org/dc/elements/1.1/description" : [ {
-    "@value" : "The mobility ontology aims to model data related to transportation sector"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/mobility#/1.0.0"
   } ]
 } ]

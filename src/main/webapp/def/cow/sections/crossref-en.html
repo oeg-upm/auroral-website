@@ -1,6 +1,6 @@
-<h2 id="crossreference" class="list">Cross-reference for AURORAL Farming ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<h2 id="crossreference" class="list">Cross-reference for Farming Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by Farming Ontology.
-<div xmlns:extra="https://w3id.org/extra#"
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
@@ -76,6 +76,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/adapters#Accelerometer</p>
+      <div class="comment">
+         <span class="markdown">An accelerometer is a sensor which, when attached to a mobile or other object, measures its non-gravitational linear acceleration.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -92,6 +95,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#Activity</p>
+      <div class="comment">
+         <span class="markdown">Represnts information related to the activities of an animal</span>
+      </div>
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
@@ -116,7 +122,15 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#Animal</p>
+      <div class="comment">
+         <span class="markdown">Animal is the feature of interest in for the dairy production use case</span>
+      </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://saref.etsi.org/core#FeatureOfInterest" title="https://saref.etsi.org/core#FeatureOfInterest">Feature Of Interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Cow" title="https://auroral.iot.linkeddata.es/def/cow#Cow">Cow</a>
@@ -147,6 +161,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#Breeding</p>
+      <div class="comment">
+         <span class="markdown">Animal breeding is defined as the application of the principles of genetics and biometry to improve the efficiency of production in farm animals.</span>
+      </div>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
@@ -169,6 +186,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#Cow</p>
+      <div class="comment">
+         <span class="markdown">COW is the mature female of cattle (genus Bos)</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -190,6 +210,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#DoesNotNeedArtificialInsemination</p>
+      <div class="comment">
+         <span class="markdown">The status of the cow is does not need artificial insemination</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -206,7 +229,15 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core#FeatureOfInterest</p>
+      <div class="comment">
+         <span class="markdown">A feature of interest represents any real world entity from which a property is measured.</span>
+      </div>
       <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Animal" title="https://auroral.iot.linkeddata.es/def/cow#Animal">Animal</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#http://www.owl-ontologies.com/saref#isPropertyOf" title="http://www.owl-ontologies.com/saref#isPropertyOf">is property of</a>
@@ -221,6 +252,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#Heifer</p>
+      <div class="comment">
+         <span class="markdown">The meaning of HEIFER is a young cow</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -236,6 +270,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#Inseminated</p>
+      <div class="comment">
+         <span class="markdown">The status of Cow is inseminated</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -252,6 +289,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#Lactation</p>
+      <div class="comment">
+         <span class="markdown">A mammal that produces milk to feed her babies</span>
+      </div>
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
@@ -274,6 +314,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#Pregnant</p>
+      <div class="comment">
+         <span class="markdown">The status of a Cow is pregnant</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -290,6 +333,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core#Property</p>
+      <div class="comment">
+         <span class="markdown">A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
@@ -317,6 +363,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#RecentDelivery</p>
+      <div class="comment">
+         <span class="markdown">The status of a Cow is recent delivery</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -333,6 +382,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#ReproductiveStatus</p>
+      <div class="comment">
+         <span class="markdown">Determines the reproductive status of amn animal. the possible status are: does not need artificial insemination, inseminated, pregnant, recent delivery, to undergo artificial insemination</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
@@ -363,6 +415,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/core#Sensor</p>
+      <div class="comment">
+         <span class="markdown">a device that is used to record that something is present or that there are changes in something</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
@@ -385,6 +440,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> http://www.owl-ontologies.com/adapters#SpaceProperty</p>
+      <div class="comment">
+         <span class="markdown">Contains information related to the space property: XAxis Acceleration, YAxis  Acceleration, ZAxis Acceleration</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -410,6 +468,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#ToUndergoArtificialInsemination</p>
+      <div class="comment">
+         <span class="markdown">The status of a Cow is to undergo artificial insemination</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -419,7 +480,7 @@ This section provides details for each class and property defined by Farming Ont
          </dd>
       </dl>
    </div>
-</div><div xmlns:extra="https://w3id.org/extra#"
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
@@ -455,6 +516,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#hasActivity</p>
+      <div class="comment">
+         <span class="markdown">A relationship between the animal and its activities</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -478,6 +542,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#hasBreeding</p>
+      <div class="comment">
+         <span class="markdown">A relationship between the Animal and the breeding class</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -501,6 +568,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#hasLactation</p>
+      <div class="comment">
+         <span class="markdown">A relationship between the animal and its lactation days</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -524,6 +594,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> http://www.owl-ontologies.com/saref#isPropertyOf</p>
+      <div class="comment">
+         <span class="markdown">A relationship between a property and the feature of interest it belongs to</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -546,6 +619,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> http://www.owl-ontologies.com/saref#measuresProperty</p>
+      <div class="comment">
+         <span class="markdown">A relationship specifying the property that can be measured by a certain device</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -569,6 +645,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#reproductiveStatus</p>
+      <div class="comment">
+         <span class="markdown">A relationship between the cow and its reproductive status</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -585,7 +664,7 @@ This section provides details for each class and property defined by Farming Ont
          </dl>
       </div>
    </div>
-</div><div xmlns:extra="https://w3id.org/extra#"
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
@@ -625,6 +704,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#birthDate</p>
+      <div class="comment">
+         <span class="markdown">The birth date of a cow</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -648,6 +730,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#daysSinceLastInsemination</p>
+      <div class="comment">
+         <span class="markdown">The number opf days since the last insemination</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
@@ -666,6 +751,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#group</p>
+      <div class="comment">
+         <span class="markdown">The group of the Cow</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -689,6 +777,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#idAnimal</p>
+      <div class="comment">
+         <span class="markdown">The identifier of a Cow</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -712,6 +803,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#lactationDays</p>
+      <div class="comment">
+         <span class="markdown">The lactation days of a Cow</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -736,6 +830,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#probabilityOfHighActivity</p>
+      <div class="comment">
+         <span class="markdown">The probability of high activity of the Cow</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -760,6 +857,9 @@ This section provides details for each class and property defined by Farming Ont
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/cow#relativeActivity</p>
+      <div class="comment">
+         <span class="markdown">The relative activity of the Cow</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -777,7 +877,7 @@ This section provides details for each class and property defined by Farming Ont
          </dl>
       </div>
    </div>
-</div><div xmlns:extra="https://w3id.org/extra#"
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
@@ -871,6 +971,11 @@ This section provides details for each class and property defined by Farming Ont
          </dd>
       </dl>
    </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="rules">
+   <h3 class="list" id="rule">Rules</h3>
+   <ul class="hlist"/>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">

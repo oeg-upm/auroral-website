@@ -1,0 +1,256 @@
+@prefix : <https://auroral.iot.linkeddata.es/def/cell#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://auroral.iot.linkeddata.es/def/cell#> .
+
+<https://auroral.iot.linkeddata.es/def/cell#> rdf:type owl:Ontology ;
+                                               <http://purl.org/dc/elements/1.1/creator> "Ahlem Rhayem" ,
+                                                                                         "Andrea Cimmino" ,
+                                                                                         "Juan Cano Benito" ,
+                                                                                         "María Poveda Villalón" ,
+                                                                                         "Raúl García Castro" ;
+                                               <http://purl.org/dc/elements/1.1/description> "This ontology aims at modelling the cell-tower information for the AURORAL project." ;
+                                               <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.owl-ontologies.com/geo#location
+<http://www.owl-ontologies.com/geo#location> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain :CellTower ;
+                                             rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+                                             rdfs:comment "Relationship between the cell tower and its geospatial coordinates" ;
+                                             rdfs:label "location" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#country
+:country rdf:type owl:ObjectProperty ;
+         rdfs:domain :CellTower ;
+         rdfs:range <https://auroral.iot.linkeddata.es/def/core#Country> ;
+         rdfs:comment "A relationship between the cellTower and the country where it is installed" ;
+         rdfs:label "country" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#hasOperator
+:hasOperator rdf:type owl:ObjectProperty ;
+             rdfs:domain :CellTower ;
+             rdfs:range :Operator ;
+             rdfs:comment "A relationship between the CellTower and its Operator" ;
+             rdfs:label "has operator" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#hasRange
+:hasRange rdf:type owl:ObjectProperty ;
+          rdfs:domain :CellTower ;
+          rdfs:range :RangeCellTower ;
+          rdfs:comment "A relationship between the Operator and its range" ;
+          rdfs:label "has range" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#providesNetwork
+:providesNetwork rdf:type owl:ObjectProperty ;
+                 rdfs:domain :CellTower ;
+                 rdfs:range :Network ;
+                 rdfs:comment "Relationship between the cellTower and the network that it provides" ;
+                 rdfs:label "provides network" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+                                              rdfs:comment "The latitude of a given location" ;
+                                              rdfs:label "lat" .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+                                               rdfs:comment "The longitude of a given location" ;
+                                               rdfs:label "long" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#cellId
+:cellId rdf:type owl:DatatypeProperty ;
+        rdfs:domain :CellTower ;
+        rdfs:range xsd:string ;
+        rdfs:comment "The identifer of a cellTower" ;
+        rdfs:label "cell id" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#created
+:created rdf:type owl:DatatypeProperty ;
+         rdfs:domain :CellTower ;
+         rdfs:range xsd:dateTime ;
+         rdfs:comment "The created time of a cellTower" ;
+         rdfs:label "created" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#networkCode
+:networkCode rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Network ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The code of a network" ;
+             rdfs:label "network code" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#operatorId
+:operatorId rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Operator ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The identifier of an operator" ;
+            rdfs:label "operator id" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#operatorName
+:operatorName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Operator ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The name of an operator" ;
+              rdfs:label "operator name" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#range
+:range rdf:type owl:DatatypeProperty ;
+       rdfs:domain :RangeCellTower ;
+       rdfs:range xsd:string ;
+       rdfs:comment "The range of a CellTower" ;
+       rdfs:label "range" .
+
+
+###  https://auroral.iot.linkeddata.es/def/core#code
+<https://auroral.iot.linkeddata.es/def/core#code> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://auroral.iot.linkeddata.es/def/core#Country> ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:comment "The code of a country" ;
+                                                  rdfs:label "code" .
+
+
+###  https://auroral.iot.linkeddata.es/def/core#name
+<https://auroral.iot.linkeddata.es/def/core#name> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://auroral.iot.linkeddata.es/def/core#Country> ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:comment "The name of a country" ;
+                                                  rdfs:label "name" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.geonames.org/ontology#Feature
+<http://www.geonames.org/ontology#Feature> rdf:type owl:Class ;
+                                           rdfs:comment "Refers to the location of an entity" ;
+                                           rdfs:label "Feature" .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#Point
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> rdf:type owl:Class ;
+                                                rdfs:comment "Represents a geospatial information of a givem location" ;
+                                                rdfs:label "Point" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#CDMA
+:CDMA rdf:type owl:Class ;
+      rdfs:subClassOf :Network ;
+      rdfs:comment "CDMA (Code-Division Multiple Access) refers to any of several protocols used in second-generation (2G) and third-generation (3G) wireless communications." ;
+      rdfs:label "C D M A" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#CellTower
+:CellTower rdf:type owl:Class ;
+           rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Device> ;
+           rdfs:comment "Cell towers, also known as cell sites, are where electric communications equipment and antennae are mounted, allowing the surrounding area to use wireless communication devices like telephones and radios" ;
+           rdfs:label "Cell Tower" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#GSM
+:GSM rdf:type owl:Class ;
+     rdfs:subClassOf :Network ;
+     rdfs:comment "A global system for mobile telecommunications: a technical system for mobile phones used in many countries: GSM network The phone company has placed a large order for GSM network equipment." ;
+     rdfs:label "G S M" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#LTE
+:LTE rdf:type owl:Class ;
+     rdfs:subClassOf :Network ;
+     rdfs:comment "LTE (Long-Term Evolution) is a fourth-generation (4G) wireless standard that provides increased network capacity and speed for cellphones and other cellular devices compared with third-generation (3G) technology." ;
+     rdfs:label "L T E" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#Network
+:Network rdf:type owl:Class ;
+         rdfs:comment "Determines the type of networks that could  be provided by a network" ;
+         rdfs:label "Network" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#Operator
+:Operator rdf:type owl:Class ;
+          rdfs:comment "Determines the owners and the operator of a device or an object" ;
+          rdfs:label "Operator" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#RangeCellTower
+:RangeCellTower rdf:type owl:Class ;
+                rdfs:comment "The range of a cell tower is defined as the working area within which mobile devices can connect reliably to the cell tower." ;
+                rdfs:label "Range Cell Tower" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#UMTS
+:UMTS rdf:type owl:Class ;
+      rdfs:subClassOf :Network ;
+      rdfs:comment "Universal Mobile Telecommunications System: a system for sending text, voice, and video data to mobile phones and computers" ;
+      rdfs:label "U M T S" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#4G
+<https://auroral.iot.linkeddata.es/def/cell#4G> rdf:type owl:Class ;
+                                                rdfs:subClassOf :Network ;
+                                                rdfs:comment "fourth-generation: relating to or using a technology that gives mobile phone and computer users more advanced features than 3G" ;
+                                                rdfs:label "4 G" .
+
+
+###  https://auroral.iot.linkeddata.es/def/cell#5G
+<https://auroral.iot.linkeddata.es/def/cell#5G> rdf:type owl:Class ;
+                                                rdfs:subClassOf :Network ;
+                                                rdfs:comment "5G is the 5th generation mobile network. It is a new global wireless standard after 1G, 2G, 3G, and 4G networks. 5G enables a new kind of network that is designed to connect virtually everyone and everything together including machines, objects, and devices." ;
+                                                rdfs:label "5 G" .
+
+
+###  https://auroral.iot.linkeddata.es/def/core#Country
+<https://auroral.iot.linkeddata.es/def/core#Country> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.geonames.org/ontology#Feature> ;
+                                                     rdfs:comment "Specifies the country where a cell tower is installed" ;
+                                                     rdfs:label "Country" .
+
+
+###  https://auroral.iot.linkeddata.es/def/core#Device
+<https://auroral.iot.linkeddata.es/def/core#Device> rdf:type owl:Class ;
+                                                    rdfs:comment "A tangible object designed to accomplish a particular task. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function." ;
+                                                    rdfs:label "Device" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

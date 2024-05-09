@@ -71,6 +71,7 @@
     <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#belongsTo">
         <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/core#Building"/>
         <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/core#Municipality"/>
+        <rdfs:comment>A relationship between the building and the municipality it belongs to</rdfs:comment>
         <rdfs:label>belongs to</rdfs:label>
     </owl:ObjectProperty>
     
@@ -81,6 +82,7 @@
 
     <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer">
         <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Price"/>
+        <rdfs:comment>A relationship between Price and the consumer of the energy</rdfs:comment>
         <rdfs:label>depends on consumer</rdfs:label>
     </owl:ObjectProperty>
     
@@ -92,6 +94,7 @@
     <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#forSeason">
         <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason"/>
         <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Season"/>
+        <rdfs:comment>A relationship between the price and the season</rdfs:comment>
         <rdfs:label>for season</rdfs:label>
     </owl:ObjectProperty>
     
@@ -103,6 +106,7 @@
     <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#hasBuilding">
         <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Consumer"/>
         <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/core#Building"/>
+        <rdfs:comment>A relationship betewwwn the consumer and the building</rdfs:comment>
         <rdfs:label>has building</rdfs:label>
     </owl:ObjectProperty>
     
@@ -114,6 +118,7 @@
     <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#hasCostPrice">
         <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/energy#PriceAgreement"/>
         <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason"/>
+        <rdfs:comment>A relationship between the price and its cost per season</rdfs:comment>
         <rdfs:label>has cost price</rdfs:label>
     </owl:ObjectProperty>
     
@@ -123,8 +128,9 @@
 
 
     <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#hasPrice">
-        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Energy"/>
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"/>
         <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Price"/>
+        <rdfs:comment>A relationship between the energy and its price</rdfs:comment>
         <rdfs:label>has price</rdfs:label>
     </owl:ObjectProperty>
     
@@ -134,8 +140,9 @@
 
 
     <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#hasSource">
-        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Energy"/>
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"/>
         <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/energy#SourceEnergy"/>
+        <rdfs:comment>A relationship between the energy property and its source</rdfs:comment>
         <rdfs:label>has source</rdfs:label>
     </owl:ObjectProperty>
     
@@ -146,6 +153,7 @@
 
     <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#inCurrency">
         <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Currency"/>
+        <rdfs:comment>A relationship between price and its currency</rdfs:comment>
         <rdfs:label>in currency</rdfs:label>
     </owl:ObjectProperty>
     
@@ -157,6 +165,7 @@
     <owl:ObjectProperty rdf:about="https://saref.etsi.org/core#hasProperty">
         <rdfs:domain rdf:resource="https://saref.etsi.org/core#FeatureofInterest"/>
         <rdfs:range rdf:resource="https://saref.etsi.org/core#Property"/>
+        <rdfs:comment>A relationship between a feature of interest and a property of that feature</rdfs:comment>
         <rdfs:label>has property</rdfs:label>
     </owl:ObjectProperty>
     
@@ -168,6 +177,7 @@
     <owl:ObjectProperty rdf:about="https://saref.etsi.org/core#isMeasuredIn">
         <rdfs:domain rdf:resource="https://saref.etsi.org/core#Measurement"/>
         <rdfs:range rdf:resource="https://saref.etsi.org/core#UnitOfMeasure"/>
+        <rdfs:comment>A relationship identifying the unit of measure used for a certain entity.</rdfs:comment>
         <rdfs:label>is measured in</rdfs:label>
     </owl:ObjectProperty>
     
@@ -179,6 +189,7 @@
     <owl:ObjectProperty rdf:about="https://saref.etsi.org/core#isPropertyOf">
         <rdfs:domain rdf:resource="https://saref.etsi.org/core#Property"/>
         <rdfs:range rdf:resource="https://saref.etsi.org/core#FeatureofInterest"/>
+        <rdfs:comment>A relationship between a property and the feature of interest it belongs to</rdfs:comment>
         <rdfs:label>is property of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -190,6 +201,7 @@
     <owl:ObjectProperty rdf:about="https://saref.etsi.org/core#relatesToMeasurement">
         <rdfs:domain rdf:resource="https://saref.etsi.org/core#Property"/>
         <rdfs:range rdf:resource="https://saref.etsi.org/core#Measurement"/>
+        <rdfs:comment>A relationship between a property and the measurements it relates to</rdfs:comment>
         <rdfs:label>relates to measurement</rdfs:label>
     </owl:ObjectProperty>
     
@@ -201,6 +213,7 @@
     <owl:ObjectProperty rdf:about="https://saref.etsi.org/core#relatesToProperty">
         <rdfs:domain rdf:resource="https://saref.etsi.org/core#Measurement"/>
         <rdfs:range rdf:resource="https://saref.etsi.org/core#Property"/>
+        <rdfs:comment>A relationship between a measurement and the property it relates to</rdfs:comment>
         <rdfs:label>relates to property</rdfs:label>
     </owl:ObjectProperty>
     
@@ -223,6 +236,7 @@
 
     <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/core#id">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The identifier of an entity</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -232,6 +246,7 @@
 
     <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/core#name">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The name of an entity</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -242,6 +257,7 @@
     <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#constructionYear">
         <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/core#Building"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The construction year of a building</rdfs:comment>
         <rdfs:label>construction Year</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -254,6 +270,7 @@
         <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/energy#FixedAgreement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Indicates the type of agreement (Year, month, week)</rdfs:comment>
+        <rdfs:comment>The contract time of an agreement</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -264,6 +281,8 @@
     <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#costPrice">
         <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>The cost of the price per season</rdfs:comment>
+        <rdfs:label>cost price</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -274,7 +293,8 @@
     <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/energy#heatingArea">
         <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/core#Building"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:label>heating Area</rdfs:label>
+        <rdfs:comment>The heating area of the buidling or a municipality</rdfs:comment>
+        <rdfs:label>heating area</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -291,12 +311,13 @@
     
 
 
-    <!-- https://auroral.iot.linkeddata.es/def/adapters#Energy -->
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty -->
 
 
-    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/adapters#Energy">
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty">
         <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core#Property"/>
-        <rdfs:label>Energy</rdfs:label>
+        <rdfs:comment>Energy property means any utility company, gas transmission or pipeline company or electric generating company or facility, but shall in no event include interests in or development of oil, gas, natural resources and mineral rights.</rdfs:comment>
+        <rdfs:label>Energy Property</rdfs:label>
     </owl:Class>
     
 
@@ -306,6 +327,7 @@
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/core#Building">
         <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core#FeatureofInterest"/>
+        <rdfs:comment>The building in which energy consumption is controlled</rdfs:comment>
         <rdfs:label>Building</rdfs:label>
     </owl:Class>
     
@@ -316,6 +338,7 @@
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/core#Municipality">
         <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core#FeatureofInterest"/>
+        <rdfs:comment>The Municipality in which energy consumption is controlled</rdfs:comment>
         <rdfs:label>Municipality</rdfs:label>
     </owl:Class>
     
@@ -325,6 +348,7 @@
 
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#Consumer">
+        <rdfs:comment>a person or an object that consumes the enrgy. consumers are: Apartment, a house with electrical heating, a house without electrical heating, a larger households</rdfs:comment>
         <rdfs:label>Consumer</rdfs:label>
     </owl:Class>
     
@@ -335,6 +359,7 @@
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason">
         <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/energy#Price"/>
+        <rdfs:comment>The price cost of the energy consumption per season</rdfs:comment>
         <rdfs:label>Cost Price Season</rdfs:label>
     </owl:Class>
     
@@ -344,6 +369,7 @@
 
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#Currency">
+        <rdfs:comment>The currency of the enry price</rdfs:comment>
         <rdfs:label>Currency</rdfs:label>
     </owl:Class>
     
@@ -354,6 +380,7 @@
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#FixedAgreement">
         <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/energy#PriceAgreement"/>
+        <rdfs:comment>A fixed-price contract is a contractual agreement with a predetermined value for the goods or services provided.</rdfs:comment>
         <rdfs:label>Fixed Agreement</rdfs:label>
     </owl:Class>
     
@@ -363,6 +390,7 @@
 
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#Price">
+        <rdfs:comment>The price of the energy</rdfs:comment>
         <rdfs:label>Price</rdfs:label>
     </owl:Class>
     
@@ -372,6 +400,7 @@
 
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#PriceAgreement">
+        <rdfs:comment>A Price Agreement comprises a group of common items or services competitively bid to set the prices contractually for a specified time period</rdfs:comment>
         <rdfs:label>Price Agreement</rdfs:label>
     </owl:Class>
     
@@ -382,6 +411,7 @@
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#PriceMeasurement">
         <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core#Measurement"/>
+        <rdfs:comment>It corresponds to the measurement price of the energy</rdfs:comment>
         <rdfs:label>Price Measurement</rdfs:label>
     </owl:Class>
     
@@ -391,6 +421,7 @@
 
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#Season">
+        <rdfs:comment>The four seasons: Winter, Summer, Autumn, Spring</rdfs:comment>
         <rdfs:label>Season</rdfs:label>
     </owl:Class>
     
@@ -400,6 +431,7 @@
 
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#SourceEnergy">
+        <rdfs:comment>The origin of the energy: fuel oil, natural gas, firewood, lignite briquette</rdfs:comment>
         <rdfs:label>Source Energy</rdfs:label>
     </owl:Class>
     
@@ -410,6 +442,7 @@
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#StandardAgreement">
         <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/energy#PriceAgreement"/>
+        <rdfs:comment>A standard agreement is an agreement in which one of the parties to the contract determines the terms, and the other party cannot change these terms.</rdfs:comment>
         <rdfs:label>Standard Agreement</rdfs:label>
     </owl:Class>
     
@@ -420,6 +453,7 @@
 
     <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/energy#VariableAgreement">
         <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/energy#PriceAgreement"/>
+        <rdfs:comment>A variable agreement is a contract  where the terms could be changed</rdfs:comment>
         <rdfs:label>Variable Agreement</rdfs:label>
     </owl:Class>
     
@@ -429,6 +463,7 @@
 
 
     <owl:Class rdf:about="https://saref.etsi.org/core#FeatureofInterest">
+        <rdfs:comment>A feature of interest represents any real world entity from which a property is measured.</rdfs:comment>
         <rdfs:label>Featureof Interest</rdfs:label>
     </owl:Class>
     
@@ -438,6 +473,7 @@
 
 
     <owl:Class rdf:about="https://saref.etsi.org/core#Measurement">
+        <rdfs:comment>Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement.</rdfs:comment>
         <rdfs:label>Measurement</rdfs:label>
     </owl:Class>
     
@@ -447,6 +483,7 @@
 
 
     <owl:Class rdf:about="https://saref.etsi.org/core#Property">
+        <rdfs:comment>A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature</rdfs:comment>
         <rdfs:label>Property</rdfs:label>
     </owl:Class>
     
@@ -456,6 +493,7 @@
 
 
     <owl:Class rdf:about="https://saref.etsi.org/core#UnitOfMeasure">
+        <rdfs:comment>The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called &quot;watt&quot;.</rdfs:comment>
         <rdfs:label>Unit Of Measure</rdfs:label>
     </owl:Class>
     
@@ -495,7 +533,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity">
-        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Energy"/>
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"/>
     </owl:NamedIndividual>
     
 
@@ -504,7 +542,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy">
-        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Energy"/>
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"/>
     </owl:NamedIndividual>
     
 

@@ -1,462 +1,479 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://auroral.iot.linkeddata.es/def/cow#"
+<rdf:RDF xmlns="https://auroral.iot.linkeddata.es/def/cow#"
+     xml:base="https://auroral.iot.linkeddata.es/def/cow"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://auroral.iot.linkeddata.es/def/cow#"
-     versionIRI="https://auroral.iot.linkeddata.es/def/cow#/1.0.0">
-    <Prefix name="" IRI="https://auroral.iot.linkeddata.es/def/cow#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <Literal>Ahlem Rhayem</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <Literal>Andrea Cimmino</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <Literal>Juan Cano</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <Literal>María Poveda-Villalón</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <Literal>Raúl Garcia-Castro</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-        <Literal>This ontology aims at modelling the Farming (Dairy production) data for the AURORAL project.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
-        <IRI>http://purl.org/NET/rdflicense/cc-by4.0</IRI>
-    </Annotation>
-    <Declaration>
-        <Class IRI="http://www.owl-ontologies.com/adapters#SpaceProperty"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://auroral.iot.linkeddata.es/def/adapters#Accelerometer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://auroral.iot.linkeddata.es/def/core#Sensor"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Activity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Animal"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Breeding"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Cow"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DoesNotNeedArtificialInsemination"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Heifer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Inseminated"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Lactation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Pregnant"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="RecentDelivery"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ReproductiveStatus"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ToUndergoArtificialInsemination"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://saref.etsi.org/core#FeatureOfInterest"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="https://saref.etsi.org/core#Property"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.owl-ontologies.com/saref#isPropertyOf"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://www.owl-ontologies.com/saref#measuresProperty"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasActivity"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasBreeding"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasLactation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="reproductiveStatus"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="birthDate"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="daysSinceLastInsemination"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="group"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="idAnimal"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="lactationDays"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="probabilityOfHighActivity"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="relativeActivity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://auroral.iot.linkeddata.es/def/adapters#XAxisAcceleration"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://auroral.iot.linkeddata.es/def/adapters#YAxisAcceleration"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="https://auroral.iot.linkeddata.es/def/adapters#ZAxisAcceleration"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="RedSpottedCow"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="http://www.owl-ontologies.com/adapters#SpaceProperty"/>
-        <Class IRI="https://saref.etsi.org/core#Property"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="https://auroral.iot.linkeddata.es/def/adapters#Accelerometer"/>
-        <Class IRI="https://auroral.iot.linkeddata.es/def/core#Sensor"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Cow"/>
-        <Class IRI="Animal"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DoesNotNeedArtificialInsemination"/>
-        <Class IRI="ReproductiveStatus"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Heifer"/>
-        <Class IRI="Animal"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Inseminated"/>
-        <Class IRI="ReproductiveStatus"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Pregnant"/>
-        <Class IRI="ReproductiveStatus"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="RecentDelivery"/>
-        <Class IRI="ReproductiveStatus"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="ToUndergoArtificialInsemination"/>
-        <Class IRI="ReproductiveStatus"/>
-    </SubClassOf>
-    <ClassAssertion>
-        <Class IRI="http://www.owl-ontologies.com/adapters#SpaceProperty"/>
-        <NamedIndividual IRI="https://auroral.iot.linkeddata.es/def/adapters#XAxisAcceleration"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.owl-ontologies.com/adapters#SpaceProperty"/>
-        <NamedIndividual IRI="https://auroral.iot.linkeddata.es/def/adapters#YAxisAcceleration"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://www.owl-ontologies.com/adapters#SpaceProperty"/>
-        <NamedIndividual IRI="https://auroral.iot.linkeddata.es/def/adapters#ZAxisAcceleration"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="Breeding"/>
-        <NamedIndividual IRI="RedSpottedCow"/>
-    </ClassAssertion>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.owl-ontologies.com/saref#isPropertyOf"/>
-        <Class IRI="https://saref.etsi.org/core#Property"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="http://www.owl-ontologies.com/saref#measuresProperty"/>
-        <Class IRI="https://auroral.iot.linkeddata.es/def/core#Sensor"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasActivity"/>
-        <Class IRI="Animal"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasBreeding"/>
-        <Class IRI="Animal"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasLactation"/>
-        <Class IRI="Cow"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="reproductiveStatus"/>
-        <Class IRI="Animal"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.owl-ontologies.com/saref#isPropertyOf"/>
-        <Class IRI="https://saref.etsi.org/core#FeatureOfInterest"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="http://www.owl-ontologies.com/saref#measuresProperty"/>
-        <Class IRI="https://saref.etsi.org/core#Property"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasActivity"/>
-        <Class IRI="Activity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasBreeding"/>
-        <Class IRI="Breeding"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasLactation"/>
-        <Class IRI="Lactation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="reproductiveStatus"/>
-        <Class IRI="ReproductiveStatus"/>
-    </ObjectPropertyRange>
-    <DataPropertyDomain>
-        <DataProperty IRI="birthDate"/>
-        <Class IRI="Animal"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="group"/>
-        <Class IRI="Animal"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="idAnimal"/>
-        <Class IRI="Animal"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="lactationDays"/>
-        <Class IRI="Lactation"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="probabilityOfHighActivity"/>
-        <Class IRI="Activity"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="relativeActivity"/>
-        <Class IRI="Activity"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="birthDate"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="daysSinceLastInsemination"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="group"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="idAnimal"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="lactationDays"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="probabilityOfHighActivity"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="relativeActivity"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.owl-ontologies.com/adapters#SpaceProperty</IRI>
-        <Literal>Space Property</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.owl-ontologies.com/saref#isPropertyOf</IRI>
-        <Literal>is property of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://www.owl-ontologies.com/saref#measuresProperty</IRI>
-        <Literal>measures property</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://auroral.iot.linkeddata.es/def/adapters#Accelerometer</IRI>
-        <Literal>Accelerometer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://auroral.iot.linkeddata.es/def/core#Sensor</IRI>
-        <Literal>Sensor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Activity</IRI>
-        <Literal>Activity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Animal</IRI>
-        <Literal>Animal</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Breeding</IRI>
-        <Literal>Breeding</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Cow</IRI>
-        <Literal>Cow</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DoesNotNeedArtificialInsemination</IRI>
-        <Literal>Does Not Need Artificial Insemination</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Heifer</IRI>
-        <Literal>Heifer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Inseminated</IRI>
-        <Literal>Inseminated</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Lactation</IRI>
-        <Literal>Lactation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Pregnant</IRI>
-        <Literal>Pregnant</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>RecentDelivery</IRI>
-        <Literal>Recent Delivery</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ReproductiveStatus</IRI>
-        <Literal>Reproductive Status</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ToUndergoArtificialInsemination</IRI>
-        <Literal>To Undergo Artificial Insemination</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>birthDate</IRI>
-        <Literal>birth date</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>daysSinceLastInsemination</IRI>
-        <Literal>days since last insemination</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>group</IRI>
-        <Literal>group</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasActivity</IRI>
-        <Literal>has activity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasBreeding</IRI>
-        <Literal>has breeding</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasLactation</IRI>
-        <Literal>has lactation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>idAnimal</IRI>
-        <Literal>id animal</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>lactationDays</IRI>
-        <Literal>lactation days</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>probabilityOfHighActivity</IRI>
-        <Literal>probability of high activity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>relativeActivity</IRI>
-        <Literal>relative activity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>reproductiveStatus</IRI>
-        <Literal>reproductive status</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://saref.etsi.org/core#FeatureOfInterest</IRI>
-        <Literal>Feature Of Interest</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>https://saref.etsi.org/core#Property</IRI>
-        <Literal>Property</Literal>
-    </AnnotationAssertion>
-</Ontology>
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://auroral.iot.linkeddata.es/def/cow#">
+        <owl:versionIRI rdf:resource="https://auroral.iot.linkeddata.es/def/cow#/1.0.0"/>
+        <dc:creator>Ahlem Rhayem</dc:creator>
+        <dc:creator>Andrea Cimmino</dc:creator>
+        <dc:creator>Juan Cano</dc:creator>
+        <dc:creator>María Poveda-Villalón</dc:creator>
+        <dc:creator>Raúl Garcia-Castro</dc:creator>
+        <dc:description>This ontology aims at modelling the Farming (Dairy production) data for the AURORAL project.</dc:description>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/saref#isPropertyOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/saref#isPropertyOf">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core#Property"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core#FeatureOfInterest"/>
+        <rdfs:comment>A relationship between a property and the feature of interest it belongs to</rdfs:comment>
+        <rdfs:label>is property of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/saref#measuresProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/saref#measuresProperty">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/core#Sensor"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core#Property"/>
+        <rdfs:comment>A relationship specifying the property that can be measured by a certain device</rdfs:comment>
+        <rdfs:label>measures property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#hasActivity -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/cow#hasActivity">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Animal"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Activity"/>
+        <rdfs:comment>A relationship between the animal and its activities</rdfs:comment>
+        <rdfs:label>has activity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#hasBreeding -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/cow#hasBreeding">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Animal"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Breeding"/>
+        <rdfs:comment>A relationship between the Animal and the breeding class</rdfs:comment>
+        <rdfs:label>has breeding</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#hasLactation -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/cow#hasLactation">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Cow"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Lactation"/>
+        <rdfs:comment>A relationship between the animal and its lactation days</rdfs:comment>
+        <rdfs:label>has lactation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#reproductiveStatus -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/cow#reproductiveStatus">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Animal"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/cow#ReproductiveStatus"/>
+        <rdfs:comment>A relationship between the cow and its reproductive status</rdfs:comment>
+        <rdfs:label>reproductive status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#birthDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/cow#birthDate">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The birth date of a cow</rdfs:comment>
+        <rdfs:label>birth date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#daysSinceLastInsemination -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/cow#daysSinceLastInsemination">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The number opf days since the last insemination</rdfs:comment>
+        <rdfs:label>days since last insemination</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#group -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/cow#group">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The group of the Cow</rdfs:comment>
+        <rdfs:label>group</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#idAnimal -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/cow#idAnimal">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Animal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The identifier of a Cow</rdfs:comment>
+        <rdfs:label>id animal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#lactationDays -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/cow#lactationDays">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Lactation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>The lactation days of a Cow</rdfs:comment>
+        <rdfs:label>lactation days</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#probabilityOfHighActivity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/cow#probabilityOfHighActivity">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The probability of high activity of the Cow</rdfs:comment>
+        <rdfs:label>probability of high activity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#relativeActivity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/cow#relativeActivity">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The relative activity of the Cow</rdfs:comment>
+        <rdfs:label>relative activity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/adapters#SpaceProperty -->
+
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/adapters#SpaceProperty">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core#Property"/>
+        <rdfs:comment>Contains information related to the space property: XAxis Acceleration, YAxis  Acceleration, ZAxis Acceleration</rdfs:comment>
+        <rdfs:label>Space Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#Accelerometer -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/adapters#Accelerometer">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/core#Sensor"/>
+        <rdfs:comment>An accelerometer is a sensor which, when attached to a mobile or other object, measures its non-gravitational linear acceleration.</rdfs:comment>
+        <rdfs:label>Accelerometer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/core#Sensor -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/core#Sensor">
+        <rdfs:comment>a device that is used to record that something is present or that there are changes in something</rdfs:comment>
+        <rdfs:label>Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#Activity -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/cow#Activity">
+        <rdfs:comment>Represnts information related to the activities of an animal</rdfs:comment>
+        <rdfs:label>Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#Animal -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/cow#Animal">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core#FeatureOfInterest"/>
+        <rdfs:comment>Animal is the feature of interest in for the dairy production use case</rdfs:comment>
+        <rdfs:label>Animal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#Breeding -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/cow#Breeding">
+        <rdfs:comment>Animal breeding is defined as the application of the principles of genetics and biometry to improve the efficiency of production in farm animals.</rdfs:comment>
+        <rdfs:label>Breeding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#Cow -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/cow#Cow">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Animal"/>
+        <rdfs:comment>COW is the mature female of cattle (genus Bos)</rdfs:comment>
+        <rdfs:label>Cow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#DoesNotNeedArtificialInsemination -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/cow#DoesNotNeedArtificialInsemination">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/cow#ReproductiveStatus"/>
+        <rdfs:comment>The status of the cow is does not need artificial insemination</rdfs:comment>
+        <rdfs:label>Does Not Need Artificial Insemination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#Heifer -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/cow#Heifer">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Animal"/>
+        <rdfs:comment>The meaning of HEIFER is a young cow</rdfs:comment>
+        <rdfs:label>Heifer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#Inseminated -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/cow#Inseminated">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/cow#ReproductiveStatus"/>
+        <rdfs:comment>The status of Cow is inseminated</rdfs:comment>
+        <rdfs:label>Inseminated</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#Lactation -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/cow#Lactation">
+        <rdfs:comment>A mammal that produces milk to feed her babies</rdfs:comment>
+        <rdfs:label>Lactation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#Pregnant -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/cow#Pregnant">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/cow#ReproductiveStatus"/>
+        <rdfs:comment>The status of a Cow is pregnant</rdfs:comment>
+        <rdfs:label>Pregnant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#RecentDelivery -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/cow#RecentDelivery">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/cow#ReproductiveStatus"/>
+        <rdfs:comment>The status of a Cow is recent delivery</rdfs:comment>
+        <rdfs:label>Recent Delivery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#ReproductiveStatus -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/cow#ReproductiveStatus">
+        <rdfs:comment>Determines the reproductive status of amn animal. the possible status are: does not need artificial insemination, inseminated, pregnant, recent delivery, to undergo artificial insemination</rdfs:comment>
+        <rdfs:label>Reproductive Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#ToUndergoArtificialInsemination -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/cow#ToUndergoArtificialInsemination">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/cow#ReproductiveStatus"/>
+        <rdfs:comment>The status of a Cow is to undergo artificial insemination</rdfs:comment>
+        <rdfs:label>To Undergo Artificial Insemination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core#FeatureOfInterest -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core#FeatureOfInterest">
+        <rdfs:comment>A feature of interest represents any real world entity from which a property is measured.</rdfs:comment>
+        <rdfs:label>Feature Of Interest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core#Property -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core#Property">
+        <rdfs:comment>A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature</rdfs:comment>
+        <rdfs:label>Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#XAxisAcceleration -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#XAxisAcceleration">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/adapters#SpaceProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#YAxisAcceleration -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#YAxisAcceleration">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/adapters#SpaceProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#ZAxisAcceleration -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#ZAxisAcceleration">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/adapters#SpaceProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/cow#RedSpottedCow -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/cow#RedSpottedCow">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/cow#Breeding"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
 

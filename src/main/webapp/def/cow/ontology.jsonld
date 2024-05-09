@@ -10,6 +10,9 @@
 }, {
   "@id" : "http://www.owl-ontologies.com/adapters#SpaceProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Contains information related to the space property: XAxis Acceleration, YAxis  Acceleration, ZAxis Acceleration"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Space Property"
   } ],
@@ -19,6 +22,9 @@
 }, {
   "@id" : "http://www.owl-ontologies.com/saref#isPropertyOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between a property and the feature of interest it belongs to"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://saref.etsi.org/core#Property"
   } ],
@@ -31,6 +37,9 @@
 }, {
   "@id" : "http://www.owl-ontologies.com/saref#measuresProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship specifying the property that can be measured by a certain device"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
   } ],
@@ -43,6 +52,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Accelerometer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An accelerometer is a sensor which, when attached to a mobile or other object, measures its non-gravitational linear acceleration."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Accelerometer"
   } ],
@@ -70,6 +82,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a device that is used to record that something is present or that there are changes in something"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Sensor"
   } ]
@@ -99,24 +114,39 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represnts information related to the activities of an animal"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Activity"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#Animal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Animal is the feature of interest in for the dairy production use case"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Animal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://saref.etsi.org/core#FeatureOfInterest"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#Breeding",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Animal breeding is defined as the application of the principles of genetics and biometry to improve the efficiency of production in farm animals."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Breeding"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#Cow",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "COW is the mature female of cattle (genus Bos)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Cow"
   } ],
@@ -126,6 +156,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#DoesNotNeedArtificialInsemination",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The status of the cow is does not need artificial insemination"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Does Not Need Artificial Insemination"
   } ],
@@ -135,6 +168,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#Heifer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The meaning of HEIFER is a young cow"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Heifer"
   } ],
@@ -144,6 +180,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#Inseminated",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The status of Cow is inseminated"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Inseminated"
   } ],
@@ -153,12 +192,18 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#Lactation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A mammal that produces milk to feed her babies"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Lactation"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#Pregnant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The status of a Cow is pregnant"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Pregnant"
   } ],
@@ -168,6 +213,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#RecentDelivery",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The status of a Cow is recent delivery"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Recent Delivery"
   } ],
@@ -183,12 +231,18 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#ReproductiveStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Determines the reproductive status of amn animal. the possible status are: does not need artificial insemination, inseminated, pregnant, recent delivery, to undergo artificial insemination"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Reproductive Status"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#ToUndergoArtificialInsemination",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The status of a Cow is to undergo artificial insemination"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "To Undergo Artificial Insemination"
   } ],
@@ -198,6 +252,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#birthDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The birth date of a cow"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/cow#Animal"
   } ],
@@ -210,6 +267,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#daysSinceLastInsemination",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The number opf days since the last insemination"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "days since last insemination"
   } ],
@@ -219,6 +279,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#group",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The group of the Cow"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/cow#Animal"
   } ],
@@ -231,6 +294,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#hasActivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the animal and its activities"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/cow#Animal"
   } ],
@@ -243,6 +309,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#hasBreeding",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the Animal and the breeding class"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/cow#Animal"
   } ],
@@ -255,6 +324,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#hasLactation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the animal and its lactation days"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/cow#Cow"
   } ],
@@ -267,6 +339,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#idAnimal",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a Cow"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/cow#Animal"
   } ],
@@ -279,6 +354,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#lactationDays",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The lactation days of a Cow"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/cow#Lactation"
   } ],
@@ -291,6 +369,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#probabilityOfHighActivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The probability of high activity of the Cow"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/cow#Activity"
   } ],
@@ -303,6 +384,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#relativeActivity",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The relative activity of the Cow"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/cow#Activity"
   } ],
@@ -315,6 +399,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#reproductiveStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the cow and its reproductive status"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/cow#Animal"
   } ],
@@ -327,12 +414,18 @@
 }, {
   "@id" : "https://saref.etsi.org/core#FeatureOfInterest",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A feature of interest represents any real world entity from which a property is measured."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Feature Of Interest"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core#Property",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Property"
   } ]

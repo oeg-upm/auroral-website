@@ -1,6 +1,6 @@
-<h2 id="crossreference" class="list">Cross-reference for the AURORAL MarketPlace Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by the AURORAL MarketPlace Ontology .
-<div xmlns:extra="https://w3id.org/extra#"
+<h2 id="crossreference" class="list">Cross-reference for Marketplace Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by the Marketplace Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
@@ -25,6 +25,9 @@ This section provides details for each class and property defined by the AURORAL
          <a href="#Stock"
             title="https://auroral.iot.linkeddata.es/def/market#Stock">Stock</a>
       </li>
+      <li>
+         <a href="#https://auroral.iot.linkeddata.es/def/core#User" title="https://auroral.iot.linkeddata.es/def/core#User">User</a>
+      </li>
    </ul>
    <div class="entity" id="Category">
       <h3>Category<sup class="type-c" title="class">c</sup>
@@ -33,6 +36,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#Category</p>
+      <div class="comment">
+         <span class="markdown">The category of the product</span>
+      </div>
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
@@ -59,7 +65,15 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#Customer</p>
+      <div class="comment">
+         <span class="markdown">The users that consumes a product</span>
+      </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://auroral.iot.linkeddata.es/def/core#User" title="https://auroral.iot.linkeddata.es/def/core#User">User</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#address"
@@ -80,6 +94,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#Product</p>
+      <div class="comment">
+         <span class="markdown">It is the item that will be sold</span>
+      </div>
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
@@ -108,7 +125,15 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#Seller</p>
+      <div class="comment">
+         <span class="markdown">The users that sell a product</span>
+      </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://auroral.iot.linkeddata.es/def/core#User" title="https://auroral.iot.linkeddata.es/def/core#User">User</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#sell" title="https://auroral.iot.linkeddata.es/def/market#sell">sell</a>
@@ -127,6 +152,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#Stock</p>
+      <div class="comment">
+         <span class="markdown">The items available for sale in a store</span>
+      </div>
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
@@ -144,7 +172,28 @@ This section provides details for each class and property defined by the AURORAL
          </dd>
       </dl>
    </div>
-</div><div xmlns:extra="https://w3id.org/extra#"
+   <div class="entity" id="https://auroral.iot.linkeddata.es/def/core#User">
+      <h3>User<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/core#User</p>
+      <div class="comment">
+         <span class="markdown">Users responsible for selling or consuming a product</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Customer"
+               title="https://auroral.iot.linkeddata.es/def/market#Customer">Customer</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Seller"
+               title="https://auroral.iot.linkeddata.es/def/market#Seller">Seller</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
@@ -171,6 +220,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#buy</p>
+      <div class="comment">
+         <span class="markdown">A relationship between the consumer and the product he buys</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -195,6 +247,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#hasCategory</p>
+      <div class="comment">
+         <span class="markdown">A relationship between the product and its category</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -219,6 +274,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#hasQuantity</p>
+      <div class="comment">
+         <span class="markdown">A relationship between the product and its quantity in the stock</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -243,6 +301,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#sell</p>
+      <div class="comment">
+         <span class="markdown">A relationship between product and salespeople</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -260,7 +321,7 @@ This section provides details for each class and property defined by the AURORAL
          </dl>
       </div>
    </div>
-</div><div xmlns:extra="https://w3id.org/extra#"
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
@@ -321,6 +382,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#address</p>
+      <div class="comment">
+         <span class="markdown">The address details of the consumer</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -345,6 +409,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#categoryId</p>
+      <div class="comment">
+         <span class="markdown">The identifier of the product</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -369,6 +436,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#categoryName</p>
+      <div class="comment">
+         <span class="markdown">The name of the product category</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -393,6 +463,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#categoryType</p>
+      <div class="comment">
+         <span class="markdown">The category type of the product</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -417,6 +490,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#hasId</p>
+      <div class="comment">
+         <span class="markdown">The identifier of the customer</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -441,6 +517,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#hasName</p>
+      <div class="comment">
+         <span class="markdown">The name of the customer</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -465,6 +544,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#productId</p>
+      <div class="comment">
+         <span class="markdown">The identifier of the product</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -489,6 +571,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#productName</p>
+      <div class="comment">
+         <span class="markdown">The product name</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -513,6 +598,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#sellerId</p>
+      <div class="comment">
+         <span class="markdown">The identifier of the seller</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -537,6 +625,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#sellerName</p>
+      <div class="comment">
+         <span class="markdown">The name of the seller</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -561,6 +652,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#stockId</p>
+      <div class="comment">
+         <span class="markdown">The identifier of the stock</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -585,6 +679,9 @@ This section provides details for each class and property defined by the AURORAL
       </h3>
       <p>
          <strong>IRI:</strong> https://auroral.iot.linkeddata.es/def/market#stockQuantity</p>
+      <div class="comment">
+         <span class="markdown">The quantity of the stock</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>

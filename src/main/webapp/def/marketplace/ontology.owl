@@ -1,357 +1,349 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://auroral.iot.linkeddata.es/def/market#"
+<rdf:RDF xmlns="https://auroral.iot.linkeddata.es/def/market#"
+     xml:base="https://auroral.iot.linkeddata.es/def/market"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://auroral.iot.linkeddata.es/def/market#">
-    <Prefix name="" IRI="https://auroral.iot.linkeddata.es/def/market#"/>
-    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
-    <Prefix name="market" IRI="https://auroral.iot.linkeddata.es/def/market#"/>
-    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Ahlem Rhayem</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Andrea Cimmino</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Juan Cano</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>María Poveda-Villalón</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Raúl Garcia-Castro</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <Literal>This ontology model the market-place information for AURORAL</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dcterms:license"/>
-        <IRI>http://purl.org/NET/rdflicense/cc-by4.0</IRI>
-    </Annotation>
-    <Declaration>
-        <Class IRI="Category"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Customer"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Product"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Seller"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Stock"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="buy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasCategory"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasQuantity"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="sell"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="address"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="categoryId"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="categoryName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="categoryType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="hasId"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="hasName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="productId"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="productName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="sellerId"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="sellerName"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="stockId"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="stockQuantity"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:description"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dcterms:license"/>
-    </Declaration>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="buy"/>
-        <Class IRI="Customer"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasCategory"/>
-        <Class IRI="Product"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasQuantity"/>
-        <Class IRI="Product"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="sell"/>
-        <Class IRI="Seller"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="buy"/>
-        <Class IRI="Product"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasCategory"/>
-        <Class IRI="Category"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasQuantity"/>
-        <Class IRI="Stock"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="sell"/>
-        <Class IRI="Product"/>
-    </ObjectPropertyRange>
-    <DataPropertyDomain>
-        <DataProperty IRI="address"/>
-        <Class IRI="Customer"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="categoryId"/>
-        <Class IRI="Category"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="categoryName"/>
-        <Class IRI="Category"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="categoryType"/>
-        <Class IRI="Category"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasId"/>
-        <Class IRI="Customer"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasName"/>
-        <Class IRI="Customer"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="productId"/>
-        <Class IRI="Product"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="productName"/>
-        <Class IRI="Product"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="sellerId"/>
-        <Class IRI="Seller"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="sellerName"/>
-        <Class IRI="Seller"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="stockId"/>
-        <Class IRI="Stock"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="stockQuantity"/>
-        <Class IRI="Stock"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="address"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="categoryId"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="categoryName"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="categoryType"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="hasId"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="hasName"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="productId"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="productName"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="sellerId"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="sellerName"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="stockId"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="stockQuantity"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Category</IRI>
-        <Literal>Category</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Customer</IRI>
-        <Literal>Customer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Product</IRI>
-        <Literal>Product</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Seller</IRI>
-        <Literal>Seller</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Stock</IRI>
-        <Literal>Stock</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>address</IRI>
-        <Literal>address</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>buy</IRI>
-        <Literal>buy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>categoryId</IRI>
-        <Literal>category id</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>categoryName</IRI>
-        <Literal>category name</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>categoryType</IRI>
-        <Literal>category type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasCategory</IRI>
-        <Literal>has category</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasId</IRI>
-        <Literal>has id</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasName</IRI>
-        <Literal>has name</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasQuantity</IRI>
-        <Literal>has quantity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>productId</IRI>
-        <Literal>product id</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>productName</IRI>
-        <Literal>product name</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>sell</IRI>
-        <Literal>sell</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>sellerId</IRI>
-        <Literal>seller id</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>sellerName</IRI>
-        <Literal>seller name</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>stockId</IRI>
-        <Literal>stock id</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>stockQuantity</IRI>
-        <Literal>stock quantity</Literal>
-    </AnnotationAssertion>
-</Ontology>
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://auroral.iot.linkeddata.es/def/market#">
+        <dc:creator>Ahlem Rhayem</dc:creator>
+        <dc:creator>Andrea Cimmino</dc:creator>
+        <dc:creator>Juan Cano</dc:creator>
+        <dc:creator>María Poveda-Villalón</dc:creator>
+        <dc:creator>Raúl Garcia-Castro</dc:creator>
+        <dc:description>This ontology model the market-place information for AURORAL</dc:description>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#buy -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#buy">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Customer"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/market#Product"/>
+        <rdfs:comment>A relationship between the consumer and the product he buys</rdfs:comment>
+        <rdfs:label>buy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#hasCategory -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#hasCategory">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Product"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/market#Category"/>
+        <rdfs:comment>A relationship between the product and its category</rdfs:comment>
+        <rdfs:label>has category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#hasQuantity -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#hasQuantity">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Product"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/market#Stock"/>
+        <rdfs:comment>A relationship between the product and its quantity in the stock</rdfs:comment>
+        <rdfs:label>has quantity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#sell -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#sell">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Seller"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/market#Product"/>
+        <rdfs:comment>A relationship between product and salespeople</rdfs:comment>
+        <rdfs:label>sell</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#address -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#address">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The address details of the consumer</rdfs:comment>
+        <rdfs:label>address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#categoryId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#categoryId">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The identifier of the product</rdfs:comment>
+        <rdfs:label>category id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#categoryName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#categoryName">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The name of the product category</rdfs:comment>
+        <rdfs:label>category name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#categoryType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#categoryType">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The category type of the product</rdfs:comment>
+        <rdfs:label>category type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#hasId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#hasId">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The identifier of the customer</rdfs:comment>
+        <rdfs:label>has id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#hasName">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Customer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The name of the customer</rdfs:comment>
+        <rdfs:label>has name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#productId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#productId">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The identifier of the product</rdfs:comment>
+        <rdfs:label>product id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#productName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#productName">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The product name</rdfs:comment>
+        <rdfs:label>product name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#sellerId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#sellerId">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Seller"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The identifier of the seller</rdfs:comment>
+        <rdfs:label>seller id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#sellerName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#sellerName">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Seller"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The name of the seller</rdfs:comment>
+        <rdfs:label>seller name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#stockId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#stockId">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Stock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The identifier of the stock</rdfs:comment>
+        <rdfs:label>stock id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#stockQuantity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/market#stockQuantity">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/market#Stock"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The quantity of the stock</rdfs:comment>
+        <rdfs:label>stock quantity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/core#User -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/core#User">
+        <rdfs:comment>Users responsible for selling or consuming a product</rdfs:comment>
+        <rdfs:label>User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#Category -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/market#Category">
+        <rdfs:comment>The category of the product</rdfs:comment>
+        <rdfs:label>Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#Customer -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/market#Customer">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/core#User"/>
+        <rdfs:comment>The users that consumes a product</rdfs:comment>
+        <rdfs:label>Customer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#Product -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/market#Product">
+        <rdfs:comment>It is the item that will be sold</rdfs:comment>
+        <rdfs:label>Product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#Seller -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/market#Seller">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/core#User"/>
+        <rdfs:comment>The users that sell a product</rdfs:comment>
+        <rdfs:label>Seller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/market#Stock -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/market#Stock">
+        <rdfs:comment>The items available for sale in a store</rdfs:comment>
+        <rdfs:label>Stock</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
 

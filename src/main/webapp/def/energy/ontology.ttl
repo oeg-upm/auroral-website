@@ -39,12 +39,14 @@
 :belongsTo rdf:type owl:ObjectProperty ;
            rdfs:domain <https://auroral.iot.linkeddata.es/def/core#Building> ;
            rdfs:range <https://auroral.iot.linkeddata.es/def/core#Municipality> ;
+           rdfs:comment "A relationship between the building and the municipality it belongs to" ;
            rdfs:label "belongs to" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer
 :dependsOnConsumer rdf:type owl:ObjectProperty ;
                    rdfs:domain :Price ;
+                   rdfs:comment "A relationship between Price and the consumer of the energy" ;
                    rdfs:label "depends on consumer" .
 
 
@@ -52,6 +54,7 @@
 :forSeason rdf:type owl:ObjectProperty ;
            rdfs:domain :CostPriceSeason ;
            rdfs:range :Season ;
+           rdfs:comment "A relationship between the price and the season" ;
            rdfs:label "for season" .
 
 
@@ -59,6 +62,7 @@
 :hasBuilding rdf:type owl:ObjectProperty ;
              rdfs:domain :Consumer ;
              rdfs:range <https://auroral.iot.linkeddata.es/def/core#Building> ;
+             rdfs:comment "A relationship betewwwn the consumer and the building" ;
              rdfs:label "has building" .
 
 
@@ -66,26 +70,30 @@
 :hasCostPrice rdf:type owl:ObjectProperty ;
               rdfs:domain :PriceAgreement ;
               rdfs:range :CostPriceSeason ;
+              rdfs:comment "A relationship between the price and its cost per season" ;
               rdfs:label "has cost price" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#hasPrice
 :hasPrice rdf:type owl:ObjectProperty ;
-          rdfs:domain <https://auroral.iot.linkeddata.es/def/adapters#Energy> ;
+          rdfs:domain <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> ;
           rdfs:range :Price ;
+          rdfs:comment "A relationship between the energy and its price" ;
           rdfs:label "has price" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#hasSource
 :hasSource rdf:type owl:ObjectProperty ;
-           rdfs:domain <https://auroral.iot.linkeddata.es/def/adapters#Energy> ;
+           rdfs:domain <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> ;
            rdfs:range :SourceEnergy ;
+           rdfs:comment "A relationship between the energy property and its source" ;
            rdfs:label "has source" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#inCurrency
 :inCurrency rdf:type owl:ObjectProperty ;
             rdfs:range :Currency ;
+            rdfs:comment "A relationship between price and its currency" ;
             rdfs:label "in currency" .
 
 
@@ -93,6 +101,7 @@
 <https://saref.etsi.org/core#hasProperty> rdf:type owl:ObjectProperty ;
                                           rdfs:domain <https://saref.etsi.org/core#FeatureofInterest> ;
                                           rdfs:range <https://saref.etsi.org/core#Property> ;
+                                          rdfs:comment "A relationship between a feature of interest and a property of that feature" ;
                                           rdfs:label "has property" .
 
 
@@ -100,6 +109,7 @@
 <https://saref.etsi.org/core#isMeasuredIn> rdf:type owl:ObjectProperty ;
                                            rdfs:domain <https://saref.etsi.org/core#Measurement> ;
                                            rdfs:range <https://saref.etsi.org/core#UnitOfMeasure> ;
+                                           rdfs:comment "A relationship identifying the unit of measure used for a certain entity." ;
                                            rdfs:label "is measured in" .
 
 
@@ -107,6 +117,7 @@
 <https://saref.etsi.org/core#isPropertyOf> rdf:type owl:ObjectProperty ;
                                            rdfs:domain <https://saref.etsi.org/core#Property> ;
                                            rdfs:range <https://saref.etsi.org/core#FeatureofInterest> ;
+                                           rdfs:comment "A relationship between a property and the feature of interest it belongs to" ;
                                            rdfs:label "is property of" .
 
 
@@ -114,6 +125,7 @@
 <https://saref.etsi.org/core#relatesToMeasurement> rdf:type owl:ObjectProperty ;
                                                    rdfs:domain <https://saref.etsi.org/core#Property> ;
                                                    rdfs:range <https://saref.etsi.org/core#Measurement> ;
+                                                   rdfs:comment "A relationship between a property and the measurements it relates to" ;
                                                    rdfs:label "relates to measurement" .
 
 
@@ -121,6 +133,7 @@
 <https://saref.etsi.org/core#relatesToProperty> rdf:type owl:ObjectProperty ;
                                                 rdfs:domain <https://saref.etsi.org/core#Measurement> ;
                                                 rdfs:range <https://saref.etsi.org/core#Property> ;
+                                                rdfs:comment "A relationship between a measurement and the property it relates to" ;
                                                 rdfs:label "relates to property" .
 
 
@@ -130,18 +143,21 @@
 
 ###  https://auroral.iot.linkeddata.es/def/core#id
 <https://auroral.iot.linkeddata.es/def/core#id> rdf:type owl:DatatypeProperty ;
-                                                rdfs:range xsd:string .
+                                                rdfs:range xsd:string ;
+                                                rdfs:comment "The identifier of an entity" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/core#name
 <https://auroral.iot.linkeddata.es/def/core#name> rdf:type owl:DatatypeProperty ;
-                                                  rdfs:range xsd:string .
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:comment "The name of an entity" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#constructionYear
 :constructionYear rdf:type owl:DatatypeProperty ;
                   rdfs:domain <https://auroral.iot.linkeddata.es/def/core#Building> ;
                   rdfs:range xsd:integer ;
+                  rdfs:comment "The construction year of a building" ;
                   rdfs:label "construction Year" .
 
 
@@ -149,121 +165,143 @@
 :contractTime rdf:type owl:DatatypeProperty ;
               rdfs:domain :FixedAgreement ;
               rdfs:range xsd:string ;
-              rdfs:comment "Indicates the type of agreement (Year, month, week)" .
+              rdfs:comment "Indicates the type of agreement (Year, month, week)" ,
+                           "The contract time of an agreement" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#costPrice
 :costPrice rdf:type owl:DatatypeProperty ;
            rdfs:domain :CostPriceSeason ;
-           rdfs:range xsd:float .
+           rdfs:range xsd:float ;
+           rdfs:comment "The cost of the price per season" ;
+           rdfs:label "cost price" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#heatingArea
 :heatingArea rdf:type owl:DatatypeProperty ;
              rdfs:domain <https://auroral.iot.linkeddata.es/def/core#Building> ;
              rdfs:range xsd:float ;
-             rdfs:label "heating Area" .
+             rdfs:comment "The heating area of the buidling or a municipality" ;
+             rdfs:label "heating area" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Energy
-<https://auroral.iot.linkeddata.es/def/adapters#Energy> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-                                                        rdfs:label "Energy" .
+###  https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
+                                                                rdfs:comment "Energy property means any utility company, gas transmission or pipeline company or electric generating company or facility, but shall in no event include interests in or development of oil, gas, natural resources and mineral rights." ;
+                                                                rdfs:label "Energy Property" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/core#Building
 <https://auroral.iot.linkeddata.es/def/core#Building> rdf:type owl:Class ;
                                                       rdfs:subClassOf <https://saref.etsi.org/core#FeatureofInterest> ;
+                                                      rdfs:comment "The building in which energy consumption is controlled" ;
                                                       rdfs:label "Building" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/core#Municipality
 <https://auroral.iot.linkeddata.es/def/core#Municipality> rdf:type owl:Class ;
                                                           rdfs:subClassOf <https://saref.etsi.org/core#FeatureofInterest> ;
+                                                          rdfs:comment "The Municipality in which energy consumption is controlled" ;
                                                           rdfs:label "Municipality" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#Consumer
 :Consumer rdf:type owl:Class ;
+          rdfs:comment "a person or an object that consumes the enrgy. consumers are: Apartment, a house with electrical heating, a house without electrical heating, a larger households" ;
           rdfs:label "Consumer" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason
 :CostPriceSeason rdf:type owl:Class ;
                  rdfs:subClassOf :Price ;
+                 rdfs:comment "The price cost of the energy consumption per season" ;
                  rdfs:label "Cost Price Season" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#Currency
 :Currency rdf:type owl:Class ;
+          rdfs:comment "The currency of the enry price" ;
           rdfs:label "Currency" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#FixedAgreement
 :FixedAgreement rdf:type owl:Class ;
                 rdfs:subClassOf :PriceAgreement ;
+                rdfs:comment "A fixed-price contract is a contractual agreement with a predetermined value for the goods or services provided." ;
                 rdfs:label "Fixed Agreement" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#Price
 :Price rdf:type owl:Class ;
+       rdfs:comment "The price of the energy" ;
        rdfs:label "Price" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#PriceAgreement
 :PriceAgreement rdf:type owl:Class ;
+                rdfs:comment "A Price Agreement comprises a group of common items or services competitively bid to set the prices contractually for a specified time period" ;
                 rdfs:label "Price Agreement" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#PriceMeasurement
 :PriceMeasurement rdf:type owl:Class ;
                   rdfs:subClassOf <https://saref.etsi.org/core#Measurement> ;
+                  rdfs:comment "It corresponds to the measurement price of the energy" ;
                   rdfs:label "Price Measurement" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#Season
 :Season rdf:type owl:Class ;
+        rdfs:comment "The four seasons: Winter, Summer, Autumn, Spring" ;
         rdfs:label "Season" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#SourceEnergy
 :SourceEnergy rdf:type owl:Class ;
+              rdfs:comment "The origin of the energy: fuel oil, natural gas, firewood, lignite briquette" ;
               rdfs:label "Source Energy" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#StandardAgreement
 :StandardAgreement rdf:type owl:Class ;
                    rdfs:subClassOf :PriceAgreement ;
+                   rdfs:comment "A standard agreement is an agreement in which one of the parties to the contract determines the terms, and the other party cannot change these terms." ;
                    rdfs:label "Standard Agreement" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/energy#VariableAgreement
 :VariableAgreement rdf:type owl:Class ;
                    rdfs:subClassOf :PriceAgreement ;
+                   rdfs:comment "A variable agreement is a contract  where the terms could be changed" ;
                    rdfs:label "Variable Agreement" .
 
 
 ###  https://saref.etsi.org/core#FeatureofInterest
 <https://saref.etsi.org/core#FeatureofInterest> rdf:type owl:Class ;
+                                                rdfs:comment "A feature of interest represents any real world entity from which a property is measured." ;
                                                 rdfs:label "Featureof Interest" .
 
 
 ###  https://saref.etsi.org/core#Measurement
 <https://saref.etsi.org/core#Measurement> rdf:type owl:Class ;
+                                          rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement." ;
                                           rdfs:label "Measurement" .
 
 
 ###  https://saref.etsi.org/core#Property
 <https://saref.etsi.org/core#Property> rdf:type owl:Class ;
+                                       rdfs:comment "A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature" ;
                                        rdfs:label "Property" .
 
 
 ###  https://saref.etsi.org/core#UnitOfMeasure
 <https://saref.etsi.org/core#UnitOfMeasure> rdf:type owl:Class ;
+                                            rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\"." ;
                                             rdfs:label "Unit Of Measure" .
 
 
@@ -283,12 +321,12 @@
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity
 <https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity> rdf:type owl:NamedIndividual ,
-                                                                             <https://auroral.iot.linkeddata.es/def/adapters#Energy> .
+                                                                             <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy
 <https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy> rdf:type owl:NamedIndividual ,
-                                                                      <https://auroral.iot.linkeddata.es/def/adapters#Energy> .
+                                                                      <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
 
 
 ###  https://auroral.iot.linkeddata.es/def/core#KiloWattHourSquareMeter

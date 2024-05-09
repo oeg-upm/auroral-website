@@ -1,11 +1,12 @@
 <https://auroral.iot.linkeddata.es/def/mobility#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://auroral.iot.linkeddata.es/def/mobility#> <http://www.w3.org/2002/07/owl#versionIRI> <https://auroral.iot.linkeddata.es/def/mobility#/1.0.0> .
 <https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/creator> "Ahlem Rhayem" .
-<https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/creator> "Andrea Cimmino" .
-<https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/creator> "Juan Cano" .
 <https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/creator> "María Poveda Villalón" .
 <https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/creator> "Raúl García Castro" .
-<https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/description> "The mobility ontology aims to model data related to transportation sector" .
+<https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/description> "This ontology aims at modelling the data related mean of transport mobility  for the AURORAL project." .
+<https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/elements/1.1/title> "The AURORAL Mobility Ontology" .
+<https://auroral.iot.linkeddata.es/def/mobility#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<https://auroral.iot.linkeddata.es/def/mobility#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+<https://auroral.iot.linkeddata.es/def/mobility#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 # 
 # 
 # #################################################################
@@ -20,6 +21,18 @@
 # 
 # http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -42,52 +55,61 @@
 # #################################################################
 # 
 # 
-# http://www.geonames.org/ontology#hasEstimatedCall
-<http://www.geonames.org/ontology#hasEstimatedCall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.geonames.org/ontology#hasEstimatedCall> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#StopPoint> .
-<http://www.geonames.org/ontology#hasEstimatedCall> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#EstimatedCall> .
-<http://www.geonames.org/ontology#hasEstimatedCall> <http://www.w3.org/2000/01/rdf-schema#label> "has estimated call" .
+# https://auroral.iot.linkeddata.es/def/mobility#destinationDisplay
+<https://auroral.iot.linkeddata.es/def/mobility#destinationDisplay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#destinationDisplay> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall> .
+<https://auroral.iot.linkeddata.es/def/mobility#destinationDisplay> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DestinationDisplay> .
+<https://auroral.iot.linkeddata.es/def/mobility#destinationDisplay> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the estimated call and the destination" .
+<https://auroral.iot.linkeddata.es/def/mobility#destinationDisplay> <http://www.w3.org/2000/01/rdf-schema#label> "destination display" .
 # 
-# http://www.geonames.org/ontology#hasPattern
-<http://www.geonames.org/ontology#hasPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.geonames.org/ontology#hasPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#JourneyService> .
-<http://www.geonames.org/ontology#hasPattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#JourneyPattern> .
-<http://www.geonames.org/ontology#hasPattern> <http://www.w3.org/2000/01/rdf-schema#label> "has pattern" .
+# https://auroral.iot.linkeddata.es/def/mobility#hasEstimatedCall
+<https://auroral.iot.linkeddata.es/def/mobility#hasEstimatedCall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasEstimatedCall> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#StopPoint> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasEstimatedCall> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasEstimatedCall> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the stop point and its estimade calls" .
+<https://auroral.iot.linkeddata.es/def/mobility#hasEstimatedCall> <http://www.w3.org/2000/01/rdf-schema#label> "has estimated call" .
 # 
-# http://www.geonames.org/ontology#hasQuay
-<http://www.geonames.org/ontology#hasQuay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.geonames.org/ontology#hasQuay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
-<http://www.geonames.org/ontology#hasQuay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#Quay> .
-<http://www.geonames.org/ontology#hasQuay> <http://www.w3.org/2000/01/rdf-schema#label> "has quay" .
+# https://auroral.iot.linkeddata.es/def/mobility#hasLine
+<https://auroral.iot.linkeddata.es/def/mobility#hasLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasLine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPattern> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasLine> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Line> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasLine> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between journey pattern and the line" .
+<https://auroral.iot.linkeddata.es/def/mobility#hasLine> <http://www.w3.org/2000/01/rdf-schema#label> "has line" .
 # 
-# http://www.geonames.org/ontology#hasScheduledTime
-<http://www.geonames.org/ontology#hasScheduledTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.geonames.org/ontology#hasScheduledTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
-<http://www.geonames.org/ontology#hasScheduledTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#ScheduledTime> .
-<http://www.geonames.org/ontology#hasScheduledTime> <http://www.w3.org/2000/01/rdf-schema#label> "has scheduled time" .
+# https://auroral.iot.linkeddata.es/def/mobility#hasQuay
+<https://auroral.iot.linkeddata.es/def/mobility#hasQuay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasQuay> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasQuay> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/mobility#Quay> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasQuay> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the estimated call and the quay" .
+<https://auroral.iot.linkeddata.es/def/mobility#hasQuay> <http://www.w3.org/2000/01/rdf-schema#label> "has quay" .
 # 
-# http://www.geonames.org/ontology#hasTransportMode
-<http://www.geonames.org/ontology#hasTransportMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.geonames.org/ontology#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#Line> .
-<http://www.geonames.org/ontology#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#TransportMode> .
-<http://www.geonames.org/ontology#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#label> "has transport mode" .
+# https://auroral.iot.linkeddata.es/def/mobility#hasScheduledTime
+<https://auroral.iot.linkeddata.es/def/mobility#hasScheduledTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasScheduledTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasScheduledTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasScheduledTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the scheduled time and the estimated call" .
+<https://auroral.iot.linkeddata.es/def/mobility#hasScheduledTime> <http://www.w3.org/2000/01/rdf-schema#label> "has scheduled time" .
 # 
-# http://www.geonames.org/ontology#hasline
-<http://www.geonames.org/ontology#hasline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.geonames.org/ontology#hasline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#JourneyPattern> .
-<http://www.geonames.org/ontology#hasline> <http://www.w3.org/2000/01/rdf-schema#label> "hasline" .
+# https://auroral.iot.linkeddata.es/def/mobility#hasTransportMode
+<https://auroral.iot.linkeddata.es/def/mobility#hasTransportMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
+<https://auroral.iot.linkeddata.es/def/mobility#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the mean of transport and the line" .
+<https://auroral.iot.linkeddata.es/def/mobility#hasTransportMode> <http://www.w3.org/2000/01/rdf-schema#label> "has transport mode" .
 # 
-# http://www.geonames.org/ontology#journeyServicel
-<http://www.geonames.org/ontology#journeyServicel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.geonames.org/ontology#journeyServicel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
-<http://www.geonames.org/ontology#journeyServicel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#JourneyService> .
-<http://www.geonames.org/ontology#journeyServicel> <http://www.w3.org/2000/01/rdf-schema#label> "journey servicel" .
+# https://auroral.iot.linkeddata.es/def/mobility#journeyPattern
+<https://auroral.iot.linkeddata.es/def/mobility#journeyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#journeyPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#JourneyService> .
+<https://auroral.iot.linkeddata.es/def/mobility#journeyPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#JourneyPattern> .
+<https://auroral.iot.linkeddata.es/def/mobility#journeyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the  journey service and the journey pattern" .
+<https://auroral.iot.linkeddata.es/def/mobility#journeyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "journey pattern" .
 # 
-# http://www.geonames.org/ontology#prescribing
-<http://www.geonames.org/ontology#prescribing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.geonames.org/ontology#prescribing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
-<http://www.geonames.org/ontology#prescribing> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#DestinationDisplay> .
-<http://www.geonames.org/ontology#prescribing> <http://www.w3.org/2000/01/rdf-schema#label> "prescribing" .
+# https://auroral.iot.linkeddata.es/def/mobility#journeyService
+<https://auroral.iot.linkeddata.es/def/mobility#journeyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#journeyService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall> .
+<https://auroral.iot.linkeddata.es/def/mobility#journeyService> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/mobility#JourneyService> .
+<https://auroral.iot.linkeddata.es/def/mobility#journeyService> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between the journey service and the estimated calls" .
+<https://auroral.iot.linkeddata.es/def/mobility#journeyService> <http://www.w3.org/2000/01/rdf-schema#label> "journey service" .
 # 
 # 
 # 
@@ -98,87 +120,110 @@
 # #################################################################
 # 
 # 
-# http://www.geonames.org/ontology#actualArrivedTime
-<http://www.geonames.org/ontology#actualArrivedTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#actualArrivedTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#ArrivalTime> .
-<http://www.geonames.org/ontology#actualArrivedTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://www.geonames.org/ontology#actualArrivedTime> <http://www.w3.org/2000/01/rdf-schema#label> "actual arrived time" .
+# https://auroral.iot.linkeddata.es/def/mobility#actualArrivedTime
+<https://auroral.iot.linkeddata.es/def/mobility#actualArrivedTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#actualArrivedTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#actualArrivedTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#actualArrivedTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual arrived time of a mean of transport" .
+<https://auroral.iot.linkeddata.es/def/mobility#actualArrivedTime> <http://www.w3.org/2000/01/rdf-schema#label> "actual arrived time" .
 # 
-# http://www.geonames.org/ontology#actualDepartureTime
-<http://www.geonames.org/ontology#actualDepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#actualDepartureTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#DepartureTime> .
-<http://www.geonames.org/ontology#actualDepartureTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://www.geonames.org/ontology#actualDepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "actual departure time" .
+# https://auroral.iot.linkeddata.es/def/mobility#actualDepartureTime
+<https://auroral.iot.linkeddata.es/def/mobility#actualDepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#actualDepartureTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#DepartureTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#actualDepartureTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#actualDepartureTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual departure time of a mean of transport" .
+<https://auroral.iot.linkeddata.es/def/mobility#actualDepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "actual departure time" .
 # 
-# http://www.geonames.org/ontology#aimedArrivalTime
-<http://www.geonames.org/ontology#aimedArrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#aimedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#ArrivalTime> .
-<http://www.geonames.org/ontology#aimedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://www.geonames.org/ontology#aimedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#label> "aimed arrival time" .
+# https://auroral.iot.linkeddata.es/def/mobility#aimedArrivalTime
+<https://auroral.iot.linkeddata.es/def/mobility#aimedArrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#aimedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#aimedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#aimedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The aimed arrival time of a mean of transport" .
+<https://auroral.iot.linkeddata.es/def/mobility#aimedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#label> "aimed arrival time" .
 # 
-# http://www.geonames.org/ontology#aimedDepartureTime
-<http://www.geonames.org/ontology#aimedDepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#aimedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#DepartureTime> .
-<http://www.geonames.org/ontology#aimedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://www.geonames.org/ontology#aimedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "aimed departure time" .
+# https://auroral.iot.linkeddata.es/def/mobility#aimedDepartureTime
+<https://auroral.iot.linkeddata.es/def/mobility#aimedDepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#aimedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#DepartureTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#aimedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#aimedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The aimde departure time of a mean of transport" .
+<https://auroral.iot.linkeddata.es/def/mobility#aimedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "aimed departure time" .
 # 
-# http://www.geonames.org/ontology#date
-<http://www.geonames.org/ontology#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
-<http://www.geonames.org/ontology#date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
-<http://www.geonames.org/ontology#date> <http://www.w3.org/2000/01/rdf-schema#label> "date" .
+# https://auroral.iot.linkeddata.es/def/mobility#date
+<https://auroral.iot.linkeddata.es/def/mobility#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#date> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall> .
+<https://auroral.iot.linkeddata.es/def/mobility#date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://auroral.iot.linkeddata.es/def/mobility#date> <http://www.w3.org/2000/01/rdf-schema#comment> "The date of the estimated call" .
+<https://auroral.iot.linkeddata.es/def/mobility#date> <http://www.w3.org/2000/01/rdf-schema#label> "date" .
 # 
-# http://www.geonames.org/ontology#expectedArrivalTime
-<http://www.geonames.org/ontology#expectedArrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#expectedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#ArrivalTime> .
-<http://www.geonames.org/ontology#expectedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://www.geonames.org/ontology#expectedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#label> "expected arrival time" .
+# https://auroral.iot.linkeddata.es/def/mobility#expectedArrivalTime
+<https://auroral.iot.linkeddata.es/def/mobility#expectedArrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#expectedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#expectedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#expectedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The expected arrival time of a given mean of transport to a stop point" .
+<https://auroral.iot.linkeddata.es/def/mobility#expectedArrivalTime> <http://www.w3.org/2000/01/rdf-schema#label> "expected arrival time" .
 # 
-# http://www.geonames.org/ontology#expectedDepartureTime
-<http://www.geonames.org/ontology#expectedDepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#expectedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#DepartureTime> .
-<http://www.geonames.org/ontology#expectedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://www.geonames.org/ontology#expectedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "expected departure time" .
+# https://auroral.iot.linkeddata.es/def/mobility#expectedDepartureTime
+<https://auroral.iot.linkeddata.es/def/mobility#expectedDepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#expectedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#DepartureTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#expectedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#expectedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The expected departure time of a given mean of transport to a stop point" .
+<https://auroral.iot.linkeddata.es/def/mobility#expectedDepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "expected departure time" .
 # 
-# http://www.geonames.org/ontology#forAlighting
-<http://www.geonames.org/ontology#forAlighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#forAlighting> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
-<http://www.geonames.org/ontology#forAlighting> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.geonames.org/ontology#forAlighting> <http://www.w3.org/2000/01/rdf-schema#label> "for alighting" .
+# https://auroral.iot.linkeddata.es/def/mobility#forAlighting
+<https://auroral.iot.linkeddata.es/def/mobility#forAlighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#forAlighting> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall> .
+<https://auroral.iot.linkeddata.es/def/mobility#forAlighting> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://auroral.iot.linkeddata.es/def/mobility#forAlighting> <http://www.w3.org/2000/01/rdf-schema#comment> "To dismount from a horse, descend from a vehicle, etc. to settle or stay after descending:" .
+<https://auroral.iot.linkeddata.es/def/mobility#forAlighting> <http://www.w3.org/2000/01/rdf-schema#label> "for alighting" .
 # 
-# http://www.geonames.org/ontology#forBoarding
-<http://www.geonames.org/ontology#forBoarding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#forBoarding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
-<http://www.geonames.org/ontology#forBoarding> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<http://www.geonames.org/ontology#forBoarding> <http://www.w3.org/2000/01/rdf-schema#label> "for boarding" .
+# https://auroral.iot.linkeddata.es/def/mobility#forBoarding
+<https://auroral.iot.linkeddata.es/def/mobility#forBoarding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#forBoarding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall> .
+<https://auroral.iot.linkeddata.es/def/mobility#forBoarding> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://auroral.iot.linkeddata.es/def/mobility#forBoarding> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of passengers and crew getting aboard a ship or aircraft" .
+<https://auroral.iot.linkeddata.es/def/mobility#forBoarding> <http://www.w3.org/2000/01/rdf-schema#label> "for boarding" .
 # 
-# http://www.geonames.org/ontology#frontText
-<http://www.geonames.org/ontology#frontText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#frontText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#DestinationDisplay> .
-<http://www.geonames.org/ontology#frontText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.geonames.org/ontology#frontText> <http://www.w3.org/2000/01/rdf-schema#label> "front text" .
+# https://auroral.iot.linkeddata.es/def/mobility#idLine
+<https://auroral.iot.linkeddata.es/def/mobility#idLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#idLine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line> .
+<https://auroral.iot.linkeddata.es/def/mobility#idLine> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/mobility#idLine> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier of a line" .
+<https://auroral.iot.linkeddata.es/def/mobility#idLine> <http://www.w3.org/2000/01/rdf-schema#label> "id line" .
 # 
-# http://www.geonames.org/ontology#id
-<http://www.geonames.org/ontology#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#StopPoint> .
-<http://www.geonames.org/ontology#id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.geonames.org/ontology#id> <http://www.w3.org/2000/01/rdf-schema#label> "id" .
+# https://auroral.iot.linkeddata.es/def/mobility#idQuay
+<https://auroral.iot.linkeddata.es/def/mobility#idQuay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#idQuay> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#Quay> .
+<https://auroral.iot.linkeddata.es/def/mobility#idQuay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/mobility#idQuay> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier of a quay" .
+<https://auroral.iot.linkeddata.es/def/mobility#idQuay> <http://www.w3.org/2000/01/rdf-schema#label> "id quay" .
 # 
-# http://www.geonames.org/ontology#name
-<http://www.geonames.org/ontology#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#StopPoint> .
-<http://www.geonames.org/ontology#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.geonames.org/ontology#name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+# https://auroral.iot.linkeddata.es/def/mobility#idStopPoint
+<https://auroral.iot.linkeddata.es/def/mobility#idStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#idStopPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#StopPoint> .
+<https://auroral.iot.linkeddata.es/def/mobility#idStopPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/mobility#idStopPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier of a stop point" .
+<https://auroral.iot.linkeddata.es/def/mobility#idStopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "id stop point" .
 # 
-# http://www.geonames.org/ontology#realTime
-<http://www.geonames.org/ontology#realTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#realTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#EstimatedCall> .
-<http://www.geonames.org/ontology#realTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+# https://auroral.iot.linkeddata.es/def/mobility#nameLine
+<https://auroral.iot.linkeddata.es/def/mobility#nameLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#nameLine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line> .
+<https://auroral.iot.linkeddata.es/def/mobility#nameLine> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/mobility#nameLine> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of a line" .
+<https://auroral.iot.linkeddata.es/def/mobility#nameLine> <http://www.w3.org/2000/01/rdf-schema#label> "name line" .
 # 
-# http://www.geonames.org/ontology#transportMode
-<http://www.geonames.org/ontology#transportMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.geonames.org/ontology#transportMode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#TransportMode> .
-<http://www.geonames.org/ontology#transportMode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# https://auroral.iot.linkeddata.es/def/mobility#nameStopPoint
+<https://auroral.iot.linkeddata.es/def/mobility#nameStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/mobility#nameStopPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/mobility#StopPoint> .
+<https://auroral.iot.linkeddata.es/def/mobility#nameStopPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/mobility#nameStopPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of a stop point" .
+<https://auroral.iot.linkeddata.es/def/mobility#nameStopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "name stop point" .
+# 
+# https://w3id.org/transmodel/journeys#frontText
+<https://w3id.org/transmodel/journeys#frontText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#frontText> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#DestinationDisplay> .
+<https://w3id.org/transmodel/journeys#frontText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/transmodel/journeys#frontText> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of acting like you are somebody else" .
+<https://w3id.org/transmodel/journeys#frontText> <http://www.w3.org/2000/01/rdf-schema#label> "front text" .
 # 
 # 
 # 
@@ -189,60 +234,115 @@
 # #################################################################
 # 
 # 
-# http://www.geonames.org/ontology#ArrivalTime
-<http://www.geonames.org/ontology#ArrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.geonames.org/ontology#ArrivalTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geonames.org/ontology#ScheduledTime> .
-<http://www.geonames.org/ontology#ArrivalTime> <http://www.w3.org/2000/01/rdf-schema#label> "Arrival Time" .
+# http://www.geonames.org/ontology#Feature
+<http://www.geonames.org/ontology#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.geonames.org/ontology#Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to a specific location" .
+<http://www.geonames.org/ontology#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature" .
 # 
-# http://www.geonames.org/ontology#DepartureTime
-<http://www.geonames.org/ontology#DepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.geonames.org/ontology#DepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "Departure Time" .
+# https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime
+<https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the scheduled arrival time for a stop point" .
+<https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime> <http://www.w3.org/2000/01/rdf-schema#label> "Arrival Time" .
 # 
-# http://www.geonames.org/ontology#DestinationDisplay
-<http://www.geonames.org/ontology#DestinationDisplay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.geonames.org/ontology#DestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#label> "Destination Display" .
+# https://auroral.iot.linkeddata.es/def/mobility#DepartureTime
+<https://auroral.iot.linkeddata.es/def/mobility#DepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/mobility#DepartureTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime> .
+<https://auroral.iot.linkeddata.es/def/mobility#DepartureTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the scheduled departure time for a stop point" .
+<https://auroral.iot.linkeddata.es/def/mobility#DepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "Departure Time" .
 # 
-# http://www.geonames.org/ontology#EstimatedCall
-<http://www.geonames.org/ontology#EstimatedCall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.geonames.org/ontology#EstimatedCall> <http://www.w3.org/2000/01/rdf-schema#label> "Estimated Call" .
+# https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall
+<https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall> <http://www.w3.org/2000/01/rdf-schema#comment> "This class defines the estimated call of a bus or any mean of transport in a specific stop point" .
+<https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall> <http://www.w3.org/2000/01/rdf-schema#label> "Estimated Call" .
 # 
-# http://www.geonames.org/ontology#JourneyPattern
-<http://www.geonames.org/ontology#JourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.geonames.org/ontology#JourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Journey Pattern" .
+# https://auroral.iot.linkeddata.es/def/mobility#JourneyService
+<https://auroral.iot.linkeddata.es/def/mobility#JourneyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/mobility#JourneyService> <http://www.w3.org/2000/01/rdf-schema#comment> "A passenger carrying Mean Of Transport JOURNEY for one specified\r\nDAY TYPE. The pattern of working is in principle defined by a\r\nSERVICE JOURNEY PATTERN." .
+<https://auroral.iot.linkeddata.es/def/mobility#JourneyService> <http://www.w3.org/2000/01/rdf-schema#label> "Journey Service" .
 # 
-# http://www.geonames.org/ontology#JourneyService
-<http://www.geonames.org/ontology#JourneyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.geonames.org/ontology#JourneyService> <http://www.w3.org/2000/01/rdf-schema#label> "Journey Service" .
+# https://auroral.iot.linkeddata.es/def/mobility#Quay
+<https://auroral.iot.linkeddata.es/def/mobility#Quay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/mobility#Quay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Point> .
+<https://auroral.iot.linkeddata.es/def/mobility#Quay> <http://www.w3.org/2000/01/rdf-schema#comment> "A place such as platform, stance, or quayside where\r\npassengers have access to PT vehicles, Taxi, cars or other\r\nmeans of transportation. A QUAY may serve one or more\r\nVEHICLE STOPPING PLACEs and be associated with one or\r\nmore SCHEDULED STOP POINTS. A QUAY may contain other\r\nsub QUAYs." .
+<https://auroral.iot.linkeddata.es/def/mobility#Quay> <http://www.w3.org/2000/01/rdf-schema#label> "Quay" .
 # 
-# http://www.geonames.org/ontology#Line
-<http://www.geonames.org/ontology#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.geonames.org/ontology#Line> <http://www.w3.org/2000/01/rdf-schema#label> "Line" .
+# https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime
+<https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the scheduled time for a Stop point" .
+<https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime> <http://www.w3.org/2000/01/rdf-schema#label> "Scheduled Time" .
 # 
-# http://www.geonames.org/ontology#Point
-<http://www.geonames.org/ontology#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.geonames.org/ontology#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geon#Feature> .
-<http://www.geonames.org/ontology#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point" .
+# https://auroral.iot.linkeddata.es/def/mobility#StopPoint
+<https://auroral.iot.linkeddata.es/def/mobility#StopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/mobility#StopPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Point> .
+<https://auroral.iot.linkeddata.es/def/mobility#StopPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A POINT where passengers can board or alight from mean of transport" .
+<https://auroral.iot.linkeddata.es/def/mobility#StopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Stop Point" .
 # 
-# http://www.geonames.org/ontology#Quay
-<http://www.geonames.org/ontology#Quay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.geonames.org/ontology#Quay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geonames.org/ontology#Point> .
-<http://www.geonames.org/ontology#Quay> <http://www.w3.org/2000/01/rdf-schema#label> "Quay" .
+# https://w3id.org/transmodel/journeys#DestinationDisplay
+<https://w3id.org/transmodel/journeys#DestinationDisplay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#DestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#comment> "An advertised destination of a specific Journey Pattern usually displayed on a headsign or other on-board locations" .
+<https://w3id.org/transmodel/journeys#DestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#label> "Destination Display" .
 # 
-# http://www.geonames.org/ontology#ScheduledTime
-<http://www.geonames.org/ontology#ScheduledTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.geonames.org/ontology#ScheduledTime> <http://www.w3.org/2000/01/rdf-schema#label> "Scheduled Time" .
+# https://w3id.org/transmodel/journeys#JourneyPattern
+<https://w3id.org/transmodel/journeys#JourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#JourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered list of SCHEDULED STOP POINTs and TIMING\r\nPOINTs on a single ROUTE, describing the pattern of working\r\nfor public transport vehicles.A JOURNEY PATTERN may pass\r\nthrough the same POINT more than once. The first point of a\r\nJOURNEY PATTERN is the origin. The last point is the\r\ndestination" .
+<https://w3id.org/transmodel/journeys#JourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Journey Pattern" .
 # 
-# http://www.geonames.org/ontology#StopPoint
-<http://www.geonames.org/ontology#StopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.geonames.org/ontology#StopPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geonames.org/ontology#Point> .
-<http://www.geonames.org/ontology#StopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Stop Point" .
+# https://w3id.org/transmodel/journeys#Line
+<https://w3id.org/transmodel/journeys#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#Line> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of ROUTEs which is generally known to the public by\r\na similar name or number." .
+<https://w3id.org/transmodel/journeys#Line> <http://www.w3.org/2000/01/rdf-schema#label> "Line" .
 # 
-# http://www.geonames.org/ontology#TransportMode
-<http://www.geonames.org/ontology#TransportMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.geonames.org/ontology#TransportMode> <http://www.w3.org/2000/01/rdf-schema#label> "Transport Mode" .
+# https://w3id.org/transmodel/journeys#MeanOfTransport
+<https://w3id.org/transmodel/journeys#MeanOfTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#MeanOfTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "The means of transportation are bus, train, aeroplane, ship, car, etc while the mode of transportation refers to road, air, sea/ocean, etc." .
+<https://w3id.org/transmodel/journeys#MeanOfTransport> <http://www.w3.org/2000/01/rdf-schema#label> "Mean Of Transport" .
 # 
-# http://www.owl-ontologies.com/geon#Feature
-<http://www.owl-ontologies.com/geon#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.owl-ontologies.com/geon#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature" .
+# https://w3id.org/transmodel/journeys#Point
+<https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geonames.org/ontology#Feature> .
+<https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Presents the geospatial coordination of a given place" .
+<https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/journeys#Bus
+<https://w3id.org/transmodel/journeys#Bus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Bus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
+# 
+# https://w3id.org/transmodel/journeys#CableCar
+<https://w3id.org/transmodel/journeys#CableCar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#CableCar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
+# 
+# https://w3id.org/transmodel/journeys#Ferry
+<https://w3id.org/transmodel/journeys#Ferry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Ferry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
+# 
+# https://w3id.org/transmodel/journeys#Funicular
+<https://w3id.org/transmodel/journeys#Funicular> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Funicular> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
+# 
+# https://w3id.org/transmodel/journeys#Gondola
+<https://w3id.org/transmodel/journeys#Gondola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Gondola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
+# 
+# https://w3id.org/transmodel/journeys#Metro
+<https://w3id.org/transmodel/journeys#Metro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Metro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
+# 
+# https://w3id.org/transmodel/journeys#Rail
+<https://w3id.org/transmodel/journeys#Rail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Rail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
+# 
+# https://w3id.org/transmodel/journeys#Tram
+<https://w3id.org/transmodel/journeys#Tram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Tram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

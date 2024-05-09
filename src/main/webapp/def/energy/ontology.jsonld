@@ -20,10 +20,13 @@
     "@id" : "https://saref.etsi.org/core#UnitOfMeasure"
   } ]
 }, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Energy",
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Energy property means any utility company, gas transmission or pipeline company or electric generating company or facility, but shall in no event include interests in or development of oil, gas, natural resources and mineral rights."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Energy"
+    "@value" : "Energy Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://saref.etsi.org/core#Property"
@@ -32,17 +35,20 @@
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Energy"
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Energy"
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/core#Building",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The building in which energy consumption is controlled"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Building"
   } ],
@@ -70,6 +76,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/core#Municipality",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Municipality in which energy consumption is controlled"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Municipality"
   } ],
@@ -91,12 +100,18 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/core#id",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of an entity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/core#name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of an entity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
@@ -135,12 +150,18 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#Consumer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "a person or an object that consumes the enrgy. consumers are: Apartment, a house with electrical heating, a house without electrical heating, a larger households"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Consumer"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The price cost of the energy consumption per season"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Cost Price Season"
   } ],
@@ -150,6 +171,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#Currency",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The currency of the enry price"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Currency"
   } ]
@@ -168,6 +192,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#FixedAgreement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A fixed-price contract is a contractual agreement with a predetermined value for the goods or services provided."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Fixed Agreement"
   } ],
@@ -219,18 +246,27 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#Price",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The price of the energy"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Price"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#PriceAgreement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Price Agreement comprises a group of common items or services competitively bid to set the prices contractually for a specified time period"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Price Agreement"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#PriceMeasurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It corresponds to the measurement price of the energy"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Price Measurement"
   } ],
@@ -240,12 +276,18 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#Season",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The four seasons: Winter, Summer, Autumn, Spring"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Season"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#SourceEnergy",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The origin of the energy: fuel oil, natural gas, firewood, lignite briquette"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Source Energy"
   } ]
@@ -258,6 +300,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#StandardAgreement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A standard agreement is an agreement in which one of the parties to the contract determines the terms, and the other party cannot change these terms."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Standard Agreement"
   } ],
@@ -285,6 +330,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#VariableAgreement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A variable agreement is a contract  where the terms could be changed"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Variable Agreement"
   } ],
@@ -294,6 +342,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#belongsTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the building and the municipality it belongs to"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Building"
   } ],
@@ -306,6 +357,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#constructionYear",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The construction year of a building"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Building"
   } ],
@@ -320,6 +374,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Indicates the type of agreement (Year, month, week)"
+  }, {
+    "@value" : "The contract time of an agreement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/energy#FixedAgreement"
@@ -330,8 +386,14 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#costPrice",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The cost of the price per season"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cost price"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -339,6 +401,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between Price and the consumer of the energy"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/energy#Price"
   } ],
@@ -348,6 +413,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#forSeason",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the price and the season"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason"
   } ],
@@ -360,6 +428,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#hasBuilding",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship betewwwn the consumer and the building"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/energy#Consumer"
   } ],
@@ -372,6 +443,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#hasCostPrice",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the price and its cost per season"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/energy#PriceAgreement"
   } ],
@@ -384,8 +458,11 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#hasPrice",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the energy and its price"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Energy"
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has price"
@@ -396,8 +473,11 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#hasSource",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the energy property and its source"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Energy"
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has source"
@@ -408,11 +488,14 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#heatingArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The heating area of the buidling or a municipality"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Building"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "heating Area"
+    "@value" : "heating area"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -420,6 +503,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/energy#inCurrency",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between price and its currency"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "in currency"
   } ],
@@ -429,30 +515,45 @@
 }, {
   "@id" : "https://saref.etsi.org/core#FeatureofInterest",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A feature of interest represents any real world entity from which a property is measured."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Featureof Interest"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core#Measurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Measurement"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core#Property",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Property"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core#UnitOfMeasure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\"."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Unit Of Measure"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core#hasProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between a feature of interest and a property of that feature"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://saref.etsi.org/core#FeatureofInterest"
   } ],
@@ -465,6 +566,9 @@
 }, {
   "@id" : "https://saref.etsi.org/core#isMeasuredIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship identifying the unit of measure used for a certain entity."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://saref.etsi.org/core#Measurement"
   } ],
@@ -477,6 +581,9 @@
 }, {
   "@id" : "https://saref.etsi.org/core#isPropertyOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between a property and the feature of interest it belongs to"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://saref.etsi.org/core#Property"
   } ],
@@ -489,6 +596,9 @@
 }, {
   "@id" : "https://saref.etsi.org/core#relatesToMeasurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between a property and the measurements it relates to"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://saref.etsi.org/core#Property"
   } ],
@@ -501,6 +611,9 @@
 }, {
   "@id" : "https://saref.etsi.org/core#relatesToProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between a measurement and the property it relates to"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://saref.etsi.org/core#Measurement"
   } ],

@@ -37,76 +37,89 @@
 <https://auroral.iot.linkeddata.es/def/energy#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://auroral.iot.linkeddata.es/def/energy#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/core#Building> .
 <https://auroral.iot.linkeddata.es/def/energy#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/core#Municipality> .
+<https://auroral.iot.linkeddata.es/def/energy#belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between the building and the municipality it belongs to" .
 <https://auroral.iot.linkeddata.es/def/energy#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer
 <https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/energy#Price> .
+<https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between Price and the consumer of the energy" .
 <https://auroral.iot.linkeddata.es/def/energy#dependsOnConsumer> <http://www.w3.org/2000/01/rdf-schema#label> "depends on consumer" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#forSeason
 <https://auroral.iot.linkeddata.es/def/energy#forSeason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://auroral.iot.linkeddata.es/def/energy#forSeason> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason> .
 <https://auroral.iot.linkeddata.es/def/energy#forSeason> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/energy#Season> .
+<https://auroral.iot.linkeddata.es/def/energy#forSeason> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between the price and the season" .
 <https://auroral.iot.linkeddata.es/def/energy#forSeason> <http://www.w3.org/2000/01/rdf-schema#label> "for season" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#hasBuilding
 <https://auroral.iot.linkeddata.es/def/energy#hasBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://auroral.iot.linkeddata.es/def/energy#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/energy#Consumer> .
 <https://auroral.iot.linkeddata.es/def/energy#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/core#Building> .
+<https://auroral.iot.linkeddata.es/def/energy#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship betewwwn the consumer and the building" .
 <https://auroral.iot.linkeddata.es/def/energy#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "has building" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#hasCostPrice
 <https://auroral.iot.linkeddata.es/def/energy#hasCostPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://auroral.iot.linkeddata.es/def/energy#hasCostPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/energy#PriceAgreement> .
 <https://auroral.iot.linkeddata.es/def/energy#hasCostPrice> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason> .
+<https://auroral.iot.linkeddata.es/def/energy#hasCostPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between the price and its cost per season" .
 <https://auroral.iot.linkeddata.es/def/energy#hasCostPrice> <http://www.w3.org/2000/01/rdf-schema#label> "has cost price" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#hasPrice
 <https://auroral.iot.linkeddata.es/def/energy#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://auroral.iot.linkeddata.es/def/energy#hasPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/adapters#Energy> .
+<https://auroral.iot.linkeddata.es/def/energy#hasPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
 <https://auroral.iot.linkeddata.es/def/energy#hasPrice> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/energy#Price> .
+<https://auroral.iot.linkeddata.es/def/energy#hasPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between the energy and its price" .
 <https://auroral.iot.linkeddata.es/def/energy#hasPrice> <http://www.w3.org/2000/01/rdf-schema#label> "has price" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#hasSource
 <https://auroral.iot.linkeddata.es/def/energy#hasSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://auroral.iot.linkeddata.es/def/energy#hasSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/adapters#Energy> .
+<https://auroral.iot.linkeddata.es/def/energy#hasSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
 <https://auroral.iot.linkeddata.es/def/energy#hasSource> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/energy#SourceEnergy> .
+<https://auroral.iot.linkeddata.es/def/energy#hasSource> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between the energy property and its source" .
 <https://auroral.iot.linkeddata.es/def/energy#hasSource> <http://www.w3.org/2000/01/rdf-schema#label> "has source" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#inCurrency
 <https://auroral.iot.linkeddata.es/def/energy#inCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://auroral.iot.linkeddata.es/def/energy#inCurrency> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/energy#Currency> .
+<https://auroral.iot.linkeddata.es/def/energy#inCurrency> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between price and its currency" .
 <https://auroral.iot.linkeddata.es/def/energy#inCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "in currency" .
 # 
 # https://saref.etsi.org/core#hasProperty
 <https://saref.etsi.org/core#hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://saref.etsi.org/core#hasProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#FeatureofInterest> .
 <https://saref.etsi.org/core#hasProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core#Property> .
+<https://saref.etsi.org/core#hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between a feature of interest and a property of that feature" .
 <https://saref.etsi.org/core#hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property" .
 # 
 # https://saref.etsi.org/core#isMeasuredIn
 <https://saref.etsi.org/core#isMeasuredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://saref.etsi.org/core#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#Measurement> .
 <https://saref.etsi.org/core#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core#UnitOfMeasure> .
+<https://saref.etsi.org/core#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship identifying the unit of measure used for a certain entity." .
 <https://saref.etsi.org/core#isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#label> "is measured in" .
 # 
 # https://saref.etsi.org/core#isPropertyOf
 <https://saref.etsi.org/core#isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://saref.etsi.org/core#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#Property> .
 <https://saref.etsi.org/core#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core#FeatureofInterest> .
+<https://saref.etsi.org/core#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between a property and the feature of interest it belongs to" .
 <https://saref.etsi.org/core#isPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> "is property of" .
 # 
 # https://saref.etsi.org/core#relatesToMeasurement
 <https://saref.etsi.org/core#relatesToMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://saref.etsi.org/core#relatesToMeasurement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#Property> .
 <https://saref.etsi.org/core#relatesToMeasurement> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core#Measurement> .
+<https://saref.etsi.org/core#relatesToMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between a property and the measurements it relates to" .
 <https://saref.etsi.org/core#relatesToMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "relates to measurement" .
 # 
 # https://saref.etsi.org/core#relatesToProperty
 <https://saref.etsi.org/core#relatesToProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://saref.etsi.org/core#relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/core#Measurement> .
 <https://saref.etsi.org/core#relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core#Property> .
+<https://saref.etsi.org/core#relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between a measurement and the property it relates to" .
 <https://saref.etsi.org/core#relatesToProperty> <http://www.w3.org/2000/01/rdf-schema#label> "relates to property" .
 # 
 # 
@@ -121,15 +134,18 @@
 # https://auroral.iot.linkeddata.es/def/core#id
 <https://auroral.iot.linkeddata.es/def/core#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://auroral.iot.linkeddata.es/def/core#id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/core#id> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier of an entity" .
 # 
 # https://auroral.iot.linkeddata.es/def/core#name
 <https://auroral.iot.linkeddata.es/def/core#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://auroral.iot.linkeddata.es/def/core#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/core#name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of an entity" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#constructionYear
 <https://auroral.iot.linkeddata.es/def/energy#constructionYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://auroral.iot.linkeddata.es/def/energy#constructionYear> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/core#Building> .
 <https://auroral.iot.linkeddata.es/def/energy#constructionYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://auroral.iot.linkeddata.es/def/energy#constructionYear> <http://www.w3.org/2000/01/rdf-schema#comment> "The construction year of a building" .
 <https://auroral.iot.linkeddata.es/def/energy#constructionYear> <http://www.w3.org/2000/01/rdf-schema#label> "construction Year" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#contractTime
@@ -137,17 +153,21 @@
 <https://auroral.iot.linkeddata.es/def/energy#contractTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/energy#FixedAgreement> .
 <https://auroral.iot.linkeddata.es/def/energy#contractTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://auroral.iot.linkeddata.es/def/energy#contractTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the type of agreement (Year, month, week)" .
+<https://auroral.iot.linkeddata.es/def/energy#contractTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The contract time of an agreement" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#costPrice
 <https://auroral.iot.linkeddata.es/def/energy#costPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://auroral.iot.linkeddata.es/def/energy#costPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason> .
 <https://auroral.iot.linkeddata.es/def/energy#costPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://auroral.iot.linkeddata.es/def/energy#costPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The cost of the price per season" .
+<https://auroral.iot.linkeddata.es/def/energy#costPrice> <http://www.w3.org/2000/01/rdf-schema#label> "cost price" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#heatingArea
 <https://auroral.iot.linkeddata.es/def/energy#heatingArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://auroral.iot.linkeddata.es/def/energy#heatingArea> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/core#Building> .
 <https://auroral.iot.linkeddata.es/def/energy#heatingArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<https://auroral.iot.linkeddata.es/def/energy#heatingArea> <http://www.w3.org/2000/01/rdf-schema#label> "heating Area" .
+<https://auroral.iot.linkeddata.es/def/energy#heatingArea> <http://www.w3.org/2000/01/rdf-schema#comment> "The heating area of the buidling or a municipality" .
+<https://auroral.iot.linkeddata.es/def/energy#heatingArea> <http://www.w3.org/2000/01/rdf-schema#label> "heating area" .
 # 
 # 
 # 
@@ -158,84 +178,102 @@
 # #################################################################
 # 
 # 
-# https://auroral.iot.linkeddata.es/def/adapters#Energy
-<https://auroral.iot.linkeddata.es/def/adapters#Energy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://auroral.iot.linkeddata.es/def/adapters#Energy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
-<https://auroral.iot.linkeddata.es/def/adapters#Energy> <http://www.w3.org/2000/01/rdf-schema#label> "Energy" .
+# https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Energy property means any utility company, gas transmission or pipeline company or electric generating company or facility, but shall in no event include interests in or development of oil, gas, natural resources and mineral rights." .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Property" .
 # 
 # https://auroral.iot.linkeddata.es/def/core#Building
 <https://auroral.iot.linkeddata.es/def/core#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://auroral.iot.linkeddata.es/def/core#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#FeatureofInterest> .
+<https://auroral.iot.linkeddata.es/def/core#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "The building in which energy consumption is controlled" .
 <https://auroral.iot.linkeddata.es/def/core#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building" .
 # 
 # https://auroral.iot.linkeddata.es/def/core#Municipality
 <https://auroral.iot.linkeddata.es/def/core#Municipality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://auroral.iot.linkeddata.es/def/core#Municipality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#FeatureofInterest> .
+<https://auroral.iot.linkeddata.es/def/core#Municipality> <http://www.w3.org/2000/01/rdf-schema#comment> "The Municipality in which energy consumption is controlled" .
 <https://auroral.iot.linkeddata.es/def/core#Municipality> <http://www.w3.org/2000/01/rdf-schema#label> "Municipality" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#Consumer
 <https://auroral.iot.linkeddata.es/def/energy#Consumer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/energy#Consumer> <http://www.w3.org/2000/01/rdf-schema#comment> "a person or an object that consumes the enrgy. consumers are: Apartment, a house with electrical heating, a house without electrical heating, a larger households" .
 <https://auroral.iot.linkeddata.es/def/energy#Consumer> <http://www.w3.org/2000/01/rdf-schema#label> "Consumer" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason
 <https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/energy#Price> .
+<https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason> <http://www.w3.org/2000/01/rdf-schema#comment> "The price cost of the energy consumption per season" .
 <https://auroral.iot.linkeddata.es/def/energy#CostPriceSeason> <http://www.w3.org/2000/01/rdf-schema#label> "Cost Price Season" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#Currency
 <https://auroral.iot.linkeddata.es/def/energy#Currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/energy#Currency> <http://www.w3.org/2000/01/rdf-schema#comment> "The currency of the enry price" .
 <https://auroral.iot.linkeddata.es/def/energy#Currency> <http://www.w3.org/2000/01/rdf-schema#label> "Currency" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#FixedAgreement
 <https://auroral.iot.linkeddata.es/def/energy#FixedAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://auroral.iot.linkeddata.es/def/energy#FixedAgreement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/energy#PriceAgreement> .
+<https://auroral.iot.linkeddata.es/def/energy#FixedAgreement> <http://www.w3.org/2000/01/rdf-schema#comment> "A fixed-price contract is a contractual agreement with a predetermined value for the goods or services provided." .
 <https://auroral.iot.linkeddata.es/def/energy#FixedAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "Fixed Agreement" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#Price
 <https://auroral.iot.linkeddata.es/def/energy#Price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/energy#Price> <http://www.w3.org/2000/01/rdf-schema#comment> "The price of the energy" .
 <https://auroral.iot.linkeddata.es/def/energy#Price> <http://www.w3.org/2000/01/rdf-schema#label> "Price" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#PriceAgreement
 <https://auroral.iot.linkeddata.es/def/energy#PriceAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/energy#PriceAgreement> <http://www.w3.org/2000/01/rdf-schema#comment> "A Price Agreement comprises a group of common items or services competitively bid to set the prices contractually for a specified time period" .
 <https://auroral.iot.linkeddata.es/def/energy#PriceAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "Price Agreement" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#PriceMeasurement
 <https://auroral.iot.linkeddata.es/def/energy#PriceMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://auroral.iot.linkeddata.es/def/energy#PriceMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Measurement> .
+<https://auroral.iot.linkeddata.es/def/energy#PriceMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "It corresponds to the measurement price of the energy" .
 <https://auroral.iot.linkeddata.es/def/energy#PriceMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Price Measurement" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#Season
 <https://auroral.iot.linkeddata.es/def/energy#Season> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/energy#Season> <http://www.w3.org/2000/01/rdf-schema#comment> "The four seasons: Winter, Summer, Autumn, Spring" .
 <https://auroral.iot.linkeddata.es/def/energy#Season> <http://www.w3.org/2000/01/rdf-schema#label> "Season" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#SourceEnergy
 <https://auroral.iot.linkeddata.es/def/energy#SourceEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/energy#SourceEnergy> <http://www.w3.org/2000/01/rdf-schema#comment> "The origin of the energy: fuel oil, natural gas, firewood, lignite briquette" .
 <https://auroral.iot.linkeddata.es/def/energy#SourceEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Source Energy" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#StandardAgreement
 <https://auroral.iot.linkeddata.es/def/energy#StandardAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://auroral.iot.linkeddata.es/def/energy#StandardAgreement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/energy#PriceAgreement> .
+<https://auroral.iot.linkeddata.es/def/energy#StandardAgreement> <http://www.w3.org/2000/01/rdf-schema#comment> "A standard agreement is an agreement in which one of the parties to the contract determines the terms, and the other party cannot change these terms." .
 <https://auroral.iot.linkeddata.es/def/energy#StandardAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "Standard Agreement" .
 # 
 # https://auroral.iot.linkeddata.es/def/energy#VariableAgreement
 <https://auroral.iot.linkeddata.es/def/energy#VariableAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://auroral.iot.linkeddata.es/def/energy#VariableAgreement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/energy#PriceAgreement> .
+<https://auroral.iot.linkeddata.es/def/energy#VariableAgreement> <http://www.w3.org/2000/01/rdf-schema#comment> "A variable agreement is a contract  where the terms could be changed" .
 <https://auroral.iot.linkeddata.es/def/energy#VariableAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "Variable Agreement" .
 # 
 # https://saref.etsi.org/core#FeatureofInterest
 <https://saref.etsi.org/core#FeatureofInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core#FeatureofInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "A feature of interest represents any real world entity from which a property is measured." .
 <https://saref.etsi.org/core#FeatureofInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Featureof Interest" .
 # 
 # https://saref.etsi.org/core#Measurement
 <https://saref.etsi.org/core#Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core#Measurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement." .
 <https://saref.etsi.org/core#Measurement> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement" .
 # 
 # https://saref.etsi.org/core#Property
 <https://saref.etsi.org/core#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature" .
 <https://saref.etsi.org/core#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
 # 
 # https://saref.etsi.org/core#UnitOfMeasure
 <https://saref.etsi.org/core#UnitOfMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\"." .
 <https://saref.etsi.org/core#UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Unit Of Measure" .
 # 
 # 
@@ -257,11 +295,11 @@
 # 
 # https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity
 <https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Energy> .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
 # 
 # https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy
 <https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Energy> .
+<https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty> .
 # 
 # https://auroral.iot.linkeddata.es/def/core#KiloWattHourSquareMeter
 <https://auroral.iot.linkeddata.es/def/core#KiloWattHourSquareMeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

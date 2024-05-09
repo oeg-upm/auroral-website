@@ -40,6 +40,7 @@
 <http://www.owl-ontologies.com/saref#isPropertyOf> rdf:type owl:ObjectProperty ;
                                                    rdfs:domain <https://saref.etsi.org/core#Property> ;
                                                    rdfs:range <https://saref.etsi.org/core#FeatureOfInterest> ;
+                                                   rdfs:comment "A relationship between a property and the feature of interest it belongs to" ;
                                                    rdfs:label "is property of" .
 
 
@@ -47,6 +48,7 @@
 <http://www.owl-ontologies.com/saref#measuresProperty> rdf:type owl:ObjectProperty ;
                                                        rdfs:domain <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
                                                        rdfs:range <https://saref.etsi.org/core#Property> ;
+                                                       rdfs:comment "A relationship specifying the property that can be measured by a certain device" ;
                                                        rdfs:label "measures property" .
 
 
@@ -54,6 +56,7 @@
 :hasActivity rdf:type owl:ObjectProperty ;
              rdfs:domain :Animal ;
              rdfs:range :Activity ;
+             rdfs:comment "A relationship between the animal and its activities" ;
              rdfs:label "has activity" .
 
 
@@ -61,6 +64,7 @@
 :hasBreeding rdf:type owl:ObjectProperty ;
              rdfs:domain :Animal ;
              rdfs:range :Breeding ;
+             rdfs:comment "A relationship between the Animal and the breeding class" ;
              rdfs:label "has breeding" .
 
 
@@ -68,6 +72,7 @@
 :hasLactation rdf:type owl:ObjectProperty ;
               rdfs:domain :Cow ;
               rdfs:range :Lactation ;
+              rdfs:comment "A relationship between the animal and its lactation days" ;
               rdfs:label "has lactation" .
 
 
@@ -75,6 +80,7 @@
 :reproductiveStatus rdf:type owl:ObjectProperty ;
                     rdfs:domain :Animal ;
                     rdfs:range :ReproductiveStatus ;
+                    rdfs:comment "A relationship between the cow and its reproductive status" ;
                     rdfs:label "reproductive status" .
 
 
@@ -86,12 +92,14 @@
 :birthDate rdf:type owl:DatatypeProperty ;
            rdfs:domain :Animal ;
            rdfs:range xsd:dateTime ;
+           rdfs:comment "The birth date of a cow" ;
            rdfs:label "birth date" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#daysSinceLastInsemination
 :daysSinceLastInsemination rdf:type owl:DatatypeProperty ;
                            rdfs:range xsd:integer ;
+                           rdfs:comment "The number opf days since the last insemination" ;
                            rdfs:label "days since last insemination" .
 
 
@@ -99,6 +107,7 @@
 :group rdf:type owl:DatatypeProperty ;
        rdfs:domain :Animal ;
        rdfs:range xsd:string ;
+       rdfs:comment "The group of the Cow" ;
        rdfs:label "group" .
 
 
@@ -106,6 +115,7 @@
 :idAnimal rdf:type owl:DatatypeProperty ;
           rdfs:domain :Animal ;
           rdfs:range xsd:string ;
+          rdfs:comment "The identifier of a Cow" ;
           rdfs:label "id animal" .
 
 
@@ -113,6 +123,7 @@
 :lactationDays rdf:type owl:DatatypeProperty ;
                rdfs:domain :Lactation ;
                rdfs:range xsd:integer ;
+               rdfs:comment "The lactation days of a Cow" ;
                rdfs:label "lactation days" .
 
 
@@ -120,6 +131,7 @@
 :probabilityOfHighActivity rdf:type owl:DatatypeProperty ;
                            rdfs:domain :Activity ;
                            rdfs:range xsd:string ;
+                           rdfs:comment "The probability of high activity of the Cow" ;
                            rdfs:label "probability of high activity" .
 
 
@@ -127,6 +139,7 @@
 :relativeActivity rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Activity ;
                   rdfs:range xsd:string ;
+                  rdfs:comment "The relative activity of the Cow" ;
                   rdfs:label "relative activity" .
 
 
@@ -137,94 +150,112 @@
 ###  http://www.owl-ontologies.com/adapters#SpaceProperty
 <http://www.owl-ontologies.com/adapters#SpaceProperty> rdf:type owl:Class ;
                                                        rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
+                                                       rdfs:comment "Contains information related to the space property: XAxis Acceleration, YAxis  Acceleration, ZAxis Acceleration" ;
                                                        rdfs:label "Space Property" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#Accelerometer
 <https://auroral.iot.linkeddata.es/def/adapters#Accelerometer> rdf:type owl:Class ;
                                                                rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
+                                                               rdfs:comment "An accelerometer is a sensor which, when attached to a mobile or other object, measures its non-gravitational linear acceleration." ;
                                                                rdfs:label "Accelerometer" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/core#Sensor
 <https://auroral.iot.linkeddata.es/def/core#Sensor> rdf:type owl:Class ;
+                                                    rdfs:comment "a device that is used to record that something is present or that there are changes in something" ;
                                                     rdfs:label "Sensor" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#Activity
 :Activity rdf:type owl:Class ;
+          rdfs:comment "Represnts information related to the activities of an animal" ;
           rdfs:label "Activity" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#Animal
 :Animal rdf:type owl:Class ;
+        rdfs:subClassOf <https://saref.etsi.org/core#FeatureOfInterest> ;
+        rdfs:comment "Animal is the feature of interest in for the dairy production use case" ;
         rdfs:label "Animal" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#Breeding
 :Breeding rdf:type owl:Class ;
+          rdfs:comment "Animal breeding is defined as the application of the principles of genetics and biometry to improve the efficiency of production in farm animals." ;
           rdfs:label "Breeding" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#Cow
 :Cow rdf:type owl:Class ;
      rdfs:subClassOf :Animal ;
+     rdfs:comment "COW is the mature female of cattle (genus Bos)" ;
      rdfs:label "Cow" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#DoesNotNeedArtificialInsemination
 :DoesNotNeedArtificialInsemination rdf:type owl:Class ;
                                    rdfs:subClassOf :ReproductiveStatus ;
+                                   rdfs:comment "The status of the cow is does not need artificial insemination" ;
                                    rdfs:label "Does Not Need Artificial Insemination" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#Heifer
 :Heifer rdf:type owl:Class ;
         rdfs:subClassOf :Animal ;
+        rdfs:comment "The meaning of HEIFER is a young cow" ;
         rdfs:label "Heifer" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#Inseminated
 :Inseminated rdf:type owl:Class ;
              rdfs:subClassOf :ReproductiveStatus ;
+             rdfs:comment "The status of Cow is inseminated" ;
              rdfs:label "Inseminated" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#Lactation
 :Lactation rdf:type owl:Class ;
+           rdfs:comment "A mammal that produces milk to feed her babies" ;
            rdfs:label "Lactation" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#Pregnant
 :Pregnant rdf:type owl:Class ;
           rdfs:subClassOf :ReproductiveStatus ;
+          rdfs:comment "The status of a Cow is pregnant" ;
           rdfs:label "Pregnant" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#RecentDelivery
 :RecentDelivery rdf:type owl:Class ;
                 rdfs:subClassOf :ReproductiveStatus ;
+                rdfs:comment "The status of a Cow is recent delivery" ;
                 rdfs:label "Recent Delivery" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#ReproductiveStatus
 :ReproductiveStatus rdf:type owl:Class ;
+                    rdfs:comment "Determines the reproductive status of amn animal. the possible status are: does not need artificial insemination, inseminated, pregnant, recent delivery, to undergo artificial insemination" ;
                     rdfs:label "Reproductive Status" .
 
 
 ###  https://auroral.iot.linkeddata.es/def/cow#ToUndergoArtificialInsemination
 :ToUndergoArtificialInsemination rdf:type owl:Class ;
                                  rdfs:subClassOf :ReproductiveStatus ;
+                                 rdfs:comment "The status of a Cow is to undergo artificial insemination" ;
                                  rdfs:label "To Undergo Artificial Insemination" .
 
 
 ###  https://saref.etsi.org/core#FeatureOfInterest
 <https://saref.etsi.org/core#FeatureOfInterest> rdf:type owl:Class ;
+                                                rdfs:comment "A feature of interest represents any real world entity from which a property is measured." ;
                                                 rdfs:label "Feature Of Interest" .
 
 
 ###  https://saref.etsi.org/core#Property
 <https://saref.etsi.org/core#Property> rdf:type owl:Class ;
+                                       rdfs:comment "A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature" ;
                                        rdfs:label "Property" .
 
 

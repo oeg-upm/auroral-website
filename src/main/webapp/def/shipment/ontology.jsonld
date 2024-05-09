@@ -10,24 +10,36 @@
 }, {
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Presents geospatial location"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Point"
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The altitude of a location"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "alt"
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The latitude of a location"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "lat"
   } ]
 }, {
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#location",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the storage and its location"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Storage"
   } ],
@@ -40,12 +52,18 @@
 }, {
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The longitude of a location"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "long"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/biomass#Biomass",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents a product example that is in shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Biomass"
   } ],
@@ -55,6 +73,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/core#User",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Determines the considered users during the shipment process. The users are genarlly the sender and the receiver of products"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "User"
   } ]
@@ -84,36 +105,54 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Address",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Determines the information related to the delivery and the pickup address for a product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Address"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#BoughtQuantity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "determines the bought quantity of a product in shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Bought Quantity"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Currency",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Determines the currency of the shipment price"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Currency"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#DeliveryPickupTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Determines the setimated time of the delivery and the pickup time of a product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Delivery Pickup Time"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Document",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the document where the shipment update is reported"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Document"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#DocumentType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "specifies the type of the used document to report the shipment update of the product."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Document Type"
   } ],
@@ -123,24 +162,36 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#LogisticCompany",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represents information relating to the logistics company responsible for the shipping process."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Logistic Company"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Price",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Refers to the price of the shipment of a product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Price"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Product",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This concept specifies the product that will be delivered"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Product"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Receiver",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It refers to the receiver of the product that could be a person, an organization, etc."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Receiver"
   } ],
@@ -150,6 +201,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Sender",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It refers to the provider of the product that could be a person, an organization, etc."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Sender"
   } ],
@@ -159,36 +213,54 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Defines the main information of the shipment process namely the identifier and the created time."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Shipment"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This concept tracks the updates in the product status during the shipment process. It has data properties like the identifier, the timeUpdate and the type."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Shipment Update"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Storage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "determines the storage location in delivery during shipment update."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Storage"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#StoragePile",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "It refers to  any outdoor storage on a source’s property of material. Every storage has a storage pile."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Storage Pile"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Transportation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "determines the means of transport of the product is shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Transportation"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#address",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The full address"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Address"
   } ],
@@ -201,6 +273,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#amount",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The amount of a price"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Price"
   } ],
@@ -213,6 +288,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#apartement",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The apartement location"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Address"
   } ],
@@ -225,6 +303,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#belongsTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship specifies that a sender is an employer in a logistic company"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Sender"
   } ],
@@ -237,6 +318,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#city",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The city of a location"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Address"
   } ],
@@ -249,6 +333,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#companyName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of the logistic company"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#LogisticCompany"
   } ],
@@ -261,6 +348,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#companyType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The type of a logistic company"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#LogisticCompany"
   } ],
@@ -273,6 +363,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#createdTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The created time of a shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -285,6 +378,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#currentAmount",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The current amount of a product in a shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Product"
   } ],
@@ -297,6 +393,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#dateStart",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The start date of the delivery or the pickup time of a product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#DeliveryPickupTime"
   } ],
@@ -309,6 +408,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#dateStop",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The end date of the delivery or the pickup time of a product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#DeliveryPickupTime"
   } ],
@@ -321,6 +423,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#days",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The  working days of a logistic company"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#LogisticCompany"
   } ],
@@ -333,6 +438,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#deliveryTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the shipment and its delivery time"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -345,6 +453,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#descriptionDocumentType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The description of the document type used during the shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#DocumentType"
   } ],
@@ -357,6 +468,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#email",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The email of a logistic company"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#LogisticCompany"
   } ],
@@ -369,6 +483,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#hasAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship specifies the address of a logistic company"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#LogisticCompany"
   } ],
@@ -381,6 +498,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#hasBuyerPrice",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between shipment of a product and purchase price"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -393,6 +513,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#hasDeliveryAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship specifies the delivery address of a shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -405,6 +528,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#hasDestination",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the shipment update and its location"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate"
   } ],
@@ -417,6 +543,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#hasDocument",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the shipment update and its details in a document"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate"
   } ],
@@ -429,6 +558,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#hasOrigin",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the shipment update and its location"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate"
   } ],
@@ -441,6 +573,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#hasPickupAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the shipment and its pickup address"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -453,6 +588,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#hasPile",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relationship between the storage and the storage pile"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Storage"
   } ],
@@ -465,6 +603,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#hasSellingPrice",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Relationship between a shipment and its selling price"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -477,6 +618,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#hasType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The type of a shipment update"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate"
   } ],
@@ -489,6 +633,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#hasUpdate",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the shipment and its update"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -501,6 +648,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#height",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The height of a shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -513,6 +663,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#inCurrency",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the price and its currencies"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Price"
   } ],
@@ -525,6 +678,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#inShipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the product and the shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Product"
   } ],
@@ -537,6 +693,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#inTransportation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the shipment update and the mean of transport used"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate"
   } ],
@@ -549,6 +708,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#isParentOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship to specify that a shipment update is a parent of another shipment update"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate"
   } ],
@@ -561,6 +723,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#licencePlate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The license plate of a mean of transport used for the shipment of a product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Transportation"
   } ],
@@ -573,6 +738,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#mimeType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The mime type of a document"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Document"
   } ],
@@ -585,6 +753,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#model",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The model of the transport mean used for the shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Transportation"
   } ],
@@ -597,6 +768,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of the mean of transport used for the shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Transportation"
   } ],
@@ -609,6 +783,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#nameDocumentType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The name of the document type"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#DocumentType"
   } ],
@@ -621,6 +798,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#numberActiveBuyer",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The number of the active buyer of a products (receiver)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Receiver"
   } ],
@@ -633,6 +813,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#numberActiveProducer",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The numebr of the active producers of a product (sender)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Sender"
   } ],
@@ -645,6 +828,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#orderDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The order description of a given shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -657,6 +843,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#orderInfo",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The order info of a shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -669,6 +858,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#personCount",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The number of people involved in theshipment process"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -681,6 +873,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#phone",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The phone number of a logistic company"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#LogisticCompany"
   } ],
@@ -693,6 +888,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#pickupTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the shipment and the delivery and the pickup time"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -705,6 +903,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#postal",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The poctal code of a given address"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Address"
   } ],
@@ -715,8 +916,29 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/shipment#providedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the prioduct and its provider"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "provided by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#User"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/shipment#provides"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#provides",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the product and its provider"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#User"
   } ],
@@ -729,6 +951,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#quantity",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The quantity of bought product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Product"
   } ],
@@ -741,6 +966,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#quantityInShipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The quantity of product in shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#BoughtQuantity"
   } ],
@@ -751,8 +979,29 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/shipment#receivedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the product and its receiver"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "received by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/core#User"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/shipment#receives"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#receives",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the product and its receiver"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#User"
   } ],
@@ -765,6 +1014,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#remoteAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The remote address of a document"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Document"
   } ],
@@ -775,17 +1027,11 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/shipment#ship",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "ship"
-  } ]
-}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#storedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between theshipment update and its storage"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate"
   } ],
@@ -798,6 +1044,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#tareKg",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The weight of an empty vehicle or container"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Transportation"
   } ],
@@ -810,6 +1059,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#timeUpdate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The update time of a shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate"
   } ],
@@ -822,6 +1074,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#totalAmount",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The total amount of a product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Product"
   } ],
@@ -834,6 +1089,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#updates",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A relationship between the shipment and its sender"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Sender"
   } ],
@@ -846,6 +1104,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#uuidCompany",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a company"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#LogisticCompany"
   } ],
@@ -858,6 +1119,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#uuidDocument",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a document"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Document"
   } ],
@@ -868,20 +1132,11 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://auroral.iot.linkeddata.es/def/shipment#uuidDocumentType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://auroral.iot.linkeddata.es/def/shipment#DocumentType"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "uuid document type"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#uuidPile",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a pile"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#StoragePile"
   } ],
@@ -894,6 +1149,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#uuidProduct",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a product"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Product"
   } ],
@@ -906,6 +1164,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#uuidShip",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -918,6 +1179,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#uuidShipUpdate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a shipment update"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#ShipmentUpdate"
   } ],
@@ -930,6 +1194,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#uuidStorage",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The identifier of a storage"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Storage"
   } ],
@@ -942,6 +1209,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#uuidTrans",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Theidentifier of a transportation mean"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Transportation"
   } ],
@@ -954,6 +1224,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#webSite",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The web site of a company"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#LogisticCompany"
   } ],
@@ -966,6 +1239,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#weight",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The weight of a shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -978,6 +1254,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#width",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The width of a shipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Shipment"
   } ],
@@ -990,6 +1269,9 @@
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/shipment#year",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The year of a mean of transport is constructed"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/shipment#Transportation"
   } ],

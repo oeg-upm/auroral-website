@@ -1,626 +1,645 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://auroral.iot.linkeddata.es/def/mobility#"
+<rdf:RDF xmlns="https://auroral.iot.linkeddata.es/def/mobility#"
+     xml:base="https://auroral.iot.linkeddata.es/def/mobility"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:mod="https://w3id.org/mod#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://auroral.iot.linkeddata.es/def/mobility#">
-    <Prefix name="" IRI="https://auroral.iot.linkeddata.es/def/mobility#"/>
-    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
-    <Prefix name="mob" IRI="https://auroral.iot.linkeddata.es/def/mobility#"/>
-    <Prefix name="mod" IRI="https://w3id.org/mod#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="geon" IRI="http://www.geonames.org/ontology#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="tmjourney" IRI="https://w3id.org/transmodel/journeys#"/>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Ahlem Rhayem</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>María Poveda Villalón</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-        <Literal>Raúl García Castro</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <Literal>This ontology aims at modelling the data related mean of transport mobility  for the AURORAL project.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <Literal>The AURORAL Mobility Ontology</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
-        <IRI>http://purl.org/NET/rdflicense/cc-by4.0</IRI>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal>0.0.1</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="mod:createdWith"/>
-        <IRI>https://chowlk.linkeddata.es/</IRI>
-    </Annotation>
-    <Declaration>
-        <Class abbreviatedIRI="geon:Feature"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ArrivalTime"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DepartureTime"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="EstimatedCall"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="JourneyService"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Quay"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ScheduledTime"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="StopPoint"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="tmjourney:DestinationDisplay"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="tmjourney:JourneyPattern"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="tmjourney:Line"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="tmjourney:MeanOfTransport"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="tmjourney:Point"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="destinationDisplay"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasEstimatedCall"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasLine"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasQuay"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasScheduledTime"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasTransportMode"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="journeyPattern"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="journeyService"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="actualArrivedTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="actualDepartureTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="aimedArrivalTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="aimedDepartureTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="date"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="expectedArrivalTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="expectedDepartureTime"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="forAlighting"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="forBoarding"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="idLine"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="idQuay"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="idStopPoint"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="nameLine"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="nameStopPoint"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="tmjourney:frontText"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="tmjourney:Bus"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="tmjourney:CableCar"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="tmjourney:Ferry"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="tmjourney:Funicular"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="tmjourney:Gondola"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="tmjourney:Metro"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="tmjourney:Rail"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="tmjourney:Tram"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:creator"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:description"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/terms/license"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="mod:createdWith"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="xsd:date"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="ArrivalTime"/>
-        <Class IRI="ScheduledTime"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DepartureTime"/>
-        <Class IRI="ScheduledTime"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Quay"/>
-        <Class abbreviatedIRI="tmjourney:Point"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="StopPoint"/>
-        <Class abbreviatedIRI="tmjourney:Point"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="tmjourney:Point"/>
-        <Class abbreviatedIRI="geon:Feature"/>
-    </SubClassOf>
-    <ClassAssertion>
-        <Class abbreviatedIRI="tmjourney:MeanOfTransport"/>
-        <NamedIndividual abbreviatedIRI="tmjourney:Bus"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="tmjourney:MeanOfTransport"/>
-        <NamedIndividual abbreviatedIRI="tmjourney:CableCar"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="tmjourney:MeanOfTransport"/>
-        <NamedIndividual abbreviatedIRI="tmjourney:Ferry"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="tmjourney:MeanOfTransport"/>
-        <NamedIndividual abbreviatedIRI="tmjourney:Funicular"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="tmjourney:MeanOfTransport"/>
-        <NamedIndividual abbreviatedIRI="tmjourney:Gondola"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="tmjourney:MeanOfTransport"/>
-        <NamedIndividual abbreviatedIRI="tmjourney:Metro"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="tmjourney:MeanOfTransport"/>
-        <NamedIndividual abbreviatedIRI="tmjourney:Rail"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="tmjourney:MeanOfTransport"/>
-        <NamedIndividual abbreviatedIRI="tmjourney:Tram"/>
-    </ClassAssertion>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="destinationDisplay"/>
-        <Class IRI="EstimatedCall"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasEstimatedCall"/>
-        <Class IRI="StopPoint"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasLine"/>
-        <Class abbreviatedIRI="tmjourney:JourneyPattern"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasQuay"/>
-        <Class IRI="EstimatedCall"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasScheduledTime"/>
-        <Class IRI="EstimatedCall"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasTransportMode"/>
-        <Class abbreviatedIRI="tmjourney:Line"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="journeyPattern"/>
-        <Class IRI="JourneyService"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="journeyService"/>
-        <Class IRI="EstimatedCall"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="destinationDisplay"/>
-        <Class abbreviatedIRI="tmjourney:DestinationDisplay"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasEstimatedCall"/>
-        <Class IRI="EstimatedCall"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasLine"/>
-        <Class abbreviatedIRI="tmjourney:Line"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasQuay"/>
-        <Class IRI="Quay"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasScheduledTime"/>
-        <Class IRI="ScheduledTime"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasTransportMode"/>
-        <Class abbreviatedIRI="tmjourney:MeanOfTransport"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="journeyPattern"/>
-        <Class abbreviatedIRI="tmjourney:JourneyPattern"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="journeyService"/>
-        <Class IRI="JourneyService"/>
-    </ObjectPropertyRange>
-    <DataPropertyDomain>
-        <DataProperty IRI="actualArrivedTime"/>
-        <Class IRI="ArrivalTime"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="actualDepartureTime"/>
-        <Class IRI="DepartureTime"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="aimedArrivalTime"/>
-        <Class IRI="ArrivalTime"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="aimedDepartureTime"/>
-        <Class IRI="DepartureTime"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="date"/>
-        <Class IRI="EstimatedCall"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="expectedArrivalTime"/>
-        <Class IRI="ArrivalTime"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="expectedDepartureTime"/>
-        <Class IRI="DepartureTime"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="forAlighting"/>
-        <Class IRI="EstimatedCall"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="forBoarding"/>
-        <Class IRI="EstimatedCall"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="idLine"/>
-        <Class abbreviatedIRI="tmjourney:Line"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="idQuay"/>
-        <Class IRI="Quay"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="idStopPoint"/>
-        <Class IRI="StopPoint"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="nameLine"/>
-        <Class abbreviatedIRI="tmjourney:Line"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="nameStopPoint"/>
-        <Class IRI="StopPoint"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="tmjourney:frontText"/>
-        <Class abbreviatedIRI="tmjourney:DestinationDisplay"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="actualArrivedTime"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="actualDepartureTime"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="aimedArrivalTime"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="aimedDepartureTime"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="date"/>
-        <Datatype abbreviatedIRI="xsd:date"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="expectedArrivalTime"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="expectedDepartureTime"/>
-        <Datatype abbreviatedIRI="xsd:dateTime"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="forAlighting"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="forBoarding"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="idLine"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="idQuay"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="idStopPoint"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="nameLine"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="nameStopPoint"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="tmjourney:frontText"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>geon:Feature</AbbreviatedIRI>
-        <Literal>Feature</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ArrivalTime</IRI>
-        <Literal>Arrival Time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DepartureTime</IRI>
-        <Literal>Departure Time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>EstimatedCall</IRI>
-        <Literal>Estimated Call</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>JourneyService</IRI>
-        <Literal>Journey Service</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Quay</IRI>
-        <Literal>Quay</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ScheduledTime</IRI>
-        <Literal>Scheduled Time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>StopPoint</IRI>
-        <Literal>Stop Point</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>actualArrivedTime</IRI>
-        <Literal>actual arrived time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>actualDepartureTime</IRI>
-        <Literal>actual departure time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>aimedArrivalTime</IRI>
-        <Literal>aimed arrival time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>aimedDepartureTime</IRI>
-        <Literal>aimed departure time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>date</IRI>
-        <Literal>date</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>destinationDisplay</IRI>
-        <Literal>destination display</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>expectedArrivalTime</IRI>
-        <Literal>expected arrival time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>expectedDepartureTime</IRI>
-        <Literal>expected departure time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>forAlighting</IRI>
-        <Literal>for alighting</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>forBoarding</IRI>
-        <Literal>for boarding</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasEstimatedCall</IRI>
-        <Literal>has estimated call</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasLine</IRI>
-        <Literal>has line</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasQuay</IRI>
-        <Literal>has quay</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasScheduledTime</IRI>
-        <Literal>has scheduled time</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasTransportMode</IRI>
-        <Literal>has transport mode</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>idLine</IRI>
-        <Literal>id line</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>idQuay</IRI>
-        <Literal>id quay</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>idStopPoint</IRI>
-        <Literal>id stop point</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>journeyPattern</IRI>
-        <Literal>journey pattern</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>journeyService</IRI>
-        <Literal>journey service</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>nameLine</IRI>
-        <Literal>name line</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>nameStopPoint</IRI>
-        <Literal>name stop point</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>tmjourney:DestinationDisplay</AbbreviatedIRI>
-        <Literal>Destination Display</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>tmjourney:JourneyPattern</AbbreviatedIRI>
-        <Literal>Journey Pattern</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>tmjourney:Line</AbbreviatedIRI>
-        <Literal>Line</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>tmjourney:MeanOfTransport</AbbreviatedIRI>
-        <Literal>Mean Of Transport</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>tmjourney:Point</AbbreviatedIRI>
-        <Literal>Point</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>tmjourney:frontText</AbbreviatedIRI>
-        <Literal>front text</Literal>
-    </AnnotationAssertion>
-</Ontology>
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://auroral.iot.linkeddata.es/def/mobility#">
+        <dc:creator>Ahlem Rhayem</dc:creator>
+        <dc:creator>María Poveda Villalón</dc:creator>
+        <dc:creator>Raúl García Castro</dc:creator>
+        <dc:description>This ontology aims at modelling the data related mean of transport mobility  for the AURORAL project.</dc:description>
+        <dc:title>The AURORAL Mobility Ontology</dc:title>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <owl:versionInfo>0.0.1</owl:versionInfo>
+        <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- https://w3id.org/mod#createdWith -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#createdWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#destinationDisplay -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#destinationDisplay">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#DestinationDisplay"/>
+        <rdfs:comment>Relationship between the estimated call and the destination</rdfs:comment>
+        <rdfs:label>destination display</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#hasEstimatedCall -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#hasEstimatedCall">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#StopPoint"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"/>
+        <rdfs:comment>Relationship between the stop point and its estimade calls</rdfs:comment>
+        <rdfs:label>has estimated call</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#hasLine -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#hasLine">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Line"/>
+        <rdfs:comment>Relationship between journey pattern and the line</rdfs:comment>
+        <rdfs:label>has line</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#hasQuay -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#hasQuay">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#Quay"/>
+        <rdfs:comment>Relationship between the estimated call and the quay</rdfs:comment>
+        <rdfs:label>has quay</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#hasScheduledTime -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#hasScheduledTime">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime"/>
+        <rdfs:comment>Relationship between the scheduled time and the estimated call</rdfs:comment>
+        <rdfs:label>has scheduled time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#hasTransportMode -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#hasTransportMode">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Line"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+        <rdfs:comment>Relationship between the mean of transport and the line</rdfs:comment>
+        <rdfs:label>has transport mode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#journeyPattern -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#journeyPattern">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#JourneyService"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+        <rdfs:comment>Relationship between the  journey service and the journey pattern</rdfs:comment>
+        <rdfs:label>journey pattern</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#journeyService -->
+
+
+    <owl:ObjectProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#journeyService">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"/>
+        <rdfs:range rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#JourneyService"/>
+        <rdfs:comment>Relationship between the journey service and the estimated calls</rdfs:comment>
+        <rdfs:label>journey service</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#actualArrivedTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#actualArrivedTime">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The actual arrived time of a mean of transport</rdfs:comment>
+        <rdfs:label>actual arrived time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#actualDepartureTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#actualDepartureTime">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#DepartureTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The actual departure time of a mean of transport</rdfs:comment>
+        <rdfs:label>actual departure time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#aimedArrivalTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#aimedArrivalTime">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The aimed arrival time of a mean of transport</rdfs:comment>
+        <rdfs:label>aimed arrival time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#aimedDepartureTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#aimedDepartureTime">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#DepartureTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The aimde departure time of a mean of transport</rdfs:comment>
+        <rdfs:label>aimed departure time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#date -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#date">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>The date of the estimated call</rdfs:comment>
+        <rdfs:label>date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#expectedArrivalTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#expectedArrivalTime">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The expected arrival time of a given mean of transport to a stop point</rdfs:comment>
+        <rdfs:label>expected arrival time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#expectedDepartureTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#expectedDepartureTime">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#DepartureTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The expected departure time of a given mean of transport to a stop point</rdfs:comment>
+        <rdfs:label>expected departure time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#forAlighting -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#forAlighting">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>To dismount from a horse, descend from a vehicle, etc. to settle or stay after descending:</rdfs:comment>
+        <rdfs:label>for alighting</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#forBoarding -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#forBoarding">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>The act of passengers and crew getting aboard a ship or aircraft</rdfs:comment>
+        <rdfs:label>for boarding</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#idLine -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#idLine">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Line"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The identifier of a line</rdfs:comment>
+        <rdfs:label>id line</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#idQuay -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#idQuay">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#Quay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The identifier of a quay</rdfs:comment>
+        <rdfs:label>id quay</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#idStopPoint -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#idStopPoint">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#StopPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The identifier of a stop point</rdfs:comment>
+        <rdfs:label>id stop point</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#nameLine -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#nameLine">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Line"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The name of a line</rdfs:comment>
+        <rdfs:label>name line</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#nameStopPoint -->
+
+
+    <owl:DatatypeProperty rdf:about="https://auroral.iot.linkeddata.es/def/mobility#nameStopPoint">
+        <rdfs:domain rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#StopPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The name of a stop point</rdfs:comment>
+        <rdfs:label>name stop point</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#frontText -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#frontText">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#DestinationDisplay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The act of acting like you are somebody else</rdfs:comment>
+        <rdfs:label>front text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.geonames.org/ontology#Feature -->
+
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology#Feature">
+        <rdfs:comment>Refers to a specific location</rdfs:comment>
+        <rdfs:label>Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/mobility#ArrivalTime">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime"/>
+        <rdfs:comment>Represents the scheduled arrival time for a stop point</rdfs:comment>
+        <rdfs:label>Arrival Time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#DepartureTime -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/mobility#DepartureTime">
+        <rdfs:subClassOf rdf:resource="https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime"/>
+        <rdfs:comment>Represents the scheduled departure time for a stop point</rdfs:comment>
+        <rdfs:label>Departure Time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/mobility#EstimatedCall">
+        <rdfs:comment>This class defines the estimated call of a bus or any mean of transport in a specific stop point</rdfs:comment>
+        <rdfs:label>Estimated Call</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#JourneyService -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/mobility#JourneyService">
+        <rdfs:comment>A passenger carrying Mean Of Transport JOURNEY for one specified
+DAY TYPE. The pattern of working is in principle defined by a
+SERVICE JOURNEY PATTERN.</rdfs:comment>
+        <rdfs:label>Journey Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#Quay -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/mobility#Quay">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:comment>A place such as platform, stance, or quayside where
+passengers have access to PT vehicles, Taxi, cars or other
+means of transportation. A QUAY may serve one or more
+VEHICLE STOPPING PLACEs and be associated with one or
+more SCHEDULED STOP POINTS. A QUAY may contain other
+sub QUAYs.</rdfs:comment>
+        <rdfs:label>Quay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/mobility#ScheduledTime">
+        <rdfs:comment>Defines the scheduled time for a Stop point</rdfs:comment>
+        <rdfs:label>Scheduled Time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/mobility#StopPoint -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/mobility#StopPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:comment>A POINT where passengers can board or alight from mean of transport</rdfs:comment>
+        <rdfs:label>Stop Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DestinationDisplay -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DestinationDisplay">
+        <rdfs:comment>An advertised destination of a specific Journey Pattern usually displayed on a headsign or other on-board locations</rdfs:comment>
+        <rdfs:label>Destination Display</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#JourneyPattern -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#JourneyPattern">
+        <rdfs:comment>An ordered list of SCHEDULED STOP POINTs and TIMING
+POINTs on a single ROUTE, describing the pattern of working
+for public transport vehicles.A JOURNEY PATTERN may pass
+through the same POINT more than once. The first point of a
+JOURNEY PATTERN is the origin. The last point is the
+destination</rdfs:comment>
+        <rdfs:label>Journey Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Line -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Line">
+        <rdfs:comment>A group of ROUTEs which is generally known to the public by
+a similar name or number.</rdfs:comment>
+        <rdfs:label>Line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#MeanOfTransport -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#MeanOfTransport">
+        <rdfs:comment>The means of transportation are bus, train, aeroplane, ship, car, etc while the mode of transportation refers to road, air, sea/ocean, etc.</rdfs:comment>
+        <rdfs:label>Mean Of Transport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Point -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Point">
+        <rdfs:subClassOf rdf:resource="http://www.geonames.org/ontology#Feature"/>
+        <rdfs:comment>Presents the geospatial coordination of a given place</rdfs:comment>
+        <rdfs:label>Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Bus -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Bus">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#CableCar -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#CableCar">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Ferry -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Ferry">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Funicular -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Funicular">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Gondola -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Gondola">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Metro -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Metro">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Rail -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Rail">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Tram -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Tram">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
 
