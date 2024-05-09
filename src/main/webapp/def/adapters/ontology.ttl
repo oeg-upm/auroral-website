@@ -727,6 +727,13 @@
                   rdfs:label "Ultrasound Sensor" .
 
 
+###  https://auroral.iot.linkeddata.es/def/adapters#Waste
+:Waste rdf:type owl:Class ;
+       rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
+       rdfs:label "Properties related to the waste materials."@en ,
+                  "Waste property"@en .
+
+
 ###  https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor
 :WasteBinSensor rdf:type owl:Class ;
                 rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
@@ -986,6 +993,11 @@
                      :CloudCover .
 
 
+###  https://auroral.iot.linkeddata.es/def/adapters#CombustibleWaste
+:CombustibleWaste rdf:type owl:NamedIndividual ,
+                           :Waste .
+
+
 ###  https://auroral.iot.linkeddata.es/def/adapters#Depth
 :Depth rdf:type owl:NamedIndividual ,
                 :OperatingProperty .
@@ -1088,6 +1100,11 @@
               :CloudCover .
 
 
+###  https://auroral.iot.linkeddata.es/def/adapters#FoodWaste
+:FoodWaste rdf:type owl:NamedIndividual ,
+                    :Waste .
+
+
 ###  https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude
 :GPSAltitude rdf:type owl:NamedIndividual ,
                       :SpaceProperty .
@@ -1101,6 +1118,11 @@
 ###  https://auroral.iot.linkeddata.es/def/adapters#GPSLongitude
 :GPSLongitude rdf:type owl:NamedIndividual ,
                        :SpaceProperty .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#GlassAndMetalPackaging
+:GlassAndMetalPackaging rdf:type owl:NamedIndividual ,
+                                 :Waste .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#GridCapacity
@@ -1287,9 +1309,19 @@ PM10 particles are a common air pollutant.""" .
                     rdfs:comment "Fine particulate matter (PM2.5) is an air pollutant that is a concern for people's health when levels in air are high." .
 
 
+###  https://auroral.iot.linkeddata.es/def/adapters#Paper
+:Paper rdf:type owl:NamedIndividual ,
+                :Waste .
+
+
 ###  https://auroral.iot.linkeddata.es/def/adapters#Periodic
 :Periodic rdf:type owl:NamedIndividual ,
                    :ActReason .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#PlasticPackaging
+:PlasticPackaging rdf:type owl:NamedIndividual ,
+                           :Waste .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#PowerFactor

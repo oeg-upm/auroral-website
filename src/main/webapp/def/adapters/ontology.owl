@@ -1156,6 +1156,17 @@
     
 
 
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#Waste -->
+
+
+    <owl:Class rdf:about="https://auroral.iot.linkeddata.es/def/adapters#Waste">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core#Property"/>
+        <rdfs:label xml:lang="en">Properties related to the waste materials.</rdfs:label>
+        <rdfs:label xml:lang="en">Waste property</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor -->
 
 
@@ -1595,6 +1606,15 @@
     
 
 
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#CombustibleWaste -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#CombustibleWaste">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Waste"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://auroral.iot.linkeddata.es/def/adapters#Depth -->
 
 
@@ -1777,6 +1797,15 @@
     
 
 
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#FoodWaste -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#FoodWaste">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Waste"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude -->
 
 
@@ -1800,6 +1829,15 @@
 
     <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#GPSLongitude">
         <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#GlassAndMetalPackaging -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#GlassAndMetalPackaging">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Waste"/>
     </owl:NamedIndividual>
     
 
@@ -2128,11 +2166,29 @@ PM10 particles are a common air pollutant.</rdfs:comment>
     
 
 
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#Paper -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#Paper">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Waste"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://auroral.iot.linkeddata.es/def/adapters#Periodic -->
 
 
     <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#Periodic">
         <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#ActReason"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://auroral.iot.linkeddata.es/def/adapters#PlasticPackaging -->
+
+
+    <owl:NamedIndividual rdf:about="https://auroral.iot.linkeddata.es/def/adapters#PlasticPackaging">
+        <rdf:type rdf:resource="https://auroral.iot.linkeddata.es/def/adapters#Waste"/>
     </owl:NamedIndividual>
     
 

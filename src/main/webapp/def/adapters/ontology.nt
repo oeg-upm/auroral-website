@@ -639,6 +639,12 @@
 <https://auroral.iot.linkeddata.es/def/adapters#UltrasoundSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "An UltraSound sensor is an electronic device that measures the distance of a target object by emitting ultrasonic sound waves, and converts the reflected sound into an electrical signal." .
 <https://auroral.iot.linkeddata.es/def/adapters#UltrasoundSensor> <http://www.w3.org/2000/01/rdf-schema#label> "Ultrasound Sensor" .
 # 
+# https://auroral.iot.linkeddata.es/def/adapters#Waste
+<https://auroral.iot.linkeddata.es/def/adapters#Waste> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/adapters#Waste> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#Property> .
+<https://auroral.iot.linkeddata.es/def/adapters#Waste> <http://www.w3.org/2000/01/rdf-schema#label> "Properties related to the waste materials."@en .
+<https://auroral.iot.linkeddata.es/def/adapters#Waste> <http://www.w3.org/2000/01/rdf-schema#label> "Waste property"@en .
+# 
 # https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor
 <https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://auroral.iot.linkeddata.es/def/core#Sensor> .
@@ -860,6 +866,10 @@
 <https://auroral.iot.linkeddata.es/def/adapters#Cloudiness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://auroral.iot.linkeddata.es/def/adapters#Cloudiness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#CloudCover> .
 # 
+# https://auroral.iot.linkeddata.es/def/adapters#CombustibleWaste
+<https://auroral.iot.linkeddata.es/def/adapters#CombustibleWaste> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#CombustibleWaste> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Waste> .
+# 
 # https://auroral.iot.linkeddata.es/def/adapters#Depth
 <https://auroral.iot.linkeddata.es/def/adapters#Depth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://auroral.iot.linkeddata.es/def/adapters#Depth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#OperatingProperty> .
@@ -942,6 +952,10 @@
 <https://auroral.iot.linkeddata.es/def/adapters#Fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://auroral.iot.linkeddata.es/def/adapters#Fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#CloudCover> .
 # 
+# https://auroral.iot.linkeddata.es/def/adapters#FoodWaste
+<https://auroral.iot.linkeddata.es/def/adapters#FoodWaste> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#FoodWaste> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Waste> .
+# 
 # https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude
 <https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> .
@@ -953,6 +967,10 @@
 # https://auroral.iot.linkeddata.es/def/adapters#GPSLongitude
 <https://auroral.iot.linkeddata.es/def/adapters#GPSLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://auroral.iot.linkeddata.es/def/adapters#GPSLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#GlassAndMetalPackaging
+<https://auroral.iot.linkeddata.es/def/adapters#GlassAndMetalPackaging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#GlassAndMetalPackaging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Waste> .
 # 
 # https://auroral.iot.linkeddata.es/def/adapters#GridCapacity
 <https://auroral.iot.linkeddata.es/def/adapters#GridCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1101,9 +1119,17 @@
 <https://auroral.iot.linkeddata.es/def/adapters#PM2_5Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#FineParticlesMatter> .
 <https://auroral.iot.linkeddata.es/def/adapters#PM2_5Concentration> <http://www.w3.org/2000/01/rdf-schema#comment> "Fine particulate matter (PM2.5) is an air pollutant that is a concern for people's health when levels in air are high." .
 # 
+# https://auroral.iot.linkeddata.es/def/adapters#Paper
+<https://auroral.iot.linkeddata.es/def/adapters#Paper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#Paper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Waste> .
+# 
 # https://auroral.iot.linkeddata.es/def/adapters#Periodic
 <https://auroral.iot.linkeddata.es/def/adapters#Periodic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://auroral.iot.linkeddata.es/def/adapters#Periodic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#ActReason> .
+# 
+# https://auroral.iot.linkeddata.es/def/adapters#PlasticPackaging
+<https://auroral.iot.linkeddata.es/def/adapters#PlasticPackaging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://auroral.iot.linkeddata.es/def/adapters#PlasticPackaging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://auroral.iot.linkeddata.es/def/adapters#Waste> .
 # 
 # https://auroral.iot.linkeddata.es/def/adapters#PowerFactor
 <https://auroral.iot.linkeddata.es/def/adapters#PowerFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

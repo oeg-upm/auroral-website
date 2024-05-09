@@ -1,21 +1,20 @@
-@prefix : <https://auroral.iot.linkeddata.es/def/adapters#> .
+@prefix : <https://auroral.iot.linkeddata.es/def/biomass#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://auroral.iot.linkeddata.es/def/adapters#> .
+@base <https://auroral.iot.linkeddata.es/def/biomass#> .
 
-<https://auroral.iot.linkeddata.es/def/adapters#> rdf:type owl:Ontology ;
-                                                   <http://purl.org/dc/elements/1.1/creator> "Ahlem Rhayem" ,
-                                                                                             "Andrea Cimmino" ,
-                                                                                             "Juan Cano de Benito" ,
-                                                                                             "Maria Poveda Villalon" ,
-                                                                                             "Raúl García Castro" ;
-                                                   <http://purl.org/dc/elements/1.1/description> "This ontology aims at modelling the adapters for the AURORAL project." ;
-                                                   <http://purl.org/dc/elements/1.1/title> "The AURORAL adapters ontology" ;
-                                                   <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                                   owl:versionInfo "0.0.1" .
+<https://auroral.iot.linkeddata.es/def/biomass#> rdf:type owl:Ontology ;
+                                                  <http://purl.org/dc/elements/1.1/creator> "Ahlem Rhayem" ,
+                                                                                            "Andrea Cimmino" ,
+                                                                                            "Juan Cano" ,
+                                                                                            "Maria Poveda Villalon" ,
+                                                                                            "Raul Garcia Castro" ;
+                                                  <http://purl.org/dc/elements/1.1/description> "This ontology aims to model the characteristics of the biomass for the AURORAL project." ;
+                                                  <http://purl.org/dc/elements/1.1/title> "The AURORAL Biomass Ontology" ;
+                                                  <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 
 #################################################################
 #    Annotation properties
@@ -37,61 +36,157 @@
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/ns/sosa/description
-<http://www.w3.org/ns/sosa/description> rdf:type owl:AnnotationProperty .
-
-
 #################################################################
 #    Object Properties
 #################################################################
 
-###  https://auroral.iot.linkeddata.es/def/core#hasReadability
-<https://auroral.iot.linkeddata.es/def/core#hasReadability> rdf:type owl:ObjectProperty ;
-                                                            rdfs:domain <https://saref.etsi.org/core#Measurement> ;
-                                                            rdfs:range <https://auroral.iot.linkeddata.es/def/core#Readability> ;
-                                                            rdfs:comment "A relationship between the measurement of its readability status" ;
-                                                            rdfs:label "has readability" .
+###  https://auroral.iot.linkeddata.es/def/biomass#belongsToType
+:belongsToType rdf:type owl:ObjectProperty ;
+               rdfs:domain :BiomassOrigin ;
+               rdfs:range :BiomassType ;
+               rdfs:comment "Relationship between the biomass and its type" ;
+               rdfs:label "belongs to type" .
 
 
-###  https://auroral.iot.linkeddata.es/def/core#hasTemporalUnit
-<https://auroral.iot.linkeddata.es/def/core#hasTemporalUnit> rdf:type owl:ObjectProperty ;
-                                                             rdfs:domain <https://saref.etsi.org/core#Measurement> ;
-                                                             rdfs:range <https://www.w3.org/2006/time#TemporalUnit> ;
-                                                             rdfs:comment "The granularity of a detected measurement" ;
-                                                             rdfs:label "has temporal unit" .
+###  https://auroral.iot.linkeddata.es/def/biomass#boughtQuantityPerGroup
+:boughtQuantityPerGroup rdf:type owl:ObjectProperty ;
+                        rdfs:domain <https://auroral.iot.linkeddata.es/def/shipment#BoughtQuantity> ;
+                        rdfs:range :BoughtPerGroup ;
+                        rdfs:comment "Relationship between the biomass and the quantity per group" ;
+                        rdfs:label "bought quantity per group" .
 
 
-###  https://saref.etsi.org/core#controlsProperty
-<https://saref.etsi.org/core#controlsProperty> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf owl:topObjectProperty ;
-                                               rdfs:domain <https://saref.etsi.org/core#Device> ;
-                                               rdfs:range <https://saref.etsi.org/core#Property> ;
-                                               rdfs:comment "A relationship specifying the property that can be controlled by a certain device" ;
-                                               rdfs:label "controls property" .
+###  https://auroral.iot.linkeddata.es/def/biomass#consumes
+:consumes rdf:type owl:ObjectProperty ;
+          rdfs:domain :Biomass ;
+          rdfs:range <https://auroral.iot.linkeddata.es/def/adapters#Energy> ;
+          rdfs:comment "Relationship between the Biomass and the energy that it consumes" ;
+          rdfs:label "consumes" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#hasAches
+:hasAches rdf:type owl:ObjectProperty ;
+          rdfs:domain :Biomass ;
+          rdfs:range :Aches ;
+          rdfs:comment "Relationship between the biomass and the aches" ;
+          rdfs:label "has aches" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#hasCaliber
+:hasCaliber rdf:type owl:ObjectProperty ;
+            rdfs:domain :SoldPerCaliber ;
+            rdfs:range :Caliber ;
+            rdfs:comment "Relationship between the biomass quantity and its caliber" ;
+            rdfs:label "has caliber" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#hasGroup
+:hasGroup rdf:type owl:ObjectProperty ;
+          rdfs:domain :BiomassOrigin ;
+          rdfs:range :BiomassGroup ;
+          rdfs:comment "Relationship between the biomass and the its groups" ;
+          rdfs:label "has group" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#hasHumidity
+:hasHumidity rdf:type owl:ObjectProperty ;
+             rdfs:domain :Biomass ;
+             rdfs:range :Humidity ;
+             rdfs:comment "Relationship between the biomass and its humidity" ;
+             rdfs:label "has humidity" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#hasOrigin
+:hasOrigin rdf:type owl:ObjectProperty ;
+           rdfs:domain :Biomass ;
+           rdfs:range :BiomassOrigin ;
+           rdfs:comment "Relationship between the biomass and its origin" ;
+           rdfs:label "has origin" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#hasSubGroup
+:hasSubGroup rdf:type owl:ObjectProperty ;
+             rdfs:domain :BiomassOrigin ;
+             rdfs:range :BiomassSubGroup ;
+             rdfs:comment "Relationship between the biomass and its subgroup" ;
+             rdfs:label "has sub group" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#hasSubType
+:hasSubType rdf:type owl:ObjectProperty ;
+            rdfs:domain :BiomassOrigin ;
+            rdfs:range :BiomassSubType ;
+            rdfs:comment "Relationship between the biomass and its subType" ;
+            rdfs:label "has sub type" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#hasTradingForm
+:hasTradingForm rdf:type owl:ObjectProperty ;
+                rdfs:range :TradingForm ;
+                rdfs:comment "Relationship between the quantity of the biomass and it strading form" ;
+                rdfs:label "has trading form" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#inCurrency
+:inCurrency rdf:type owl:ObjectProperty ;
+            rdfs:domain <https://saref.etsi.org/core#Price> ;
+            rdfs:range <http://publications.europa.eu/resource/authority/Currency> ;
+            rdfs:comment "Relationship between the price and its currencies" ;
+            rdfs:label "in currency" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#produces
+:produces rdf:type owl:ObjectProperty ;
+          rdfs:domain :Biomass ;
+          rdfs:range <https://auroral.iot.linkeddata.es/def/adapters#Energy> ;
+          rdfs:comment "Relationship between the Biomass and the enregy that it produces" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#quantity
+:quantity rdf:type owl:ObjectProperty ;
+          rdfs:domain :Biomass ;
+          rdfs:range :Quantity ;
+          rdfs:comment "Relationship between the Biomass and its quantity" ;
+          rdfs:label "quantity" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#quantityPerCaliber
+:quantityPerCaliber rdf:type owl:ObjectProperty ;
+                    rdfs:domain :SoldPerGroup ;
+                    rdfs:range :SoldPerCaliber ;
+                    rdfs:comment "Relationship between the sold quantity per group and its related Caliber" ;
+                    rdfs:label "quantity per caliber" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#relatedTo
+:relatedTo rdf:type owl:ObjectProperty ;
+           rdfs:range :BiomassSubGroup ;
+           rdfs:comment "Relationship between the quantity per group and the quantity per sold and its and its subgroup" ;
+           rdfs:label "related to" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#soldQuantityPerGroup
+:soldQuantityPerGroup rdf:type owl:ObjectProperty ;
+                      rdfs:domain :SoldQuantity ;
+                      rdfs:range :SoldPerGroup ;
+                      rdfs:comment "A relationship between a sold quantity and its groups" ;
+                      rdfs:label "sold quantity per group" .
+
+
+###  https://saref.etsi.org/core#hasPrice
+<https://saref.etsi.org/core#hasPrice> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain <https://auroral.iot.linkeddata.es/def/adapters#Energy> ;
+                                       rdfs:range <https://saref.etsi.org/core#Price> ;
+                                       rdfs:comment "Relationship between the price and the energy" ;
+                                       rdfs:label "has price" .
 
 
 ###  https://saref.etsi.org/core#isMeasuredIn
 <https://saref.etsi.org/core#isMeasuredIn> rdf:type owl:ObjectProperty ;
                                            rdfs:domain <https://saref.etsi.org/core#Measurement> ;
                                            rdfs:range <https://saref.etsi.org/core#UnitOfMeasure> ;
-                                           rdfs:comment "A relationship between the measurement and its unit of measure" ;
+                                           rdfs:comment "Relationship between the measurement and its units" ;
                                            rdfs:label "is measured in" .
-
-
-###  https://saref.etsi.org/core#makesMeasurement
-<https://saref.etsi.org/core#makesMeasurement> rdf:type owl:ObjectProperty ;
-                                               rdfs:domain <https://saref.etsi.org/core#Device> ;
-                                               rdfs:range <https://saref.etsi.org/core#Measurement> ;
-                                               rdfs:comment "A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates." ;
-                                               rdfs:label "makes measurement" .
-
-
-###  https://saref.etsi.org/core#measuresProperty
-<https://saref.etsi.org/core#measuresProperty> rdf:type owl:ObjectProperty ;
-                                               rdfs:domain <https://saref.etsi.org/core#Device> ;
-                                               rdfs:range <https://saref.etsi.org/core#Property> ;
-                                               rdfs:comment "A relationship specifying the property that can be measured by a certain device" ;
-                                               rdfs:label "measures property" .
 
 
 ###  https://saref.etsi.org/core#relatesToMeasurement
@@ -104,88 +199,92 @@
 
 ###  https://saref.etsi.org/core#relatesToProperty
 <https://saref.etsi.org/core#relatesToProperty> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://saref.etsi.org/core#Measurement> ;
+                                                rdfs:range <https://saref.etsi.org/core#Property> ;
                                                 rdfs:comment "A relationship between a measurement and the property it relates to" ;
                                                 rdfs:label "relates to property" .
+
+
+###  https://www.w3.org/ns/org#broader
+<https://www.w3.org/ns/org#broader> rdf:type owl:ObjectProperty ;
+                                    rdfs:comment "To assert that one concept is broader in meaning (i.e. more general) than another" ;
+                                    rdfs:label "broader" .
+
+
+###  https://www.w3.org/ns/org#narrower
+<https://www.w3.org/ns/org#narrower> rdf:type owl:ObjectProperty ;
+                                     rdfs:comment "Assert the inverse of the broader relationship, namely when one concept is narrower in meaning (i.e. more specific) than another." ;
+                                     rdfs:label "narrower" .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://auroral.iot.linkeddata.es/def/adapters#dateLastStatusUpdate
-:dateLastStatusUpdate rdf:type owl:DatatypeProperty ;
-                      rdfs:domain :StatusProperty ;
-                      rdfs:range xsd:dateTime ;
-                      rdfs:comment "The last date of updation the status of the device" ;
-                      rdfs:label "date last status update" .
+###  https://auroral.iot.linkeddata.es/def/biomass#avgSustainabilityScore
+:avgSustainabilityScore rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:float ;
+                        rdfs:comment "The average sustainability of a biomass" ;
+                        rdfs:label "avg sustainability score" .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#hasHeight
-:hasHeight rdf:type owl:DatatypeProperty ;
-           rdfs:domain :SoilMoisture ;
-           rdfs:range xsd:float ;
-           rdfs:comment "The height level of the soil moisture" ;
-           rdfs:label "has height" .
+###  https://auroral.iot.linkeddata.es/def/biomass#dimension
+:dimension rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Biomass ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The dimension of a Biomass" .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#hasVolume
-:hasVolume rdf:type owl:DatatypeProperty ;
-           rdfs:domain :SoilMoisture ;
-           rdfs:range xsd:float ;
-           rdfs:comment "The volume of the soil moisture" ;
-           rdfs:label "has volume" .
+###  https://auroral.iot.linkeddata.es/def/biomass#hasDescription
+:hasDescription rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The description of a given entity" ;
+                rdfs:label "has description" .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#title
-:title rdf:type owl:DatatypeProperty ;
-       rdfs:domain :StatusProperty ;
+###  https://auroral.iot.linkeddata.es/def/biomass#hasId
+:hasId rdf:type owl:DatatypeProperty ;
        rdfs:range xsd:string ;
-       rdfs:comment "The title of the status property" ;
-       rdfs:label "title" .
+       rdfs:comment "The identifier of an entity" ;
+       rdfs:label "has id" .
 
 
-###  https://auroral.iot.linkeddata.es/def/core#hasId
-<https://auroral.iot.linkeddata.es/def/core#hasId> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:range xsd:string ;
-                                                   rdfs:comment "The identifier of a given entity" ;
-                                                   rdfs:label "has id" .
+###  https://auroral.iot.linkeddata.es/def/biomass#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string ;
+         rdfs:comment "The name of an entity" ;
+         rdfs:label "has name" .
 
 
-###  https://auroral.iot.linkeddata.es/def/core#serialNumber
-<https://auroral.iot.linkeddata.es/def/core#serialNumber> rdf:type owl:DatatypeProperty ;
-                                                          rdfs:domain <https://saref.etsi.org/core#Device> ;
-                                                          rdfs:range xsd:string ;
-                                                          rdfs:comment "The serial number of a device" ;
-                                                          rdfs:label "serial number" .
+###  https://auroral.iot.linkeddata.es/def/biomass#priceValue
+:priceValue rdf:type owl:DatatypeProperty ;
+            rdfs:domain :BiomassEnergyPrice ;
+            rdfs:range xsd:float ;
+            rdfs:comment "The value of a price" ;
+            rdfs:label "price value" .
 
 
-###  https://auroral.iot.linkeddata.es/def/core#value
-<https://auroral.iot.linkeddata.es/def/core#value> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain <https://auroral.iot.linkeddata.es/def/core#Readability> ;
-                                                   rdfs:range xsd:integer ;
-                                                   rdfs:comment "The readability value of the detected measurement" ;
-                                                   rdfs:label "value" .
-
-
-###  https://auroral.iot.linkeddata.es/def/core#versionNumber
-<https://auroral.iot.linkeddata.es/def/core#versionNumber> rdf:type owl:DatatypeProperty ;
-                                                           rdfs:domain <https://saref.etsi.org/core#Device> ;
-                                                           rdfs:range xsd:string ;
-                                                           rdfs:comment "The version number of the employed device" ;
-                                                           rdfs:label "version number" .
+###  https://auroral.iot.linkeddata.es/def/biomass#value
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Quantity ;
+       rdfs:range xsd:float ;
+       rdfs:comment "The value of a quantity" ;
+       rdfs:label "value" .
 
 
 ###  https://saref.etsi.org/core#hasTimeStamp
 <https://saref.etsi.org/core#hasTimeStamp> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <https://saref.etsi.org/core#Measurement> ;
                                            rdfs:range xsd:dateTime ;
-                                           rdfs:comment "The timestapm of a given entity" ;
-                                           rdfs:label "has time stamp" .
+                                           rdfs:comment "The timestamp of a Measurement" ;
+                                           rdfs:label "has timestamp" .
 
 
 ###  https://saref.etsi.org/core#hasValue
 <https://saref.etsi.org/core#hasValue> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <https://saref.etsi.org/core#Measurement> ;
                                        rdfs:range xsd:float ;
-                                       rdfs:comment "The value of the detected measurement" ;
+                                       rdfs:comment "The value of a measurement" ;
                                        rdfs:label "has value" .
 
 
@@ -193,1324 +292,1478 @@
 #    Classes
 #################################################################
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Accelerometer
-:Accelerometer rdf:type owl:Class ;
-               rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-               rdfs:comment "An instrument for measuring acceleration or for detecting and measuring vibrations" ;
-               rdfs:label "Accelerometer" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AccumulatedPercipitation
-:AccumulatedPercipitation rdf:type owl:Class ;
-                          rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-                          rdfs:comment "Accumulated precipitation is the sum of precipitation over a certain period of time in a certain place." ;
-                          rdfs:label "Accumulated Percipitation" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#ActReason
-:ActReason rdf:type owl:Class ;
-           rdfs:subClassOf :StatusProperty ;
-           rdfs:comment "Refers to the act reason of the devices, that change the status of the device from active to passive  or vice versa" ;
-           rdfs:label "Act reason" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AirConditionningBasic
-:AirConditionningBasic rdf:type owl:Class ;
-                       rdfs:subClassOf :CoolingSensor ,
-                                       :HeatingSensor ;
-                       rdfs:comment "Air conditioning is the controlling of air temperature, its humidity, its purity, noise- free and its flow rate at a certain place to produce a comfort zone." ;
-                       rdfs:label "Air Conditionning Basic" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AirQuality
-:AirQuality rdf:type owl:Class ;
-            rdfs:subClassOf :AmbientProperty ;
-            rdfs:comment "Air quality refers to the degree to which the air is suitable or clean enough for humans or the environment." ;
-            rdfs:label "Air Quality" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AirQualitySensor
-:AirQualitySensor rdf:type owl:Class ;
-                  rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                  rdfs:comment "An air quality sensor is a device used to detect the concentration of pollutants in the air. It can usually measure two or more air quality indicators such as temperature, humidity, carbon dioxide, carbon monoxide, ozone, formaldehyde, benzene, PM2.5, PM10, etc." ;
-                  rdfs:label "Air Quality Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Alert
-:Alert rdf:type owl:Class ;
-       rdfs:subClassOf :StatusProperty ;
-       rdfs:comment "A mechanism that gives an audible, visual or other kind of alarm signal to alert someone to a problem or condition that requires urgent attention." ;
-       rdfs:label "Alert" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AmbientProperty
-:AmbientProperty rdf:type owl:Class ;
-                 rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-                 rdfs:comment "This concepts regroups the ambient properties that are detcetd by the deployed devices. These properties are the ambient temperature, the ambient humidity, the ambient flood, the ambient wind and the ambient solar radiation properties." ;
-                 rdfs:label "Ambient Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AmbientSolarRadiation
-:AmbientSolarRadiation rdf:type owl:Class ;
-                       rdfs:subClassOf :AmbientProperty ;
-                       rdfs:comment "Often called the solar resource or just sunlight, is a general term for the electromagnetic radiation emitted by the sun." ;
-                       rdfs:label "Ambient Solar Radiation" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Ammonia
-:Ammonia rdf:type owl:Class ;
-         rdfs:subClassOf :AirQuality ;
-         rdfs:comment "Ammonia is an inorganic chemical compound of nitrogen and hydrogen with the formula NH3. A stable binary hydride and the simplest pnictogen hydride, ammonia is a colourless gas with a distinct pungent smell." ;
-         rdfs:label "Ammonia" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#BoilerBiomass
-:BoilerBiomass rdf:type owl:Class ;
-               rdfs:subClassOf :BoilerSensor ;
-               rdfs:comment "biomass boilers are boilers that run on biomass fuels." ;
-               rdfs:label "Boiler Biomass" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#BoilerNgas
-:BoilerNgas rdf:type owl:Class ;
-            rdfs:subClassOf :BoilerSensor ;
-            rdfs:comment "A sensor boilers that is run on natural gas" ;
-            rdfs:label "Boiler Ngas" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#BoilerOil
-:BoilerOil rdf:type owl:Class ;
-           rdfs:subClassOf :BoilerSensor ;
-           rdfs:comment "An oil boiler works in a very similar way to a gas boiler. The fuel, in this case oil." ;
-           rdfs:label "Boiler Oil" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#BoilerSensor
-:BoilerSensor rdf:type owl:Class ;
-              rdfs:subClassOf :HeatingSensor ;
-              rdfs:comment "A boiler is a device which burns gas, oil, electricity, or coal in order to provide hot water, especially for the central heating in a building" ;
-              rdfs:label "Boiler Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#CarbonDioxide
-:CarbonDioxide rdf:type owl:Class ;
-               rdfs:subClassOf :AirQuality ;
-               rdfs:comment "Carbon dioxide is a chemical compound with the chemical formula CO2. It is made up of molecules that each have one carbon atom covalently double bonded to two oxygen atoms." ;
-               rdfs:label "Carbon Dioxide" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#CarbonMonoxide
-:CarbonMonoxide rdf:type owl:Class ;
-                rdfs:subClassOf :AirQuality ;
-                rdfs:comment "Carbon monoxide (CO) is a colorless, practically odorless, and tasteless gas or liquid. It results from incomplete oxidation of carbon in combustion. Burns with a violet flame." ;
-                rdfs:label "Carbon Monoxide" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#CloudCover
-:CloudCover rdf:type owl:Class ;
-            rdfs:subClassOf :AmbientProperty ;
-            rdfs:comment "Cloud cover (also known as cloudiness, cloudage, or cloud amount) refers to the fraction of the sky obscured by clouds on average when observed from a particular location." ;
-            rdfs:label "Cloud Cover" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#CoarseParticulateMatter
-:CoarseParticulateMatter rdf:type owl:Class ;
-                         rdfs:subClassOf :AirQuality ;
-                         rdfs:comment "Coarse particles (also known as PM10-2.5): particles with diameters generally larger than 2.5 µm and smaller than, or equal to, 10 µm in diameter." ;
-                         rdfs:label "Coarse Particulate Matter" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor
-:CoolingSensor rdf:type owl:Class ;
-               rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-               rdfs:comment "The Cooling Sensor is used to measure the temperature of the engine coolant." ;
-               rdfs:label "Cooling Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#EnergyMonitor
-:EnergyMonitor rdf:type owl:Class ;
-               rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-               rdfs:comment "It is used to track and control real time energy use. It has different properties such as the returned energy, the total returned energy, etc..." ;
-               rdfs:label "Energy Monitor Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#EnergyProperty
-:EnergyProperty rdf:type owl:Class ;
-                rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-                rdfs:comment "It regroups the properties related to the energy such as: the battery level, the totalreturnedEnergy, the TotalEnergy, the PowerFactor, the Gridvoltage, and so one." ;
-                rdfs:label "Energy Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Error
-:Error rdf:type owl:Class ;
-       rdfs:subClassOf :StatusProperty ;
-       rdfs:comment "Refers to the rror status of a given device" ;
-       rdfs:label "Error" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#FineParticlesMatter
-:FineParticlesMatter rdf:type owl:Class ;
-                     rdfs:subClassOf :AirQuality ;
-                     rdfs:comment "The fine particles, or particulate matter 2.5 (PM2.5), refers to tiny particles or droplets in the air that are 2 ½ microns or less in width." ;
-                     rdfs:label "Fine Particles Matter" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#FloodAmbientProperty
-:FloodAmbientProperty rdf:type owl:Class ;
-                      rdfs:subClassOf :AmbientProperty ;
-                      rdfs:comment "a rising and overflowing of a body os water especially onto normally dry land" ;
-                      rdfs:label "Flood Ambient Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#FloodSensor
-:FloodSensor rdf:type owl:Class ;
-             rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-             rdfs:comment "It is designed for detection of water leaks or detecting excessively high-water level." ;
-             rdfs:label "Flood Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#GPSEmergencyButton
-:GPSEmergencyButton rdf:type owl:Class ;
-                    rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                    rdfs:comment "It is a device used to detect the exact location of a specific thing or object. The detected data is the longitude, latitude, altitude, and the acceleration." ;
-                    rdfs:label "GPS Emergency Button" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#HealthProperty
-:HealthProperty rdf:type owl:Class ;
-                rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-                rdfs:comment "Refers to the health status of a patient, by considering differents properties such as blood glucose, heart rate, blood pressure, etc." ;
-                rdfs:label "Health Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirToAir
-:HeatPumpAirToAir rdf:type owl:Class ;
-                  rdfs:subClassOf :CoolingSensor ,
-                                  :HeatingSensor ;
-                  rdfs:comment "An heat pump is a specific type of air source heat pump that absorbs heat from the outside air to distribute in a home, usually via a ventilation fan system" ;
-                  rdfs:label "Heat Pump Air To Air" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#HeatPumpAirToWater
-:HeatPumpAirToWater rdf:type owl:Class ;
-                    rdfs:subClassOf :CoolingSensor ,
-                                    :HeatingSensor ;
-                    rdfs:comment "An air to water heat pump is a piece of mechanical equipment that extracts heat from the air and uses it to heat hot water" ;
-                    rdfs:label "Heat Pump Air To Water" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#HeatingSensor
-:HeatingSensor rdf:type owl:Class ;
-               rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-               rdfs:comment "A heat sensor is a type of circuit that senses heat changes by teaming up with a thermistor." ;
-               rdfs:label "Heating Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#HumidityAmbientProperty
-:HumidityAmbientProperty rdf:type owl:Class ;
-                         rdfs:subClassOf :AmbientProperty ;
-                         rdfs:comment "It is a value expressed as a percentage (0-100%). It is the amount of water vapor present in a specific volume." ;
-                         rdfs:label "Ambient Humidity Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#HumiditySensor
-:HumiditySensor rdf:type owl:Class ;
-                rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                rdfs:comment "It is a device that detects and measures water vapor in its environment and converts its findings into a corresponding electrical signal." ;
-                rdfs:label "Humidity Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#LightBulb
-:LightBulb rdf:type owl:Class ;
-           rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-           rdfs:comment "A device used to convert electricity into light, consisting of a source of illumination (e.g. an electric filament or one or more LEDs) enclosed within a transparent or translucent shell, typically having a rounded shape and designed to be fitted into a socket in a lamp." ;
-           rdfs:label "Light Bulb" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#LightProperty
-:LightProperty rdf:type owl:Class ;
-               rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-               rdfs:comment "it describes properties about illuminance." ;
-               rdfs:label "Light Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#LuminusFlux
-:LuminusFlux rdf:type owl:Class ;
-             rdfs:subClassOf :LightProperty ;
-             rdfs:comment "it describes properties about illuminance." ;
-             rdfs:label "Luminus Flux" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#MonitoringSensor
-:MonitoringSensor rdf:type owl:Class ;
-                  rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                  rdfs:comment "It generates data about the active power, the reactive inductive power, the active enrgy, the reactive capacitif, the voltage and so one." ;
-                  rdfs:label "Monitoring Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#MotionProperty
-:MotionProperty rdf:type owl:Class ;
-                rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-                rdfs:comment "it is  about the motion and the vibration properties." ;
-                rdfs:label "Motion Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#MotionSensor
-:MotionSensor rdf:type owl:Class ;
-              rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-              rdfs:comment "A motion sensor (or motion detector) is a device that is designed to detect and measure movement." ;
-              rdfs:label "Motion Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#NitrogenDioxide
-:NitrogenDioxide rdf:type owl:Class ;
-                 rdfs:subClassOf :AirQuality ;
-                 rdfs:comment "Nitrogen dioxide, or NO2, is a gaseous air pollutant composed of nitrogen and oxygen and is one of a group of related gases called nitrogen oxides, or NOx. Nitrogen dioxide forms when fossil fuels such as coal, oil, methane gas (natural gas) or diesel are burned at high temperatures." ;
-                 rdfs:label "Nitrogen Dioxide" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#NitrogenMonoxide
-:NitrogenMonoxide rdf:type owl:Class ;
-                  rdfs:subClassOf :AirQuality ;
-                  rdfs:comment "Nitric oxide (nitrogen oxide or nitrogen monoxide[1]) is a colorless gas with the formula NO. It is one of the principal oxides of nitrogen. Nitric oxide is a free radical: it has an unpaired electron, which is sometimes denoted by a dot in its chemical formula (•N=O or •NO). Nitric oxide is also a heteronuclear diatomic molecule, a class of molecules whose study spawned early modern theories of chemical bonding" ;
-                  rdfs:label "Nitrogen Monoxide" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Noise
-:Noise rdf:type owl:Class ;
-       rdfs:subClassOf :AmbientProperty ;
-       rdfs:comment "mesure the noise in a place" ;
-       rdfs:label "Noise" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#OperatingProperty
-:OperatingProperty rdf:type owl:Class ;
-                   rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-                   rdfs:comment "Includes propertis about the operating of a device" ;
-                   rdfs:label "Operating Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Ozone
-:Ozone rdf:type owl:Class ;
-       rdfs:subClassOf :AirQuality ;
-       rdfs:comment "Ozone is a colourless gas which is a form of oxygen. There is a layer of ozone high above the earth's surface." ;
-       rdfs:label "Ozone" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#PV
-:PV rdf:type owl:Class ;
-    rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-    rdfs:comment "The photovolatic sensor" ;
-    rdfs:label "PV" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#PVBIntegrated
-:PVBIntegrated rdf:type owl:Class ;
-               rdfs:subClassOf :PV ;
-               rdfs:comment "The PVB integrated sensor" ;
-               rdfs:label "PVB Integrated" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#PVFaçade
-:PVFaçade rdf:type owl:Class ;
-          rdfs:subClassOf :PV ;
-          rdfs:comment "PV facade is a facade mounted photovoltaic system that adapts to solar conditions by using a solar tracking mechanism." ;
-          rdfs:label "PV Façade" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#PVGround
-:PVGround rdf:type owl:Class ;
-          rdfs:subClassOf :PV ;
-          rdfs:comment "Photovoltaic ground sensor" ;
-          rdfs:label "PV Ground" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#PVRoofFlat
-:PVRoofFlat rdf:type owl:Class ;
-            rdfs:subClassOf :PV ;
-            rdfs:comment "Photovoltaic Root Flat sensor" ;
-            rdfs:label "PV Roof Flat" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#PVRoofStanled
-:PVRoofStanled rdf:type owl:Class ;
-               rdfs:subClassOf :PV ;
-               rdfs:comment "The Photovoltaic Roof Stanled sensor" ;
-               rdfs:label "PV Roof Stanled" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#PersonCounter
-:PersonCounter rdf:type owl:Class ;
-               rdfs:subClassOf :TRAFXProperty ;
-               rdfs:comment "The number of people traversing a certain passage or entrance." ;
-               rdfs:label "Person Counter" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#PersonCounterSensor
-:PersonCounterSensor rdf:type owl:Class ;
-                     rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                     rdfs:comment "The person sounter sensor is designed to count the number of person that visit a specific city" ;
-                     rdfs:label "Person Counter Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Precipitation
-:Precipitation rdf:type owl:Class ;
-               rdfs:subClassOf :AmbientProperty ;
-               rdfs:comment "A form of water, such as rain, snow, or sleet, that condenses from the atmosphere, becomes too heavy to remain suspended, and falls to the Earth's surface." ;
-               rdfs:label "Precipitation" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Presence
-:Presence rdf:type owl:Class ;
-          rdfs:subClassOf :StatusProperty ;
-          rdfs:comment "Refers to th epresence property of a given device (present or not )" ;
-          rdfs:label "Presence" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#PresenceSensor
-:PresenceSensor rdf:type owl:Class ;
-                rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                rdfs:comment "it detects the presence of an object in a place" ;
-                rdfs:label "Presence Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Pressure
-:Pressure rdf:type owl:Class ;
-          rdfs:subClassOf :AmbientProperty ;
-          rdfs:comment "provides information about the pressure properties (for example the atmospheric pressure)." ;
-          rdfs:label "Pressure" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#PressureSensor
-:PressureSensor rdf:type owl:Class ;
-                rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                rdfs:comment "A pressure sensor is a device that senses and measures pressure. In this case, pressure is defined as the amount of force exerted over an area." ;
-                rdfs:label "Pressure Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#QRCounter
-:QRCounter rdf:type owl:Class ;
-           rdfs:subClassOf :TRAFXProperty ;
-           rdfs:comment "QR Code tracking delivers all scan statistics" ;
-           rdfs:label "QR Counter" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#QRGeneratorSensor
-:QRGeneratorSensor rdf:type owl:Class ;
-                   rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                   rdfs:comment "The QR Generator sensor is designed to count the numebr of person that scan the QR code when they visit a specific city" ;
-                   rdfs:label "QR Generator Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Relay
-:Relay rdf:type owl:Class ;
-       rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Actuator> ;
-       rdfs:comment "A relay is an electrically operated switch. It consists of a set of input terminals for a single or multiple control signals, and a set of operating contact terminals." ;
-       rdfs:label "Relay" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#SmartPlug
-:SmartPlug rdf:type owl:Class ;
-           rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-           rdfs:comment "SmartPlug is to control electrical devices thanks to their electric supplies, it can also measure the power consumption of the electric device plugged into it, and measure and evaluate the quality of the electrical mains to which it is plugged." ;
-           rdfs:label "Smart Plug" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#SmartValve
-:SmartValve rdf:type owl:Class ;
-            rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Actuator> ;
-            rdfs:comment "SmartValve is a digital power flow control technology that quickly solves bottlenecks and grid issues to create extra capacity." ;
-            rdfs:label "Smart Valve" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#SoilMoisture
-:SoilMoisture rdf:type owl:Class ;
-              rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-              rdfs:comment "presents the soil moisture height and volume" ;
-              rdfs:label "Soil Moisture" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#SoilMoistureSensor
-:SoilMoistureSensor rdf:type owl:Class ;
-                    rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                    rdfs:comment "soil moisture sensors measure the volumetric water content in soil. it provides data about the height and volume of water in soil." ;
-                    rdfs:label "Soil Moisture Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Sound
-:Sound rdf:type owl:Class ;
-       rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-       rdfs:comment "This concept defines the Noise Level properties." ;
-       rdfs:label "Sound Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#SoundSensor
-:SoundSensor rdf:type owl:Class ;
-             rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-             rdfs:comment "A sound sensor is a sensor that detects sound waves via the sound's intensity and then converts it to electric signals." ;
-             rdfs:label "Sound Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty
-:SpaceProperty rdf:type owl:Class ;
-               rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-               rdfs:comment "describes properties related to space such as the  GPS latitude, the GPS altitude, the GPS longitude, the XAxis Acceleration, the YAxisAcceleration, the ZAxis acceleration, the distance, etc." ;
-               rdfs:label "Space Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#StatusProperty
-:StatusProperty rdf:type owl:Class ;
-                rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-                rdfs:comment "Determines the operational status of a device" ;
-                rdfs:label "Status Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#StorageCapacity
-:StorageCapacity rdf:type owl:Class ;
-                 rdfs:subClassOf :StatusProperty ;
-                 rdfs:comment "Refers to the storage capacity of a given device" ;
-                 rdfs:label "Storage Capacity" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#SulphurDioxide
-:SulphurDioxide rdf:type owl:Class ;
-                rdfs:subClassOf :AirQuality ;
-                rdfs:comment "Sulfur dioxide (SO2) is a gaseous air pollutant composed of sulfur and oxygen. SO2 forms when sulfur-containing fuel such as coal, petroleum oil, or diesel is burned." ;
-                rdfs:label "Sulphur Dioxide" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Switch
-:Switch rdf:type owl:Class ;
-        rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Actuator> ;
-        rdfs:comment "A switch, in the context of networking, is a high-speed device that receives incoming data packets and redirects them to their destination on a local area network (LAN)." ;
-        rdfs:label "Switch" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#SwitchStatus
-:SwitchStatus rdf:type owl:Class ;
-              rdfs:subClassOf :StatusProperty ;
-              rdfs:comment "Refers to the switch status of a Device" ;
-              rdfs:label "Switch Status" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#TRAFXProperty
-:TRAFXProperty rdf:type owl:Class ;
-               rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-               rdfs:label "TRAFX Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#TemperatureAmbientProperty
-:TemperatureAmbientProperty rdf:type owl:Class ;
-                            rdfs:subClassOf :AmbientProperty ;
-                            rdfs:comment "Ambient Temperature is a measure of the temperature around a given asset or piece of equipement or other object" ;
-                            rdfs:label "Ambient Temperature" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Thermometer
-:Thermometer rdf:type owl:Class ;
-             rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-             rdfs:comment "A thermometer sensor is a device used to measure temperature." ;
-             rdfs:label "Thermometer Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#UltraFineParticlesMatter
-:UltraFineParticlesMatter rdf:type owl:Class ;
-                          rdfs:subClassOf :AirQuality ;
-                          rdfs:comment "Ultrafine particles (UFPs) are aerosols with an aerodynamic diameter of 0.1 µm (100 nm) or less." ;
-                          rdfs:label "Ultra Fine Particles Matter" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#UltrasoundSensor
-:UltrasoundSensor rdf:type owl:Class ;
-                  rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                  rdfs:comment "An UltraSound sensor is an electronic device that measures the distance of a target object by emitting ultrasonic sound waves, and converts the reflected sound into an electrical signal." ;
-                  rdfs:label "Ultrasound Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Waste
-:Waste rdf:type owl:Class ;
-       rdfs:subClassOf <https://saref.etsi.org/core#Property> ;
-       rdfs:label "Properties related to the waste materials."@en ,
-                  "Waste property"@en .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor
-:WasteBinSensor rdf:type owl:Class ;
-                rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                rdfs:comment "It ensures a real time monitoring of the waste bins' status. It generates data about the distance and the deviation position" ;
-                rdfs:label "Waste Bin Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#WaterAMRSensor
-:WaterAMRSensor rdf:type owl:Class ;
-                rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                rdfs:comment "Water AMR sensor sends data about the accumulated value of water in the current timestamp." ;
-                rdfs:label "Water AMR Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#WaterValveActuator
-:WaterValveActuator rdf:type owl:Class ;
-                    rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Actuator> ;
-                    rdfs:comment "it is used to control the water valve. It generates an acknowledgement message indicating that the command has been accepted. The generated command can be: ON, OFF, active, close." ;
-                    rdfs:label "Water Valve Actuator" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Weather
-:Weather rdf:type owl:Class ;
-         rdfs:subClassOf :AmbientProperty ;
-         rdfs:comment "The general condition of the atmosphere at a particular time and place, with regard to the temperature, moisture, cloudiness" ;
-         rdfs:label "Weather" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#WeatherSensor
-:WeatherSensor rdf:type owl:Class ;
-               rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-               rdfs:comment "It is a component of an automatic weather station that detects the presence of hydrometeors and determines their type (rain, snow, drizzle, etc.) and intensity. it detects data about the temperature, the humidity, the solar irradiation, the pressure and the rain." ;
-               rdfs:label "Weather Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#WindAmbientProperty
-:WindAmbientProperty rdf:type owl:Class ;
-                     rdfs:subClassOf :AmbientProperty ;
-                     rdfs:comment "It refers to moving air, as in a breeze, or what fills the sails of a boat." ;
-                     rdfs:label "Wind Ambient Property" .
-
-
-###  https://auroral.iot.linkeddata.es/def/core#Actuator
-<https://auroral.iot.linkeddata.es/def/core#Actuator> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Device> ,
-                                                                      <https://saref.etsi.org/core#Actuator> ;
-                                                      rdfs:comment "A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world" ;
-                                                      rdfs:label "Actuator" .
-
-
-###  https://auroral.iot.linkeddata.es/def/core#BatterySensor
-<https://auroral.iot.linkeddata.es/def/core#BatterySensor> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Sensor> ;
-                                                           rdfs:comment "Battery sensor is used to precisely monitor/measure the current, voltage, and temperature of rechargeable batteries." ;
-                                                           rdfs:label "Battery Sensor" .
-
-
-###  https://auroral.iot.linkeddata.es/def/core#Device
-<https://auroral.iot.linkeddata.es/def/core#Device> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <https://saref.etsi.org/core#Device> ;
-                                                    rdfs:comment "It is designed to realize a specific task. This task can be a detection of an occurred event or the initiation of an action. It has two sub-classes (sensor and actuator)." ;
-                                                    rdfs:label "Device" .
-
-
-###  https://auroral.iot.linkeddata.es/def/core#Readability
-<https://auroral.iot.linkeddata.es/def/core#Readability> rdf:type owl:Class ;
-                                                         rdfs:comment "represents the status of the detected measurement, that could be redable or not." ;
-                                                         rdfs:label "Readability" .
-
-
-###  https://auroral.iot.linkeddata.es/def/core#Sensor
-<https://auroral.iot.linkeddata.es/def/core#Sensor> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <https://auroral.iot.linkeddata.es/def/core#Device> ,
-                                                                    <https://saref.etsi.org/core#Sensor> ;
-                                                    rdfs:comment "A sensor is a device that detects and responds to some type of input from the physical environment." ;
-                                                    rdfs:label "Sensor" .
-
-
-###  https://saref.etsi.org/core#Actuator
-<https://saref.etsi.org/core#Actuator> rdf:type owl:Class ;
-                                       rdfs:comment "A device that causes a machine or other device to operate." ;
-                                       rdfs:label "Actuator" .
-
-
-###  https://saref.etsi.org/core#Device
-<https://saref.etsi.org/core#Device> rdf:type owl:Class ;
-                                     rdfs:comment "Physical object used in a use case (sensor, actuator, etc)" ;
-                                     rdfs:label "Device" .
+###  http://publications.europa.eu/resource/authority/Currency
+<http://publications.europa.eu/resource/authority/Currency> rdf:type owl:Class ;
+                                                            rdfs:comment "The currency of the biomass energy price" ;
+                                                            rdfs:label "Currency" .
+
+
+###  https://auroral.iot.linkeddata.es/def/adapters#Energy
+<https://auroral.iot.linkeddata.es/def/adapters#Energy> rdf:type owl:Class ;
+                                                        rdfs:comment "Refers to the energy that could be produced or used by a Biomass" ;
+                                                        rdfs:label "Energy" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#Aches
+:Aches rdf:type owl:Class ;
+       rdfs:comment "Ash is the residue after combustion. Biomass ash is naturally alkaline. Ash content is usually small for wood but can reach up to 20% in mass for some biomasses (see Table 9.6)." ;
+       rdfs:label "Aches" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#Biomass
+:Biomass rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :consumes ;
+                           owl:someValuesFrom <https://auroral.iot.linkeddata.es/def/adapters#Energy>
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasAches ;
+                           owl:someValuesFrom :Aches
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasHumidity ;
+                           owl:someValuesFrom :Humidity
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasOrigin ;
+                           owl:someValuesFrom :BiomassOrigin
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :produces ;
+                           owl:someValuesFrom <https://auroral.iot.linkeddata.es/def/adapters#Energy>
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :quantity ;
+                           owl:someValuesFrom :Quantity
+                         ] ;
+         rdfs:comment "Biomass is organic, non-fossil material of biological origin (plants and animals) used as a raw material for production of biofuels." ;
+         rdfs:label "Biomass" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#BiomassEnergyPrice
+:BiomassEnergyPrice rdf:type owl:Class ;
+                    rdfs:subClassOf <https://saref.etsi.org/core#Price> ;
+                    rdfs:comment "The amount of the  biomass energy price" ;
+                    rdfs:label "Biomass Energy Price" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#BiomassGroup
+:BiomassGroup rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://www.w3.org/ns/org#narrower> ;
+                                owl:someValuesFrom :BiomassSubGroup
+                              ] ;
+              rdfs:comment "Determines the five main groups of biomass: Woody, Herbaceous, Fruit, Aquatic, Blends and mixtures" ;
+              rdfs:label "Biomass Group" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#BiomassOrigin
+:BiomassOrigin rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :belongsToType ;
+                                 owl:someValuesFrom :BiomassType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasGroup ;
+                                 owl:someValuesFrom :BiomassGroup
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasSubGroup ;
+                                 owl:someValuesFrom :BiomassSubGroup
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasSubType ;
+                                 owl:someValuesFrom :BiomassSubType
+                               ] ;
+               rdfs:comment "Detremine the origin of the biomass, The origin is mainly composed by the group, the sub-group, the type and the sub-type" ;
+               rdfs:label "Biomass Origin" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#BiomassSubGroup
+:BiomassSubGroup rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty <https://www.w3.org/ns/org#broader> ;
+                                   owl:someValuesFrom :BiomassGroup
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <https://www.w3.org/ns/org#narrower> ;
+                                   owl:someValuesFrom :BiomassType
+                                 ] ;
+                 rdfs:comment "Refers to the list sub-group of the biomass" ;
+                 rdfs:label "Biomass Sub Group" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#BiomassSubType
+:BiomassSubType rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty <https://www.w3.org/ns/org#broader> ;
+                                  owl:someValuesFrom :BiomassType
+                                ] ;
+                rdfs:comment "Refers to the list of biomass sub-type origin" ;
+                rdfs:label "Biomass Sub Type" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#BiomassType
+:BiomassType rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty <https://www.w3.org/ns/org#broader> ;
+                               owl:someValuesFrom :BiomassSubGroup
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <https://www.w3.org/ns/org#narrower> ;
+                               owl:someValuesFrom :BiomassSubType
+                             ] ;
+             rdfs:comment "Refers to the list of biomass type origin" ;
+             rdfs:label "Biomass Type" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#BoughtPerGroup
+:BoughtPerGroup rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :relatedTo ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :BiomassSubGroup
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :value ;
+                                  owl:someValuesFrom xsd:float
+                                ] ;
+                rdfs:comment "Refers to the  bought quantity of biomass per group" ;
+                rdfs:label "Bought Per Group" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#Caliber
+:Caliber rdf:type owl:Class ;
+         rdfs:comment "The degree of quality or excellence of biomass quantity" ;
+         rdfs:label "Caliber" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#CurrentQuantity
+:CurrentQuantity rdf:type owl:Class ;
+                 rdfs:subClassOf :Quantity ;
+                 rdfs:comment "The current quantity biomass" ;
+                 rdfs:label "Current Quantity" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#Humidity
+:Humidity rdf:type owl:Class ;
+          rdfs:comment "Refers to the humidity of a biomass" ;
+          rdfs:label "Humidity" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#Quantity
+:Quantity rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :value ;
+                            owl:someValuesFrom xsd:float
+                          ] ;
+          rdfs:comment "The quantity of the biomass" ;
+          rdfs:label "Quantity" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#SoldPerCaliber
+:SoldPerCaliber rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasCaliber ;
+                                  owl:someValuesFrom :Caliber
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTradingForm ;
+                                  owl:someValuesFrom :TradingForm
+                                ] ;
+                rdfs:comment "The sold quantity per caliber for a biomass" ;
+                rdfs:label "Sold Per Caliber" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#SoldPerGroup
+:SoldPerGroup rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :relatedTo ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :BiomassSubGroup
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :value ;
+                                owl:someValuesFrom xsd:float
+                              ] ;
+              rdfs:comment "The sold quantity per group for a biomass" ;
+              rdfs:label "Sold Per Group" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#SoldQuantity
+:SoldQuantity rdf:type owl:Class ;
+              rdfs:subClassOf :Quantity ;
+              rdfs:comment "The sold quantity of the biomass" ;
+              rdfs:label "Sold Quantity" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#TotalQuantity
+:TotalQuantity rdf:type owl:Class ;
+               rdfs:subClassOf :Quantity ;
+               rdfs:comment "The total quantity of the biomass" ;
+               rdfs:label "Total Quantity" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#TradingForm
+:TradingForm rdf:type owl:Class ;
+             rdfs:comment "The trading form of a biomass" ;
+             rdfs:label "Trading Form" .
+
+
+###  https://auroral.iot.linkeddata.es/def/shipment#BoughtQuantity
+<https://auroral.iot.linkeddata.es/def/shipment#BoughtQuantity> rdf:type owl:Class ;
+                                                                rdfs:subClassOf :Quantity ;
+                                                                rdfs:comment "The bought quantity of the biomass" ;
+                                                                rdfs:label "Bought Quantity" .
 
 
 ###  https://saref.etsi.org/core#Measurement
 <https://saref.etsi.org/core#Measurement> rdf:type owl:Class ;
-                                          rdfs:comment "refers to the detected measurement from the physical devices" ;
+                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://saref.etsi.org/core#relatesToProperty> ;
+                                                            owl:someValuesFrom <https://saref.etsi.org/core#Property>
+                                                          ] ;
+                                          rdfs:comment "The measurement related to the energy produced or consumed by a biomass" ;
                                           rdfs:label "Measurement" .
+
+
+###  https://saref.etsi.org/core#Price
+<https://saref.etsi.org/core#Price> rdf:type owl:Class ;
+                                    rdfs:comment "The price of the biomass energy" ;
+                                    rdfs:label "Price" .
 
 
 ###  https://saref.etsi.org/core#Property
 <https://saref.etsi.org/core#Property> rdf:type owl:Class ;
-                                       rdfs:comment "It refers to the observables properties concerning a particular domain or use case. It has diverse sub-classes as presented below." ;
+                                       rdfs:comment "A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature" ;
                                        rdfs:label "Property" .
-
-
-###  https://saref.etsi.org/core#Sensor
-<https://saref.etsi.org/core#Sensor> rdf:type owl:Class ;
-                                     rdfs:comment "A sensor is a device that detects and responds to some type of input from the physical environment." ;
-                                     rdfs:label "Sensor" .
 
 
 ###  https://saref.etsi.org/core#UnitOfMeasure
 <https://saref.etsi.org/core#UnitOfMeasure> rdf:type owl:Class ;
-                                            rdfs:comment "Defines the unit of each mesurement dtected by a sensor" ;
-                                            rdfs:label "Unit Of Measure" .
-
-
-###  https://www.w3.org/2006/time#TemporalUnit
-<https://www.w3.org/2006/time#TemporalUnit> rdf:type owl:Class ;
-                                            rdfs:comment "Presents the temporal aspect of the detected measurement." ;
-                                            rdfs:label "Temporal Unit" .
+                                            rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM)." ;
+                                            rdfs:label "Unit of Measure" .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindDirection
-<http://www.semanticweb.org/user/ontologies/2022/5/adapters#WindDirection> rdf:type owl:NamedIndividual ,
-                                                                                    :WindAmbientProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AccumulatedWater
-:AccumulatedWater rdf:type owl:NamedIndividual ,
-                           :FloodAmbientProperty ;
-                  rdfs:comment "Accumulated Water" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Active
-:Active rdf:type owl:NamedIndividual ,
-                 :StatusProperty ;
-        rdfs:comment "Active" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#ActiveEnergy
-:ActiveEnergy rdf:type owl:NamedIndividual ,
-                       :EnergyProperty ;
-              rdfs:comment "Active Energy" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AirPressureAtSea
-:AirPressureAtSea rdf:type owl:NamedIndividual ,
-                           :Pressure .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Alarm
-:Alarm rdf:type owl:NamedIndividual ,
-                :ActReason .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AmbientTemperature
-:AmbientTemperature rdf:type owl:NamedIndividual ,
-                             :TemperatureAmbientProperty ;
-                    rdfs:label "Ambient Temperature" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AmountPrecipitation
-:AmountPrecipitation rdf:type owl:NamedIndividual ,
-                              :Precipitation .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AngularUnit
-:AngularUnit rdf:type owl:NamedIndividual ,
-                      :SpaceProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AtmosphericPressure
-:AtmosphericPressure rdf:type owl:NamedIndividual ,
-                              :Pressure ;
-                     rdfs:comment "Atmosphoric Pressure" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Available
-:Available rdf:type owl:NamedIndividual ,
-                    :StatusProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AverageMovementShare
-:AverageMovementShare rdf:type owl:NamedIndividual ,
-                               :MotionProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#AverageMovementTime
-:AverageMovementTime rdf:type owl:NamedIndividual ,
-                              :MotionProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#BasalMetabolicRate
-:BasalMetabolicRate rdf:type owl:NamedIndividual ,
-                             :HealthProperty ;
-                    rdfs:comment "Basal Metabolic Rate (BMR) is the number of calories you burn as your body performs basic (basal) life-sustaining function." .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Battery
-:Battery rdf:type owl:NamedIndividual ,
-                  :ActReason .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#BatteryLevel
-:BatteryLevel rdf:type owl:NamedIndividual ,
-                       :EnergyProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#BeaconMac
-:BeaconMac rdf:type owl:NamedIndividual ,
-                    :SpaceProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#BodyFatPercentage
-:BodyFatPercentage rdf:type owl:NamedIndividual ,
-                            :HealthProperty ;
-                   rdfs:comment "The amount of essential fat differs between men and women, and is typically around 2-5% in men, and 10-13% in women." .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#BodyMassIndex
-:BodyMassIndex rdf:type owl:NamedIndividual ,
-                        :HealthProperty ;
-               rdfs:comment "Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women." .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#BoneMineralContent
-:BoneMineralContent rdf:type owl:NamedIndividual ,
-                             :HealthProperty ;
-                    rdfs:comment "Calcium is the largest contributor to bone mineral content. It exists in hydroxyapatite crystals, which contribute to bone strength, and acts as a reserve to maintain serum calcium levels within a narrow range during periods of dietary calcium inadequacy." .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Button
-:Button rdf:type owl:NamedIndividual ,
-                 :ActReason .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#CO2Concentration
-:CO2Concentration rdf:type owl:NamedIndividual ,
-                           :CarbonDioxide .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#COConcentration
-:COConcentration rdf:type owl:NamedIndividual ,
-                          :CarbonMonoxide .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#CaloriesBurned
-:CaloriesBurned rdf:type owl:NamedIndividual ,
-                         :HealthProperty ;
-                rdfs:comment "indicates how many clories were burned by wlking for example" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Cloudiness
-:Cloudiness rdf:type owl:NamedIndividual ,
-                     :CloudCover .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#CombustibleWaste
-:CombustibleWaste rdf:type owl:NamedIndividual ,
-                           :Waste .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Depth
-:Depth rdf:type owl:NamedIndividual ,
-                :OperatingProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#DevPosition
-:DevPosition rdf:type owl:NamedIndividual ,
-                      :SpaceProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#DeviceStatus
-:DeviceStatus rdf:type owl:NamedIndividual ,
-                       :StatusProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#DewpointTemperature
-:DewpointTemperature rdf:type owl:NamedIndividual ,
-                              :TemperatureAmbientProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#DiastolicBloodPressure
-:DiastolicBloodPressure rdf:type owl:NamedIndividual ,
-                                 :HealthProperty ;
-                        rdfs:comment "Diastolic blood level for a patient" .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiation
-:DiffuseRadiation rdf:type owl:NamedIndividual ,
-                           :AmbientSolarRadiation .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#DiffuseRadiationInstant
-:DiffuseRadiationInstant rdf:type owl:NamedIndividual ,
-                                  :AmbientSolarRadiation .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradiance
-:DirectNormalIrradiance rdf:type owl:NamedIndividual ,
-                                 :AmbientSolarRadiation .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#DirectNormalIrradianceInstant
-:DirectNormalIrradianceInstant rdf:type owl:NamedIndividual ,
-                                        :AmbientSolarRadiation .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#DirectRadiation
-:DirectRadiation rdf:type owl:NamedIndividual ,
-                          :AmbientSolarRadiation .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#DirectRadiationInstant
-:DirectRadiationInstant rdf:type owl:NamedIndividual ,
-                                 :AmbientSolarRadiation .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#Distance
-:Distance rdf:type owl:NamedIndividual ,
-                   :SpaceProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#DistanceWalked
-:DistanceWalked rdf:type owl:NamedIndividual ,
-                         :MotionProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#ElectricCurrent
-:ElectricCurrent rdf:type owl:NamedIndividual ,
-                          :EnergyProperty .
-
-
-###  https://auroral.iot.linkeddata.es/def/adapters#ElectricVoltage
-:ElectricVoltage rdf:type owl:NamedIndividual ,
-                          :EnergyProperty ;
-                 rdfs:comment "Electric Voltage" .
-
-
 ###  https://auroral.iot.linkeddata.es/def/adapters#EnergyConsumption
-:EnergyConsumption rdf:type owl:NamedIndividual ,
-                            :EnergyProperty .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyConsumption> rdf:type owl:NamedIndividual ,
+                                                                            <https://auroral.iot.linkeddata.es/def/adapters#Energy> .
 
 
 ###  https://auroral.iot.linkeddata.es/def/adapters#EnergyProduction
-:EnergyProduction rdf:type owl:NamedIndividual ,
-                           :EnergyProperty .
+<https://auroral.iot.linkeddata.es/def/adapters#EnergyProduction> rdf:type owl:NamedIndividual ,
+                                                                           <https://auroral.iot.linkeddata.es/def/adapters#Energy> .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#EnergyUseIntensity
-:EnergyUseIntensity rdf:type owl:NamedIndividual ,
-                             :EnergyProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#Algae
+:Algae rdf:type owl:NamedIndividual ,
+                :BiomassSubGroup ;
+       <https://www.w3.org/ns/org#broader> :AquaticBiomass ;
+       <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesAlgae ,
+                                            :MacroAlgae ,
+                                            :MicroAlgae .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Flood
-:Flood rdf:type owl:NamedIndividual ,
-                :FloodAmbientProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#AquaticBiomass
+:AquaticBiomass rdf:type owl:NamedIndividual ,
+                         :BiomassGroup ;
+                <https://www.w3.org/ns/org#narrower> :Algae ,
+                                                     :BlendsAndMixturesAquaticBiomass ,
+                                                     :LakeAndSeaGrass ,
+                                                     :Reeds ,
+                                                     :WaterHyacinth .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Fog
-:Fog rdf:type owl:NamedIndividual ,
-              :CloudCover .
+###  https://auroral.iot.linkeddata.es/def/biomass#BambooGrasses
+:BambooGrasses rdf:type owl:NamedIndividual ,
+                        :BiomassSubType ;
+               <https://www.w3.org/ns/org#broader> :Grasses .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#FoodWaste
-:FoodWaste rdf:type owl:NamedIndividual ,
-                    :Waste .
+###  https://auroral.iot.linkeddata.es/def/biomass#BarkChemicallyTreatedUsedWood
+:BarkChemicallyTreatedUsedWood rdf:type owl:NamedIndividual ,
+                                        :BiomassSubType ;
+                               <https://www.w3.org/ns/org#broader> :ChemicallyTreatedUsedWood .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude
-:GPSAltitude rdf:type owl:NamedIndividual ,
-                      :SpaceProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents
+:BarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents rdf:type owl:NamedIndividual ,
+                                                                               :BiomassSubType ;
+                                                                      <https://www.w3.org/ns/org#broader> :ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#GPSLatitude
-:GPSLatitude rdf:type owl:NamedIndividual ,
-                      :SpaceProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BarkChemicallyUntreatedUsedWood
+:BarkChemicallyUntreatedUsedWood rdf:type owl:NamedIndividual ,
+                                          :BiomassSubType ;
+                                 <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedUsedWood .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#GPSLongitude
-:GPSLongitude rdf:type owl:NamedIndividual ,
-                       :SpaceProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BarkChemicallyUntreatedWoodByProductsAndResidues
+:BarkChemicallyUntreatedWoodByProductsAndResidues rdf:type owl:NamedIndividual ,
+                                                           :BiomassSubType ;
+                                                  <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedWoodbyProductsAndResidues ;
+                                                  rdfs:comment "from industry operations" .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#GlassAndMetalPackaging
-:GlassAndMetalPackaging rdf:type owl:NamedIndividual ,
-                                 :Waste .
+###  https://auroral.iot.linkeddata.es/def/biomass#BarkFromForestryOperations
+:BarkFromForestryOperations rdf:type owl:NamedIndividual ,
+                                     :BiomassType .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#GridCapacity
-:GridCapacity rdf:type owl:NamedIndividual ,
-                       :EnergyProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BarkFromIndustryOperations
+:BarkFromIndustryOperations rdf:type owl:NamedIndividual ,
+                                     :BiomassSubType .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#GridDemand
-:GridDemand rdf:type owl:NamedIndividual ,
-                     :EnergyProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#Berries
+:Berries rdf:type owl:NamedIndividual ,
+                  :BiomassType ;
+         <https://www.w3.org/ns/org#broader> :OrchardAndHorticultureFruit ;
+         <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesBerries ,
+                                              :FleshBerries ,
+                                              :SeedsBerries ,
+                                              :WholeBerries .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#GridFrequency
-:GridFrequency rdf:type owl:NamedIndividual ,
-                        :EnergyProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BerriesChemicallyTreatedFruitResidues
+:BerriesChemicallyTreatedFruitResidues rdf:type owl:NamedIndividual ,
+                                                :BiomassSubType ;
+                                       <https://www.w3.org/ns/org#broader> :ChemicallyTreatedFruitResidues .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#GridVoltage
-:GridVoltage rdf:type owl:NamedIndividual ,
-                      :EnergyProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BerriesChemicallyUntreatedFruitResidues
+:BerriesChemicallyUntreatedFruitResidues rdf:type owl:NamedIndividual ,
+                                                  :BiomassSubType ;
+                                         <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedFruitResidues .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#HeartRate
-:HeartRate rdf:type owl:NamedIndividual ,
-                    :HealthProperty ;
-           rdfs:comment "Heart rate level for a patient" .
+###  https://auroral.iot.linkeddata.es/def/biomass#Blends
+:Blends rdf:type owl:NamedIndividual ,
+                 :BiomassSubGroup .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#HighClouds
-:HighClouds rdf:type owl:NamedIndividual ,
-                     :CloudCover .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMIxturesStoneOrKernelFruit
+:BlendsAndMIxturesStoneOrKernelFruit rdf:type owl:NamedIndividual ,
+                                              :BiomassSubType ;
+                                     <https://www.w3.org/ns/org#broader> :StoneOrKernelFruits .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#HourlyPersonCounter
-:HourlyPersonCounter rdf:type owl:NamedIndividual ,
-                              :PersonCounter .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixtures
+:BlendsAndMixtures rdf:type owl:NamedIndividual ,
+                            :BiomassGroup .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Illuminance
-:Illuminance rdf:type owl:NamedIndividual ,
-                      :LuminusFlux .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesAlgae
+:BlendsAndMixturesAlgae rdf:type owl:NamedIndividual ,
+                                 :BiomassType ;
+                        <https://www.w3.org/ns/org#broader> :Algae .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#IndoorAmbientTemperature
-:IndoorAmbientTemperature rdf:type owl:NamedIndividual ,
-                                   :TemperatureAmbientProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesAquaticBiomass
+:BlendsAndMixturesAquaticBiomass rdf:type owl:NamedIndividual ,
+                                          :BiomassSubGroup ;
+                                 <https://www.w3.org/ns/org#broader> :AquaticBiomass .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#InstantaneousActivePower
-:InstantaneousActivePower rdf:type owl:NamedIndividual ,
-                                   :EnergyProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesBerries
+:BlendsAndMixturesBerries rdf:type owl:NamedIndividual ,
+                                   :BiomassSubType ;
+                          <https://www.w3.org/ns/org#broader> :Berries .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#InstantaneousApparentPower
-:InstantaneousApparentPower rdf:type owl:NamedIndividual ,
-                                     :EnergyProperty ;
-                            rdfs:comment "Instantaneous Apparent Power" .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesByProductsAndResiduesFromFoodAndFruitProcessingIndustry
+:BlendsAndMixturesByProductsAndResiduesFromFoodAndFruitProcessingIndustry rdf:type owl:NamedIndividual ,
+                                                                                   :BiomassType ;
+                                                                          <https://www.w3.org/ns/org#broader> :ByProductsAndResiduesFromFoodAndFruitProcessingIndustry .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#InstantaneousCapacitiveInductivePower
-:InstantaneousCapacitiveInductivePower rdf:type owl:NamedIndividual ,
-                                                :EnergyProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesByProductsAndResiduesFromFoodAndHerbaceousProcesingIndustry
+:BlendsAndMixturesByProductsAndResiduesFromFoodAndHerbaceousProcesingIndustry rdf:type owl:NamedIndividual ,
+                                                                                       :BiomassType ;
+                                                                              <https://www.w3.org/ns/org#broader> :ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactiveInductivePower
-:InstantaneousReactiveInductivePower rdf:type owl:NamedIndividual ,
-                                              :EnergyProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesByProductsAndResiduesFromWoodProcessingIndustry
+:BlendsAndMixturesByProductsAndResiduesFromWoodProcessingIndustry rdf:type owl:NamedIndividual ,
+                                                                           :BiomassType ;
+                                                                  <https://www.w3.org/ns/org#broader> :ByProductsAndResiduesFromWoodProcessingIndustry .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#InstantaneousReactivePower
-:InstantaneousReactivePower rdf:type owl:NamedIndividual ,
-                                     :EnergyProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesCerealCrops
+:BlendsAndMixturesCerealCrops rdf:type owl:NamedIndividual ,
+                                       :BiomassSubType ;
+                              <https://www.w3.org/ns/org#broader> :CerealCrops .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#LightColor
-:LightColor rdf:type owl:NamedIndividual ,
-                     :LightProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesChemicallyTreatedFruitResidues
+:BlendsAndMixturesChemicallyTreatedFruitResidues rdf:type owl:NamedIndividual ,
+                                                          :BiomassSubType ;
+                                                 <https://www.w3.org/ns/org#broader> :ChemicallyTreatedFruitResidues .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#LowClouds
-:LowClouds rdf:type owl:NamedIndividual ,
-                    :CloudCover .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesChemicallyTreatedHerbaceousResidues
+:BlendsAndMixturesChemicallyTreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                                               :BiomassSubType ;
+                                                      <https://www.w3.org/ns/org#broader> :ChemicallyTreatedHerbaceousResidues .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#MaximumPrecipitation
-:MaximumPrecipitation rdf:type owl:NamedIndividual ,
-                               :Precipitation .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesChemicallyUntreatedFruitResidues
+:BlendsAndMixturesChemicallyUntreatedFruitResidues rdf:type owl:NamedIndividual ,
+                                                            :BiomassSubType ;
+                                                   <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedFruitResidues .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#MaximumTemperature
-:MaximumTemperature rdf:type owl:NamedIndividual ,
-                             :TemperatureAmbientProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesChemicallyUntreatedHerbaceousResidues
+:BlendsAndMixturesChemicallyUntreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                                                 :BiomassSubType ;
+                                                        <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedHerbaceousResidues .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Medium_Clouds
-:Medium_Clouds rdf:type owl:NamedIndividual ,
-                        :CloudCover .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesFlowers
+:BlendsAndMixturesFlowers rdf:type owl:NamedIndividual ,
+                                   :BiomassSubType ;
+                          <https://www.w3.org/ns/org#broader> :Flowers .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#MinimumPrecipitation
-:MinimumPrecipitation rdf:type owl:NamedIndividual ,
-                               :Precipitation .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesForestPlantation
+:BlendsAndMixturesForestPlantation rdf:type owl:NamedIndividual ,
+                                            :BiomassType ;
+                                   <https://www.w3.org/ns/org#broader> :ForestPlantation .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#MinimumTemperature
-:MinimumTemperature rdf:type owl:NamedIndividual ,
-                             :TemperatureAmbientProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesFruitBiomass
+:BlendsAndMixturesFruitBiomass rdf:type owl:NamedIndividual ,
+                                        :BiomassSubGroup ;
+                               <https://www.w3.org/ns/org#broader> :FruitBiomass .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Motion
-:Motion rdf:type owl:NamedIndividual ,
-                 :MotionProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesGrasses
+:BlendsAndMixturesGrasses rdf:type owl:NamedIndividual ,
+                                   :BiomassSubType ;
+                          <https://www.w3.org/ns/org#broader> :Grasses .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#MuscleMass
-:MuscleMass rdf:type owl:NamedIndividual ,
-                     :HealthProperty ;
-            rdfs:comment "Muscle mass is the amount of muscle in your body, including skeletal muscles, smooth muscles, and cardiac muscles." .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesHerbaceousBiomass
+:BlendsAndMixturesHerbaceousBiomass rdf:type owl:NamedIndividual ,
+                                             :BiomassSubGroup ;
+                                    <https://www.w3.org/ns/org#broader> :HerbaceousBiomass .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#NH3Concentration
-:NH3Concentration rdf:type owl:NamedIndividual ,
-                           :Ammonia ;
-                  rdfs:comment "Ammonia - NH3 - is a gas commonly used as a refrigerant in cooling systems." .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesHerbaceousBiomassFromAgricultureAndHorticulture
+:BlendsAndMixturesHerbaceousBiomassFromAgricultureAndHorticulture rdf:type owl:NamedIndividual ,
+                                                                           :BiomassType ;
+                                                                  <https://www.w3.org/ns/org#broader> :HerbaceousBiomassFromAgricultureAndHorticulture .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#NO2Concentration
-:NO2Concentration rdf:type owl:NamedIndividual ,
-                           :NitrogenDioxide .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesLeakAndSeaGrass
+:BlendsAndMixturesLeakAndSeaGrass rdf:type owl:NamedIndividual ,
+                                           :BiomassType ;
+                                  <https://www.w3.org/ns/org#broader> :LakeAndSeaGrass .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#NOConcentration
-:NOConcentration rdf:type owl:NamedIndividual ,
-                          :NitrogenMonoxide .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesLegumeCrops
+:BlendsAndMixturesLegumeCrops rdf:type owl:NamedIndividual ,
+                                       :BiomassSubType ;
+                              <https://www.w3.org/ns/org#broader> :LegumeCrops .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#NoiseLevel
-:NoiseLevel rdf:type owl:NamedIndividual ,
-                     :Sound .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesLoggingResidues
+:BlendsAndMixturesLoggingResidues rdf:type owl:NamedIndividual ,
+                                           :BiomassSubType ;
+                                  <https://www.w3.org/ns/org#broader> :LoggingResidues .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#O3Concentration
-:O3Concentration rdf:type owl:NamedIndividual ,
-                          :Ozone ;
-                 rdfs:comment "O3 Concentration" .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesNutsAndAcorns
+:BlendsAndMixturesNutsAndAcorns rdf:type owl:NamedIndividual ,
+                                         :BiomassSubType ;
+                                <https://www.w3.org/ns/org#broader> :NutsandAcorns .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Off
-:Off rdf:type owl:NamedIndividual ,
-              :StatusProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesOilSeedCrops
+:BlendsAndMixturesOilSeedCrops rdf:type owl:NamedIndividual ,
+                                        :BiomassSubType ;
+                               <https://www.w3.org/ns/org#broader> :OilSeedCrops .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#On
-:On rdf:type owl:NamedIndividual ,
-             :StatusProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesOrchardAndHorticultureFruit
+:BlendsAndMixturesOrchardAndHorticultureFruit rdf:type owl:NamedIndividual ,
+                                                       :BiomassType ;
+                                              <https://www.w3.org/ns/org#broader> :OrchardAndHorticultureFruit .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#OperationalStatus
-:OperationalStatus rdf:type owl:NamedIndividual ,
-                            :StatusProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesReeds
+:BlendsAndMixturesReeds rdf:type owl:NamedIndividual ,
+                                 :BiomassType ;
+                        <https://www.w3.org/ns/org#broader> :Reeds .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#OutdoorAmbientTemperature
-:OutdoorAmbientTemperature rdf:type owl:NamedIndividual ,
-                                    :TemperatureAmbientProperty .
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesRootCrops
+:BlendsAndMixturesRootCrops rdf:type owl:NamedIndividual ,
+                                     :BiomassSubType ;
+                            <https://www.w3.org/ns/org#broader> :RootCrops .
 
 
-###  https://auroral.iot.linkeddata.es/def/adapters#PM10Concentration
-:PM10Concentration rdf:type owl:NamedIndividual ,
-                            :CoarseParticulateMatter ;
-                   rdfs:comment """PM10 are very small particles found in dust and smoke. They have a diameter of 10 micrometres (0.01 mm) or smaller.
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesStemwood
+:BlendsAndMixturesStemwood rdf:type owl:NamedIndividual ,
+                                    :BiomassSubType ;
+                           <https://www.w3.org/ns/org#broader> :Stemwood .
 
-PM10 particles are a common air pollutant.""" .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesStumpsOrRoots
+:BlendsAndMixturesStumpsOrRoots rdf:type owl:NamedIndividual ,
+                                         :BiomassSubType ;
+                                <https://www.w3.org/ns/org#broader> :StumpsOrRoots ;
+                                rdfs:label "Blends And Mixtures Stumps or roots" .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#PM1Concentration
-:PM1Concentration rdf:type owl:NamedIndividual ,
-                           :UltraFineParticlesMatter .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesUsedWood
+:BlendsAndMixturesUsedWood rdf:type owl:NamedIndividual ,
+                                    :BiomassType ;
+                           <https://www.w3.org/ns/org#broader> :UsedWood .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#PM2_5Concentration
-:PM2_5Concentration rdf:type owl:NamedIndividual ,
-                             :FineParticlesMatter ;
-                    rdfs:comment "Fine particulate matter (PM2.5) is an air pollutant that is a concern for people's health when levels in air are high." .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesWholeTreesWithRoots
+:BlendsAndMixturesWholeTreesWithRoots rdf:type owl:NamedIndividual ,
+                                               :BiomassSubType ;
+                                      <https://www.w3.org/ns/org#broader> :WholeTreesWithRoots .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Paper
-:Paper rdf:type owl:NamedIndividual ,
-                :Waste .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesWholeTreesWithoutRoots
+:BlendsAndMixturesWholeTreesWithoutRoots rdf:type owl:NamedIndividual ,
+                                                  :BiomassSubType ;
+                                         <https://www.w3.org/ns/org#broader> :WholeTreesWithoutRoots .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Periodic
-:Periodic rdf:type owl:NamedIndividual ,
-                   :ActReason .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BlendsAndMixturesWoodyBiomass
+:BlendsAndMixturesWoodyBiomass rdf:type owl:NamedIndividual ,
+                                        :BiomassSubGroup ;
+                               <https://www.w3.org/ns/org#broader> :WoodyBiomass .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#PlasticPackaging
-:PlasticPackaging rdf:type owl:NamedIndividual ,
-                           :Waste .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BroadLeafStumpsOrRoots
+:BroadLeafStumpsOrRoots rdf:type owl:NamedIndividual ,
+                                 :BiomassSubType ;
+                        <https://www.w3.org/ns/org#broader> :StumpsOrRoots .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#PowerFactor
-:PowerFactor rdf:type owl:NamedIndividual ,
-                      :EnergyProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BroadLeafWholeTreesWithRoots
+:BroadLeafWholeTreesWithRoots rdf:type owl:NamedIndividual ,
+                                       :BiomassSubType ;
+                              <https://www.w3.org/ns/org#broader> :WholeTreesWithRoots .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#PowerOn
-:PowerOn rdf:type owl:NamedIndividual ,
-                  :ActReason .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BroadLeafWholeTreesWithoutRoots
+:BroadLeafWholeTreesWithoutRoots rdf:type owl:NamedIndividual ,
+                                          :BiomassSubType ;
+                                 <https://www.w3.org/ns/org#broader> :WholeTreesWithoutRoots .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#ProbabilityPrecipitation
-:ProbabilityPrecipitation rdf:type owl:NamedIndividual ,
-                                   :Precipitation .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BroadLeafWithBarkChemicallyUntreatedWoodByProductsAndResidues
+:BroadLeafWithBarkChemicallyUntreatedWoodByProductsAndResidues rdf:type owl:NamedIndividual ,
+                                                                        :BiomassSubType ;
+                                                               <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedWoodbyProductsAndResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Protein
-:Protein rdf:type owl:NamedIndividual ,
-                  :HealthProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BroadLeafWithBarkStemwood
+:BroadLeafWithBarkStemwood rdf:type owl:NamedIndividual ,
+                                    :BiomassSubType ;
+                           <https://www.w3.org/ns/org#broader> :Stemwood .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Pulse
-:Pulse rdf:type owl:NamedIndividual ,
-                :HealthProperty ;
-       rdfs:comment "The rhythmic dilation of an artery that results from beating of the heart. Pulse is often measured by feeling the arteries of the wrist or neck." .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BroadLeafWithoutBarkChemicallyUntreatedWoodByProductsAndResidues
+:BroadLeafWithoutBarkChemicallyUntreatedWoodByProductsAndResidues rdf:type owl:NamedIndividual ,
+                                                                           :BiomassSubType ;
+                                                                  <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedWoodbyProductsAndResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Rainfall
-:Rainfall rdf:type owl:NamedIndividual ,
-                   :Precipitation .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BroadLeafWithoutBarkStemwood
+:BroadLeafWithoutBarkStemwood rdf:type owl:NamedIndividual ,
+                                       :BiomassSubType ;
+                              <https://www.w3.org/ns/org#broader> :Stemwood .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#ReactiveCpacitiveEnergy
-:ReactiveCpacitiveEnergy rdf:type owl:NamedIndividual ,
-                                  :EnergyProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BrownSeaWeed
+:BrownSeaWeed rdf:type owl:NamedIndividual ,
+                       :BiomassSubType ;
+              <https://www.w3.org/ns/org#broader> :MacroAlgae .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#ReactiveInductiveEnergy
-:ReactiveInductiveEnergy rdf:type owl:NamedIndividual ,
-                                  :EnergyProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BushesStumpsOrRoots
+:BushesStumpsOrRoots rdf:type owl:NamedIndividual ,
+                              :BiomassSubType ;
+                     <https://www.w3.org/ns/org#broader> :StumpsOrRoots .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#RelativeHumidity
-:RelativeHumidity rdf:type owl:NamedIndividual ,
-                           :HumidityAmbientProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BushesWholeTreesWithRoots
+:BushesWholeTreesWithRoots rdf:type owl:NamedIndividual ,
+                                    :BiomassSubType ;
+                           <https://www.w3.org/ns/org#broader> :WholeTreesWithRoots .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#RelayStatus
-:RelayStatus rdf:type owl:NamedIndividual ,
-                      :StatusProperty ;
-             rdfs:comment "Relay Status" .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#BushesWholeTreesWithoutRoots
+:BushesWholeTreesWithoutRoots rdf:type owl:NamedIndividual ,
+                                       :BiomassSubType ;
+                              <https://www.w3.org/ns/org#broader> :WholeTreesWithoutRoots .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#ReturnedEnergy
-:ReturnedEnergy rdf:type owl:NamedIndividual ,
-                         :EnergyProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ByProductsAndResiduesFromFoodAndFruitProcessingIndustry
+:ByProductsAndResiduesFromFoodAndFruitProcessingIndustry rdf:type owl:NamedIndividual ,
+                                                                  :BiomassSubGroup ;
+                                                         <https://www.w3.org/ns/org#broader> :FruitBiomass ;
+                                                         <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesByProductsAndResiduesFromFoodAndFruitProcessingIndustry ,
+                                                                                              :ChemicallyTreatedFruitResidues ,
+                                                                                              :ChemicallyUntreatedFruitResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#SO2Concentration
-:SO2Concentration rdf:type owl:NamedIndividual ,
-                           :SulphurDioxide .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ByProductsAndResiduesFromWoodProcessingIndustry
+:ByProductsAndResiduesFromWoodProcessingIndustry rdf:type owl:NamedIndividual ,
+                                                          :BiomassSubGroup ;
+                                                 <https://www.w3.org/ns/org#broader> :WoodyBiomass ;
+                                                 <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesByProductsAndResiduesFromWoodProcessingIndustry ,
+                                                                                      :ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents ,
+                                                                                      :ChemicallyUntreatedWoodbyProductsAndResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#SelectableStatus
-:SelectableStatus rdf:type owl:NamedIndividual ,
-                           :StatusProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry
+:ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry rdf:type owl:NamedIndividual ,
+                                                                       :BiomassSubGroup ;
+                                                              <https://www.w3.org/ns/org#broader> :HerbaceousBiomass ;
+                                                              <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesByProductsAndResiduesFromFoodAndHerbaceousProcesingIndustry ,
+                                                                                                   :ChemicallyTreatedHerbaceousResidues ,
+                                                                                                   :ChemicallyUntreatedHerbaceousResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Sensor
-:Sensor rdf:type owl:NamedIndividual ,
-                 :ActReason ;
-        rdfs:comment "it responds to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result" .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#CerealCrops
+:CerealCrops rdf:type owl:NamedIndividual ,
+                      :BiomassType ;
+             <https://www.w3.org/ns/org#broader> :HerbaceousBiomassFromAgricultureAndHorticulture ;
+             <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesCerealCrops ,
+                                                  :GrainsOrSeedsCerealCrops ,
+                                                  :HusksOrShellsCerealCrops ,
+                                                  :StrawPartsCerealCrops ,
+                                                  :WholePlantCerealCrops .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#ShortwaveRadiationInstant
-:ShortwaveRadiationInstant rdf:type owl:NamedIndividual ,
-                                    :AmbientSolarRadiation .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#CerealCropsAndGrasses
+:CerealCropsAndGrasses rdf:type owl:NamedIndividual ,
+                                :BiomassSubType ;
+                       <https://www.w3.org/ns/org#broader> :ChemicallyTreatedHerbaceousResidues ,
+                                                           :ChemicallyUntreatedHerbaceousResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Sleep
-:Sleep rdf:type owl:NamedIndividual ,
-                :HealthProperty ;
-       rdfs:comment "control the sleep disorders of a patient" .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#CerealCropsAndGrassesChemicallyTreatedherbaceousResidues
+:CerealCropsAndGrassesChemicallyTreatedherbaceousResidues rdf:type owl:NamedIndividual ,
+                                                                   :BiomassSubType ;
+                                                          <https://www.w3.org/ns/org#broader> :ChemicallyTreatedHerbaceousResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Snowfall
-:Snowfall rdf:type owl:NamedIndividual ,
-                   :Precipitation .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#CerealCropsAndGrassesChemicallyUntreatedHerbaceousResidues
+:CerealCropsAndGrassesChemicallyUntreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                                                     :BiomassSubType ;
+                                                            <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedHerbaceousResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Steps
-:Steps rdf:type owl:NamedIndividual ,
-                :MotionProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ChemicallyTreatedFruitResidues
+:ChemicallyTreatedFruitResidues rdf:type owl:NamedIndividual ,
+                                         :BiomassType ;
+                                <https://www.w3.org/ns/org#broader> :ByProductsAndResiduesFromFoodAndFruitProcessingIndustry ;
+                                <https://www.w3.org/ns/org#narrower> :BerriesChemicallyTreatedFruitResidues ,
+                                                                     :BlendsAndMixturesChemicallyTreatedFruitResidues ,
+                                                                     :ExhaustedOliveCakeChemicallyTreatedFruitResidues ,
+                                                                     :NutsAndAcornsChemicallyTreatedFruitResidues ,
+                                                                     :StoneOrKernelFruitsChemicallyTreatedFruitResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#SugarLevel
-:SugarLevel rdf:type owl:NamedIndividual ,
-                     :HealthProperty ;
-            rdfs:comment "A blood sugar level less than 140 mg/dL (7.8 mmol/L) is normal. A reading of more than 200 mg/dL (11.1 mmol/L) after two hours means you have diabetes. A reading between 140 and 199 mg/dL (7.8 mmol/L and 11.0 mmol/L) means you have prediabetes." .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ChemicallyTreatedHerbaceousResidues
+:ChemicallyTreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                              :BiomassType ;
+                                     <https://www.w3.org/ns/org#broader> :ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry ;
+                                     <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesChemicallyTreatedHerbaceousResidues ,
+                                                                          :CerealCropsAndGrassesChemicallyTreatedherbaceousResidues ,
+                                                                          :FlowersChemicallyTreatedHerbaceousResidues ,
+                                                                          :LegumeCropsChemicallyTreatedHerbaceousResidues ,
+                                                                          :OilSeedCropsChemicallyTreatedHerbaceousResidues ,
+                                                                          :RootCropsChemicallyTreatedHerbaceousResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#SystolicBloodPressure
-:SystolicBloodPressure rdf:type owl:NamedIndividual ,
-                                :HealthProperty ;
-                       rdfs:comment "niveau de systolic blood pressure for a patient" .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ChemicallyTreatedUsedWood
+:ChemicallyTreatedUsedWood rdf:type owl:NamedIndividual ,
+                                    :BiomassType ;
+                           <https://www.w3.org/ns/org#broader> :UsedWood ;
+                           <https://www.w3.org/ns/org#narrower> :BarkChemicallyTreatedUsedWood ,
+                                                                :WithBarkChemicallyTreatedUsedWood ,
+                                                                :WithoutBarkChemicallyTreatedUsedWood .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiation
-:TerrestrialRadiation rdf:type owl:NamedIndividual ,
-                               :AmbientSolarRadiation .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents
+:ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents rdf:type owl:NamedIndividual ,
+                                                                           :BiomassType ;
+                                                                  <https://www.w3.org/ns/org#broader> :ByProductsAndResiduesFromWoodProcessingIndustry ;
+                                                                  <https://www.w3.org/ns/org#narrower> :BarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents ,
+                                                                                                       :FibresAndWoodConstituentsChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents ,
+                                                                                                       :WithBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents ,
+                                                                                                       :WithoutBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#TerrestrialRadiationInstant
-:TerrestrialRadiationInstant rdf:type owl:NamedIndividual ,
-                                      :AmbientSolarRadiation .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ChemicallyUntreatedFruitResidues
+:ChemicallyUntreatedFruitResidues rdf:type owl:NamedIndividual ,
+                                           :BiomassType ;
+                                  <https://www.w3.org/ns/org#broader> :ByProductsAndResiduesFromFoodAndFruitProcessingIndustry ;
+                                  <https://www.w3.org/ns/org#narrower> :BerriesChemicallyUntreatedFruitResidues ,
+                                                                       :BlendsAndMixturesChemicallyUntreatedFruitResidues ,
+                                                                       :CrudeOliveCakeChemicallyUntreatedFruitResidues ,
+                                                                       :NutsAndAcornsChemicallyUntreatedFruitResidues ,
+                                                                       :StoneOrKernelFruitsOrFruitFibreChemicallyUntreatedFruitResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Thunder
-:Thunder rdf:type owl:NamedIndividual ,
-                  :Weather .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ChemicallyUntreatedHerbaceousResidues
+:ChemicallyUntreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                                :BiomassType ;
+                                       <https://www.w3.org/ns/org#broader> :ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry ;
+                                       <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesChemicallyUntreatedHerbaceousResidues ,
+                                                                            :CerealCropsAndGrassesChemicallyUntreatedHerbaceousResidues ,
+                                                                            :FlowersChemicallyUntreatedHerbaceousResidues ,
+                                                                            :LegumeCropsChemicallyUntreatedHerbaceousResidues ,
+                                                                            :OilSeedCropsChemicallyUntreatedHerbaceousResidues ,
+                                                                            :RootCropsChemicallyUntreatedHerbaceousResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#TotalBodyWaterPercentage
-:TotalBodyWaterPercentage rdf:type owl:NamedIndividual ,
-                                   :HealthProperty ;
-                          rdfs:comment "Most of the human body is water, with an average of roughly 60%. The amount of water in the body changes slightly with age, sex, and hydration levels." .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ChemicallyUntreatedUsedWood
+:ChemicallyUntreatedUsedWood rdf:type owl:NamedIndividual ,
+                                      :BiomassType ;
+                             <https://www.w3.org/ns/org#broader> :UsedWood ;
+                             <https://www.w3.org/ns/org#narrower> :BarkChemicallyUntreatedUsedWood ,
+                                                                  :WithBrakChemicallyUntreatedUsedWood ,
+                                                                  :WithoutBarkChemicallyUntreatedUsedWood .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#TotalEnergy
-:TotalEnergy rdf:type owl:NamedIndividual ,
-                      :EnergyProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ChemicallyUntreatedWoodbyProductsAndResidues
+:ChemicallyUntreatedWoodbyProductsAndResidues rdf:type owl:NamedIndividual ,
+                                                       :BiomassType ;
+                                              <https://www.w3.org/ns/org#broader> :ByProductsAndResiduesFromWoodProcessingIndustry ;
+                                              <https://www.w3.org/ns/org#narrower> :BarkChemicallyUntreatedWoodByProductsAndResidues ,
+                                                                                   :BroadLeafWithBarkChemicallyUntreatedWoodByProductsAndResidues ,
+                                                                                   :BroadLeafWithoutBarkChemicallyUntreatedWoodByProductsAndResidues ,
+                                                                                   :ConiferousWithBrakChemicallyUntreatedWoodByProductsAndResidues ,
+                                                                                   :ConiferousWithoutBarkChemicallyUntreatedWoodByProductsAndResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#UVIndex
-:UVIndex rdf:type owl:NamedIndividual ,
-                  :AmbientSolarRadiation .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#CommonReed
+:CommonReed rdf:type owl:NamedIndividual ,
+                     :BiomassType ;
+            <https://www.w3.org/ns/org#broader> :Reeds .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Unavailable
-:Unavailable rdf:type owl:NamedIndividual ,
-                      :StatusProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ConiferousStumpsOrRoots
+:ConiferousStumpsOrRoots rdf:type owl:NamedIndividual ,
+                                  :BiomassSubType ;
+                         <https://www.w3.org/ns/org#broader> :StumpsOrRoots .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Vibration
-:Vibration rdf:type owl:NamedIndividual ,
-                    :MotionProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ConiferousWholeTreesWithRoots
+:ConiferousWholeTreesWithRoots rdf:type owl:NamedIndividual ,
+                                        :BiomassSubType ;
+                               <https://www.w3.org/ns/org#broader> :WholeTreesWithRoots .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#VisceralFatRating
-:VisceralFatRating rdf:type owl:NamedIndividual ,
-                            :HealthProperty ;
-                   rdfs:comment "According to the manufacturer's information, a rating between 1 and 12 indicates a healthy level of visceral fat, whereas a rating between 13 and 59 indicates excess visceral fat." .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ConiferousWholeTreesWithoutRoots
+:ConiferousWholeTreesWithoutRoots rdf:type owl:NamedIndividual ,
+                                           :BiomassSubType ;
+                                  <https://www.w3.org/ns/org#broader> :WholeTreesWithoutRoots .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#WeatherCondition
-:WeatherCondition rdf:type owl:NamedIndividual ,
-                           :Weather .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ConiferousWithBarkStemwood
+:ConiferousWithBarkStemwood rdf:type owl:NamedIndividual ,
+                                     :BiomassSubType ;
+                            <https://www.w3.org/ns/org#broader> :Stemwood .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#Weight
-:Weight rdf:type owl:NamedIndividual ,
-                 :HealthProperty ;
-        rdfs:comment "Weight of patient" .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ConiferousWithBrakChemicallyUntreatedWoodByProductsAndResidues
+:ConiferousWithBrakChemicallyUntreatedWoodByProductsAndResidues rdf:type owl:NamedIndividual ,
+                                                                         :BiomassSubType ;
+                                                                <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedWoodbyProductsAndResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#WindGust
-:WindGust rdf:type owl:NamedIndividual ,
-                   :WindAmbientProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ConiferousWithoutBarkChemicallyUntreatedWoodByProductsAndResidues
+:ConiferousWithoutBarkChemicallyUntreatedWoodByProductsAndResidues rdf:type owl:NamedIndividual ,
+                                                                            :BiomassSubType ;
+                                                                   <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedWoodbyProductsAndResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#XAxisAcceleration
-:XAxisAcceleration rdf:type owl:NamedIndividual ,
-                            :SpaceProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ConiferousWithoutBarkStemwood
+:ConiferousWithoutBarkStemwood rdf:type owl:NamedIndividual ,
+                                        :BiomassSubType ;
+                               <https://www.w3.org/ns/org#broader> :Stemwood .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#YAxisAcceleration
-:YAxisAcceleration rdf:type owl:NamedIndividual ,
-                            :SpaceProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#CrudeOliveCakeChemicallyUntreatedFruitResidues
+:CrudeOliveCakeChemicallyUntreatedFruitResidues rdf:type owl:NamedIndividual ,
+                                                         :BiomassSubType ;
+                                                <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedFruitResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#ZAxisAcceleration
-:ZAxisAcceleration rdf:type owl:NamedIndividual ,
-                            :SpaceProperty .
 
+###  https://auroral.iot.linkeddata.es/def/biomass#ExhaustedOliveCakeChemicallyTreatedFruitResidues
+:ExhaustedOliveCakeChemicallyTreatedFruitResidues rdf:type owl:NamedIndividual ,
+                                                           :BiomassSubType ;
+                                                  <https://www.w3.org/ns/org#broader> :ChemicallyTreatedFruitResidues .
 
-###  https://auroral.iot.linkeddata.es/def/adapters#windSpeed
-:windSpeed rdf:type owl:NamedIndividual ,
-                    :WindAmbientProperty .
+
+###  https://auroral.iot.linkeddata.es/def/biomass#FibresAndWoodConstituentsChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents
+:FibresAndWoodConstituentsChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents rdf:type owl:NamedIndividual ,
+                                                                                                    :BiomassSubType ;
+                                                                                           <https://www.w3.org/ns/org#broader> :ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#FleshBerries
+:FleshBerries rdf:type owl:NamedIndividual ,
+                       :BiomassSubType .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#FleshStoneOrKernelFruits
+:FleshStoneOrKernelFruits rdf:type owl:NamedIndividual ,
+                                   :BiomassSubType ;
+                          <https://www.w3.org/ns/org#broader> :StoneOrKernelFruits .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#Flowers
+:Flowers rdf:type owl:NamedIndividual ,
+                  :BiomassType ;
+         <https://www.w3.org/ns/org#broader> :HerbaceousBiomassFromAgricultureAndHorticulture ;
+         <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesFlowers ,
+                                              :SeedsFlowers ,
+                                              :StalksAndLeavesFlowers ,
+                                              :WholePlantFlowers .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#FlowersChemicallyTreatedHerbaceousResidues
+:FlowersChemicallyTreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                                     :BiomassSubType ;
+                                            <https://www.w3.org/ns/org#broader> :ChemicallyTreatedHerbaceousResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#FlowersChemicallyUntreatedHerbaceousResidues
+:FlowersChemicallyUntreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                                       :BiomassSubType ;
+                                              <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedHerbaceousResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#ForestPlantation
+:ForestPlantation rdf:type owl:NamedIndividual ,
+                           :BiomassSubGroup ;
+                  <https://www.w3.org/ns/org#broader> :WoodyBiomass ;
+                  <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesForestPlantation ,
+                                                       :LoggingResidues ,
+                                                       :SegregatedWoodFromGardensParksRoadsideMaintenanceVineyardsFruitOrchardsAndDriftwoodFromFreshwater ,
+                                                       :Stemwood ,
+                                                       :StumpsOrRoots ,
+                                                       :WholeTreesWithRoots ,
+                                                       :WholeTreesWithoutRoots .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#FreshOrGreenBroadLeaf
+:FreshOrGreenBroadLeaf rdf:type owl:NamedIndividual ,
+                                :BiomassSubType ;
+                       <https://www.w3.org/ns/org#broader> :LoggingResidues ;
+                       rdfs:comment "Fresh or green broad leaf  (including leaves)" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#FreshOrGreenConiferous
+:FreshOrGreenConiferous rdf:type owl:NamedIndividual ,
+                                 :BiomassSubType ;
+                        <https://www.w3.org/ns/org#broader> :LoggingResidues ;
+                        rdfs:comment "Fresh or green coniferous (including needles)" .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#FruitBiomass
+:FruitBiomass rdf:type owl:NamedIndividual ,
+                       :BiomassGroup ;
+              <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesFruitBiomass ,
+                                                   :ByProductsAndResiduesFromFoodAndFruitProcessingIndustry ,
+                                                   :OrchardAndHorticultureFruit .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#FruitLegumeCrops
+:FruitLegumeCrops rdf:type owl:NamedIndividual ,
+                           :BiomassSubType ;
+                  <https://www.w3.org/ns/org#broader> :LegumeCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#GrainsOrSeedsCerealCrops
+:GrainsOrSeedsCerealCrops rdf:type owl:NamedIndividual ,
+                                   :BiomassSubType ;
+                          <https://www.w3.org/ns/org#broader> :CerealCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#Grasses
+:Grasses rdf:type owl:NamedIndividual ,
+                  :BiomassType ;
+         <https://www.w3.org/ns/org#broader> :HerbaceousBiomassFromAgricultureAndHorticulture ;
+         <https://www.w3.org/ns/org#narrower> :BambooGrasses ,
+                                              :BlendsAndMixturesGrasses ,
+                                              :SeedsGrasses ,
+                                              :ShellsGrasses ,
+                                              :StrawPartsGrasses ,
+                                              :WholePlantGrasses .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#GreenSeaWeed
+:GreenSeaWeed rdf:type owl:NamedIndividual ,
+                       :BiomassSubType ;
+              <https://www.w3.org/ns/org#broader> :MacroAlgae .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#HerbaceousBiomass
+:HerbaceousBiomass rdf:type owl:NamedIndividual ,
+                            :BiomassGroup ;
+                   <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesHerbaceousBiomass ,
+                                                        :ByProductsAndresiduesFromFoodAndHerbaceousProcessingIndustry ,
+                                                        :HerbaceousBiomassFromAgricultureAndHorticulture .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#HerbaceousBiomassFromAgricultureAndHorticulture
+:HerbaceousBiomassFromAgricultureAndHorticulture rdf:type owl:NamedIndividual ,
+                                                          :BiomassSubGroup ;
+                                                 <https://www.w3.org/ns/org#broader> :HerbaceousBiomass ;
+                                                 <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesHerbaceousBiomassFromAgricultureAndHorticulture ,
+                                                                                      :CerealCrops ,
+                                                                                      :Flowers ,
+                                                                                      :Grasses ,
+                                                                                      :LegumeCrops ,
+                                                                                      :OilSeedCrops ,
+                                                                                      :RootCrops ,
+                                                                                      :SegregatedHerbaceousBiomassFromGardensParksRoadsideMaintenanceVineyardsAndFruitOrchards .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#HusksOrShellsCerealCrops
+:HusksOrShellsCerealCrops rdf:type owl:NamedIndividual ,
+                                   :BiomassSubType ;
+                          <https://www.w3.org/ns/org#broader> :CerealCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#HusksOrShellsOilSeedCrops
+:HusksOrShellsOilSeedCrops rdf:type owl:NamedIndividual ,
+                                    :BiomassSubType ;
+                           <https://www.w3.org/ns/org#broader> :OilSeedCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#KernelsNutsAndAcorns
+:KernelsNutsAndAcorns rdf:type owl:NamedIndividual ,
+                               :BiomassSubType ;
+                      <https://www.w3.org/ns/org#broader> :NutsandAcorns .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#LakeAndSeaGrass
+:LakeAndSeaGrass rdf:type owl:NamedIndividual ,
+                          :BiomassSubGroup ;
+                 <https://www.w3.org/ns/org#broader> :AquaticBiomass ;
+                 <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesLeakAndSeaGrass ,
+                                                      :LakeGrass ,
+                                                      :SeaGrass .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#LakeGrass
+:LakeGrass rdf:type owl:NamedIndividual ,
+                    :BiomassType ;
+           <https://www.w3.org/ns/org#broader> :LakeAndSeaGrass .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#LegumeCrops
+:LegumeCrops rdf:type owl:NamedIndividual ,
+                      :BiomassType ;
+             <https://www.w3.org/ns/org#broader> :HerbaceousBiomassFromAgricultureAndHorticulture ;
+             <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesLegumeCrops ,
+                                                  :FruitLegumeCrops ,
+                                                  :PodsLegumeCrops ,
+                                                  :StalksAndLeavesLegumeCrops ,
+                                                  :WholePlantLegumeCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#LegumeCropsChemicallyTreatedHerbaceousResidues
+:LegumeCropsChemicallyTreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                                         :BiomassSubType ;
+                                                <https://www.w3.org/ns/org#broader> :ChemicallyTreatedHerbaceousResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#LegumeCropsChemicallyUntreatedHerbaceousResidues
+:LegumeCropsChemicallyUntreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                                           :BiomassSubType ;
+                                                  <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedHerbaceousResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#LoggingResidues
+:LoggingResidues rdf:type owl:NamedIndividual ,
+                          :BiomassType ;
+                 <https://www.w3.org/ns/org#broader> :ForestPlantation ;
+                 <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesLoggingResidues ,
+                                                      :FreshOrGreenBroadLeaf ,
+                                                      :FreshOrGreenConiferous ,
+                                                      :StoredBroadLeaf ,
+                                                      :StoredConiferous .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#MacroAlgae
+:MacroAlgae rdf:type owl:NamedIndividual ,
+                     :BiomassType ;
+            <https://www.w3.org/ns/org#broader> :Algae ;
+            <https://www.w3.org/ns/org#narrower> :BrownSeaWeed ,
+                                                 :GreenSeaWeed ,
+                                                 :RedSeaWeed .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#MicroAlgae
+:MicroAlgae rdf:type owl:NamedIndividual ,
+                     :BiomassType ;
+            <https://www.w3.org/ns/org#broader> :Algae .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#Mixtures
+:Mixtures rdf:type owl:NamedIndividual ,
+                   :BiomassSubGroup .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#NutsAndAcornsChemicallyTreatedFruitResidues
+:NutsAndAcornsChemicallyTreatedFruitResidues rdf:type owl:NamedIndividual ,
+                                                      :BiomassSubType ;
+                                             <https://www.w3.org/ns/org#broader> :ChemicallyTreatedFruitResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#NutsAndAcornsChemicallyUntreatedFruitResidues
+:NutsAndAcornsChemicallyUntreatedFruitResidues rdf:type owl:NamedIndividual ,
+                                                        :BiomassSubType ;
+                                               <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedFruitResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#NutsandAcorns
+:NutsandAcorns rdf:type owl:NamedIndividual ,
+                        :BiomassType ;
+               <https://www.w3.org/ns/org#broader> :OrchardAndHorticultureFruit ;
+               <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesNutsAndAcorns ,
+                                                    :KernelsNutsAndAcorns ,
+                                                    :ShellsOrHusksNutsAndAcorns ,
+                                                    :WholeNuts .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#OilSeedCrops
+:OilSeedCrops rdf:type owl:NamedIndividual ,
+                       :BiomassType ;
+              <https://www.w3.org/ns/org#broader> :HerbaceousBiomassFromAgricultureAndHorticulture ;
+              <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesOilSeedCrops ,
+                                                   :HusksOrShellsOilSeedCrops ,
+                                                   :SeedsOilSeedCrops ,
+                                                   :StalksAndLeavesOilSeedCrops ,
+                                                   :WholePlantOilSeedCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#OilSeedCropsChemicallyTreatedHerbaceousResidues
+:OilSeedCropsChemicallyTreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                                          :BiomassSubType ;
+                                                 <https://www.w3.org/ns/org#broader> :ChemicallyTreatedHerbaceousResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#OilSeedCropsChemicallyUntreatedHerbaceousResidues
+:OilSeedCropsChemicallyUntreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                                            :BiomassSubType ;
+                                                   <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedHerbaceousResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#OrchardAndHorticultureFruit
+:OrchardAndHorticultureFruit rdf:type owl:NamedIndividual ,
+                                      :BiomassSubGroup ;
+                             <https://www.w3.org/ns/org#broader> :FruitBiomass ;
+                             <https://www.w3.org/ns/org#narrower> :Berries ,
+                                                                  :BlendsAndMixturesOrchardAndHorticultureFruit ,
+                                                                  :NutsandAcorns ,
+                                                                  :StoneOrKernelFruits .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#OtherReed
+:OtherReed rdf:type owl:NamedIndividual ,
+                    :BiomassType ;
+           <https://www.w3.org/ns/org#broader> :Reeds .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#PodsLegumeCrops
+:PodsLegumeCrops rdf:type owl:NamedIndividual ,
+                          :BiomassSubType ;
+                 <https://www.w3.org/ns/org#broader> :LegumeCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#PrimaryEnergyCost
+:PrimaryEnergyCost rdf:type owl:NamedIndividual ,
+                            :BiomassEnergyPrice .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#PrimaryEnergyCostObs
+:PrimaryEnergyCostObs rdf:type owl:NamedIndividual ,
+                               :BiomassEnergyPrice .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#RedSeaWeed
+:RedSeaWeed rdf:type owl:NamedIndividual ,
+                     :BiomassSubType ;
+            <https://www.w3.org/ns/org#broader> :MacroAlgae .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#Reeds
+:Reeds rdf:type owl:NamedIndividual ,
+                :BiomassSubGroup ;
+       <https://www.w3.org/ns/org#broader> :AquaticBiomass ;
+       <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesReeds ,
+                                            :CommonReed ,
+                                            :OtherReed .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#RootCrops
+:RootCrops rdf:type owl:NamedIndividual ,
+                    :BiomassType ;
+           <https://www.w3.org/ns/org#broader> :HerbaceousBiomassFromAgricultureAndHorticulture ;
+           <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesRootCrops ,
+                                                :RootRootCrops ,
+                                                :StalksAndLeavesRootCrops ,
+                                                :WholePlantRootCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#RootCropsChemicallyTreatedHerbaceousResidues
+:RootCropsChemicallyTreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                                       :BiomassSubType ;
+                                              <https://www.w3.org/ns/org#broader> :ChemicallyTreatedHerbaceousResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#RootCropsChemicallyUntreatedHerbaceousResidues
+:RootCropsChemicallyUntreatedHerbaceousResidues rdf:type owl:NamedIndividual ,
+                                                         :BiomassSubType ;
+                                                <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedHerbaceousResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#RootRootCrops
+:RootRootCrops rdf:type owl:NamedIndividual ,
+                        :BiomassSubType ;
+               <https://www.w3.org/ns/org#broader> :RootCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#SeaGrass
+:SeaGrass rdf:type owl:NamedIndividual ,
+                   :BiomassType ;
+          <https://www.w3.org/ns/org#broader> :LakeAndSeaGrass .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#SeedsBerries
+:SeedsBerries rdf:type owl:NamedIndividual ,
+                       :BiomassSubType .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#SeedsFlowers
+:SeedsFlowers rdf:type owl:NamedIndividual ,
+                       :BiomassSubType ;
+              <https://www.w3.org/ns/org#broader> :Flowers .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#SeedsGrasses
+:SeedsGrasses rdf:type owl:NamedIndividual ,
+                       :BiomassSubType ;
+              <https://www.w3.org/ns/org#broader> :Grasses .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#SeedsOilSeedCrops
+:SeedsOilSeedCrops rdf:type owl:NamedIndividual ,
+                            :BiomassSubType ;
+                   <https://www.w3.org/ns/org#broader> :OilSeedCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#SegregatedHerbaceousBiomassFromGardensParksRoadsideMaintenanceVineyardsAndFruitOrchards
+:SegregatedHerbaceousBiomassFromGardensParksRoadsideMaintenanceVineyardsAndFruitOrchards rdf:type owl:NamedIndividual ,
+                                                                                                  :BiomassType ;
+                                                                                         <https://www.w3.org/ns/org#broader> :HerbaceousBiomassFromAgricultureAndHorticulture .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#SegregatedWoodFromGardensParksRoadsideMaintenanceVineyardsFruitOrchardsAndDriftwoodFromFreshwater
+:SegregatedWoodFromGardensParksRoadsideMaintenanceVineyardsFruitOrchardsAndDriftwoodFromFreshwater rdf:type owl:NamedIndividual ,
+                                                                                                            :BiomassType ;
+                                                                                                   <https://www.w3.org/ns/org#broader> :ForestPlantation .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#ShellsGrasses
+:ShellsGrasses rdf:type owl:NamedIndividual ,
+                        :BiomassSubType ;
+               <https://www.w3.org/ns/org#broader> :Grasses .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#ShellsOrHusksNutsAndAcorns
+:ShellsOrHusksNutsAndAcorns rdf:type owl:NamedIndividual ,
+                                     :BiomassSubType ;
+                            <https://www.w3.org/ns/org#broader> :NutsandAcorns .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#ShortRotationCoppiceStumpsOrRoots
+:ShortRotationCoppiceStumpsOrRoots rdf:type owl:NamedIndividual ,
+                                            :BiomassSubType ;
+                                   <https://www.w3.org/ns/org#broader> :StumpsOrRoots .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#ShortRotationCoppiceWholeTreesWithRoots
+:ShortRotationCoppiceWholeTreesWithRoots rdf:type owl:NamedIndividual ,
+                                                  :BiomassSubType ;
+                                         <https://www.w3.org/ns/org#broader> :WholeTreesWithRoots .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#ShortRotationCoppiceWholeTreesWithoutRoots
+:ShortRotationCoppiceWholeTreesWithoutRoots rdf:type owl:NamedIndividual ,
+                                                     :BiomassSubType ;
+                                            <https://www.w3.org/ns/org#broader> :WholeTreesWithoutRoots .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StalksAndLeavesFlowers
+:StalksAndLeavesFlowers rdf:type owl:NamedIndividual ,
+                                 :BiomassSubType ;
+                        <https://www.w3.org/ns/org#broader> :Flowers .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StalksAndLeavesLegumeCrops
+:StalksAndLeavesLegumeCrops rdf:type owl:NamedIndividual ,
+                                     :BiomassSubType ;
+                            <https://www.w3.org/ns/org#broader> :LegumeCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StalksAndLeavesOilSeedCrops
+:StalksAndLeavesOilSeedCrops rdf:type owl:NamedIndividual ,
+                                      :BiomassSubType ;
+                             <https://www.w3.org/ns/org#broader> :OilSeedCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StalksAndLeavesRootCrops
+:StalksAndLeavesRootCrops rdf:type owl:NamedIndividual ,
+                                   :BiomassSubType ;
+                          <https://www.w3.org/ns/org#broader> :RootCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#Stemwood
+:Stemwood rdf:type owl:NamedIndividual ,
+                   :BiomassType ;
+          <https://www.w3.org/ns/org#broader> :ForestPlantation ;
+          <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesStemwood ,
+                                               :BroadLeafWithBarkStemwood ,
+                                               :BroadLeafWithoutBarkStemwood ,
+                                               :ConiferousWithBarkStemwood ,
+                                               :ConiferousWithoutBarkStemwood .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StoneOrKernelFruits
+:StoneOrKernelFruits rdf:type owl:NamedIndividual ,
+                              :BiomassType ;
+                     <https://www.w3.org/ns/org#broader> :OrchardAndHorticultureFruit ;
+                     <https://www.w3.org/ns/org#narrower> :BlendsAndMIxturesStoneOrKernelFruit ,
+                                                          :FleshStoneOrKernelFruits ,
+                                                          :StoneOrKernelOrFruitFibreStoneOrKernelFruit ,
+                                                          :WholeFruitStoneOrKernelFruits .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StoneOrKernelFruitsChemicallyTreatedFruitResidues
+:StoneOrKernelFruitsChemicallyTreatedFruitResidues rdf:type owl:NamedIndividual ,
+                                                            :BiomassSubType ;
+                                                   <https://www.w3.org/ns/org#broader> :ChemicallyTreatedFruitResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StoneOrKernelFruitsOrFruitFibreChemicallyUntreatedFruitResidues
+:StoneOrKernelFruitsOrFruitFibreChemicallyUntreatedFruitResidues rdf:type owl:NamedIndividual ,
+                                                                          :BiomassSubType ;
+                                                                 <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedFruitResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StoneOrKernelOrFruitFibreStoneOrKernelFruit
+:StoneOrKernelOrFruitFibreStoneOrKernelFruit rdf:type owl:NamedIndividual ,
+                                                      :BiomassSubType ;
+                                             <https://www.w3.org/ns/org#broader> :StoneOrKernelFruits .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StoredBroadLeaf
+:StoredBroadLeaf rdf:type owl:NamedIndividual ,
+                          :BiomassSubType ;
+                 <https://www.w3.org/ns/org#broader> :LoggingResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StoredConiferous
+:StoredConiferous rdf:type owl:NamedIndividual ,
+                           :BiomassSubType ;
+                  <https://www.w3.org/ns/org#broader> :LoggingResidues .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StrawPartsCerealCrops
+:StrawPartsCerealCrops rdf:type owl:NamedIndividual ,
+                                :BiomassSubType ;
+                       <https://www.w3.org/ns/org#broader> :CerealCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StrawPartsGrasses
+:StrawPartsGrasses rdf:type owl:NamedIndividual ,
+                            :BiomassSubType ;
+                   <https://www.w3.org/ns/org#broader> :Grasses .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#StumpsOrRoots
+:StumpsOrRoots rdf:type owl:NamedIndividual ,
+                        :BiomassType ;
+               <https://www.w3.org/ns/org#broader> :ForestPlantation ;
+               <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesStumpsOrRoots ,
+                                                    :BroadLeafStumpsOrRoots ,
+                                                    :BushesStumpsOrRoots ,
+                                                    :ConiferousStumpsOrRoots ,
+                                                    :ShortRotationCoppiceStumpsOrRoots .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#UsedWood
+:UsedWood rdf:type owl:NamedIndividual ,
+                   :BiomassSubGroup ;
+          <https://www.w3.org/ns/org#broader> :WoodyBiomass ;
+          <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesUsedWood ,
+                                               :ChemicallyTreatedHerbaceousResidues ,
+                                               :ChemicallyUntreatedUsedWood .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WaterHyacinth
+:WaterHyacinth rdf:type owl:NamedIndividual ,
+                        :BiomassSubGroup ;
+               <https://www.w3.org/ns/org#broader> :AquaticBiomass .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WholeBerries
+:WholeBerries rdf:type owl:NamedIndividual ,
+                       :BiomassSubType ;
+              <https://www.w3.org/ns/org#broader> :Berries .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WholeFruit
+:WholeFruit rdf:type owl:NamedIndividual ,
+                     :BiomassSubType ;
+            <https://www.w3.org/ns/org#broader> :StoneOrKernelFruits .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WholeFruitStoneOrKernelFruits
+:WholeFruitStoneOrKernelFruits rdf:type owl:NamedIndividual ,
+                                        :BiomassSubType ;
+                               <https://www.w3.org/ns/org#broader> :StoneOrKernelFruits .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WholeNuts
+:WholeNuts rdf:type owl:NamedIndividual ,
+                    :BiomassSubType ;
+           <https://www.w3.org/ns/org#broader> :NutsandAcorns .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WholePlantCerealCrops
+:WholePlantCerealCrops rdf:type owl:NamedIndividual ,
+                                :BiomassSubType ;
+                       <https://www.w3.org/ns/org#broader> :CerealCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WholePlantFlowers
+:WholePlantFlowers rdf:type owl:NamedIndividual ,
+                            :BiomassSubType ;
+                   <https://www.w3.org/ns/org#broader> :Flowers .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WholePlantGrasses
+:WholePlantGrasses rdf:type owl:NamedIndividual ,
+                            :BiomassSubType ;
+                   <https://www.w3.org/ns/org#broader> :Grasses .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WholePlantLegumeCrops
+:WholePlantLegumeCrops rdf:type owl:NamedIndividual ,
+                                :BiomassSubType ;
+                       <https://www.w3.org/ns/org#broader> :LegumeCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WholePlantOilSeedCrops
+:WholePlantOilSeedCrops rdf:type owl:NamedIndividual ,
+                                 :BiomassSubType ;
+                        <https://www.w3.org/ns/org#broader> :OilSeedCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WholePlantRootCrops
+:WholePlantRootCrops rdf:type owl:NamedIndividual ,
+                              :BiomassSubType ;
+                     <https://www.w3.org/ns/org#broader> :RootCrops .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WholeTreesWithRoots
+:WholeTreesWithRoots rdf:type owl:NamedIndividual ,
+                              :BiomassType ;
+                     <https://www.w3.org/ns/org#broader> :ForestPlantation ;
+                     <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesWholeTreesWithRoots ,
+                                                          :BroadLeafWholeTreesWithRoots ,
+                                                          :BushesWholeTreesWithRoots ,
+                                                          :ConiferousWholeTreesWithRoots ,
+                                                          :ShortRotationCoppiceWholeTreesWithRoots .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WholeTreesWithoutRoots
+:WholeTreesWithoutRoots rdf:type owl:NamedIndividual ,
+                                 :BiomassType ;
+                        <https://www.w3.org/ns/org#broader> :ForestPlantation ;
+                        <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesWholeTreesWithoutRoots ,
+                                                             :BroadLeafWholeTreesWithoutRoots ,
+                                                             :BushesWholeTreesWithoutRoots ,
+                                                             :ConiferousWholeTreesWithoutRoots ,
+                                                             :ShortRotationCoppiceWholeTreesWithoutRoots .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WithBarkChemicallyTreatedUsedWood
+:WithBarkChemicallyTreatedUsedWood rdf:type owl:NamedIndividual ,
+                                            :BiomassSubType ;
+                                   <https://www.w3.org/ns/org#broader> :ChemicallyTreatedUsedWood .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WithBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents
+:WithBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents rdf:type owl:NamedIndividual ,
+                                                                                   :BiomassSubType ;
+                                                                          <https://www.w3.org/ns/org#broader> :ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WithBrakChemicallyUntreatedUsedWood
+:WithBrakChemicallyUntreatedUsedWood rdf:type owl:NamedIndividual ,
+                                              :BiomassSubType ;
+                                     <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedUsedWood .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WithoutBarkChemicallyTreatedUsedWood
+:WithoutBarkChemicallyTreatedUsedWood rdf:type owl:NamedIndividual ,
+                                               :BiomassSubType ;
+                                      <https://www.w3.org/ns/org#broader> :ChemicallyTreatedUsedWood .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WithoutBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents
+:WithoutBarkChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents rdf:type owl:NamedIndividual ,
+                                                                                      :BiomassSubType ;
+                                                                             <https://www.w3.org/ns/org#broader> :ChemicallyTreatedWoodByProductsResiduesFibresAndWoodConstituents .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WithoutBarkChemicallyUntreatedUsedWood
+:WithoutBarkChemicallyUntreatedUsedWood rdf:type owl:NamedIndividual ,
+                                                 :BiomassSubType ;
+                                        <https://www.w3.org/ns/org#broader> :ChemicallyUntreatedUsedWood .
+
+
+###  https://auroral.iot.linkeddata.es/def/biomass#WoodyBiomass
+:WoodyBiomass rdf:type owl:NamedIndividual ,
+                       :BiomassGroup ;
+              <https://www.w3.org/ns/org#narrower> :BlendsAndMixturesWoodyBiomass ,
+                                                   :ByProductsAndResiduesFromWoodProcessingIndustry ,
+                                                   :ForestPlantation ,
+                                                   :UsedWood .
+
+
+###  https://auroral.iot.linkeddata.es/def/core#KilowattPerKg
+<https://auroral.iot.linkeddata.es/def/core#KilowattPerKg> rdf:type owl:NamedIndividual ,
+                                                                    <https://saref.etsi.org/core#UnitOfMeasure> .
+
+
+###  https://auroral.iot.linkeddata.es/def/core#MegajoulePerKg
+<https://auroral.iot.linkeddata.es/def/core#MegajoulePerKg> rdf:type owl:NamedIndividual ,
+                                                                     <https://saref.etsi.org/core#UnitOfMeasure> .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

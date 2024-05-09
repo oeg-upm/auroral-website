@@ -438,6 +438,12 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#AirQuality"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CombustibleWaste",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Waste"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CoolingSensor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -648,6 +654,12 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#CloudCover"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#FoodWaste",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Waste"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GPSAltitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -676,6 +688,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#SpaceProperty"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GlassAndMetalPackaging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Waste"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#GridCapacity",
@@ -1189,6 +1207,12 @@
     "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PV"
   } ]
 }, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Paper",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Waste"
+  } ]
+}, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Periodic",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1217,6 +1241,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://auroral.iot.linkeddata.es/def/core#Sensor"
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PlasticPackaging",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Waste"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#PowerFactor",
@@ -1712,6 +1742,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "According to the manufacturer's information, a rating between 1 and 12 indicates a healthy level of visceral fat, whereas a rating between 13 and 59 indicates excess visceral fat."
+  } ]
+}, {
+  "@id" : "https://auroral.iot.linkeddata.es/def/adapters#Waste",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Properties related to the waste materials."
+  }, {
+    "@language" : "en",
+    "@value" : "Waste property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://saref.etsi.org/core#Property"
   } ]
 }, {
   "@id" : "https://auroral.iot.linkeddata.es/def/adapters#WasteBinSensor",
