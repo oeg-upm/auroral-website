@@ -1,6 +1,5 @@
 <https://auroral.iot.linkeddata.es/def/cow#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://auroral.iot.linkeddata.es/def/cow#> <http://www.w3.org/2002/07/owl#versionIRI> <https://auroral.iot.linkeddata.es/def/cow#/1.0.0> .
-<https://auroral.iot.linkeddata.es/def/cow#> <http://purl.org/dc/elements/1.1/creator> "Ahlem Rhayem" .
 <https://auroral.iot.linkeddata.es/def/cow#> <http://purl.org/dc/elements/1.1/creator> "Andrea Cimmino" .
 <https://auroral.iot.linkeddata.es/def/cow#> <http://purl.org/dc/elements/1.1/creator> "Juan Cano" .
 <https://auroral.iot.linkeddata.es/def/cow#> <http://purl.org/dc/elements/1.1/creator> "María Poveda-Villalón" .

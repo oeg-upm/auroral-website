@@ -8,8 +8,7 @@
 
 <https://auroral.iot.linkeddata.es/def/cow#> rdf:type owl:Ontology ;
                                               owl:versionIRI <https://auroral.iot.linkeddata.es/def/cow#/1.0.0> ;
-                                              <http://purl.org/dc/elements/1.1/creator> "Ahlem Rhayem" ,
-                                                                                        "Andrea Cimmino" ,
+                                              <http://purl.org/dc/elements/1.1/creator> "Andrea Cimmino" ,
                                                                                         "Juan Cano" ,
                                                                                         "María Poveda-Villalón" ,
                                                                                         "Raúl Garcia-Castro" ;

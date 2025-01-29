@@ -92,8 +92,6 @@
   "@id" : "https://auroral.iot.linkeddata.es/def/cow#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Ahlem Rhayem"
-  }, {
     "@value" : "Andrea Cimmino"
   }, {
     "@value" : "Juan Cano"

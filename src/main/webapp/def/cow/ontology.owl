@@ -10,7 +10,6 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://auroral.iot.linkeddata.es/def/cow#">
         <owl:versionIRI rdf:resource="https://auroral.iot.linkeddata.es/def/cow#/1.0.0"/>
-        <dc:creator>Ahlem Rhayem</dc:creator>
         <dc:creator>Andrea Cimmino</dc:creator>
         <dc:creator>Juan Cano</dc:creator>
         <dc:creator>María Poveda-Villalón</dc:creator>
