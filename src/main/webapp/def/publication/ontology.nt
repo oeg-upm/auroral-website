@@ -1,0 +1,246 @@
+<https://auroral.iot.linkeddata.es/def/publication#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://auroral.iot.linkeddata.es/def/publication#> <http://purl.org/dc/elements/1.1/creator> "Olivér Angyal" .
+<https://auroral.iot.linkeddata.es/def/publication#> <http://purl.org/dc/elements/1.1/description> "This ontology aims at modelling the publication information for the AURORAL project." .
+<https://auroral.iot.linkeddata.es/def/publication#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://auroral.iot.linkeddata.es/def/publication#hasAffiliation
+<https://auroral.iot.linkeddata.es/def/publication#hasAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/publication#Affiliation> .
+<https://auroral.iot.linkeddata.es/def/publication#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a publication to its affiliation(s)." .
+<https://auroral.iot.linkeddata.es/def/publication#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#label> "has affiliation" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#hasAuthor
+<https://auroral.iot.linkeddata.es/def/publication#hasAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/publication#Author> .
+<https://auroral.iot.linkeddata.es/def/publication#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a publication to its authors." .
+<https://auroral.iot.linkeddata.es/def/publication#hasAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "has author" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#hasDomain
+<https://auroral.iot.linkeddata.es/def/publication#hasDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#hasDomain> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#hasDomain> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/publication#Domain> .
+<https://auroral.iot.linkeddata.es/def/publication#hasDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a publication to its domain(s)." .
+<https://auroral.iot.linkeddata.es/def/publication#hasDomain> <http://www.w3.org/2000/01/rdf-schema#label> "has domain" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#hasKeyword
+<https://auroral.iot.linkeddata.es/def/publication#hasKeyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#hasKeyword> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#hasKeyword> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/publication#Keyword> .
+<https://auroral.iot.linkeddata.es/def/publication#hasKeyword> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a publication to its keywords." .
+<https://auroral.iot.linkeddata.es/def/publication#hasKeyword> <http://www.w3.org/2000/01/rdf-schema#label> "has keyword" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#hasTopic
+<https://auroral.iot.linkeddata.es/def/publication#hasTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#hasTopic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#hasTopic> <http://www.w3.org/2000/01/rdf-schema#range> <https://auroral.iot.linkeddata.es/def/publication#Topic> .
+<https://auroral.iot.linkeddata.es/def/publication#hasTopic> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a publication to its topics." .
+<https://auroral.iot.linkeddata.es/def/publication#hasTopic> <http://www.w3.org/2000/01/rdf-schema#label> "has topic" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://auroral.iot.linkeddata.es/def/publication#abstract
+<https://auroral.iot.linkeddata.es/def/publication#abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#abstract> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#abstract> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#abstract> <http://www.w3.org/2000/01/rdf-schema#comment> "The abstract of the publication." .
+<https://auroral.iot.linkeddata.es/def/publication#abstract> <http://www.w3.org/2000/01/rdf-schema#label> "Abstract" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#affiliation
+<https://auroral.iot.linkeddata.es/def/publication#affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#affiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Affiliation> .
+<https://auroral.iot.linkeddata.es/def/publication#affiliation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#affiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the affiliation." .
+<https://auroral.iot.linkeddata.es/def/publication#affiliation> <http://www.w3.org/2000/01/rdf-schema#label> "Affiliation" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#author
+<https://auroral.iot.linkeddata.es/def/publication#author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#author> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Author> .
+<https://auroral.iot.linkeddata.es/def/publication#author> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#author> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the author." .
+<https://auroral.iot.linkeddata.es/def/publication#author> <http://www.w3.org/2000/01/rdf-schema#label> "Author" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#conclusion
+<https://auroral.iot.linkeddata.es/def/publication#conclusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#conclusion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#conclusion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#conclusion> <http://www.w3.org/2000/01/rdf-schema#comment> "The conclusion of the publication." .
+<https://auroral.iot.linkeddata.es/def/publication#conclusion> <http://www.w3.org/2000/01/rdf-schema#label> "Conclusion" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#doi
+<https://auroral.iot.linkeddata.es/def/publication#doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#doi> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#doi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#doi> <http://www.w3.org/2000/01/rdf-schema#comment> "The DOI of the publication." .
+<https://auroral.iot.linkeddata.es/def/publication#doi> <http://www.w3.org/2000/01/rdf-schema#label> "DOI" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#domain
+<https://auroral.iot.linkeddata.es/def/publication#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#domain> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Domain> .
+<https://auroral.iot.linkeddata.es/def/publication#domain> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#domain> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the domain." .
+<https://auroral.iot.linkeddata.es/def/publication#domain> <http://www.w3.org/2000/01/rdf-schema#label> "Domain" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#introduction
+<https://auroral.iot.linkeddata.es/def/publication#introduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#introduction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#introduction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#introduction> <http://www.w3.org/2000/01/rdf-schema#comment> "The introduction of the publication." .
+<https://auroral.iot.linkeddata.es/def/publication#introduction> <http://www.w3.org/2000/01/rdf-schema#label> "Introduction" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#keyword
+<https://auroral.iot.linkeddata.es/def/publication#keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Keyword> .
+<https://auroral.iot.linkeddata.es/def/publication#keyword> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#keyword> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the keyword." .
+<https://auroral.iot.linkeddata.es/def/publication#keyword> <http://www.w3.org/2000/01/rdf-schema#label> "Keyword" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#language
+<https://auroral.iot.linkeddata.es/def/publication#language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#language> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#language> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#language> <http://www.w3.org/2000/01/rdf-schema#comment> "The language of the publication." .
+<https://auroral.iot.linkeddata.es/def/publication#language> <http://www.w3.org/2000/01/rdf-schema#label> "Language" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#matchScore
+<https://auroral.iot.linkeddata.es/def/publication#matchScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#matchScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#matchScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://auroral.iot.linkeddata.es/def/publication#matchScore> <http://www.w3.org/2000/01/rdf-schema#comment> "The match score of the publication." .
+<https://auroral.iot.linkeddata.es/def/publication#matchScore> <http://www.w3.org/2000/01/rdf-schema#label> "Match Score" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#organisation
+<https://auroral.iot.linkeddata.es/def/publication#organisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#organisation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#organisation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#organisation> <http://www.w3.org/2000/01/rdf-schema#comment> "The organisation this publication belongs to." .
+<https://auroral.iot.linkeddata.es/def/publication#organisation> <http://www.w3.org/2000/01/rdf-schema#label> "Organisation" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#pdfUrl
+<https://auroral.iot.linkeddata.es/def/publication#pdfUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#pdfUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#pdfUrl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://auroral.iot.linkeddata.es/def/publication#pdfUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "URL to access the publication's PDF." .
+<https://auroral.iot.linkeddata.es/def/publication#pdfUrl> <http://www.w3.org/2000/01/rdf-schema#label> "PDF URL" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#publicationDate
+<https://auroral.iot.linkeddata.es/def/publication#publicationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#publicationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#publicationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://auroral.iot.linkeddata.es/def/publication#publicationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The publication date." .
+<https://auroral.iot.linkeddata.es/def/publication#publicationDate> <http://www.w3.org/2000/01/rdf-schema#label> "Publication Date" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#publisher
+<https://auroral.iot.linkeddata.es/def/publication#publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#publisher> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#publisher> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "The publisher of the publication." .
+<https://auroral.iot.linkeddata.es/def/publication#publisher> <http://www.w3.org/2000/01/rdf-schema#label> "Publisher" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#score
+<https://auroral.iot.linkeddata.es/def/publication#score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#score> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#score> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://auroral.iot.linkeddata.es/def/publication#score> <http://www.w3.org/2000/01/rdf-schema#comment> "The business potential score of the publication." .
+<https://auroral.iot.linkeddata.es/def/publication#score> <http://www.w3.org/2000/01/rdf-schema#label> "Score" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#title
+<https://auroral.iot.linkeddata.es/def/publication#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#title> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Publication> .
+<https://auroral.iot.linkeddata.es/def/publication#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#title> <http://www.w3.org/2000/01/rdf-schema#comment> "The title of the publication." .
+<https://auroral.iot.linkeddata.es/def/publication#title> <http://www.w3.org/2000/01/rdf-schema#label> "Title" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#topic
+<https://auroral.iot.linkeddata.es/def/publication#topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://auroral.iot.linkeddata.es/def/publication#topic> <http://www.w3.org/2000/01/rdf-schema#domain> <https://auroral.iot.linkeddata.es/def/publication#Topic> .
+<https://auroral.iot.linkeddata.es/def/publication#topic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://auroral.iot.linkeddata.es/def/publication#topic> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the topic." .
+<https://auroral.iot.linkeddata.es/def/publication#topic> <http://www.w3.org/2000/01/rdf-schema#label> "Topic" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://auroral.iot.linkeddata.es/def/publication#Affiliation
+<https://auroral.iot.linkeddata.es/def/publication#Affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/publication#Affiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an affiliation associated with a publication or author." .
+<https://auroral.iot.linkeddata.es/def/publication#Affiliation> <http://www.w3.org/2000/01/rdf-schema#label> "Affiliation" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#Author
+<https://auroral.iot.linkeddata.es/def/publication#Author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/publication#Author> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an author of a publication." .
+<https://auroral.iot.linkeddata.es/def/publication#Author> <http://www.w3.org/2000/01/rdf-schema#label> "Author" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#Domain
+<https://auroral.iot.linkeddata.es/def/publication#Domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/publication#Domain> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a subject domain of a publication." .
+<https://auroral.iot.linkeddata.es/def/publication#Domain> <http://www.w3.org/2000/01/rdf-schema#label> "Domain" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#Keyword
+<https://auroral.iot.linkeddata.es/def/publication#Keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/publication#Keyword> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a keyword associated with a publication." .
+<https://auroral.iot.linkeddata.es/def/publication#Keyword> <http://www.w3.org/2000/01/rdf-schema#label> "Keyword" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#Publication
+<https://auroral.iot.linkeddata.es/def/publication#Publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/publication#Publication> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a publication." .
+<https://auroral.iot.linkeddata.es/def/publication#Publication> <http://www.w3.org/2000/01/rdf-schema#label> "Publication" .
+# 
+# https://auroral.iot.linkeddata.es/def/publication#Topic
+<https://auroral.iot.linkeddata.es/def/publication#Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://auroral.iot.linkeddata.es/def/publication#Topic> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a topic associated with a publication." .
+<https://auroral.iot.linkeddata.es/def/publication#Topic> <http://www.w3.org/2000/01/rdf-schema#label> "Topic" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

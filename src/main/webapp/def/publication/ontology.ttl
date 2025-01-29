@@ -1,0 +1,262 @@
+@prefix : <https://auroral.iot.linkeddata.es/def/publication#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://auroral.iot.linkeddata.es/def/publication#> .
+
+<https://auroral.iot.linkeddata.es/def/publication#> rdf:type owl:Ontology ;
+                                                      <http://purl.org/dc/elements/1.1/creator> "Olivér Angyal" ;
+                                                      <http://purl.org/dc/elements/1.1/description> "This ontology aims at modelling the publication information for the AURORAL project." ;
+                                                      <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://auroral.iot.linkeddata.es/def/publication#hasAffiliation
+:hasAffiliation rdf:type owl:ObjectProperty ;
+                rdfs:domain :Publication ;
+                rdfs:range :Affiliation ;
+                rdfs:comment "Links a publication to its affiliation(s)." ;
+                rdfs:label "has affiliation" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#hasAuthor
+:hasAuthor rdf:type owl:ObjectProperty ;
+           rdfs:domain :Publication ;
+           rdfs:range :Author ;
+           rdfs:comment "Links a publication to its authors." ;
+           rdfs:label "has author" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#hasDomain
+:hasDomain rdf:type owl:ObjectProperty ;
+           rdfs:domain :Publication ;
+           rdfs:range :Domain ;
+           rdfs:comment "Links a publication to its domain(s)." ;
+           rdfs:label "has domain" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#hasKeyword
+:hasKeyword rdf:type owl:ObjectProperty ;
+            rdfs:domain :Publication ;
+            rdfs:range :Keyword ;
+            rdfs:comment "Links a publication to its keywords." ;
+            rdfs:label "has keyword" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#hasTopic
+:hasTopic rdf:type owl:ObjectProperty ;
+          rdfs:domain :Publication ;
+          rdfs:range :Topic ;
+          rdfs:comment "Links a publication to its topics." ;
+          rdfs:label "has topic" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://auroral.iot.linkeddata.es/def/publication#abstract
+:abstract rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Publication ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The abstract of the publication." ;
+          rdfs:label "Abstract" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#affiliation
+:affiliation rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Affiliation ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The name of the affiliation." ;
+             rdfs:label "Affiliation" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#author
+:author rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Author ;
+        rdfs:range xsd:string ;
+        rdfs:comment "The name of the author." ;
+        rdfs:label "Author" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#conclusion
+:conclusion rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Publication ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The conclusion of the publication." ;
+            rdfs:label "Conclusion" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#doi
+:doi rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Publication ;
+     rdfs:range xsd:string ;
+     rdfs:comment "The DOI of the publication." ;
+     rdfs:label "DOI" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#domain
+:domain rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Domain ;
+        rdfs:range xsd:string ;
+        rdfs:comment "The name of the domain." ;
+        rdfs:label "Domain" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#introduction
+:introduction rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Publication ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The introduction of the publication." ;
+              rdfs:label "Introduction" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#keyword
+:keyword rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Keyword ;
+         rdfs:range xsd:string ;
+         rdfs:comment "The name of the keyword." ;
+         rdfs:label "Keyword" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#language
+:language rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Publication ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The language of the publication." ;
+          rdfs:label "Language" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#matchScore
+:matchScore rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Publication ;
+            rdfs:range xsd:float ;
+            rdfs:comment "The match score of the publication." ;
+            rdfs:label "Match Score" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#organisation
+:organisation rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Publication ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The organisation this publication belongs to." ;
+              rdfs:label "Organisation" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#pdfUrl
+:pdfUrl rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Publication ;
+        rdfs:range xsd:anyURI ;
+        rdfs:comment "URL to access the publication's PDF." ;
+        rdfs:label "PDF URL" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#publicationDate
+:publicationDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Publication ;
+                 rdfs:range xsd:date ;
+                 rdfs:comment "The publication date." ;
+                 rdfs:label "Publication Date" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#publisher
+:publisher rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Publication ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The publisher of the publication." ;
+           rdfs:label "Publisher" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#score
+:score rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Publication ;
+       rdfs:range xsd:float ;
+       rdfs:comment "The business potential score of the publication." ;
+       rdfs:label "Score" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#title
+:title rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Publication ;
+       rdfs:range xsd:string ;
+       rdfs:comment "The title of the publication." ;
+       rdfs:label "Title" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#topic
+:topic rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Topic ;
+       rdfs:range xsd:string ;
+       rdfs:comment "The name of the topic." ;
+       rdfs:label "Topic" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://auroral.iot.linkeddata.es/def/publication#Affiliation
+:Affiliation rdf:type owl:Class ;
+             rdfs:comment "Represents an affiliation associated with a publication or author." ;
+             rdfs:label "Affiliation" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#Author
+:Author rdf:type owl:Class ;
+        rdfs:comment "Represents an author of a publication." ;
+        rdfs:label "Author" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#Domain
+:Domain rdf:type owl:Class ;
+        rdfs:comment "Represents a subject domain of a publication." ;
+        rdfs:label "Domain" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#Keyword
+:Keyword rdf:type owl:Class ;
+         rdfs:comment "Represents a keyword associated with a publication." ;
+         rdfs:label "Keyword" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#Publication
+:Publication rdf:type owl:Class ;
+             rdfs:comment "Represents a publication." ;
+             rdfs:label "Publication" .
+
+
+###  https://auroral.iot.linkeddata.es/def/publication#Topic
+:Topic rdf:type owl:Class ;
+       rdfs:comment "Represents a topic associated with a publication." ;
+       rdfs:label "Topic" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
